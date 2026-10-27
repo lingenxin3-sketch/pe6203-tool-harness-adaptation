@@ -1,0 +1,26 @@
+[
+  {
+    "version": "original",
+    "checked_archive_files": 10951,
+    "missing": [],
+    "modified": [],
+    "passed": true,
+    "scope": "All extracted archive members; extra runtime-generated files are not source changes."
+  },
+  {
+    "version": "iter3",
+    "checked_archive_files": 10651,
+    "missing": [],
+    "modified": [],
+    "passed": true,
+    "scope": "All extracted archive members; extra runtime-generated files are not source changes."
+  },
+  {
+    "version": "iter5",
+    "checked_archive_files": 10786,
+    "missing": [],
+    "modified": [],
+    "passed": true,
+    "scope": "All extracted archive members; extra runtime-generated files are not source changes."
+  }
+]

@@ -1,0 +1,87 @@
+{"idx":103,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":105,"pe":4.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter3"}
+{"idx":113,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":117,"pe":8.0,"status":"evaluated","strategy":"full_rewrite","tf":8.0,"version":"iter3"}
+{"idx":139,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":267,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":273,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":274,"pe":5.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter3"}
+{"idx":278,"pe":1.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter3"}
+{"idx":28,"pe":4.0,"status":"evaluated","strategy":"full_rewrite","tf":7.0,"version":"iter3"}
+{"idx":283,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":386,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":389,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":393,"pe":9.0,"status":"evaluated","strategy":"full_rewrite","tf":7.0,"version":"iter3"}
+{"idx":403,"pe":1.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter3"}
+{"idx":411,"pe":9.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter3"}
+{"idx":416,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":9,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter3"}
+{"idx":103,"pe":9.0,"status":"evaluated","strategy":"full_rewrite","tf":4.0,"version":"iter5"}
+{"idx":105,"pe":4.0,"status":"evaluated","strategy":"full_rewrite","tf":6.0,"version":"iter5"}
+{"idx":113,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter5"}
+{"idx":117,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":9.0,"version":"iter5"}
+{"idx":139,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter5"}
+{"idx":267,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter5"}
+{"idx":273,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter5"}
+{"idx":274,"pe":4.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter5"}
+{"idx":278,"pe":1.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter5"}
+{"idx":28,"pe":4.0,"status":"evaluated","strategy":"full_rewrite","tf":7.0,"version":"iter5"}
+{"idx":283,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter5"}
+{"idx":386,"pe":4.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter5"}
+{"idx":389,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter5"}
+{"idx":393,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter5"}
+{"idx":403,"pe":1.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter5"}
+{"idx":411,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter5"}
+{"idx":416,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"iter5"}
+{"idx":9,"pe":2.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"iter5"}
+{"idx":103,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":6.0,"version":"original"}
+{"idx":105,"pe":4.0,"status":"evaluated","strategy":"full_rewrite","tf":6.0,"version":"original"}
+{"idx":113,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":4.0,"version":"original"}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\tool_adapt\__main__.py", line 2, in <module>
+    main()
+    ~~~~^^
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\tool_adapt\cli.py", line 28, in main
+    judge_experiment(root,args.run_directory.resolve())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\tool_adapt\experiment.py", line 159, in judge_experiment
+    record['eval_result'] = evaluator.judge(record, record['evaluation_tools'], model,
+                            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        repeats=config['judge_repeats'], seed=config['seed'] + record['idx'])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\tool_adapt\official.py", line 53, in judge
+    message, usage = model.complete([{'role': 'user', 'content': prompt}], json_mode=True)
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\tool_adapt\llm.py", line 65, in complete
+    with urllib.request.urlopen(req, timeout=self.timeout) as response:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 487, in open
+    response = self._open(req, data)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 504, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 464, in _call_chain
+    result = func(*args)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 1350, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 1325, in do_open
+    r = h.getresponse()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。

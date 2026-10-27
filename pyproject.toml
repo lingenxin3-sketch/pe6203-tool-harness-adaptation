@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pe6203-tool-adaptation"
+version = "0.1.0"
+description = "Selective tool knowledge adaptation evaluated with MCPEvol-Bench"
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.12,<2", "httpx>=0.28,<1", "jsonschema>=4.23,<5"]
+
+[project.scripts]
+tool-adapt = "tool_adapt.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["tool_adapt*"]

@@ -1,0 +1,64 @@
+{
+  "title": "Dependency-aware selective tool knowledge adaptation",
+  "benchmark": "MCPEvol-Bench",
+  "upstream_commit": "888c779a0fe735f612ca62bdd1fdd7c9e6bf8701",
+  "development_ids": [
+    3,
+    101
+  ],
+  "test_ids": [
+    9,
+    28,
+    103,
+    105,
+    113,
+    117,
+    139,
+    267,
+    273,
+    274,
+    278,
+    283,
+    386,
+    389,
+    393,
+    403,
+    411,
+    416
+  ],
+  "selection_rule": "Official chosen_idx tasks whose servers run locally without paid accounts; task IDs fixed before evaluating policies. Development tasks are excluded. Subset emphasizes local file, project, task and memory workflows; not representative of all 201 tasks.",
+  "strategies": [
+    "no_update",
+    "full_rewrite",
+    "selective_patch"
+  ],
+  "versions": [
+    "original",
+    "iter3",
+    "iter5"
+  ],
+  "base_url": "http://127.0.0.1:8081/v1",
+  "model": "qwen3-4b",
+  "model_sha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+  "temperature": 0.0,
+  "seed": 6203,
+  "agent_max_tokens": 2048,
+  "update_max_tokens": 2048,
+  "judge_max_tokens": 2048,
+  "max_steps": 12,
+  "repeats": 1,
+  "judge_repeats": 1,
+  "endpoint_policy": "Local only. No paid APIs.",
+  "information_boundary": "Updater receives tool contracts only, never questions, reference trajectories, task annotations or judge scores.",
+  "scope_rule": "Use official task server/tool names at Early. Later include the same surviving names and newly added tools in those servers. Executable servers always use the current official version.",
+  "failure_policy": "Preserve every failed trace. Invalid updates are rejected with previous knowledge retained and recorded. Infrastructure errors are reported separately and never silently omitted. Formal output directories are immutable on rerun.",
+  "judge_limitation": "Local Qwen2.5-7B judge with unmodified official rubric, calibrated on two development trajectories. Scores are not instructor-certified and may still be incorrect; inspect independent execution evidence.",
+  "dependency_closure": true,
+  "judge_base_url": "http://127.0.0.1:8082/v1",
+  "judge_model": "qwen2.5-7b-judge",
+  "defer_judging": true,
+  "judge_sha256": [
+    "dfce12e3862a5283ccfb88221b48480e58745165de856439950d0f22590580db",
+    "539cf93f78e887edea1c04e2d7d8cdaca9d01dae9c9025bcb8accbe29df3d72a"
+  ]
+}

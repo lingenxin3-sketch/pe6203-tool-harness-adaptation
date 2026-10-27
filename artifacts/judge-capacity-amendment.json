@@ -1,0 +1,65 @@
+{
+  "recorded_local_time": "2026-10-27T13:23:07.792658",
+  "stage": "ablation_execution",
+  "pre_scoring_status_counts": {
+    "final-v1": {
+      "records": 162,
+      "evaluated": 0,
+      "awaiting_judge": 162
+    },
+    "ablation-v1": {
+      "records": 3,
+      "evaluated": 0,
+      "awaiting_judge": 3
+    }
+  },
+  "preflight_sha256": "b8078b09ef0bf08430eb4feaa7e4aafaf1ebeee8d75980e2ca2ea0b95b7247b9",
+  "checked_records": 162,
+  "oversized_under_original_budget": [
+    {
+      "record": "repeat-0/no_update/iter3/416/result.json",
+      "prompt_characters": 80478,
+      "content_tokens": 17885,
+      "with_response_safety_and_template_allowance": 20317,
+      "fits_16384_with_allowance": false
+    },
+    {
+      "record": "repeat-0/selective_patch/iter3/416/result.json",
+      "prompt_characters": 70882,
+      "content_tokens": 14920,
+      "with_response_safety_and_template_allowance": 17352,
+      "fits_16384_with_allowance": false
+    },
+    {
+      "record": "repeat-0/no_update/original/416/result.json",
+      "prompt_characters": 64605,
+      "content_tokens": 14676,
+      "with_response_safety_and_template_allowance": 17108,
+      "fits_16384_with_allowance": false
+    },
+    {
+      "record": "repeat-0/full_rewrite/original/416/result.json",
+      "prompt_characters": 61943,
+      "content_tokens": 13986,
+      "with_response_safety_and_template_allowance": 16418,
+      "fits_16384_with_allowance": false
+    }
+  ],
+  "uniform_judge_context_tokens": 24576,
+  "all_main_estimates_fit_amended_budget": true,
+  "policy": {
+    "context_tokens": 24576,
+    "previous_context_tokens": 16384,
+    "scope": "Uniform judge-only capacity amendment before any formal scoring; actor and updater unchanged",
+    "reason": "Complete preflight of 162 main traces found four inputs exceeding the original response-reserved budget; largest reserved estimate 20317 tokens.",
+    "preserved": [
+      "model weights",
+      "rubric",
+      "trajectory formatter",
+      "temperature",
+      "seed",
+      "response token limit",
+      "all original actor evidence"
+    ]
+  }
+}

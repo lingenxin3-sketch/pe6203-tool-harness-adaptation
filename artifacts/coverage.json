@@ -1,0 +1,518 @@
+[
+  {
+    "idx": 9,
+    "version": "iter3",
+    "categories": [
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 2,
+    "closure_count": 2,
+    "changed": [
+      "648628__read_text_file",
+      "e54174__request_planning"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 9,
+    "version": "iter5",
+    "categories": [
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 3,
+    "closure_count": 3,
+    "changed": [
+      "648628__read_text_file",
+      "648628__search_files",
+      "e54174__request_planning"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 28,
+    "version": "iter3",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 28,
+    "version": "iter5",
+    "categories": [
+      "Parameter"
+    ],
+    "direct_count": 1,
+    "closure_count": 1,
+    "changed": [
+      "b1f986__read_multiple_files"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 103,
+    "version": "iter3",
+    "categories": [
+      "Tool",
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 3,
+    "closure_count": 3,
+    "changed": [
+      "15f157__create_project",
+      "5a6140__sequentialthinking"
+    ],
+    "added": [
+      "5a6140__parallel-thinking"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 103,
+    "version": "iter5",
+    "categories": [
+      "Tool",
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 7,
+    "closure_count": 7,
+    "changed": [
+      "15f157__create_project",
+      "15f157__list_projects",
+      "5a6140__sequentialthinking"
+    ],
+    "added": [
+      "15f157__review_project_status",
+      "15f157__review_workspace_health",
+      "5a6140__convergent-synthesis",
+      "5a6140__parallel-thinking"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 105,
+    "version": "iter3",
+    "categories": [
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 1,
+    "closure_count": 1,
+    "changed": [
+      "15f157__create_project"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 105,
+    "version": "iter5",
+    "categories": [
+      "Tool",
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 4,
+    "closure_count": 4,
+    "changed": [
+      "15f157__create_project",
+      "15f157__list_tasks"
+    ],
+    "added": [
+      "15f157__review_project_status",
+      "15f157__review_workspace_health"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 113,
+    "version": "iter3",
+    "categories": [
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 2,
+    "closure_count": 6,
+    "changed": [
+      "15f157__create_project",
+      "e54174__request_planning"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 113,
+    "version": "iter5",
+    "categories": [
+      "Tool",
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 5,
+    "closure_count": 9,
+    "changed": [
+      "15f157__create_project",
+      "15f157__list_tasks",
+      "e54174__request_planning"
+    ],
+    "added": [
+      "15f157__review_project_status",
+      "15f157__review_workspace_health"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 117,
+    "version": "iter3",
+    "categories": [
+      "Tool",
+      "Description"
+    ],
+    "direct_count": 2,
+    "closure_count": 2,
+    "changed": [
+      "5a6140__sequentialthinking"
+    ],
+    "added": [
+      "5a6140__parallel-thinking"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 117,
+    "version": "iter5",
+    "categories": [
+      "Tool",
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 3,
+    "closure_count": 3,
+    "changed": [
+      "5a6140__sequentialthinking"
+    ],
+    "added": [
+      "5a6140__convergent-synthesis",
+      "5a6140__parallel-thinking"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 139,
+    "version": "iter3",
+    "categories": [
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 2,
+    "closure_count": 2,
+    "changed": [
+      "0b5258__create_entities",
+      "15f157__create_project"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 139,
+    "version": "iter5",
+    "categories": [
+      "Tool",
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 7,
+    "closure_count": 7,
+    "changed": [
+      "0b5258__create_entities",
+      "0b5258__create_relations",
+      "15f157__create_project"
+    ],
+    "added": [
+      "0b5258__find_related_entities",
+      "0b5258__get_graph_stats",
+      "15f157__review_project_status",
+      "15f157__review_workspace_health"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 267,
+    "version": "iter3",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 267,
+    "version": "iter5",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 273,
+    "version": "iter3",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 273,
+    "version": "iter5",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 274,
+    "version": "iter3",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 274,
+    "version": "iter5",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 278,
+    "version": "iter3",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 278,
+    "version": "iter5",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 283,
+    "version": "iter3",
+    "categories": [
+      "Tool",
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 3,
+    "closure_count": 3,
+    "changed": [
+      "15f157__create_project",
+      "5a6140__sequentialthinking"
+    ],
+    "added": [
+      "5a6140__parallel-thinking"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 283,
+    "version": "iter5",
+    "categories": [
+      "Tool",
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 6,
+    "closure_count": 6,
+    "changed": [
+      "15f157__create_project",
+      "5a6140__sequentialthinking"
+    ],
+    "added": [
+      "15f157__review_project_status",
+      "15f157__review_workspace_health",
+      "5a6140__convergent-synthesis",
+      "5a6140__parallel-thinking"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 386,
+    "version": "iter3",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 386,
+    "version": "iter5",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 389,
+    "version": "iter3",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 389,
+    "version": "iter5",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 393,
+    "version": "iter3",
+    "categories": [
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 2,
+    "closure_count": 2,
+    "changed": [
+      "15f157__create_project",
+      "30e6e7__create_relations"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 393,
+    "version": "iter5",
+    "categories": [
+      "Tool",
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 7,
+    "closure_count": 7,
+    "changed": [
+      "15f157__create_project",
+      "15f157__list_projects",
+      "30e6e7__create_entities",
+      "30e6e7__create_relations"
+    ],
+    "added": [
+      "15f157__review_project_status",
+      "15f157__review_workspace_health",
+      "30e6e7__get_related_entities"
+    ],
+    "removed": []
+  },
+  {
+    "idx": 403,
+    "version": "iter3",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 403,
+    "version": "iter5",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 411,
+    "version": "iter3",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 411,
+    "version": "iter5",
+    "categories": [],
+    "direct_count": 0,
+    "closure_count": 0,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 416,
+    "version": "iter3",
+    "categories": [
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 1,
+    "closure_count": 4,
+    "changed": [
+      "e54174__request_planning"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "idx": 416,
+    "version": "iter5",
+    "categories": [
+      "Parameter",
+      "Description"
+    ],
+    "direct_count": 1,
+    "closure_count": 4,
+    "changed": [
+      "e54174__request_planning"
+    ],
+    "added": [],
+    "removed": []
+  }
+]

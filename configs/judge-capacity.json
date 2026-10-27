@@ -1,0 +1,7 @@
+{
+  "context_tokens": 24576,
+  "previous_context_tokens": 16384,
+  "scope": "Uniform judge-only capacity amendment before any formal scoring; actor and updater unchanged",
+  "reason": "Complete preflight of 162 main traces found four inputs exceeding the original response-reserved budget; largest reserved estimate 20317 tokens.",
+  "preserved": ["model weights", "rubric", "trajectory formatter", "temperature", "seed", "response token limit", "all original actor evidence"]
+}

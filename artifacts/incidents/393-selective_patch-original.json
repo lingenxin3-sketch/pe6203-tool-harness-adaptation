@@ -1,0 +1,33 @@
+{
+  "purpose": "Template-only diagnosis of saved failed trajectory; no inference or task replay",
+  "episode": "393/selective_patch/original",
+  "original_error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+  "last_finish_reason": "tool_calls",
+  "template_http_status": 200,
+  "prompt_characters": 19026,
+  "root_cause_status": "Immediate backend memory-allocation failure identified by matching exact prompt/generation counts and timings of the saved response to server task302261, followed by bad allocation on the next request task303364. The log does not establish the underlying RAM/VRAM/allocator cause. No task retry or model/config change.",
+  "backend_evidence": {
+    "source_log": "runtime/model.stderr.log",
+    "source_lines": [
+      11538,
+      11567
+    ],
+    "excerpt": "393-model-service-excerpt.txt",
+    "excerpt_sha256": "39627ec537da7ac5b71c90f19ddb294af9b11e7d7eecf845da29f285f76b0e57",
+    "matched_response_id": "chatcmpl-MGvNl1WLAfzctgOwHuzSvEyG9xqrJWTv",
+    "matched_timings": {
+      "cache_n": 88,
+      "prompt_n": 2515,
+      "prompt_ms": 2154.812,
+      "prompt_per_token_ms": 0.8567840954274354,
+      "prompt_per_second": 1167.1551856960143,
+      "predicted_n": 1101,
+      "predicted_ms": 43711.848,
+      "predicted_per_token_ms": 39.738043636363635,
+      "predicted_per_second": 25.16480200059261
+    },
+    "completed_server_task": 302261,
+    "failed_next_server_task": 303364,
+    "error": "bad allocation"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "pid": 3664,
+  "phase": "failed",
+  "updated_epoch": 1793081976.0375855,
+  "error": "CalledProcessError: Command '['F:\\\\ASUS\\\\Desktop\\\\codex\u6587\u4ef6\u5939\\\\shopee\u81ea\u52a8\u5316\u9009\u54c1\u7cfb\u7edf\\\\pe6203-tool-adaptation\\\\.venv\\\\Scripts\\\\python.exe', '-m', 'tool_adapt', 'judge', 'F:\\\\ASUS\\\\Desktop\\\\codex\u6587\u4ef6\u5939\\\\shopee\u81ea\u52a8\u5316\u9009\u54c1\u7cfb\u7edf\\\\pe6203-tool-adaptation\\\\runs\\\\final-v1']' returned non-zero exit status 1."
+}

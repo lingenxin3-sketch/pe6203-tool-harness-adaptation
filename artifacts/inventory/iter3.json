@@ -1,0 +1,4226 @@
+{
+  "mcp-filesystem-server": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "b1f986__read_file",
+        "description": "Read the complete contents of a file from the file system. Handles various text encodings and provides detailed error messages if the file cannot be read.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The path to the file"
+            },
+            "encoding": {
+              "type": "string",
+              "default": "utf-8",
+              "description": "File encoding (default: utf-8)"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__read_binary_file",
+        "description": "Read a binary file and return its contents as base64 encoded string.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The path to the binary file"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "paths": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Array of file paths to read"
+            },
+            "encoding": {
+              "type": "string",
+              "default": "utf-8",
+              "description": "File encoding (default: utf-8)"
+            }
+          },
+          "required": [
+            "paths"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The path to the file"
+            },
+            "content": {
+              "type": "string",
+              "description": "The content to write to the file"
+            },
+            "createDirectories": {
+              "type": "boolean",
+              "default": false,
+              "description": "Create parent directories if they don't exist"
+            }
+          },
+          "required": [
+            "path",
+            "content"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The path to the file"
+            },
+            "edits": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "oldText": {
+                    "type": "string",
+                    "description": "Text to search for - must match exactly"
+                  },
+                  "newText": {
+                    "type": "string",
+                    "description": "Text to replace with"
+                  }
+                },
+                "required": [
+                  "oldText",
+                  "newText"
+                ],
+                "additionalProperties": false
+              },
+              "description": "Array of edit operations"
+            },
+            "dryRun": {
+              "type": "boolean",
+              "default": false,
+              "description": "Preview changes using git-style diff format"
+            }
+          },
+          "required": [
+            "path",
+            "edits"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The path to the directory"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The path to the directory"
+            },
+            "showHidden": {
+              "type": "boolean",
+              "default": false,
+              "description": "Show hidden files starting with ."
+            },
+            "sortBy": {
+              "type": "string",
+              "enum": [
+                "default",
+                "name",
+                "type"
+              ],
+              "default": "default",
+              "description": "Sorting mode: default (directories first), name, or type"
+            },
+            "reverse": {
+              "type": "boolean",
+              "default": false,
+              "description": "Reverse the sort order"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The path to the directory"
+            },
+            "maxDepth": {
+              "type": "number",
+              "default": 10,
+              "description": "Maximum depth to traverse"
+            },
+            "includeFiles": {
+              "type": "boolean",
+              "default": true,
+              "description": "Include files in the output"
+            },
+            "showHidden": {
+              "type": "boolean",
+              "default": false,
+              "description": "Show hidden files starting with ."
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "type": "string",
+              "description": "The source file or directory path"
+            },
+            "destination": {
+              "type": "string",
+              "description": "The destination file or directory path"
+            },
+            "overwrite": {
+              "type": "boolean",
+              "default": false,
+              "description": "Overwrite destination if it exists"
+            }
+          },
+          "required": [
+            "source",
+            "destination"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__search_files",
+        "description": "Recursively search for files and directories matching a pattern. Searches through all subdirectories from the starting path.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The starting directory path"
+            },
+            "pattern": {
+              "type": "string",
+              "description": "The search pattern"
+            },
+            "maxResults": {
+              "type": "number",
+              "default": 1000,
+              "description": "Maximum number of results to return"
+            },
+            "maxDepth": {
+              "type": "number",
+              "default": 20,
+              "description": "Maximum depth to search"
+            },
+            "excludePatterns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": [],
+              "description": "Patterns to exclude from search"
+            },
+            "searchContents": {
+              "type": "boolean",
+              "default": false,
+              "description": "Search file contents instead of just names"
+            }
+          },
+          "required": [
+            "path",
+            "pattern"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The path to the file or directory"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "b1f986__list_directory_info",
+        "description": "Returns information about the filesystem server.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "b1f986__get_pwd",
+        "description": "Returns the current working directory (pwd), which is used as the base for relative paths.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ],
+    "routing": {
+      "b1f986__read_file": [
+        "mcp-filesystem-server",
+        "read_file"
+      ],
+      "b1f986__read_binary_file": [
+        "mcp-filesystem-server",
+        "read_binary_file"
+      ],
+      "b1f986__read_multiple_files": [
+        "mcp-filesystem-server",
+        "read_multiple_files"
+      ],
+      "b1f986__write_file": [
+        "mcp-filesystem-server",
+        "write_file"
+      ],
+      "b1f986__edit_file": [
+        "mcp-filesystem-server",
+        "edit_file"
+      ],
+      "b1f986__create_directory": [
+        "mcp-filesystem-server",
+        "create_directory"
+      ],
+      "b1f986__list_directory": [
+        "mcp-filesystem-server",
+        "list_directory"
+      ],
+      "b1f986__directory_tree": [
+        "mcp-filesystem-server",
+        "directory_tree"
+      ],
+      "b1f986__move_file": [
+        "mcp-filesystem-server",
+        "move_file"
+      ],
+      "b1f986__search_files": [
+        "mcp-filesystem-server",
+        "search_files"
+      ],
+      "b1f986__get_file_info": [
+        "mcp-filesystem-server",
+        "get_file_info"
+      ],
+      "b1f986__list_directory_info": [
+        "mcp-filesystem-server",
+        "list_directory_info"
+      ],
+      "b1f986__get_pwd": [
+        "mcp-filesystem-server",
+        "get_pwd"
+      ]
+    }
+  },
+  "mcp-tasks": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "897e5b__tasks_setup",
+        "description": "Initializes an source file from a path\n- Always call once per conversation when asked to use these tools\n- Ask the user to clarify the file path if not given, before calling this tool\n- Creates the file if it does not exist\n- Returns the source ID for further use\n- Use mcp-tasks tools when the user mentions new or updated tasks",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workspace": {
+              "type": "string",
+              "description": "Workspace/project directory path (provided by the IDE or use $PWD)"
+            },
+            "source_path": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "source_path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "897e5b__tasks_search",
+        "description": "Search tasks from specific statuses with optional text & ID filtering",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "source_id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Source ID from task_setup() response\n- Defaults to most recent in the workspace if not provided\n- Try to always provide it!\n- If you don't have it, ask the user for a file path and call task_setup()"
+            },
+            "statuses": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "In Progress",
+                  "To Do",
+                  "Backlog",
+                  "Done",
+                  "Reminders",
+                  "Notes",
+                  "Deleted"
+                ],
+                "description": "You might need to infer it from the context:\n- \"To Do\" for tasks coming up next (e.g. \"Do X next\")\n- \"In Progress\" for what you'll do now (e.g. \"First do X\")\n- \"Reminders\" instructions for you (the AI) to be constantly reminded of\n- \"Notes\" to collect non-actionable notes"
+              },
+              "description": "Specific statuses to get. Gets all if omitted"
+            },
+            "terms": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Search terms to filter tasks by text or status (case-insensitive, OR logic, no regex or wildcards)"
+            },
+            "ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Optional list of task IDs to search for"
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Maximum number of results (only for really large task lists)"
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "897e5b__tasks_add",
+        "description": "Add new tasks with a specific status. It's faster and cheaper if you use this in batch. User can add atomically while AI works using the CLI add tool",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "source_id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Source ID from task_setup() response\n- Defaults to most recent in the workspace if not provided\n- Try to always provide it!\n- If you don't have it, ask the user for a file path and call task_setup()"
+            },
+            "texts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": "Each text becomes a task"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "In Progress",
+                "To Do",
+                "Backlog",
+                "Done",
+                "Reminders",
+                "Notes",
+                "Deleted"
+              ],
+              "description": "You might need to infer it from the context:\n- \"To Do\" for tasks coming up next (e.g. \"Do X next\")\n- \"In Progress\" for what you'll do now (e.g. \"First do X\")\n- \"Reminders\" instructions for you (the AI) to be constantly reminded of\n- \"Notes\" to collect non-actionable notes"
+            },
+            "index": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "0-based index to place the tasks. e.g.:\n- 0 for \"Do this next\"\n- Omit to place at the end (\"Do this later\")"
+            }
+          },
+          "required": [
+            "texts",
+            "status"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "897e5b__tasks_update",
+        "description": "Update tasks in bulk by ID to a different status. Returns complete summary no need to call tasks_summary afterwards. Prevents AI accidentally rename or deleting tasks during mass updates, not even possible",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "source_id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Source ID from task_setup() response\n- Defaults to most recent in the workspace if not provided\n- Try to always provide it!\n- If you don't have it, ask the user for a file path and call task_setup()"
+            },
+            "ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "The IDs of existing tasks"
+            },
+            "status": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "In Progress",
+                    "To Do",
+                    "Backlog",
+                    "Done",
+                    "Reminders",
+                    "Notes",
+                    "Deleted"
+                  ],
+                  "description": "You might need to infer it from the context:\n- \"To Do\" for tasks coming up next (e.g. \"Do X next\")\n- \"In Progress\" for what you'll do now (e.g. \"First do X\")\n- \"Reminders\" instructions for you (the AI) to be constantly reminded of\n- \"Notes\" to collect non-actionable notes"
+                },
+                {
+                  "type": "string",
+                  "const": "Deleted"
+                }
+              ],
+              "description": "You might need to infer it from the context:\n- \"To Do\" for tasks coming up next (e.g. \"Do X next\")\n- \"In Progress\" for what you'll do now (e.g. \"First do X\")\n- \"Reminders\" instructions for you (the AI) to be constantly reminded of\n- \"Notes\" to collect non-actionable notes\n- \"Deleted\" when they want these removed\n- Updating tasks to In Progress moves others to To Do, finishing a In Progress task moves the first Done to In Progress"
+            },
+            "index": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "0-based index to place the tasks. e.g.:\n- 0 for \"Do this next\"\n- Omit to place at the end (\"Do this later\")"
+            }
+          },
+          "required": [
+            "ids",
+            "status"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "897e5b__tasks_summary",
+        "description": "Get per-status task counts and the WIP task(s). Redundant right after tasks_add/tasks_update",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "source_id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Source ID from task_setup() response\n- Defaults to most recent in the workspace if not provided\n- Try to always provide it!\n- If you don't have it, ask the user for a file path and call task_setup()"
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      }
+    ],
+    "routing": {
+      "897e5b__tasks_setup": [
+        "mcp-tasks",
+        "tasks_setup"
+      ],
+      "897e5b__tasks_search": [
+        "mcp-tasks",
+        "tasks_search"
+      ],
+      "897e5b__tasks_add": [
+        "mcp-tasks",
+        "tasks_add"
+      ],
+      "897e5b__tasks_update": [
+        "mcp-tasks",
+        "tasks_update"
+      ],
+      "897e5b__tasks_summary": [
+        "mcp-tasks",
+        "tasks_summary"
+      ]
+    }
+  },
+  "mcp-shrimp-task-manager": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "44a0da__plan_task",
+        "description": "When you need to plan tasks or construct complex features, you can use this tool to receive task planning guidance. You are expected to strictly follow the step-by-step instructions provided by the tool when organizing your tasks. You may optionally choose to reference existing tasks for extended planning.\n\n**Critical Warning**: All forms of `assumptions`, `guesses`, and `imagination` are strictly prohibited. You must use every `available tool` at your disposal to `gather real information`.\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "type": "string",
+              "minLength": 10,
+              "description": "完整詳細的任務問題描述，應包含任務目標、背景及預期成果"
+            },
+            "requirements": {
+              "type": "string",
+              "description": "任務的特定技術要求、業務約束條件或品質標準（選填）"
+            },
+            "existingTasksReference": {
+              "type": "boolean",
+              "default": false,
+              "description": "是否參考現有任務作為規劃基礎，用於任務調整和延續性規劃"
+            }
+          },
+          "required": [
+            "description"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__analyze_task",
+        "description": "Deeply analyze task requirements and systematically examine the codebase, assess technical feasibility and potential risks, if code needs to be provided use pseudocode format and only provide high-level logic flow and key steps avoiding complete code\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "summary": {
+              "type": "string",
+              "minLength": 10,
+              "description": "結構化的任務摘要，包含任務目標、範圍與關鍵技術挑戰，最少10個字符"
+            },
+            "initialConcept": {
+              "type": "string",
+              "minLength": 50,
+              "description": "最少50個字符的初步解答構想，包含技術方案、架構設計和實施策略，如果需要提供程式碼請使用 pseudocode 格式且僅提供高級邏輯流程和關鍵步驟避免完整代碼"
+            },
+            "previousAnalysis": {
+              "type": "string",
+              "description": "前次迭代的分析結果，用於持續改進方案（僅在重新分析時需提供）"
+            }
+          },
+          "required": [
+            "summary",
+            "initialConcept"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__reflect_task",
+        "description": "Critically review analysis results, assess solution completeness and identify optimization opportunities, ensure solutions conform to best practices, if code needs to be provided use pseudocode format and only provide high-level logic flow and key steps avoiding complete code\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "summary": {
+              "type": "string",
+              "minLength": 10,
+              "description": "結構化的任務摘要，保持與分析階段一致以確保連續性"
+            },
+            "analysis": {
+              "type": "string",
+              "minLength": 100,
+              "description": "完整詳盡的技術分析結果，包括所有技術細節、依賴組件和實施方案，如果需要提供程式碼請使用 pseudocode 格式且僅提供高級邏輯流程和關鍵步驟避免完整代碼"
+            }
+          },
+          "required": [
+            "summary",
+            "analysis"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__split_tasks",
+        "description": "Break down complex tasks into independent subtasks, establishing dependencies and priorities.\n\n## 1. **Granularity Control (Required Reading)**\n\n- ### **Minimum Viable Task**\n\n  Each subtask should be completable and verifiable by a single developer within **1–2 working days** (approximately 8–16 hours).\n\n- ### **Maximum Complexity Limitation**\n\n  A single subtask should not span multiple technical domains such as **frontend**, **backend**, and **database**.  \n  If cross-domain work is required, split it into multiple subtasks.\n\n- ### **Recommended Number of Tasks**\n\n  Avoid splitting into more than **10 subtasks** at once.  \n  If more are needed, submit them in prioritized batches (6–8 tasks per batch).\n\n- ### **Recommended Task Length**\n\n  Each split should not exceed **5,000 characters**.  \n  If it does, divide and submit in multiple batches.\n\n- ### **Depth Limitation**\n  The task tree should not exceed **3 levels**:\n  - **Level 1**: Functional Modules\n  - **Level 2**: Main Processes\n  - **Level 3**: Key Steps\n\n## 2. **Task Splitting Example**\n\n- Identify **core functionality points**, and create a subtask for each.\n- Annotate each subtask with:\n  - **Input/Output**\n  - **Acceptance Criteria**\n- If needed, provide **pseudocode**:\n  - Only outline high-level logic and key steps.\n  - Avoid providing complete source code.\n- Check **dependencies** between subtasks and specify them in the `dependencies` field.\n- If the task involves interface design, always provide a complete and consistent definition, including:\n\n  - Function/class/schema definitions (including names, parameters, return values)\n  - Data types, usage descriptions, and optional/required status for each item\n  - Error handling methods and expected exception scenarios\n  - Dependency and naming conventions (if any)\n  - Sample data and usage examples\n\n  This ensures consistency, readability, and development precision between tasks.\n\n## 3. **Dependencies and Prioritization**\n\n- Mark each subtask with its `dependencies` list.\n- Automatically compute and enforce execution order based on the dependency graph to prioritize the **critical path**.\n\n## 4. **Update Mode Explanation (`updateMode`)**\n\nWhen you need to create a new task that is not related to the current task list, be sure to use `clearAllTasks` to avoid task confusion.\n\n- `append`: Keep existing unfinished tasks and add new ones.\n- `overwrite`: Delete all unfinished tasks, keep completed ones.\n- `selective`: Smart-match and update tasks by name.\n- `clearAllTasks`: Clear all tasks and automatically back up the current list.\n\n---\n\n## 5. **Strict JSON Rules**\n\n- ### **No Comments Allowed**\n\n  JSON does not support comments.  \n  Any use of `#` or `//` will cause parsing failures.\n\n- ### **Proper Escaping Required**\n  All special characters (e.g., double quotes `\\\"`, backslashes `\\\\`) must be properly escaped,  \n  or they will be considered invalid.\n\n## 6. **Important Notes**\n\nThese tasks will be executed by low-intelligence models, so please follow the guidelines below:\n\n- `Clear and Explicit Instructions`: This prevents the model from producing incorrect or inconsistent architecture/code styles. Provide clear commands or specifications.\n- `Encapsulated Interfaces`: Each task runs independently. Define the interfaces clearly — such as function names, parameters, return values — so that other task-executing models can easily understand how to interact with or integrate these functions.\n- `Dependencies`: If there are dependencies between tasks, define the interaction interfaces first. Tasks do not need to know each other's implementation, but must know how to interact with one another.\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "updateMode": {
+              "type": "string",
+              "enum": [
+                "append",
+                "overwrite",
+                "selective",
+                "clearAllTasks"
+              ],
+              "description": "任務更新模式選擇：'append'(保留所有現有任務並添加新任務)、'overwrite'(清除所有未完成任務並完全替換，保留已完成任務)、'selective'(智能更新：根據任務名稱匹配更新現有任務，保留不在列表中的任務，推薦用於任務微調)、'clearAllTasks'(清除所有任務並創建備份)。\n預設為'clearAllTasks'模式，只有用戶要求變更或修改計劃內容才使用其他模式"
+            },
+            "tasksRaw": {
+              "type": "string",
+              "description": "結構化的任務清單，每個任務應保持原子性且有明確的完成標準，避免過於簡單的任務，簡單修改可與其他任務整合，避免任務過多，範例：[{name: '簡潔明確的任務名稱，應能清晰表達任務目的', description: '詳細的任務描述，包含實施要點、技術細節和驗收標準', implementationGuide: '此特定任務的具體實現方法和步驟，請參考之前的分析結果提供精簡pseudocode', notes: '補充說明、特殊處理要求或實施建議（選填）', dependencies: ['此任務依賴的前置任務完整名稱'], relatedFiles: [{path: '文件路徑', type: '文件類型 (TO_MODIFY: 待修改, REFERENCE: 參考資料, CREATE: 待建立, DEPENDENCY: 依賴文件, OTHER: 其他)', description: '文件描述', lineStart: 1, lineEnd: 100}], verificationCriteria: '此特定任務的驗證標準和檢驗方法'}, {name: '任務2', description: '任務2描述', implementationGuide: '任務2實現方法', notes: '補充說明、特殊處理要求或實施建議（選填）', dependencies: ['任務1'], relatedFiles: [{path: '文件路徑', type: '文件類型 (TO_MODIFY: 待修改, REFERENCE: 參考資料, CREATE: 待建立, DEPENDENCY: 依賴文件, OTHER: 其他)', description: '文件描述', lineStart: 1, lineEnd: 100}], verificationCriteria: '此特定任務的驗證標準和檢驗方法'}]"
+            },
+            "globalAnalysisResult": {
+              "type": "string",
+              "description": "任務最終目標，來自之前分析適用於所有任務的通用部分"
+            }
+          },
+          "required": [
+            "updateMode",
+            "tasksRaw"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__list_tasks",
+        "description": "Generate structured task lists, including complete status tracking, priorities, and dependencies\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "all",
+                "pending",
+                "in_progress",
+                "completed"
+              ],
+              "description": "要列出的任務狀態，可選擇 'all' 列出所有任務，或指定具體狀態"
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__execute_task",
+        "description": "Retrieve the instructional guidance for a specific task. You will complete the programming task based on this guidance. You must strictly follow the feedback and instructions provided by the tool — it is designed to **guide you toward perfect task completion, not to execute the task for you**. Severe Warning: Calling the executeTask tool does not mean you have completed the task. You must follow the step-by-step guidance returned by the tool to complete the task properly.\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "taskId": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$",
+              "description": "待執行任務的唯一標識符，必須是系統中存在的有效任務ID"
+            }
+          },
+          "required": [
+            "taskId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__verify_task",
+        "description": "## Verify Task\n\nPlease comprehensively check and score according to the requirements in verificationCriteria,\nIf you are missing or have forgotten the verificationCriteria content, please use `get_task_detail` to obtain it.\n\nPlease score according to the following rules:\n\n### Verification Standards\n\n1. **Requirements Compliance(30%)** - Functionality completeness, constraint adherence, edge case handling\n2. **Technical Quality(30%)** - Architectural consistency, code robustness, implementation elegance\n3. **Integration Compatibility(20%)** - System integration, interoperability, compatibility maintenance\n4. **Performance Scalability(20%)** - Performance optimization, load adaptability, resource management\n\n### score Parameter Guidelines\n\nProvide overall score and rating, assessment of each standard, issues and suggestions, and final conclusion.\n\n**Must use the following format to provide scoring results (for system parsing):**\n\n```Scoring\nscore: [number from 0-100]\n```\n\n### summary Parameter Guidelines\n\nIf the score is equal to or greater than 80 points, please provide a task summary\n\n```\nsummary: 'Task completion summary, concise description of implementation results and important decisions'\n```\n\nIf the score is less than 80 points, please provide correction suggestions\n\n```\nsummary: 'List task issues and correction suggestions'\n```\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "taskId": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$",
+              "description": "待驗證任務的唯一標識符，必須是系統中存在的有效任務ID"
+            },
+            "summary": {
+              "type": "string",
+              "minLength": 30,
+              "description": "當分數高於或等於 80分時代表任務完成摘要，簡潔描述實施結果和重要決策，當分數低於 80分時代表缺失或需要修正的部分說明，最少30個字"
+            },
+            "score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "針對任務的評分，當評分等於或超過80分時自動完成任務"
+            }
+          },
+          "required": [
+            "taskId",
+            "summary",
+            "score"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__delete_task",
+        "description": "Delete incomplete tasks, but does not allow deleting completed tasks, ensuring the integrity of system records\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "taskId": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$",
+              "description": "待刪除任務的唯一標識符，必須是系統中存在且未完成的任務ID"
+            }
+          },
+          "required": [
+            "taskId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__clear_all_tasks",
+        "description": "Clear incomplete tasks and reset the task list\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "confirm": {
+              "type": "boolean",
+              "description": "確認刪除所有未完成的任務（此操作不可逆）"
+            }
+          },
+          "required": [
+            "confirm"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__update_task",
+        "description": "Update task content, including name, description and notes, dependent tasks, related files, implementation guide, and verification criteria, completed tasks only allow updating summary and related files\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "taskId": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$",
+              "description": "待更新任務的唯一標識符，必須是系統中存在且未完成的任務ID"
+            },
+            "name": {
+              "type": "string",
+              "description": "任務的新名稱（選填）"
+            },
+            "description": {
+              "type": "string",
+              "description": "任務的新描述內容（選填）"
+            },
+            "notes": {
+              "type": "string",
+              "description": "任務的新補充說明（選填）"
+            },
+            "dependencies": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "任務的新依賴關係（選填）"
+            },
+            "relatedFiles": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "文件路徑，可以是相對於項目根目錄的路徑或絕對路徑"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "TO_MODIFY",
+                      "REFERENCE",
+                      "CREATE",
+                      "DEPENDENCY",
+                      "OTHER"
+                    ],
+                    "description": "文件與任務的關係類型 (TO_MODIFY, REFERENCE, CREATE, DEPENDENCY, OTHER)"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "文件的補充描述（選填）"
+                  },
+                  "lineStart": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "description": "相關代碼區塊的起始行（選填）"
+                  },
+                  "lineEnd": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "description": "相關代碼區塊的結束行（選填）"
+                  }
+                },
+                "required": [
+                  "path",
+                  "type"
+                ],
+                "additionalProperties": false
+              },
+              "description": "與任務相關的文件列表，用於記錄與任務相關的代碼文件、參考資料、要建立的檔案等（選填）"
+            },
+            "implementationGuide": {
+              "type": "string",
+              "description": "任務的新實現指南（選填）"
+            },
+            "verificationCriteria": {
+              "type": "string",
+              "description": "任務的新驗證標準（選填）"
+            }
+          },
+          "required": [
+            "taskId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__query_task",
+        "description": "Search for tasks based on keywords or ID, display abbreviated task information\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "minLength": 1,
+              "description": "搜尋查詢文字，可以是任務ID或多個關鍵字（空格分隔）"
+            },
+            "isId": {
+              "type": "boolean",
+              "default": false,
+              "description": "指定是否為ID查詢模式，默認為否（關鍵字模式）"
+            },
+            "page": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "default": 1,
+              "description": "分頁頁碼，默認為第1頁"
+            },
+            "pageSize": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "minimum": 1,
+              "maximum": 20,
+              "default": 5,
+              "description": "每頁顯示的任務數量，默認為5筆，最大20筆"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__get_task_detail",
+        "description": "Retrieve complete detailed information of a task based on task ID, including untruncated implementation guides and verification criteria\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "taskId": {
+              "type": "string",
+              "minLength": 1,
+              "description": "欲檢視詳情的任務ID"
+            }
+          },
+          "required": [
+            "taskId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__process_thought",
+        "description": "Conduct flexible and evolvable thinking processes, progressively deepen understanding and generate effective solutions through establishing, questioning, verifying, and correcting ideas. When encountering situations requiring data collection, analysis, or research, prioritize reviewing project-related code; if relevant code does not exist, query the web rather than speculate. Set nextThoughtNeeded to false when thinking is sufficient, otherwise adjust total_thoughts to extend the process\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "thought": {
+              "type": "string",
+              "minLength": 1,
+              "description": "思維內容"
+            },
+            "thought_number": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "description": "當前思維編號"
+            },
+            "total_thoughts": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "description": "預計總思維數量，如果需要更多的思考可以隨時變更"
+            },
+            "next_thought_needed": {
+              "type": "boolean",
+              "description": "是否需要下一步思維"
+            },
+            "stage": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Thinking stage. Available stages include: Problem Definition, Information Gathering, Research, Analysis, Synthesis, Conclusion, Critical Questioning, and Planning."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "思維標籤，是一個陣列字串"
+            },
+            "axioms_used": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "使用的公理，是一個陣列字串"
+            },
+            "assumptions_challenged": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "挑戰的假設，是一個陣列字串"
+            }
+          },
+          "required": [
+            "thought",
+            "thought_number",
+            "total_thoughts",
+            "next_thought_needed",
+            "stage"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__init_project_rules",
+        "description": "Initialize project standards, call this tool when the user requests to generate or initialize a project standards document, also call this tool if the user requests to change or update project standards\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "44a0da__research_mode",
+        "description": "When you need to conduct in-depth research on programming-related topics, you can use this tool to enter a specialized research mode. This tool will guide you on how to use web search and code search tools to systematically research technical topics, ensuring research depth and breadth while avoiding topic deviation. Suitable for technical research, best practice exploration, solution comparison, and other scenarios.\n",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "minLength": 5,
+              "description": "要研究的程式編程主題內容，應該明確且具體"
+            },
+            "previousState": {
+              "type": "string",
+              "default": "",
+              "description": "之前的研究狀態和內容摘要，第一次執行時為空，後續會包含之前詳細且關鍵的研究成果，這將幫助後續的研究"
+            },
+            "currentState": {
+              "type": "string",
+              "description": "當前 Agent 主要該執行的內容，例如使用網路工具搜尋某些關鍵字或分析特定程式碼，研究完畢後請呼叫 research_mode 來記錄狀態並與之前的`previousState`整合，這將幫助你更好的保存與執行研究內容"
+            },
+            "nextSteps": {
+              "type": "string",
+              "description": "後續的計劃、步驟或研究方向，用來約束 Agent 不偏離主題或走錯方向，如果研究過程中發現需要調整研究方向，請更新此欄位"
+            }
+          },
+          "required": [
+            "topic",
+            "currentState",
+            "nextSteps"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      }
+    ],
+    "routing": {
+      "44a0da__plan_task": [
+        "mcp-shrimp-task-manager",
+        "plan_task"
+      ],
+      "44a0da__analyze_task": [
+        "mcp-shrimp-task-manager",
+        "analyze_task"
+      ],
+      "44a0da__reflect_task": [
+        "mcp-shrimp-task-manager",
+        "reflect_task"
+      ],
+      "44a0da__split_tasks": [
+        "mcp-shrimp-task-manager",
+        "split_tasks"
+      ],
+      "44a0da__list_tasks": [
+        "mcp-shrimp-task-manager",
+        "list_tasks"
+      ],
+      "44a0da__execute_task": [
+        "mcp-shrimp-task-manager",
+        "execute_task"
+      ],
+      "44a0da__verify_task": [
+        "mcp-shrimp-task-manager",
+        "verify_task"
+      ],
+      "44a0da__delete_task": [
+        "mcp-shrimp-task-manager",
+        "delete_task"
+      ],
+      "44a0da__clear_all_tasks": [
+        "mcp-shrimp-task-manager",
+        "clear_all_tasks"
+      ],
+      "44a0da__update_task": [
+        "mcp-shrimp-task-manager",
+        "update_task"
+      ],
+      "44a0da__query_task": [
+        "mcp-shrimp-task-manager",
+        "query_task"
+      ],
+      "44a0da__get_task_detail": [
+        "mcp-shrimp-task-manager",
+        "get_task_detail"
+      ],
+      "44a0da__process_thought": [
+        "mcp-shrimp-task-manager",
+        "process_thought"
+      ],
+      "44a0da__init_project_rules": [
+        "mcp-shrimp-task-manager",
+        "init_project_rules"
+      ],
+      "44a0da__research_mode": [
+        "mcp-shrimp-task-manager",
+        "research_mode"
+      ]
+    }
+  },
+  "@modelcontextprotocol/server-filesystem": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "648628__read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "head": {
+              "type": "number",
+              "description": "If provided, returns only the first N lines of the file"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "head": {
+              "type": "number",
+              "description": "If provided, returns only the first N lines of the file"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "paths": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "description": "Array of file paths to read. Each path must be a string pointing to a valid file within allowed directories."
+            }
+          },
+          "required": [
+            "paths"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "path",
+            "content"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "edits": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "oldText": {
+                    "type": "string",
+                    "description": "Text to search for - must match exactly"
+                  },
+                  "newText": {
+                    "type": "string",
+                    "description": "Text to replace with"
+                  }
+                },
+                "required": [
+                  "oldText",
+                  "newText"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "dryRun": {
+              "type": "boolean",
+              "default": false,
+              "description": "Preview changes using git-style diff format"
+            }
+          },
+          "required": [
+            "path",
+            "edits"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "sortBy": {
+              "type": "string",
+              "enum": [
+                "name",
+                "size"
+              ],
+              "default": "name",
+              "description": "Sort entries by name or size"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "excludePatterns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": []
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "type": "string"
+            },
+            "destination": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "source",
+            "destination"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "pattern": {
+              "type": "string"
+            },
+            "excludePatterns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": []
+            }
+          },
+          "required": [
+            "path",
+            "pattern"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "648628__list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ],
+    "routing": {
+      "648628__read_file": [
+        "@modelcontextprotocol/server-filesystem",
+        "read_file"
+      ],
+      "648628__read_text_file": [
+        "@modelcontextprotocol/server-filesystem",
+        "read_text_file"
+      ],
+      "648628__read_media_file": [
+        "@modelcontextprotocol/server-filesystem",
+        "read_media_file"
+      ],
+      "648628__read_multiple_files": [
+        "@modelcontextprotocol/server-filesystem",
+        "read_multiple_files"
+      ],
+      "648628__write_file": [
+        "@modelcontextprotocol/server-filesystem",
+        "write_file"
+      ],
+      "648628__edit_file": [
+        "@modelcontextprotocol/server-filesystem",
+        "edit_file"
+      ],
+      "648628__create_directory": [
+        "@modelcontextprotocol/server-filesystem",
+        "create_directory"
+      ],
+      "648628__list_directory": [
+        "@modelcontextprotocol/server-filesystem",
+        "list_directory"
+      ],
+      "648628__list_directory_with_sizes": [
+        "@modelcontextprotocol/server-filesystem",
+        "list_directory_with_sizes"
+      ],
+      "648628__directory_tree": [
+        "@modelcontextprotocol/server-filesystem",
+        "directory_tree"
+      ],
+      "648628__move_file": [
+        "@modelcontextprotocol/server-filesystem",
+        "move_file"
+      ],
+      "648628__search_files": [
+        "@modelcontextprotocol/server-filesystem",
+        "search_files"
+      ],
+      "648628__get_file_info": [
+        "@modelcontextprotocol/server-filesystem",
+        "get_file_info"
+      ],
+      "648628__list_allowed_directories": [
+        "@modelcontextprotocol/server-filesystem",
+        "list_allowed_directories"
+      ]
+    }
+  },
+  "@kazuph/mcp-taskmanager": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "e54174__request_planning",
+        "description": "Register a new user request and plan its associated tasks. You must provide 'originalRequest', 'splitDetails', and 'tasks'.\n\nValidation rules: 'originalRequest' and 'splitDetails' must each be 10-2000 characters after trimming. 'tasks' must contain 1 to 50 items. Each task title must be 3-120 characters, each description 5-2000 characters, and task titles must be unique within the request.\n\nThis tool initiates a new workflow for handling a user's request. The workflow is as follows:\n1. Use 'request_planning' to register a request and its tasks.\n2. After adding tasks, you MUST use 'get_next_task' to retrieve the first task. A progress table will be displayed.\n3. Use 'get_next_task' to retrieve the next uncompleted task.\n4. **IMPORTANT:** After marking a task as done, the assistant MUST NOT proceed to another task without the user's approval. The user must explicitly approve the completed task using 'approve_task_completion'. A progress table will be displayed before each approval request.\n5. Once a task is approved, you can proceed to 'get_next_task' again to fetch the next pending task.\n6. Repeat this cycle until all tasks are done.\n7. After all tasks are completed (and approved), 'get_next_task' will indicate that all tasks are done and that the request awaits approval for full completion.\n8. The user must then approve the entire request's completion using 'approve_request_completion'. If the user does not approve and wants more tasks, you can again use 'request_planning' to add new tasks and continue the cycle.\n\nThe critical point is to always wait for user approval after completing each task and after all tasks are done, wait for request completion approval. Do not proceed automatically.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "originalRequest": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 2000
+            },
+            "splitDetails": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 2000
+            },
+            "tasks": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 50,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 120
+                  },
+                  "description": {
+                    "type": "string",
+                    "minLength": 5,
+                    "maxLength": 2000
+                  }
+                },
+                "required": [
+                  "title",
+                  "description"
+                ]
+              }
+            }
+          },
+          "required": [
+            "originalRequest",
+            "splitDetails",
+            "tasks"
+          ]
+        }
+      },
+      {
+        "name": "e54174__get_next_task",
+        "description": "Given a 'requestId', return the next pending task (not done yet). If all tasks are completed, it will indicate that no more tasks are left and that you must wait for the request completion approval.\n\nA progress table showing the current status of all tasks will be displayed with each response.\n\nIf the same task is returned again or if no new task is provided after a task was marked as done but not yet approved, you MUST NOT proceed. In such a scenario, you must prompt the user for approval via 'approve_task_completion' before calling 'get_next_task' again. Do not skip the user's approval step.\nIn other words:\n- After calling 'mark_task_done', do not call 'get_next_task' again until 'approve_task_completion' is called by the user.\n- If 'get_next_task' returns 'all_tasks_done', it means all tasks have been completed. At this point, you must not start a new request or do anything else until the user decides to 'approve_request_completion' or possibly add more tasks via 'request_planning'.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "requestId"
+          ]
+        }
+      },
+      {
+        "name": "e54174__mark_task_done",
+        "description": "Mark a given task as done after you've completed it. Provide 'requestId' and 'taskId', and optionally 'completedDetails'.\n\nAfter marking a task as done, a progress table will be displayed showing the updated status of all tasks.\n\nAfter this, DO NOT proceed to 'get_next_task' again until the user has explicitly approved this completed task using 'approve_task_completion'.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "string"
+            },
+            "taskId": {
+              "type": "string"
+            },
+            "completedDetails": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "requestId",
+            "taskId"
+          ]
+        }
+      },
+      {
+        "name": "e54174__approve_task_completion",
+        "description": "Once the assistant has marked a task as done using 'mark_task_done', the user must call this tool to approve that the task is genuinely completed. Only after this approval can you proceed to 'get_next_task' to move on.\n\nA progress table will be displayed before requesting approval, showing the current status of all tasks.\n\nIf the user does not approve, do not call 'get_next_task'. Instead, the user may request changes, or even re-plan tasks by using 'request_planning' again.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "string"
+            },
+            "taskId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "requestId",
+            "taskId"
+          ]
+        }
+      },
+      {
+        "name": "e54174__approve_request_completion",
+        "description": "After all tasks are done and approved, this tool finalizes the entire request. The user must call this to confirm that the request is fully completed.\n\nA progress table showing the final status of all tasks will be displayed before requesting final approval.\n\nIf not approved, the user can add new tasks using 'request_planning' and continue the process.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "requestId"
+          ]
+        }
+      },
+      {
+        "name": "e54174__open_task_details",
+        "description": "Get details of a specific task by 'taskId'. This is for inspecting task information at any point.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "taskId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "taskId"
+          ]
+        }
+      },
+      {
+        "name": "e54174__list_requests",
+        "description": "List all requests with their basic information and summary of tasks. This provides a quick overview of all requests in the system.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "e54174__add_tasks_to_request",
+        "description": "Add new tasks to an existing request. This allows extending a request with additional tasks.\n\nA progress table will be displayed showing all tasks including the newly added ones.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "string"
+            },
+            "tasks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "title",
+                  "description"
+                ]
+              }
+            }
+          },
+          "required": [
+            "requestId",
+            "tasks"
+          ]
+        }
+      },
+      {
+        "name": "e54174__update_task",
+        "description": "Update an existing task's title and/or description. Only uncompleted tasks can be updated.\n\nA progress table will be displayed showing the updated task information.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "string"
+            },
+            "taskId": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "requestId",
+            "taskId"
+          ]
+        }
+      },
+      {
+        "name": "e54174__delete_task",
+        "description": "Delete a specific task from a request. Only uncompleted tasks can be deleted.\n\nA progress table will be displayed showing the remaining tasks after deletion.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "string"
+            },
+            "taskId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "requestId",
+            "taskId"
+          ]
+        }
+      }
+    ],
+    "routing": {
+      "e54174__request_planning": [
+        "@kazuph/mcp-taskmanager",
+        "request_planning"
+      ],
+      "e54174__get_next_task": [
+        "@kazuph/mcp-taskmanager",
+        "get_next_task"
+      ],
+      "e54174__mark_task_done": [
+        "@kazuph/mcp-taskmanager",
+        "mark_task_done"
+      ],
+      "e54174__approve_task_completion": [
+        "@kazuph/mcp-taskmanager",
+        "approve_task_completion"
+      ],
+      "e54174__approve_request_completion": [
+        "@kazuph/mcp-taskmanager",
+        "approve_request_completion"
+      ],
+      "e54174__open_task_details": [
+        "@kazuph/mcp-taskmanager",
+        "open_task_details"
+      ],
+      "e54174__list_requests": [
+        "@kazuph/mcp-taskmanager",
+        "list_requests"
+      ],
+      "e54174__add_tasks_to_request": [
+        "@kazuph/mcp-taskmanager",
+        "add_tasks_to_request"
+      ],
+      "e54174__update_task": [
+        "@kazuph/mcp-taskmanager",
+        "update_task"
+      ],
+      "e54174__delete_task": [
+        "@kazuph/mcp-taskmanager",
+        "delete_task"
+      ]
+    }
+  },
+  "time-mcp": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "405458__current_time",
+        "description": "Get the current date and time.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "format": {
+              "default": "YYYY-MM-DD HH:mm:ss",
+              "type": "string",
+              "enum": [
+                "h:mm A",
+                "h:mm:ss A",
+                "YYYY-MM-DD HH:mm:ss",
+                "YYYY-MM-DD",
+                "YYYY-MM",
+                "MM/DD/YYYY",
+                "MM/DD/YY",
+                "YYYY/MM/DD",
+                "YYYY/MM"
+              ]
+            },
+            "timezone": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "name": "405458__relative_time",
+        "description": "Get the relative time from now.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "time"
+          ]
+        }
+      },
+      {
+        "name": "405458__days_in_month",
+        "description": "Get the number of days in a month. If no date is provided, get the number of days in the current month.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "name": "405458__get_timestamp",
+        "description": "Get the timestamp for the time.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "time": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "name": "405458__convert_time",
+        "description": "Convert time between timezones.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "sourceTimezone": {
+              "type": "string"
+            },
+            "targetTimezone": {
+              "type": "string"
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sourceTimezone",
+            "targetTimezone",
+            "time"
+          ]
+        }
+      },
+      {
+        "name": "405458__get_week_year",
+        "description": "Get the week and isoWeek of the year.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    ],
+    "routing": {
+      "405458__current_time": [
+        "time-mcp",
+        "current_time"
+      ],
+      "405458__relative_time": [
+        "time-mcp",
+        "relative_time"
+      ],
+      "405458__days_in_month": [
+        "time-mcp",
+        "days_in_month"
+      ],
+      "405458__get_timestamp": [
+        "time-mcp",
+        "get_timestamp"
+      ],
+      "405458__convert_time": [
+        "time-mcp",
+        "convert_time"
+      ],
+      "405458__get_week_year": [
+        "time-mcp",
+        "get_week_year"
+      ]
+    }
+  },
+  "mcp-sequentialthinking-tools": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "d16339__sequentialthinking_tools",
+        "description": "A detailed tool for dynamic and reflective problem-solving through thoughts.\nThis tool helps analyze problems through a flexible thinking process that can adapt and evolve.\nEach thought can build on, question, or revise previous insights as understanding deepens.\n\nIMPORTANT: This server facilitates sequential thinking with MCP tool coordination. The LLM analyzes available tools and their descriptions to make intelligent recommendations, which are then tracked and organized by this server.\n\nWhen to use this tool:\n- Breaking down complex problems into steps\n- Planning and design with room for revision\n- Analysis that might need course correction\n- Problems where the full scope might not be clear initially\n- Problems that require a multi-step solution\n- Tasks that need to maintain context over multiple steps\n- Situations where irrelevant information needs to be filtered out\n- When you need guidance on which tools to use and in what order\n\nKey features:\n- You can adjust total_thoughts up or down as you progress\n- You can question or revise previous thoughts\n- You can add more thoughts even after reaching what seemed like the end\n- You can express uncertainty and explore alternative approaches\n- Not every thought needs to build linearly - you can branch or backtrack\n- Generates a solution hypothesis\n- Verifies the hypothesis based on the Chain of Thought steps\n- Recommends appropriate tools for each step\n- Provides rationale for tool recommendations\n- Suggests tool execution order and parameters\n- Tracks previous recommendations and remaining steps\n\nParameters explained:\n- available_mcp_tools: Array of MCP tool names that are available for use (e.g., [\"mcp-omnisearch\", \"mcp-turso-cloud\"])\n- thought: Your current thinking step, which can include:\n* Regular analytical steps\n* Revisions of previous thoughts\n* Questions about previous decisions\n* Realizations about needing more analysis\n* Changes in approach\n* Hypothesis generation\n* Hypothesis verification\n* Tool recommendations and rationale\n- next_thought_needed: True if you need more thinking, even if at what seemed like the end\n- thought_number: Current number in sequence (can go beyond initial total if needed)\n- total_thoughts: Current estimate of thoughts needed (can be adjusted up/down)\n- is_revision: A boolean indicating if this thought revises previous thinking\n- revises_thought: If is_revision is true, which thought number is being reconsidered\n- branch_from_thought: If branching, which thought number is the branching point\n- branch_id: Identifier for the current branch (if any)\n- needs_more_thoughts: If reaching end but realizing more thoughts needed\n- current_step: Current step recommendation, including:\n* step_description: What needs to be done\n* recommended_tools: Tools recommended for this step\n* expected_outcome: What to expect from this step\n* next_step_conditions: Conditions to consider for the next step\n- previous_steps: Steps already recommended\n- remaining_steps: High-level descriptions of upcoming steps\n\nYou should:\n1. Start with an initial estimate of needed thoughts, but be ready to adjust\n2. Feel free to question or revise previous thoughts\n3. Don't hesitate to add more thoughts if needed, even at the \"end\"\n4. Express uncertainty when present\n5. Mark thoughts that revise previous thinking or branch into new paths\n6. Ignore information that is irrelevant to the current step\n7. Generate a solution hypothesis when appropriate\n8. Verify the hypothesis based on the Chain of Thought steps\n9. Consider available tools that could help with the current step\n10. Provide clear rationale for tool recommendations\n11. Suggest specific tool parameters when appropriate\n12. Consider alternative tools for each step\n13. Track progress through the recommended steps\n14. Provide a single, ideally correct answer as the final output\n15. Only set next_thought_needed to false when truly done and a satisfactory answer is reached",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "available_mcp_tools": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Array of MCP tool names available for use (e.g., [\"mcp-omnisearch\", \"mcp-turso-cloud\"])"
+            },
+            "thought": {
+              "type": "string",
+              "description": "Your current thinking step"
+            },
+            "next_thought_needed": {
+              "type": "boolean",
+              "description": "Whether another thought step is needed"
+            },
+            "thought_number": {
+              "type": "number",
+              "minimum": 1,
+              "description": "Current thought number"
+            },
+            "total_thoughts": {
+              "type": "number",
+              "minimum": 1,
+              "description": "Estimated total thoughts needed"
+            },
+            "is_revision": {
+              "type": "boolean",
+              "description": "Whether this revises previous thinking"
+            },
+            "revises_thought": {
+              "type": "number",
+              "minimum": 1,
+              "description": "Which thought is being reconsidered"
+            },
+            "branch_from_thought": {
+              "type": "number",
+              "minimum": 1,
+              "description": "Branching point thought number"
+            },
+            "branch_id": {
+              "type": "string",
+              "description": "Branch identifier"
+            },
+            "needs_more_thoughts": {
+              "type": "boolean",
+              "description": "If more thoughts are needed"
+            },
+            "current_step": {
+              "type": "object",
+              "properties": {
+                "step_description": {
+                  "type": "string",
+                  "description": "What needs to be done"
+                },
+                "recommended_tools": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "tool_name": {
+                        "type": "string",
+                        "description": "Name of the tool being recommended"
+                      },
+                      "confidence": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "0-1 indicating confidence in recommendation"
+                      },
+                      "rationale": {
+                        "type": "string",
+                        "description": "Why this tool is recommended"
+                      },
+                      "priority": {
+                        "type": "number",
+                        "description": "Order in the recommendation sequence"
+                      },
+                      "suggested_inputs": {
+                        "type": "object",
+                        "propertyNames": {
+                          "type": "string"
+                        },
+                        "additionalProperties": {},
+                        "description": "Optional suggested parameters"
+                      },
+                      "alternatives": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Alternative tools that could be used"
+                      }
+                    },
+                    "required": [
+                      "tool_name",
+                      "confidence",
+                      "rationale",
+                      "priority"
+                    ]
+                  },
+                  "description": "Tools recommended for this step"
+                },
+                "expected_outcome": {
+                  "type": "string",
+                  "description": "What to expect from this step"
+                },
+                "next_step_conditions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Conditions to consider for the next step"
+                }
+              },
+              "required": [
+                "step_description",
+                "recommended_tools",
+                "expected_outcome"
+              ],
+              "description": "Current step recommendation"
+            },
+            "previous_steps": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "step_description": {
+                    "type": "string",
+                    "description": "What needs to be done"
+                  },
+                  "recommended_tools": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "tool_name": {
+                          "type": "string",
+                          "description": "Name of the tool being recommended"
+                        },
+                        "confidence": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1,
+                          "description": "0-1 indicating confidence in recommendation"
+                        },
+                        "rationale": {
+                          "type": "string",
+                          "description": "Why this tool is recommended"
+                        },
+                        "priority": {
+                          "type": "number",
+                          "description": "Order in the recommendation sequence"
+                        },
+                        "suggested_inputs": {
+                          "type": "object",
+                          "propertyNames": {
+                            "type": "string"
+                          },
+                          "additionalProperties": {},
+                          "description": "Optional suggested parameters"
+                        },
+                        "alternatives": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "Alternative tools that could be used"
+                        }
+                      },
+                      "required": [
+                        "tool_name",
+                        "confidence",
+                        "rationale",
+                        "priority"
+                      ]
+                    },
+                    "description": "Tools recommended for this step"
+                  },
+                  "expected_outcome": {
+                    "type": "string",
+                    "description": "What to expect from this step"
+                  },
+                  "next_step_conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Conditions to consider for the next step"
+                  }
+                },
+                "required": [
+                  "step_description",
+                  "recommended_tools",
+                  "expected_outcome"
+                ]
+              },
+              "description": "Steps already recommended"
+            },
+            "remaining_steps": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "High-level descriptions of upcoming steps"
+            },
+            "max_branches": {
+              "type": "number",
+              "minimum": 1,
+              "description": "Maximum number of concurrent branches allowed (default: unlimited)"
+            },
+            "confidence_threshold": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Minimum confidence level (0-1) for tool recommendations (default: 0.0)"
+            },
+            "enable_auto_verification": {
+              "type": "boolean",
+              "description": "Whether to automatically trigger verification after hypothesis generation (default: true)"
+            }
+          },
+          "required": [
+            "available_mcp_tools",
+            "thought",
+            "next_thought_needed",
+            "thought_number",
+            "total_thoughts"
+          ],
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      }
+    ],
+    "routing": {
+      "d16339__sequentialthinking_tools": [
+        "mcp-sequentialthinking-tools",
+        "sequentialthinking_tools"
+      ]
+    }
+  },
+  "@modelcontextprotocol/server-sequential-thinking": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "5a6140__sequentialthinking",
+        "description": "A detailed tool for dynamic and reflective problem-solving through sequential thoughts.\nThis tool helps analyze problems through a flexible thinking process that can adapt and evolve.\nEach thought can build on, question, or revise previous insights as understanding deepens.\n\nWhen to use this tool:\n- Breaking down complex problems into ordered steps\n- Planning and design with room for revision along a single reasoning path\n- Analysis that might need course correction within a linear progression\n- Problems where the full scope might not be clear initially\n- Problems that require a multi-step solution with maintained context\n- Tasks that need to maintain context over multiple sequential steps\n- Situations where irrelevant information needs to be filtered out\n- When you need ONE coherent chain of reasoning rather than exploring multiple paths\n\nFor exploring multiple solution approaches simultaneously, use the parallel-thinking tool instead.\n\nKey features:\n- You can adjust total_thoughts up or down as you progress\n- You can question or revise previous thoughts\n- You can add more thoughts even after reaching what seemed like the end\n- You can express uncertainty and explore alternative approaches\n- Not every thought needs to build linearly - you can branch or backtrack\n- Generates a solution hypothesis\n- Verifies the hypothesis based on the Chain of Thought steps\n- Repeats the process until satisfied\n- Provides a correct answer\n\nParameters explained:\n- thought: Your current thinking step, which can include:\n  * Regular analytical steps\n  * Revisions of previous thoughts\n  * Questions about previous decisions\n  * Realizations about needing more analysis\n  * Changes in approach\n  * Hypothesis generation\n  * Hypothesis verification\n- nextThoughtNeeded: True if you need more thinking, even if at what seemed like the end\n- thoughtNumber: Current number in sequence (can go beyond initial total if needed)\n- totalThoughts: Current estimate of thoughts needed (can be adjusted up/down)\n- isRevision: A boolean indicating if this thought revises previous thinking\n- revisesThought: If is_revision is true, which thought number is being reconsidered\n- branchFromThought: If branching, which thought number is the branching point\n- branchId: Identifier for the current branch (if any)\n- needsMoreThoughts: If reaching end but realizing more thoughts needed\n\nYou should:\n1. Start with an initial estimate of needed thoughts, but be ready to adjust\n2. Feel free to question or revise previous thoughts\n3. Don't hesitate to add more thoughts if needed, even at the \"end\"\n4. Express uncertainty when present\n5. Mark thoughts that revise previous thinking or branch into new paths\n6. Ignore information that is irrelevant to the current step\n7. Generate a solution hypothesis when appropriate\n8. Verify the hypothesis based on the Chain of Thought steps\n9. Repeat the process until satisfied with the solution\n10. Provide a single, ideally correct answer as the final output\n11. Only set nextThoughtNeeded to false when truly done and a satisfactory answer is reached",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "thought": {
+              "type": "string",
+              "description": "Your current thinking step"
+            },
+            "nextThoughtNeeded": {
+              "type": "boolean",
+              "description": "Whether another thought step is needed"
+            },
+            "thoughtNumber": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Current thought number (numeric value, e.g., 1, 2, 3)"
+            },
+            "totalThoughts": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Estimated total thoughts needed (numeric value, e.g., 5, 10)"
+            },
+            "isRevision": {
+              "type": "boolean",
+              "description": "Whether this revises previous thinking"
+            },
+            "revisesThought": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Which thought is being reconsidered"
+            },
+            "branchFromThought": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Branching point thought number"
+            },
+            "branchId": {
+              "type": "string",
+              "description": "Branch identifier"
+            },
+            "needsMoreThoughts": {
+              "type": "boolean",
+              "description": "If more thoughts are needed"
+            }
+          },
+          "required": [
+            "thought",
+            "nextThoughtNeeded",
+            "thoughtNumber",
+            "totalThoughts"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "5a6140__parallel-thinking",
+        "description": "A tool for exploring multiple solution paths or perspectives simultaneously.\nThis tool enables concurrent analysis of different approaches, allowing you to evaluate\nmultiple hypotheses, strategies, or viewpoints before converging on a solution.\n\nWhen to use this tool:\n- Exploring multiple solution strategies simultaneously\n- Comparing different approaches or perspectives\n- Brainstorming where diverse ideas should be developed in parallel\n- Problems with multiple valid solution paths\n- Decision-making that requires evaluating trade-offs between options\n- Creative problem-solving that benefits from divergent thinking\n- Situations where you want to avoid premature commitment to one approach\n\nKey features:\n- Maintain multiple independent reasoning paths\n- Each path can have its own chain of thoughts\n- Paths can be compared, merged, or eliminated\n- Supports convergence when paths lead to similar conclusions\n- Allows switching between paths or creating new ones\n- Final synthesis combines insights from all paths\n\nParameters explained:\n- pathId: Identifier for the current reasoning path (e.g., \"approach_a\", \"strategy_1\")\n- thought: Current thinking step within this path\n- pathNumber: Current path number in sequence\n- totalPaths: Total number of paths being explored\n- thoughtInPath: Which thought number within this specific path\n- pathStatus: Status of this path (\"active\", \"completed\", \"abandoned\", \"merged\")\n- relatedPaths: Other path IDs that relate to or conflict with this one\n- convergenceDetected: Whether this path is converging with others\n- needsNewPath: Whether a new parallel path should be created\n- readyForSynthesis: Whether all paths are ready to be synthesized into a final answer\n\nYou should:\n1. Start by identifying distinct approaches or perspectives to explore\n2. Develop each path independently with its own reasoning chain\n3. Note when paths converge or conflict\n4. Abandon paths that prove unproductive\n5. Create new paths if promising directions emerge\n6. Synthesize insights from all viable paths into a final solution\n7. Only set readyForSynthesis to true when all paths have been adequately explored",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "pathId": {
+              "type": "string",
+              "description": "Identifier for the current reasoning path"
+            },
+            "thought": {
+              "type": "string",
+              "description": "Current thinking step within this path"
+            },
+            "pathNumber": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Current path number"
+            },
+            "totalPaths": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Total number of paths being explored"
+            },
+            "thoughtInPath": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Thought number within this specific path"
+            },
+            "pathStatus": {
+              "type": "string",
+              "enum": [
+                "active",
+                "completed",
+                "abandoned",
+                "merged"
+              ],
+              "description": "Status of this path"
+            },
+            "relatedPaths": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Related or conflicting path IDs"
+            },
+            "convergenceDetected": {
+              "type": "boolean",
+              "description": "Whether converging with other paths"
+            },
+            "needsNewPath": {
+              "type": "boolean",
+              "description": "Whether to create a new parallel path"
+            },
+            "readyForSynthesis": {
+              "type": "boolean",
+              "description": "Whether ready to synthesize all paths"
+            }
+          },
+          "required": [
+            "pathId",
+            "thought",
+            "pathNumber",
+            "totalPaths",
+            "thoughtInPath",
+            "pathStatus",
+            "readyForSynthesis"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      }
+    ],
+    "routing": {
+      "5a6140__sequentialthinking": [
+        "@modelcontextprotocol/server-sequential-thinking",
+        "sequentialthinking"
+      ],
+      "5a6140__parallel-thinking": [
+        "@modelcontextprotocol/server-sequential-thinking",
+        "parallel-thinking"
+      ]
+    }
+  },
+  "@pimzino/agentic-tools-mcp": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "15f157__list_projects",
+        "description": "Discover and overview all your projects with comprehensive details and progress insights. Perfect for getting a bird's-eye view of your work portfolio, tracking project status, and quickly navigating between different initiatives in your workspace with project-specific storage.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            }
+          },
+          "required": [
+            "workingDirectory"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__create_project",
+        "description": "Launch new projects with structured organization, detailed documentation, and optional repository/tag metadata. Establishes a solid foundation for task management with richer setup context for collaboration, categorization, and progress tracking across your development workflow.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "name": {
+              "type": "string",
+              "description": "The name of the new project"
+            },
+            "description": {
+              "type": "string",
+              "description": "A detailed description of the project"
+            },
+            "repoUrl": {
+              "type": "string",
+              "description": "Optional repository URL associated with the project"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Optional tags for categorizing the project"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "name",
+            "description"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__get_project",
+        "description": "Access comprehensive project details including metadata, creation dates, and current status. Essential for project analysis, reporting, and understanding project context when planning tasks or reviewing progress in your development workflow.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the project to retrieve"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__update_project",
+        "description": "Evolve and refine your project information as requirements change and scope develops. Maintain accurate project documentation with flexible updates to names and descriptions, ensuring your project data stays current and meaningful throughout the development lifecycle.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the project to update"
+            },
+            "name": {
+              "type": "string",
+              "description": "New name for the project (optional)"
+            },
+            "description": {
+              "type": "string",
+              "description": "New description for the project (optional)"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__delete_project",
+        "description": "Safely remove completed or obsolete projects from your workspace with built-in confirmation safeguards. Permanently cleans up project data while protecting against accidental deletions, helping maintain an organized and current project portfolio.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the project to delete"
+            },
+            "confirm": {
+              "type": "boolean",
+              "description": "Must be set to true to confirm deletion (safety measure)"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id",
+            "confirm"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__list_tasks",
+        "description": "Explore and organize your task portfolio with intelligent filtering and comprehensive progress tracking. View all tasks across projects or focus on specific project tasks, perfect for sprint planning, progress reviews, and maintaining productivity momentum.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "projectId": {
+              "type": "string",
+              "description": "ID of the project to list tasks for"
+            },
+            "parentId": {
+              "type": "string",
+              "description": "Filter to tasks under this parent (optional)"
+            },
+            "showHierarchy": {
+              "type": "boolean",
+              "description": "Show tasks in hierarchical tree format (default: true)"
+            },
+            "includeCompleted": {
+              "type": "boolean",
+              "description": "Include completed tasks in results (default: true)"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "projectId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__create_task",
+        "description": "Transform project goals into actionable, trackable tasks with advanced features including dependencies, priorities, complexity estimation, and workflow management. Build structured workflows that break down complex projects into manageable components with unlimited hierarchy depth.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "name": {
+              "type": "string",
+              "description": "The name/title of the new task"
+            },
+            "details": {
+              "type": "string",
+              "description": "Detailed description of what the task involves"
+            },
+            "projectId": {
+              "type": "string",
+              "description": "The ID of the project this task belongs to"
+            },
+            "parentId": {
+              "type": "string",
+              "description": "Parent task ID for unlimited nesting (optional - creates top-level task if not specified)"
+            },
+            "dependsOn": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Array of task IDs that must be completed before this task"
+            },
+            "priority": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10,
+              "description": "Task priority level (1-10, where 10 is highest priority)"
+            },
+            "complexity": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10,
+              "description": "Estimated complexity/effort (1-10, where 10 is most complex)"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "in-progress",
+                "blocked",
+                "done"
+              ],
+              "description": "Initial task status (defaults to pending)"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tags for categorization and filtering"
+            },
+            "estimatedHours": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Estimated time to complete in hours"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "name",
+            "details",
+            "projectId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__get_task",
+        "description": "Deep-dive into task specifics with comprehensive details including progress status, creation history, and full context. Essential for task analysis, status reporting, and understanding dependencies when planning work or conducting progress reviews.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the task to retrieve"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__update_task",
+        "description": "Adapt and refine tasks with comprehensive updates including dependencies, priorities, complexity, status, tags, and time tracking. Keep your workflow current and accurate with advanced project management capabilities including unlimited hierarchy movement.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the task to update"
+            },
+            "name": {
+              "type": "string",
+              "description": "New name/title for the task (optional)"
+            },
+            "details": {
+              "type": "string",
+              "description": "New detailed description for the task (optional)"
+            },
+            "completed": {
+              "type": "boolean",
+              "description": "Mark task as completed (true) or incomplete (false) (optional)"
+            },
+            "parentId": {
+              "type": "string",
+              "description": "Updated parent task ID for moving between hierarchy levels (optional - use null/empty to move to top level)"
+            },
+            "dependsOn": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Updated array of task IDs that must be completed before this task"
+            },
+            "priority": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10,
+              "description": "Updated task priority level (1-10, where 10 is highest priority)"
+            },
+            "complexity": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10,
+              "description": "Updated complexity/effort estimate (1-10, where 10 is most complex)"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "in-progress",
+                "blocked",
+                "done"
+              ],
+              "description": "Updated task status"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Updated tags for categorization and filtering"
+            },
+            "estimatedHours": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Updated estimated time to complete in hours"
+            },
+            "actualHours": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Actual time spent on the task in hours"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__delete_task",
+        "description": "Streamline your workflow by safely removing obsolete or completed tasks with built-in confirmation protection. Maintain a clean, focused task environment while preventing accidental data loss through required confirmation safeguards.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the task to delete"
+            },
+            "confirm": {
+              "type": "boolean",
+              "description": "Must be set to true to confirm deletion (safety measure)"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id",
+            "confirm"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__migrate_subtasks",
+        "description": "Migrate existing subtasks to the unified task model. This tool converts all subtasks to tasks with parentId for unlimited nesting depth. Run this once after upgrading to ensure data compatibility.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            }
+          },
+          "required": [
+            "workingDirectory"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__move_task",
+        "description": "Move a task to a different parent in the hierarchy. Set newParentId to move under another task, or leave empty to move to top level. Supports unlimited nesting depth.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "taskId": {
+              "type": "string",
+              "description": "The unique identifier of the task to move"
+            },
+            "newParentId": {
+              "type": "string",
+              "description": "The ID of the new parent task (optional - leave empty for top level)"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "taskId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__list_subtasks",
+        "description": "Navigate your detailed work breakdown with granular subtask visibility and flexible filtering options. Perfect for sprint planning, daily standups, and detailed progress tracking across the complete project hierarchy from high-level goals to specific implementation steps.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "taskId": {
+              "type": "string",
+              "description": "Filter subtasks to only those belonging to this task (optional)"
+            },
+            "projectId": {
+              "type": "string",
+              "description": "Filter subtasks to only those in this project (optional)"
+            }
+          },
+          "required": [
+            "workingDirectory"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__create_subtask",
+        "description": "Break down complex tasks into precise, actionable subtasks with detailed specifications and clear ownership. Enable granular progress tracking and team coordination by decomposing work into manageable, measurable components within your hierarchical project structure.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "name": {
+              "type": "string",
+              "description": "The name/title of the new subtask"
+            },
+            "details": {
+              "type": "string",
+              "description": "Detailed description of what the subtask involves"
+            },
+            "taskId": {
+              "type": "string",
+              "description": "The ID of the parent task this subtask belongs to"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "name",
+            "details",
+            "taskId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__get_subtask",
+        "description": "Examine subtask details with comprehensive context including parent task relationships, progress status, and implementation specifics. Essential for detailed work planning, progress assessment, and understanding the complete scope of granular work items.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the subtask to retrieve"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__update_subtask",
+        "description": "Fine-tune subtask specifications and track completion progress with flexible updates to names, descriptions, and status. Maintain accurate, up-to-date work records that reflect evolving requirements and real-time progress in your detailed project execution.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the subtask to update"
+            },
+            "name": {
+              "type": "string",
+              "description": "New name/title for the subtask (optional)"
+            },
+            "details": {
+              "type": "string",
+              "description": "New detailed description for the subtask (optional)"
+            },
+            "completed": {
+              "type": "boolean",
+              "description": "Mark subtask as completed (true) or incomplete (false) (optional)"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__delete_subtask",
+        "description": "Clean up your detailed work breakdown by safely removing completed or obsolete subtasks with confirmation safeguards. Maintain focus on current priorities while preserving data integrity through required confirmation protocols.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the subtask to delete"
+            },
+            "confirm": {
+              "type": "boolean",
+              "description": "Must be set to true to confirm deletion (safety measure)"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id",
+            "confirm"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__create_memory",
+        "description": "Capture and preserve important information, insights, or context as searchable memories with intelligent file-based storage. Ideal for building a knowledge base of user preferences, technical decisions, project context, or any information you want to remember and retrieve later with organized categorization.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "title": {
+              "type": "string",
+              "description": "Short title for the memory (max 50 characters for better file organization)"
+            },
+            "content": {
+              "type": "string",
+              "description": "Detailed memory content/text (no character limit)"
+            },
+            "metadata": {
+              "type": "object",
+              "additionalProperties": {},
+              "description": "Optional metadata as key-value pairs for additional context"
+            },
+            "category": {
+              "type": "string",
+              "description": "Optional category to organize memories (e.g., \"user_preferences\", \"project_context\")"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "title",
+            "content"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__search_memories",
+        "description": "Intelligently search through your stored memories using advanced text matching algorithms to quickly find relevant information. Features multi-field search across titles, content, and metadata with customizable relevance scoring - perfect for retrieving past decisions, preferences, or contextual information when you need it most.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "query": {
+              "type": "string",
+              "description": "The search query text to find matching memories"
+            },
+            "limit": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 100,
+              "description": "Maximum number of results to return (default: 10)"
+            },
+            "threshold": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Minimum relevance threshold 0-1 (default: 0.3)"
+            },
+            "category": {
+              "type": "string",
+              "description": "Filter results to memories in this specific category"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "query"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__get_memory",
+        "description": "Access comprehensive memory details including full content, metadata, creation history, and categorization. Essential for reviewing stored knowledge, understanding context, and retrieving complete information when making decisions or referencing past insights.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the memory to retrieve"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__list_memories",
+        "description": "Browse and explore your knowledge repository with organized memory listings and flexible category filtering. Perfect for reviewing stored information, discovering patterns in your knowledge base, and maintaining awareness of your accumulated insights and decisions.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "category": {
+              "type": "string",
+              "description": "Filter to memories in this specific category"
+            },
+            "limit": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 1000,
+              "description": "Maximum number of memories to return (default: 50)"
+            }
+          },
+          "required": [
+            "workingDirectory"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__update_memory",
+        "description": "Evolve and refine your stored knowledge with flexible updates to content, categorization, and metadata. Keep your memory repository current and accurate as understanding deepens, ensuring your knowledge base remains a reliable source of up-to-date insights and decisions.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the memory to update"
+            },
+            "title": {
+              "type": "string",
+              "description": "New title for the memory (max 50 characters for better file organization)"
+            },
+            "content": {
+              "type": "string",
+              "description": "New detailed content for the memory (no character limit)"
+            },
+            "metadata": {
+              "type": "object",
+              "additionalProperties": {},
+              "description": "New metadata as key-value pairs (replaces existing metadata)"
+            },
+            "category": {
+              "type": "string",
+              "description": "New category for organizing the memory"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__delete_memory",
+        "description": "Safely remove outdated or irrelevant memories from your knowledge repository with built-in confirmation safeguards. Maintain a clean, focused memory collection while protecting against accidental loss of valuable information through required confirmation protocols.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "id": {
+              "type": "string",
+              "description": "The unique identifier of the memory to delete"
+            },
+            "confirm": {
+              "type": "boolean",
+              "description": "Must be set to true to confirm deletion (safety measure)"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "id",
+            "confirm"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__parse_prd",
+        "description": "Parse a Product Requirements Document (PRD) and automatically generate structured tasks with dependencies, priorities, and complexity estimates. Transform high-level requirements into actionable task breakdowns with intelligent analysis.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "projectId": {
+              "type": "string",
+              "description": "ID of the project to add tasks to"
+            },
+            "prdContent": {
+              "type": "string",
+              "description": "Content of the Product Requirements Document to parse"
+            },
+            "generateSubtasks": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to generate subtasks for complex tasks"
+            },
+            "defaultPriority": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10,
+              "default": 5,
+              "description": "Default priority for generated tasks (1-10)"
+            },
+            "estimateComplexity": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to estimate complexity for tasks"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "projectId",
+            "prdContent"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__get_next_task_recommendation",
+        "description": "Get intelligent recommendations for the next task to work on based on dependencies, priorities, complexity, and current project status. Smart task recommendation engine for optimal workflow management and productivity.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "projectId": {
+              "type": "string",
+              "description": "Filter recommendations to a specific project"
+            },
+            "maxRecommendations": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10,
+              "default": 3,
+              "description": "Maximum number of task recommendations to return"
+            },
+            "considerComplexity": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to factor in task complexity for recommendations"
+            },
+            "preferredTags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Preferred task tags to prioritize in recommendations"
+            },
+            "excludeBlocked": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to exclude blocked tasks from recommendations"
+            }
+          },
+          "required": [
+            "workingDirectory"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__analyze_task_complexity",
+        "description": "Analyze task complexity and suggest breaking down overly complex tasks into smaller, manageable subtasks. Intelligent complexity analysis to identify tasks that should be split for better productivity and progress tracking.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "taskId": {
+              "type": "string",
+              "description": "Specific task ID to analyze (if not provided, analyzes all tasks)"
+            },
+            "projectId": {
+              "type": "string",
+              "description": "Filter analysis to a specific project"
+            },
+            "complexityThreshold": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10,
+              "default": 7,
+              "description": "Complexity threshold above which tasks should be broken down"
+            },
+            "suggestBreakdown": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to suggest specific task breakdowns"
+            },
+            "autoCreateSubtasks": {
+              "type": "boolean",
+              "default": false,
+              "description": "Whether to automatically create suggested subtasks"
+            }
+          },
+          "required": [
+            "workingDirectory"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__infer_task_progress",
+        "description": "Analyze the codebase to infer which tasks appear to be completed based on code changes, file creation, and implementation evidence. Intelligent progress inference to automatically track task completion from code analysis.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "projectId": {
+              "type": "string",
+              "description": "Filter analysis to a specific project"
+            },
+            "scanDepth": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 5,
+              "default": 3,
+              "description": "Directory depth to scan for code files"
+            },
+            "fileExtensions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": [
+                ".js",
+                ".ts",
+                ".jsx",
+                ".tsx",
+                ".py",
+                ".java",
+                ".cs",
+                ".go",
+                ".rs"
+              ],
+              "description": "File extensions to analyze"
+            },
+            "autoUpdateTasks": {
+              "type": "boolean",
+              "default": false,
+              "description": "Whether to automatically update task status based on inference"
+            },
+            "confidenceThreshold": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.7,
+              "description": "Confidence threshold for auto-updating tasks (0-1)"
+            }
+          },
+          "required": [
+            "workingDirectory"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__research_task",
+        "description": "Guide the AI agent to perform comprehensive web research for a task, with intelligent research suggestions and automatic memory storage of findings. Combines web research capabilities with local knowledge caching for optimal research workflow.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "taskId": {
+              "type": "string",
+              "description": "ID of the task to research"
+            },
+            "researchAreas": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Specific areas to research (auto-generated if not provided)"
+            },
+            "saveToMemories": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to save research findings to memories"
+            },
+            "checkExistingMemories": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to check existing memories first"
+            },
+            "researchDepth": {
+              "type": "string",
+              "enum": [
+                "quick",
+                "standard",
+                "comprehensive"
+              ],
+              "default": "standard",
+              "description": "Depth of research to perform"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "taskId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "15f157__generate_research_queries",
+        "description": "Generate intelligent, targeted web search queries for task research. Provides structured search strategies to help AI agents find the most relevant information efficiently with optimized search terms and techniques.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workingDirectory": {
+              "type": "string",
+              "description": "The full absolute path to the working directory where data is stored. MUST be an absolute path, never relative. Windows: \"C:\\Users\\username\\project\" or \"D:\\projects\\my-app\". Unix/Linux/macOS: \"/home/username/project\" or \"/Users/username/project\". Do NOT use: \".\", \"..\", \"~\", \"./folder\", \"../folder\" or any relative paths. Ensure the path exists and is accessible before calling this tool. NOTE: When server is started with --claude flag, this parameter is ignored and a global user directory is used instead."
+            },
+            "taskId": {
+              "type": "string",
+              "description": "ID of the task to generate research queries for"
+            },
+            "queryTypes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "implementation",
+                  "best_practices",
+                  "troubleshooting",
+                  "alternatives",
+                  "performance",
+                  "security",
+                  "examples",
+                  "tools"
+                ]
+              },
+              "description": "Types of queries to generate"
+            },
+            "includeAdvanced": {
+              "type": "boolean",
+              "default": false,
+              "description": "Include advanced search operators and techniques"
+            },
+            "targetYear": {
+              "type": "number",
+              "default": 2026,
+              "description": "Target year for recent information (default: current year)"
+            }
+          },
+          "required": [
+            "workingDirectory",
+            "taskId"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      }
+    ],
+    "routing": {
+      "15f157__list_projects": [
+        "@pimzino/agentic-tools-mcp",
+        "list_projects"
+      ],
+      "15f157__create_project": [
+        "@pimzino/agentic-tools-mcp",
+        "create_project"
+      ],
+      "15f157__get_project": [
+        "@pimzino/agentic-tools-mcp",
+        "get_project"
+      ],
+      "15f157__update_project": [
+        "@pimzino/agentic-tools-mcp",
+        "update_project"
+      ],
+      "15f157__delete_project": [
+        "@pimzino/agentic-tools-mcp",
+        "delete_project"
+      ],
+      "15f157__list_tasks": [
+        "@pimzino/agentic-tools-mcp",
+        "list_tasks"
+      ],
+      "15f157__create_task": [
+        "@pimzino/agentic-tools-mcp",
+        "create_task"
+      ],
+      "15f157__get_task": [
+        "@pimzino/agentic-tools-mcp",
+        "get_task"
+      ],
+      "15f157__update_task": [
+        "@pimzino/agentic-tools-mcp",
+        "update_task"
+      ],
+      "15f157__delete_task": [
+        "@pimzino/agentic-tools-mcp",
+        "delete_task"
+      ],
+      "15f157__migrate_subtasks": [
+        "@pimzino/agentic-tools-mcp",
+        "migrate_subtasks"
+      ],
+      "15f157__move_task": [
+        "@pimzino/agentic-tools-mcp",
+        "move_task"
+      ],
+      "15f157__list_subtasks": [
+        "@pimzino/agentic-tools-mcp",
+        "list_subtasks"
+      ],
+      "15f157__create_subtask": [
+        "@pimzino/agentic-tools-mcp",
+        "create_subtask"
+      ],
+      "15f157__get_subtask": [
+        "@pimzino/agentic-tools-mcp",
+        "get_subtask"
+      ],
+      "15f157__update_subtask": [
+        "@pimzino/agentic-tools-mcp",
+        "update_subtask"
+      ],
+      "15f157__delete_subtask": [
+        "@pimzino/agentic-tools-mcp",
+        "delete_subtask"
+      ],
+      "15f157__create_memory": [
+        "@pimzino/agentic-tools-mcp",
+        "create_memory"
+      ],
+      "15f157__search_memories": [
+        "@pimzino/agentic-tools-mcp",
+        "search_memories"
+      ],
+      "15f157__get_memory": [
+        "@pimzino/agentic-tools-mcp",
+        "get_memory"
+      ],
+      "15f157__list_memories": [
+        "@pimzino/agentic-tools-mcp",
+        "list_memories"
+      ],
+      "15f157__update_memory": [
+        "@pimzino/agentic-tools-mcp",
+        "update_memory"
+      ],
+      "15f157__delete_memory": [
+        "@pimzino/agentic-tools-mcp",
+        "delete_memory"
+      ],
+      "15f157__parse_prd": [
+        "@pimzino/agentic-tools-mcp",
+        "parse_prd"
+      ],
+      "15f157__get_next_task_recommendation": [
+        "@pimzino/agentic-tools-mcp",
+        "get_next_task_recommendation"
+      ],
+      "15f157__analyze_task_complexity": [
+        "@pimzino/agentic-tools-mcp",
+        "analyze_task_complexity"
+      ],
+      "15f157__infer_task_progress": [
+        "@pimzino/agentic-tools-mcp",
+        "infer_task_progress"
+      ],
+      "15f157__research_task": [
+        "@pimzino/agentic-tools-mcp",
+        "research_task"
+      ],
+      "15f157__generate_research_queries": [
+        "@pimzino/agentic-tools-mcp",
+        "generate_research_queries"
+      ]
+    }
+  },
+  "@modelcontextprotocol/server-memory": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "30e6e7__create_entities",
+        "description": "Create multiple new entities in the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "entities": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the entity"
+                  },
+                  "entityType": {
+                    "type": "string",
+                    "description": "The type of the entity"
+                  },
+                  "observations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "An array of observation contents associated with the entity"
+                  }
+                },
+                "required": [
+                  "name",
+                  "entityType",
+                  "observations"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "entities"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "30e6e7__create_relations",
+        "description": "Create multiple new relations between entities in the knowledge graph. Relations should be in active voice",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "relations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation starts"
+                  },
+                  "to": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation ends"
+                  },
+                  "relationType": {
+                    "type": "string",
+                    "description": "The type of the relation"
+                  }
+                },
+                "required": [
+                  "from",
+                  "to",
+                  "relationType"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "skipDuplicates": {
+              "type": "boolean",
+              "description": "Whether to skip relations that already exist. Defaults to true"
+            },
+            "requireExistingEntities": {
+              "type": "boolean",
+              "description": "Whether to require that both relation endpoints already exist as entities. Defaults to false"
+            }
+          },
+          "required": [
+            "relations"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "30e6e7__add_observations",
+        "description": "Add new observations to existing entities in the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "observations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "entityName": {
+                    "type": "string",
+                    "description": "The name of the entity to add the observations to"
+                  },
+                  "contents": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "An array of observation contents to add"
+                  }
+                },
+                "required": [
+                  "entityName",
+                  "contents"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "observations"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "30e6e7__delete_entities",
+        "description": "Delete multiple entities and their associated relations from the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "entityNames": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "An array of entity names to delete"
+            }
+          },
+          "required": [
+            "entityNames"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "30e6e7__delete_observations",
+        "description": "Delete specific observations from entities in the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "deletions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "entityName": {
+                    "type": "string",
+                    "description": "The name of the entity containing the observations"
+                  },
+                  "observations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "An array of observations to delete"
+                  }
+                },
+                "required": [
+                  "entityName",
+                  "observations"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "deletions"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "30e6e7__delete_relations",
+        "description": "Delete multiple relations from the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "relations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation starts"
+                  },
+                  "to": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation ends"
+                  },
+                  "relationType": {
+                    "type": "string",
+                    "description": "The type of the relation"
+                  }
+                },
+                "required": [
+                  "from",
+                  "to",
+                  "relationType"
+                ],
+                "additionalProperties": false
+              },
+              "description": "An array of relations to delete"
+            }
+          },
+          "required": [
+            "relations"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "30e6e7__read_graph",
+        "description": "Read the entire knowledge graph",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "30e6e7__search_nodes",
+        "description": "Search for nodes in the knowledge graph based on a query",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The search query to match against entity names, types, and observation content"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      },
+      {
+        "name": "30e6e7__open_nodes",
+        "description": "Open specific nodes in the knowledge graph by their names",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "names": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "An array of entity names to retrieve"
+            }
+          },
+          "required": [
+            "names"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        }
+      }
+    ],
+    "routing": {
+      "30e6e7__create_entities": [
+        "@modelcontextprotocol/server-memory",
+        "create_entities"
+      ],
+      "30e6e7__create_relations": [
+        "@modelcontextprotocol/server-memory",
+        "create_relations"
+      ],
+      "30e6e7__add_observations": [
+        "@modelcontextprotocol/server-memory",
+        "add_observations"
+      ],
+      "30e6e7__delete_entities": [
+        "@modelcontextprotocol/server-memory",
+        "delete_entities"
+      ],
+      "30e6e7__delete_observations": [
+        "@modelcontextprotocol/server-memory",
+        "delete_observations"
+      ],
+      "30e6e7__delete_relations": [
+        "@modelcontextprotocol/server-memory",
+        "delete_relations"
+      ],
+      "30e6e7__read_graph": [
+        "@modelcontextprotocol/server-memory",
+        "read_graph"
+      ],
+      "30e6e7__search_nodes": [
+        "@modelcontextprotocol/server-memory",
+        "search_nodes"
+      ],
+      "30e6e7__open_nodes": [
+        "@modelcontextprotocol/server-memory",
+        "open_nodes"
+      ]
+    }
+  },
+  "@itseasy21/mcp-knowledge-graph": {
+    "status": "ok",
+    "tools": [
+      {
+        "name": "0b5258__create_entities",
+        "description": "Create multiple new entities in the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "entities": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the entity"
+                  },
+                  "entityType": {
+                    "type": "string",
+                    "description": "The type of the entity"
+                  },
+                  "observations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "An array of observation contents associated with the entity"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            },
+            "allowOverwrite": {
+              "type": "boolean",
+              "description": "When true, existing entities with the same name are updated instead of skipped"
+            },
+            "defaultEntityType": {
+              "type": "string",
+              "description": "Fallback entity type for entities that omit entityType"
+            },
+            "defaultObservations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Fallback observations for entities that omit observations"
+            }
+          },
+          "required": [
+            "entities"
+          ]
+        }
+      },
+      {
+        "name": "0b5258__create_relations",
+        "description": "Create multiple new relations between entities in the knowledge graph. Relations should be in active voice",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "relations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation starts"
+                  },
+                  "to": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation ends"
+                  },
+                  "relationType": {
+                    "type": "string",
+                    "description": "The type of the relation"
+                  }
+                },
+                "required": [
+                  "from",
+                  "to",
+                  "relationType"
+                ]
+              }
+            }
+          },
+          "required": [
+            "relations"
+          ]
+        }
+      },
+      {
+        "name": "0b5258__add_observations",
+        "description": "Add new observations to existing entities in the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "observations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "entityName": {
+                    "type": "string",
+                    "description": "The name of the entity to add the observations to"
+                  },
+                  "contents": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "An array of observation contents to add"
+                  }
+                },
+                "required": [
+                  "entityName",
+                  "contents"
+                ]
+              }
+            }
+          },
+          "required": [
+            "observations"
+          ]
+        }
+      },
+      {
+        "name": "0b5258__delete_entities",
+        "description": "Delete multiple entities and their associated relations from the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "entityNames": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "An array of entity names to delete"
+            }
+          },
+          "required": [
+            "entityNames"
+          ]
+        }
+      },
+      {
+        "name": "0b5258__delete_observations",
+        "description": "Delete specific observations from entities in the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "deletions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "entityName": {
+                    "type": "string",
+                    "description": "The name of the entity containing the observations"
+                  },
+                  "observations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "An array of observations to delete"
+                  }
+                },
+                "required": [
+                  "entityName",
+                  "observations"
+                ]
+              }
+            }
+          },
+          "required": [
+            "deletions"
+          ]
+        }
+      },
+      {
+        "name": "0b5258__delete_relations",
+        "description": "Delete multiple relations from the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "relations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation starts"
+                  },
+                  "to": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation ends"
+                  },
+                  "relationType": {
+                    "type": "string",
+                    "description": "The type of the relation"
+                  }
+                },
+                "required": [
+                  "from",
+                  "to",
+                  "relationType"
+                ]
+              },
+              "description": "An array of relations to delete"
+            }
+          },
+          "required": [
+            "relations"
+          ]
+        }
+      },
+      {
+        "name": "0b5258__read_graph",
+        "description": "Read the entire knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "0b5258__search_nodes",
+        "description": "Search for nodes in the knowledge graph based on a query",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The search query to match against entity names, types, and observation content"
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      },
+      {
+        "name": "0b5258__open_nodes",
+        "description": "Open specific nodes in the knowledge graph by their names",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "names": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "An array of entity names to retrieve"
+            }
+          },
+          "required": [
+            "names"
+          ]
+        }
+      },
+      {
+        "name": "0b5258__update_entities",
+        "description": "Update multiple existing entities in the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "entities": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the entity to update"
+                  },
+                  "entityType": {
+                    "type": "string",
+                    "description": "The updated type of the entity"
+                  },
+                  "observations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "The updated array of observation contents"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          },
+          "required": [
+            "entities"
+          ]
+        }
+      },
+      {
+        "name": "0b5258__update_relations",
+        "description": "Update multiple existing relations in the knowledge graph",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "relations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation starts"
+                  },
+                  "to": {
+                    "type": "string",
+                    "description": "The name of the entity where the relation ends"
+                  },
+                  "relationType": {
+                    "type": "string",
+                    "description": "The type of the relation"
+                  }
+                },
+                "required": [
+                  "from",
+                  "to",
+                  "relationType"
+                ]
+              }
+            }
+          },
+          "required": [
+            "relations"
+          ]
+        }
+      }
+    ],
+    "routing": {
+      "0b5258__create_entities": [
+        "@itseasy21/mcp-knowledge-graph",
+        "create_entities"
+      ],
+      "0b5258__create_relations": [
+        "@itseasy21/mcp-knowledge-graph",
+        "create_relations"
+      ],
+      "0b5258__add_observations": [
+        "@itseasy21/mcp-knowledge-graph",
+        "add_observations"
+      ],
+      "0b5258__delete_entities": [
+        "@itseasy21/mcp-knowledge-graph",
+        "delete_entities"
+      ],
+      "0b5258__delete_observations": [
+        "@itseasy21/mcp-knowledge-graph",
+        "delete_observations"
+      ],
+      "0b5258__delete_relations": [
+        "@itseasy21/mcp-knowledge-graph",
+        "delete_relations"
+      ],
+      "0b5258__read_graph": [
+        "@itseasy21/mcp-knowledge-graph",
+        "read_graph"
+      ],
+      "0b5258__search_nodes": [
+        "@itseasy21/mcp-knowledge-graph",
+        "search_nodes"
+      ],
+      "0b5258__open_nodes": [
+        "@itseasy21/mcp-knowledge-graph",
+        "open_nodes"
+      ],
+      "0b5258__update_entities": [
+        "@itseasy21/mcp-knowledge-graph",
+        "update_entities"
+      ],
+      "0b5258__update_relations": [
+        "@itseasy21/mcp-knowledge-graph",
+        "update_relations"
+      ]
+    }
+  }
+}

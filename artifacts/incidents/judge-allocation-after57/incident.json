@@ -1,0 +1,236 @@
+{
+  "recorded_local_time": "2026-10-27T20:18:35.509581",
+  "cause": "HTTP500 decode() failed: bad allocation; backend task3149 at10946 tokens",
+  "completed_scores": [
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\103\\result.json",
+      "sha256": "a7d97712ec51bc926eda72a32ac91071dc05ae83d3e56a92ef11e254fbe20d99"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\105\\result.json",
+      "sha256": "85aea04da7cf7d4856b414bbd2b106378d876b4cde2afcbb4eb9ca9e8b1bf12a"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\113\\result.json",
+      "sha256": "51af87a092611c103b03fabe03a56cc7dc34938583e2b7b27bebd5ddecf1c1a5"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\117\\result.json",
+      "sha256": "e6bd8ed6d339b37603f424e13f2b88fa1ffb49155438737c69946f1e417b59d8"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\139\\result.json",
+      "sha256": "d5f856a43ec580499b3947a0410de2d009bfc804127ddaf74a3a2763b190b6a8"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\267\\result.json",
+      "sha256": "ab29827e95ac3ee1a61e48d9976585f9f10bfd166c72cb50b2aaf7edcdceed31"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\273\\result.json",
+      "sha256": "f4513cb4ad243d12f57adda310719e36179531cde867846c232320875f7ff07a"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\274\\result.json",
+      "sha256": "0b844a1cb2860bc01ec85bdbd9fc2a8248f793b3f38458223d719300f2ac392d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\278\\result.json",
+      "sha256": "286d0489d6de21b08cd315de0b6fb07c7b355551ae3354656d236d0d9b0d07b9"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\28\\result.json",
+      "sha256": "2379eb184c6489428f8c94a35bafceecaae4b073e204bc0af4fd94b8701c7664"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\283\\result.json",
+      "sha256": "c9aad734f27b84d0d5f92dfed53fcc363828c06b4ceae9e7501b98dcbe9f0ac8"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\386\\result.json",
+      "sha256": "12b06a6a21c49cb54cd81be08dfe6caf36ec899584cf72a8f38e43fad8d9f8a2"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\389\\result.json",
+      "sha256": "2ed37240cecf69b1310ec0b72d9c9b424ccef44c8e45d178444fe08a1ca0af76"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\393\\result.json",
+      "sha256": "046df0314370dec8a364a31198e389618526a8f36c3dbee456fdc037c8d61495"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\403\\result.json",
+      "sha256": "e5656feef34bdf08e87d0a24f05a1fb929666c1c5cffdfa9364cc6c8911d7d53"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\411\\result.json",
+      "sha256": "b52b3cd0d4598555e50b786e45e8e0edfc9e319ef7ff8f9e852ed443795cffed"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\416\\result.json",
+      "sha256": "9870d098fda1e9f340578a840bb378ff5c7648b2f4311d97579a5fa913aa4f3b"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\9\\result.json",
+      "sha256": "ef83c4ffe412acf53cac5c70f691f291b7bebaf7bbf9b1910a125e93f2b2bccd"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\103\\result.json",
+      "sha256": "7de8c49043b8f64d7b0ff9f7a9f7d5e7a362a14a11ab68d49e8f0291a683d2f0"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\105\\result.json",
+      "sha256": "93368d84993fb22909e6bdd840b08c5533a2d063965927a0f100806878673e2d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\113\\result.json",
+      "sha256": "31e94de3f1b328d306bdb2fe6edb3e1cc430319e26cdf8f17ee71cb838ab0c41"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\117\\result.json",
+      "sha256": "e5f8b358256f7bd3a8c958678f1c08b4d316f21e4b8fa083ee63c72636603118"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\139\\result.json",
+      "sha256": "b61c271096f8fbdd64066ed693d727750c4a22fdf5311eb958a5ca0ecbf3bae3"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\267\\result.json",
+      "sha256": "1de522478f574a1c07ccdc6f4994827496b97baf744b35ff8c6c16e182cdf803"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\273\\result.json",
+      "sha256": "67fecea19c1e91d2c7a705a3854187ee66d9c889b801f6258459514abd91610d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\274\\result.json",
+      "sha256": "009c9ba2a76c38894c6790422e85cb595182bf10650329da09ec6cff9c04a74d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\278\\result.json",
+      "sha256": "6253834e41d7d94bb442a70ab581fd6964da58639d11860295117a4b69d844f1"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\28\\result.json",
+      "sha256": "bd2d5f471fa39f2dc49a4c75b6a1762dd15bc460d28fe46b1afb2973bd5da996"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\283\\result.json",
+      "sha256": "b75fd3139b9f8c2e754e48497fbc3b44fc7650614b684e12990feb2b6a5acfdb"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\386\\result.json",
+      "sha256": "82e319e3ee829f94eae103041251b2b6ea0f9169ec55cbb891e32c2e802b20b3"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\389\\result.json",
+      "sha256": "ee585afeddbb75c2cd5ab03504c89af0e9956531033a2ee8284043133ffe1f27"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\393\\result.json",
+      "sha256": "17c7008ef20b8a79d31547bcfc46828b6bfab284d0e8c74b835ec127581c769b"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\403\\result.json",
+      "sha256": "77a2a68c01232195b0e51bd41ce2e5c630e6fb293e059b19ade23153aba9d3c3"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\411\\result.json",
+      "sha256": "182083d9cffaf00479456a34fb5c9819c151bbb38f764b46fc745bb91b482f16"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\416\\result.json",
+      "sha256": "1ba648410f745f7845ce4f64a2bc571cdc920394f909632c125f67edad3c800a"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\9\\result.json",
+      "sha256": "d27e0f37ce8a297c0b330dce4a2559aa7aefa3ab117d2faf15d136d99ce24e18"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\103\\result.json",
+      "sha256": "4b4e3e4497cb337e3be8cb49a09d250d950663fe34bdce4ea1283626cc40c8db"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\105\\result.json",
+      "sha256": "8afae8b1784587f0ba116bf2be836459cf2ce6ad802f165cb8de602d12bf79f4"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\113\\result.json",
+      "sha256": "2bce5fc8603775ac10cd5b364aa7c9080877d26c3e2b0ccbe2801b84fb4249ab"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\117\\result.json",
+      "sha256": "251ef8abbd748d3fd1f03fe3658f619f6bb0c546b1e406ef69d8f0f3e7fed9d5"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\139\\result.json",
+      "sha256": "1026b14d3a20456fa12ec692c78a5f55355e82955b67f47ff7d539d3e4280ce3"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\267\\result.json",
+      "sha256": "0c1b5170bb0acca228ae97d79d52131cd9fe5494832c6dcc90f92b9289a3eb1d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\273\\result.json",
+      "sha256": "1333abd4c565821e2e6ea1880a8bb40a49b178dd96f6fbb2a37d5074794e9367"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\274\\result.json",
+      "sha256": "9ba9409dd8fb5bcb1ba10c2c96125d978d3a1f3c6145ab2853a3956463e27155"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\278\\result.json",
+      "sha256": "24a2e388d74858b5d884478245f0849b6b7a615fe6dbf472c46eb71144dffb1c"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\28\\result.json",
+      "sha256": "a8651fa78d988b5395ae127b15afc5c96d81ddeb8347c5c23afc789436cfc483"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\283\\result.json",
+      "sha256": "10c3c656c4e4c2cc4cbb0bf76799f7830b43f134d062ad081f5a91feaca5d93d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\386\\result.json",
+      "sha256": "ea061088b3d9269491420cc885b08820e6550756e5d574a69026be6a2feb1965"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\389\\result.json",
+      "sha256": "58e2dd5794be2cecadff4080ef3439df96cc26c139c2c70be2f62d652af32e55"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\393\\result.json",
+      "sha256": "ddb9d7ca627d09c55b9c8e244299f02555f460ed593773dc46c2d82330fc305f"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\403\\result.json",
+      "sha256": "d0924850495b2c636da702a01f24a49d43e9a3055f351222083a725285d4c631"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\411\\result.json",
+      "sha256": "852235299840b9aea6ec57e621a85b254ed99a5baac172d1b84527ab1dc8c20e"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\416\\result.json",
+      "sha256": "16b3376db052cfa146ce48c16c3e1ba2048fbfee319171d5d0d188cfbad1e34f"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\9\\result.json",
+      "sha256": "77d2fb0f625a07308414a7618f92daca29ac1a91bc81abd05d8461caa2147820"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\no_update\\iter3\\103\\result.json",
+      "sha256": "4d0c7769296e2205ed35aaf7fbdee63f8a06ca58109629ccf118d50ece368e4f"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\no_update\\iter3\\105\\result.json",
+      "sha256": "c2c809e5efc7ce52378b76325239918b696ecfa74ea39bda6329637d90b882ae"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\no_update\\iter3\\113\\result.json",
+      "sha256": "4023a5ec6d807a1ee9efbba3e250cf60767a2dc2d6c4587c44accbd4b33cc082"
+    }
+  ],
+  "recovery": "Restart same configuration, continue unscored records only",
+  "unreturned_request_usage": "Unavailable in client evidence; raw backend log preserved"
+}

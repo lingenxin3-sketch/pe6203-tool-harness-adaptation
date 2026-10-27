@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-27",
+  "pdf": "output\\pdf\\PE6203_Project4_Report.pdf",
+  "pdf_sha256": "4f85b66d9f9ee7b1fc8814b42ec4793e8179bc25f3c24f626571008109ca9796",
+  "pages": 12,
+  "visual_review": "All 12 rendered pages inspected; tables, chart, margins and text readable. A continued table repeats its header.",
+  "main_scored": 162,
+  "ablation_scored": 6,
+  "workflow_scored": 9,
+  "tests_passed": 22,
+  "limits": "Protocol checks are not semantic success or grade guarantees. No external submission performed."
+}

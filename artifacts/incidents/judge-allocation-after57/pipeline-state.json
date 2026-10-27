@@ -1,0 +1,6 @@
+{
+  "pid": 35728,
+  "phase": "failed",
+  "updated_epoch": 1793082565.5665424,
+  "error": "CalledProcessError: Command '['F:\\\\ASUS\\\\Desktop\\\\codex\u6587\u4ef6\u5939\\\\shopee\u81ea\u52a8\u5316\u9009\u54c1\u7cfb\u7edf\\\\pe6203-tool-adaptation\\\\.venv\\\\Scripts\\\\python.exe', 'F:\\\\ASUS\\\\Desktop\\\\codex\u6587\u4ef6\u5939\\\\shopee\u81ea\u52a8\u5316\u9009\u54c1\u7cfb\u7edf\\\\pe6203-tool-adaptation\\\\scripts\\\\judge_with_capacity.py', 'F:\\\\ASUS\\\\Desktop\\\\codex\u6587\u4ef6\u5939\\\\shopee\u81ea\u52a8\u5316\u9009\u54c1\u7cfb\u7edf\\\\pe6203-tool-adaptation\\\\runs\\\\final-v1']' returned non-zero exit status 1."
+}

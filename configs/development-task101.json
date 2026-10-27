@@ -1,0 +1,56 @@
+{
+  "title": "Dependency-aware selective tool knowledge adaptation",
+  "benchmark": "MCPEvol-Bench",
+  "upstream_commit": "888c779a0fe735f612ca62bdd1fdd7c9e6bf8701",
+  "development_ids": [
+    101
+  ],
+  "test_ids": [
+    9,
+    28,
+    103,
+    105,
+    113,
+    117,
+    139,
+    267,
+    273,
+    274,
+    278,
+    283,
+    386,
+    389,
+    393,
+    403,
+    411,
+    416
+  ],
+  "selection_rule": "Official chosen_idx tasks whose servers run locally without paid accounts; task IDs fixed before evaluating policies. Development tasks are excluded. Subset emphasizes local file, project, task and memory workflows; not representative of all 201 tasks.",
+  "strategies": [
+    "no_update",
+    "full_rewrite",
+    "selective_patch"
+  ],
+  "versions": [
+    "original",
+    "iter3",
+    "iter5"
+  ],
+  "base_url": "http://127.0.0.1:8081/v1",
+  "model": "qwen3-4b",
+  "model_sha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+  "temperature": 0.0,
+  "seed": 6203,
+  "agent_max_tokens": 2048,
+  "update_max_tokens": 2048,
+  "judge_max_tokens": 2048,
+  "max_steps": 12,
+  "repeats": 1,
+  "judge_repeats": 1,
+  "endpoint_policy": "Local only. No paid APIs.",
+  "information_boundary": "Updater receives tool contracts only, never questions, reference trajectories, task annotations or judge scores.",
+  "scope_rule": "Use official task server/tool names at Early. Later include the same surviving names and newly added tools in those servers. Executable servers always use the current official version.",
+  "failure_policy": "Preserve every failed trace. Invalid updates are rejected with previous knowledge retained and recorded. Infrastructure errors are reported separately and never silently omitted. Formal output directories are immutable on rerun.",
+  "judge_limitation": "Local Qwen3-4B is also used in a separate judge context. Rubric is official but scores are a local-model evaluation, not an instructor-certified ranking. Human trajectory audit remains necessary.",
+  "dependency_closure": true
+}

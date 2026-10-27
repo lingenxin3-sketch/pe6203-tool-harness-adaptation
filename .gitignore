@@ -1,0 +1,13 @@
+.venv/
+runtime/
+upstream/
+vendor/
+__pycache__/
+*.pyc
+.env
+runs/
+tmp/
+deliverables/
+*.egg-info/
+docs/WORK_STATE.md
+docs/REPORT_DRAFT.md

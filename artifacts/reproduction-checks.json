@@ -1,0 +1,73 @@
+{
+  "scope": "Fresh isolated Python environment; dependencies installed from requirements-lock.txt and project installed editable. Does not claim a second full benchmark run.",
+  "commands": [
+    "runtime/repro-venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "runtime/repro-venv/Scripts/python.exe -m pip check; runtime/repro-venv/Scripts/python.exe -m tool_adapt --help"
+  ],
+  "checks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "8a167f",
+        "wall_time_seconds": 8.854905,
+        "exit_code": 0,
+        "original_token_count": 628,
+        "output": "test_cannot_silently_truncate_original_task (test_context.ContextTests.test_cannot_silently_truncate_original_task) ... ok\r\ntest_prunes_complete_old_turn_preserving_task (test_context.ContextTests.test_prunes_complete_old_turn_preserving_task) ... ok\r\ntest_failed_attempt_preserved_and_not_converted_to_success (test_failure_accounting.FailureAccountingTests.test_failed_attempt_preserved_and_not_converted_to_success) ... ok\r\ntest_inconsistent_event_cannot_be_promoted_or_overwrite_evidence (test_failure_accounting.FailureAccountingTests.test_inconsistent_event_cannot_be_promoted_or_overwrite_evidence) ... ok\r\ntest_ablation_disables_dependency_closure (test_knowledge.AdaptationTests.test_ablation_disables_dependency_closure) ... ok\r\ntest_dependency_closure_is_transitive (test_knowledge.AdaptationTests.test_dependency_closure_is_transitive) ... ok\r\ntest_description_only_change (test_knowledge.AdaptationTests.test_description_only_change) ... ok\r\ntest_duplicate_names_rejected (test_knowledge.AdaptationTests.test_duplicate_names_rejected) ... ok\r\ntest_full_rewrite_includes_unchanged (test_knowledge.AdaptationTests.test_full_rewrite_includes_unchanged) ... ok\r\ntest_invalid_update_does_not_mutate_input (test_knowledge.AdaptationTests.test_invalid_update_does_not_mutate_input) ... ok\r\ntest_no_change_avoids_model_call (test_knowledge.AdaptationTests.test_no_change_avoids_model_call) ... ok\r\ntest_no_update_is_byte_equivalent (test_knowledge.AdaptationTests.test_no_update_is_byte_equivalent) ... ok\r\ntest_parameter_change_and_dependency (test_knowledge.AdaptationTests.test_parameter_change_and_dependency) ... ok\r\ntest_rename_as_delete_and_add (test_knowledge.AdaptationTests.test_rename_as_delete_and_add) ... ok\r\ntest_file_boundary (test_protocol.ProtocolTests.test_file_boundary) ... ok\r\ntest_final_tasks_are_official_and_disjoint (test_protocol.ProtocolTests.test_final_tasks_are_official_and_disjoint) ... ok\r\ntest_local_only_inference (test_protocol.ProtocolTests.test_local_only_inference) ... ok\r\ntest_official_ecs_formula_and_aggregation (test_protocol.ProtocolTests.test_official_ecs_formula_and_aggregation) ... ok\r\ntest_task_scope_includes_new_not_unrelated_existing (test_protocol.ProtocolTests.test_task_scope_includes_new_not_unrelated_existing) ... ok\r\ntest_updater_does_not_receive_task_answers (test_protocol.ProtocolTests.test_updater_does_not_receive_task_answers) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 20 tests in 0.233s\r\n\r\nOK\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "09891e",
+        "wall_time_seconds": 8.7677778,
+        "exit_code": 0,
+        "original_token_count": 63,
+        "output": "No broken requirements found.\r\nusage: python.exe -m tool_adapt [-h] {run,analyze,judge} ...\r\n\r\nMCPEvol-Bench selective tool adaptation\r\n\r\npositional arguments:\r\n  {run,analyze,judge}\r\n\r\noptions:\r\n  -h, --help           show this help message and exit\r\n"
+      }
+    }
+  ],
+  "python": "3.14.2",
+  "lock_sha256": "20644cdbae32bec87cc8362222d27ddd85ec53f2a2fd1e74e7929fdaf07f4088",
+  "installed_versions": {
+    "annotated-types": "0.8.0",
+    "anyio": "4.15.1",
+    "attrs": "26.1.0",
+    "certifi": "2026.10.23",
+    "cffi": "2.1.1",
+    "click": "8.5.0",
+    "cryptography": "50.0.2",
+    "h11": "0.16.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "httpx-sse": "0.4.3",
+    "idna": "3.20",
+    "jsonschema": "4.26.0",
+    "jsonschema-specifications": "2025.9.1",
+    "mcp": "1.30.0",
+    "pycparser": "3.12",
+    "pydantic": "2.14.1",
+    "pydantic-settings": "2.16.1",
+    "pydantic_core": "2.50.1",
+    "PyJWT": "2.15.1",
+    "python-dotenv": "1.2.4",
+    "python-multipart": "0.0.32",
+    "pywin32": "312",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.9.1",
+    "sse-starlette": "3.6.0",
+    "starlette": "1.10.0",
+    "typing-inspection": "0.4.4",
+    "typing_extensions": "4.16.0",
+    "uvicorn": "0.54.0"
+  },
+  "all_locked_versions_match": true,
+  "final_test_verification": {
+    "date": "2026-10-27",
+    "command": "runtime/repro-venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "tests_run": 22,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0,
+    "includes": "judge capacity preservation and actor limit isolation tests"
+  }
+}

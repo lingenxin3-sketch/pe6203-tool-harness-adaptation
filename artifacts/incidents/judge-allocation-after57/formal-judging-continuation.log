@@ -1,0 +1,52 @@
+{"idx":117,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"original"}
+{"idx":139,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"original"}
+{"idx":267,"pe":4.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"original"}
+{"idx":273,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":8.0,"version":"original"}
+{"idx":274,"pe":4.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"original"}
+{"idx":278,"pe":1.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"original"}
+{"idx":28,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"original"}
+{"idx":283,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"original"}
+{"idx":386,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"original"}
+{"idx":389,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"original"}
+{"idx":393,"pe":9.0,"status":"evaluated","strategy":"full_rewrite","tf":4.0,"version":"original"}
+{"idx":403,"pe":1.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"original"}
+{"idx":411,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"original"}
+{"idx":416,"pe":10.0,"status":"evaluated","strategy":"full_rewrite","tf":10.0,"version":"original"}
+{"idx":9,"pe":2.0,"status":"evaluated","strategy":"full_rewrite","tf":1.0,"version":"original"}
+{"idx":103,"pe":10.0,"status":"evaluated","strategy":"no_update","tf":8.0,"version":"iter3"}
+{"idx":105,"pe":4.0,"status":"evaluated","strategy":"no_update","tf":6.0,"version":"iter3"}
+{"idx":113,"pe":7.0,"status":"evaluated","strategy":"no_update","tf":4.0,"version":"iter3"}
+Traceback (most recent call last):
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\scripts\judge_with_capacity.py", line 62, in <module>
+    judge(args.run_directory.resolve())
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\scripts\judge_with_capacity.py", line 53, in judge
+    experiment.judge_experiment(ROOT, folder)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\tool_adapt\experiment.py", line 159, in judge_experiment
+    record['eval_result'] = evaluator.judge(record, record['evaluation_tools'], model,
+                            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        repeats=config['judge_repeats'], seed=config['seed'] + record['idx'])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\tool_adapt\official.py", line 53, in judge
+    message, usage = model.complete([{'role': 'user', 'content': prompt}], json_mode=True)
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ASUS\Desktop\codex文件夹\shopee自动化选品系统\pe6203-tool-adaptation\tool_adapt\llm.py", line 65, in complete
+    with urllib.request.urlopen(req, timeout=self.timeout) as response:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 493, in open
+    response = meth(req, response)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 464, in _call_chain
+    result = func(*args)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\urllib\request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: Internal Server Error

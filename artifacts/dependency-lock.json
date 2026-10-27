@@ -1,0 +1,50 @@
+[
+  {
+    "file": "cudart.zip",
+    "source": "https://github.com/ggml-org/llama.cpp/releases/download/b11900/cudart-llama-bin-win-cuda-12.4-x64.zip",
+    "bytes": 391443627,
+    "sha256": "8c79a9b226de4b3cacfd1f83d24f962d0773be79f1e7b75c6af4ded7e32ae1d6"
+  },
+  {
+    "file": "iter3_servers.zip",
+    "source": "https://huggingface.co/datasets/anonymous2233/evol-servers/resolve/main/iter3_servers.zip?download=true",
+    "bytes": 1088423924,
+    "sha256": "18ef1f0c693b4d84730992211f0663817973f3fb6b436e2e77f7c082137e2391"
+  },
+  {
+    "file": "iter5_servers.zip",
+    "source": "https://huggingface.co/datasets/anonymous2233/evol-servers/resolve/main/iter5_servers.zip?download=true",
+    "bytes": 1088574402,
+    "sha256": "67cc5adc6959acfa978ee67a0b53cc02f2fb064b16811d7a300a505117acaad1"
+  },
+  {
+    "file": "llama.zip",
+    "source": "https://github.com/ggml-org/llama.cpp/releases/download/b11900/llama-b11900-bin-win-cuda-12.4-x64.zip",
+    "bytes": 279417051,
+    "sha256": "387ad76c926cdb301971851a11df018165a7b4df4b1b7c64cf4b09a367ec82bc"
+  },
+  {
+    "file": "original_servers.zip",
+    "source": "https://huggingface.co/datasets/anonymous2233/evol-servers/resolve/main/original_servers.zip?download=true",
+    "bytes": 1218495812,
+    "sha256": "a66baee83b5d7b810e4064472fbc9030ba656a324e806aa263187e754e6935ec"
+  },
+  {
+    "file": "qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+    "source": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF/resolve/main/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf?download=true",
+    "bytes": 3993201344,
+    "sha256": "dfce12e3862a5283ccfb88221b48480e58745165de856439950d0f22590580db"
+  },
+  {
+    "file": "qwen2.5-7b-instruct-q4_k_m-00002-of-00002.gguf",
+    "source": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF/resolve/main/qwen2.5-7b-instruct-q4_k_m-00002-of-00002.gguf?download=true",
+    "bytes": 689872288,
+    "sha256": "539cf93f78e887edea1c04e2d7d8cdaca9d01dae9c9025bcb8accbe29df3d72a"
+  },
+  {
+    "file": "qwen3-4b-q4.gguf",
+    "source": "https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/resolve/main/Qwen3-4B-Instruct-2507-Q4_K_M.gguf?download=true",
+    "bytes": 2497281120,
+    "sha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597"
+  }
+]

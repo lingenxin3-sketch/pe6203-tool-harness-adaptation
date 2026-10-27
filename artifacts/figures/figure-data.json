@@ -1,0 +1,90 @@
+{
+  "run": "F:\\ASUS\\Desktop\\codex\u6587\u4ef6\u5939\\shopee\u81ea\u52a8\u5316\u9009\u54c1\u7cfb\u7edf\\pe6203-tool-adaptation\\runs\\final-v1",
+  "development_only": false,
+  "points": [
+    {
+      "strategy": "no_update",
+      "metric": "tf",
+      "versions": [
+        "original",
+        "iter3",
+        "iter5"
+      ],
+      "values": [
+        6.833333333333333,
+        7.277777777777778,
+        7.444444444444445
+      ]
+    },
+    {
+      "strategy": "no_update",
+      "metric": "pe",
+      "versions": [
+        "original",
+        "iter3",
+        "iter5"
+      ],
+      "values": [
+        6.555555555555555,
+        7.333333333333333,
+        7.888888888888889
+      ]
+    },
+    {
+      "strategy": "full_rewrite",
+      "metric": "tf",
+      "versions": [
+        "original",
+        "iter3",
+        "iter5"
+      ],
+      "values": [
+        6.277777777777778,
+        7.055555555555555,
+        6.722222222222222
+      ]
+    },
+    {
+      "strategy": "full_rewrite",
+      "metric": "pe",
+      "versions": [
+        "original",
+        "iter3",
+        "iter5"
+      ],
+      "values": [
+        7.5,
+        7.833333333333333,
+        7.166666666666667
+      ]
+    },
+    {
+      "strategy": "selective_patch",
+      "metric": "tf",
+      "versions": [
+        "original",
+        "iter3",
+        "iter5"
+      ],
+      "values": [
+        7.111111111111111,
+        7.611111111111111,
+        7.166666666666667
+      ]
+    },
+    {
+      "strategy": "selective_patch",
+      "metric": "pe",
+      "versions": [
+        "original",
+        "iter3",
+        "iter5"
+      ],
+      "values": [
+        7.333333333333333,
+        7.611111111111111,
+        7.388888888888889
+      ]
+    }
+  ]
+}

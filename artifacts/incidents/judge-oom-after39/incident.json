@@ -1,0 +1,164 @@
+{
+  "recorded_local_time": "2026-10-27T14:21:48.821793",
+  "cause": "CUDA out of memory in model service; connection reset before completed judge result",
+  "completed_scores": [
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\103\\result.json",
+      "sha256": "a7d97712ec51bc926eda72a32ac91071dc05ae83d3e56a92ef11e254fbe20d99"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\105\\result.json",
+      "sha256": "85aea04da7cf7d4856b414bbd2b106378d876b4cde2afcbb4eb9ca9e8b1bf12a"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\113\\result.json",
+      "sha256": "51af87a092611c103b03fabe03a56cc7dc34938583e2b7b27bebd5ddecf1c1a5"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\117\\result.json",
+      "sha256": "e6bd8ed6d339b37603f424e13f2b88fa1ffb49155438737c69946f1e417b59d8"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\139\\result.json",
+      "sha256": "d5f856a43ec580499b3947a0410de2d009bfc804127ddaf74a3a2763b190b6a8"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\267\\result.json",
+      "sha256": "ab29827e95ac3ee1a61e48d9976585f9f10bfd166c72cb50b2aaf7edcdceed31"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\273\\result.json",
+      "sha256": "f4513cb4ad243d12f57adda310719e36179531cde867846c232320875f7ff07a"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\274\\result.json",
+      "sha256": "0b844a1cb2860bc01ec85bdbd9fc2a8248f793b3f38458223d719300f2ac392d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\278\\result.json",
+      "sha256": "286d0489d6de21b08cd315de0b6fb07c7b355551ae3354656d236d0d9b0d07b9"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\28\\result.json",
+      "sha256": "2379eb184c6489428f8c94a35bafceecaae4b073e204bc0af4fd94b8701c7664"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\283\\result.json",
+      "sha256": "c9aad734f27b84d0d5f92dfed53fcc363828c06b4ceae9e7501b98dcbe9f0ac8"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\386\\result.json",
+      "sha256": "12b06a6a21c49cb54cd81be08dfe6caf36ec899584cf72a8f38e43fad8d9f8a2"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\389\\result.json",
+      "sha256": "2ed37240cecf69b1310ec0b72d9c9b424ccef44c8e45d178444fe08a1ca0af76"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\393\\result.json",
+      "sha256": "046df0314370dec8a364a31198e389618526a8f36c3dbee456fdc037c8d61495"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\403\\result.json",
+      "sha256": "e5656feef34bdf08e87d0a24f05a1fb929666c1c5cffdfa9364cc6c8911d7d53"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\411\\result.json",
+      "sha256": "b52b3cd0d4598555e50b786e45e8e0edfc9e319ef7ff8f9e852ed443795cffed"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\416\\result.json",
+      "sha256": "9870d098fda1e9f340578a840bb378ff5c7648b2f4311d97579a5fa913aa4f3b"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter3\\9\\result.json",
+      "sha256": "ef83c4ffe412acf53cac5c70f691f291b7bebaf7bbf9b1910a125e93f2b2bccd"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\103\\result.json",
+      "sha256": "7de8c49043b8f64d7b0ff9f7a9f7d5e7a362a14a11ab68d49e8f0291a683d2f0"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\105\\result.json",
+      "sha256": "93368d84993fb22909e6bdd840b08c5533a2d063965927a0f100806878673e2d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\113\\result.json",
+      "sha256": "31e94de3f1b328d306bdb2fe6edb3e1cc430319e26cdf8f17ee71cb838ab0c41"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\117\\result.json",
+      "sha256": "e5f8b358256f7bd3a8c958678f1c08b4d316f21e4b8fa083ee63c72636603118"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\139\\result.json",
+      "sha256": "b61c271096f8fbdd64066ed693d727750c4a22fdf5311eb958a5ca0ecbf3bae3"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\267\\result.json",
+      "sha256": "1de522478f574a1c07ccdc6f4994827496b97baf744b35ff8c6c16e182cdf803"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\273\\result.json",
+      "sha256": "67fecea19c1e91d2c7a705a3854187ee66d9c889b801f6258459514abd91610d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\274\\result.json",
+      "sha256": "009c9ba2a76c38894c6790422e85cb595182bf10650329da09ec6cff9c04a74d"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\278\\result.json",
+      "sha256": "6253834e41d7d94bb442a70ab581fd6964da58639d11860295117a4b69d844f1"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\28\\result.json",
+      "sha256": "bd2d5f471fa39f2dc49a4c75b6a1762dd15bc460d28fe46b1afb2973bd5da996"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\283\\result.json",
+      "sha256": "b75fd3139b9f8c2e754e48497fbc3b44fc7650614b684e12990feb2b6a5acfdb"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\386\\result.json",
+      "sha256": "82e319e3ee829f94eae103041251b2b6ea0f9169ec55cbb891e32c2e802b20b3"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\389\\result.json",
+      "sha256": "ee585afeddbb75c2cd5ab03504c89af0e9956531033a2ee8284043133ffe1f27"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\393\\result.json",
+      "sha256": "17c7008ef20b8a79d31547bcfc46828b6bfab284d0e8c74b835ec127581c769b"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\403\\result.json",
+      "sha256": "77a2a68c01232195b0e51bd41ce2e5c630e6fb293e059b19ade23153aba9d3c3"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\411\\result.json",
+      "sha256": "182083d9cffaf00479456a34fb5c9819c151bbb38f764b46fc745bb91b482f16"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\416\\result.json",
+      "sha256": "1ba648410f745f7845ce4f64a2bc571cdc920394f909632c125f67edad3c800a"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\iter5\\9\\result.json",
+      "sha256": "d27e0f37ce8a297c0b330dce4a2559aa7aefa3ab117d2faf15d136d99ce24e18"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\103\\result.json",
+      "sha256": "4b4e3e4497cb337e3be8cb49a09d250d950663fe34bdce4ea1283626cc40c8db"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\105\\result.json",
+      "sha256": "8afae8b1784587f0ba116bf2be836459cf2ce6ad802f165cb8de602d12bf79f4"
+    },
+    {
+      "record": "runs\\final-v1\\repeat-0\\full_rewrite\\original\\113\\result.json",
+      "sha256": "2bce5fc8603775ac10cd5b364aa7c9080877d26c3e2b0ccbe2801b84fb4249ab"
+    }
+  ],
+  "recovery": "Restart same judge configuration, preserving all completed scores and actor evidence; continue awaiting_judge only",
+  "unreturned_request_usage": "Unavailable in client evidence; retained backend log documents incident"
+}

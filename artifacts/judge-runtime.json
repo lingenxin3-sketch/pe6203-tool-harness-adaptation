@@ -1,0 +1,12 @@
+{
+  "recorded_local_time": "2026-10-27T13:33:19.561547",
+  "model_alias": "qwen2.5-7b-judge",
+  "n_ctx": 24576,
+  "total_slots": 1,
+  "build_info": "b11900-74b104c9b",
+  "startup_lines": [
+    "0.07.565.630 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 24576, kv_unified = 'false'",
+    "0.07.589.045 I srv  server_on_li: listening on http://127.0.0.1:8082"
+  ],
+  "policy_sha256": "d1917165bbd76582ded5244c3d07ce9da97e9bf2fbaa9af8f71d725f80de8025"
+}
