@@ -107,3 +107,11 @@ R3目前两条异常为full_rewrite/iter5/117（原始SHA c3d375a4b91e38db5888f8
 06:22:13实际进度提交ee1940681f0710e393ea5a90cadcafbf62cc2037远端逐文件核验，公开R3案例receipt当时仅[28,113]共18条，任务117补充及27条事件冻结在06:23以后生成，尚待下一心跳公开，不能误称已上传。持续15分钟发布，注意last-publish.json及publication-error日志。原来R2已完成的证据、提交、费用和限制仍如上，不动原轮、main、旧v1.0.0或无关可视化草稿。
 
 后续R3自然完成执行时管理器会整理失败、审计、切换原judge评分、统计及发布新Release。评分实际开始后及时独立保存r3-judge-start-runtime.json，不要提前复制仍属于R2的global judge-runtime.json。完成后独立下载校验R3ZIP全部162来源、失败和日志，远端核验commit/结果页；审查27条原分数与已核对事实，不改分；若old/R3严格可比，再按已预声明的原轮+第二新增轮324视图提供两次对照，保留R2独立且不称486可比。完整目标尚未完成，不更新goal为complete，也不是blocked；继续至第二轮实际评分发布验证及最终要求逐项审计。
+
+## 2026年10月29日0641续接补充
+
+同一controller40048及观察会话46604继续，06:39实际R3落盘72/162、评分0、异常2；现属有实际进程句柄的等待，非阻塞。06:38:16的公开提交742e9e9ad59dcaa5ed0e7c6f61afc0828fe1d29a已逐文件远端核验；06:40:52还独立通过GitHub API读回27条r3-case-execution-review-receipt.json、27条r3-case-event-freeze.json及第二新增轮案例核查.md，与commit Git blob逐字节一致。见r3-case-publication-verification.json。现在27条案例及117补充确实已公开，不能再沿用06:22仅18条的旧快照。该独立核验收据本身将由下次心跳上传。
+
+已准备runtime/repeats-20261029/case_score_table_r3.py并通过语法编译，尚未实际执行。仅当27条选定案例全部按原协议评分后运行（通常全局评分到154条左右），它会先核对27个事件文件SHA、早期实际Markdown/JSON产物SHA、原件字节（正常用agent-record、异常用failure-record）及actor/update调用，再生成r3-case-postscore-review.json并向第二新增轮案例核查.md追加原TF/PE表，绝不重评分。它在未评分或已有输出时拒绝写，不要提前运行或覆盖。准备阶段一次外层PowerShell引号错误已改为apply_patch，编译复核成功，没有执行模型或更动任何实验输出，不能把它计为实验失败。
+
+最终如生成已预声明的old+R3两轮视图，merge_views中的cohorts.n是观测数之和；需另标distinct_tasks（沿用单轮该组人数）和n_observations，不把两个重复当新增独立任务。ECS中跨版本的总体标准差与跨轮均值的样本标准差须区分，n=2不作显著性或普遍优越结论。R2继续独立，整轮总token比full多8.4%的不利结果照样保留。不要为了更好结果再加第三个新轮、改seed、提高上下文或改动原评分。

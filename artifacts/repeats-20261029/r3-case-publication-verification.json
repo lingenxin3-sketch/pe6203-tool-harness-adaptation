@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-10-29T06:40:52+08:00",
+  "remote_commit": "742e9e9ad59dcaa5ed0e7c6f61afc0828fe1d29a",
+  "stage": "R3 execution still ongoing, no score completion claim",
+  "selected_case_records": 27,
+  "remote_files_match_committed_blobs": true,
+  "files": [
+    {
+      "path": "artifacts/repeats-20261029/r3-case-execution-review-receipt.json",
+      "git_blob_sha256": "27850e00bb09bf943ff9ae53e04b703d60732767e8891bfc197d89fbfdbabd6a"
+    },
+    {
+      "path": "artifacts/repeats-20261029/r3-case-event-freeze.json",
+      "git_blob_sha256": "e660c0f43c08d35120d975bd9c75027d2ab8a7f126eb81a3b142b129e2f64bdc"
+    },
+    {
+      "path": "docs/追加实验/第二新增轮案例核查.md",
+      "git_blob_sha256": "391a617c5ef16acfb2a8a279acfbade9831d4e2cb4814665e765530e4395bbeb"
+    }
+  ]
+}
