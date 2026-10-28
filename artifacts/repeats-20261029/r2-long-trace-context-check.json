@@ -1,0 +1,58 @@
+{
+  "available_records": 64,
+  "checked_records": 6,
+  "selection": "Longest 6 by prompt characters; not exhaustive",
+  "model_vocabulary": "Qwen2.5-7B-Instruct Q4_K_M downloaded judge",
+  "template_allowance_tokens": 256,
+  "safety_tokens": 128,
+  "no_inference": true,
+  "results": [
+    {
+      "record": "repeat-0/full_rewrite/iter3/117/result.json",
+      "prompt_characters": 56448,
+      "content_tokens": 13669,
+      "with_response_safety_and_template_allowance": 16101,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/iter5/117/result.json",
+      "prompt_characters": 49138,
+      "content_tokens": 11650,
+      "with_response_safety_and_template_allowance": 14082,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/selective_patch/iter3/117/result.json",
+      "prompt_characters": 45308,
+      "content_tokens": 10883,
+      "with_response_safety_and_template_allowance": 13315,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/iter3/117/result.json",
+      "prompt_characters": 44569,
+      "content_tokens": 10894,
+      "with_response_safety_and_template_allowance": 13326,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/original/267/result.json",
+      "prompt_characters": 44003,
+      "content_tokens": 10710,
+      "with_response_safety_and_template_allowance": 13142,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/iter5/113/result.json",
+      "prompt_characters": 42767,
+      "content_tokens": 10174,
+      "with_response_safety_and_template_allowance": 12606,
+      "fits_16384_with_allowance": true
+    }
+  ],
+  "limitation": "Raw prompt token count plus an allowance; exact chat-template validation remains at live judging.",
+  "collected_at": "2026-10-29T01:36:29+08:00",
+  "actual_fixed_judge_capacity": 24576,
+  "all_checked_fit_24576": true,
+  "partial_run": true
+}
