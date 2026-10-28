@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T00:35:48+08:00",
+  "collected_at": "2026-10-29T00:49:00+08:00",
   "phase": "executing",
   "message": "第2轮实际执行；结果逐条保存",
   "rounds": [
@@ -19,13 +19,13 @@
     {
       "name": "repeat-r2-20261029",
       "expected": 162,
-      "found": 6,
+      "found": 30,
       "scored": 0,
       "failures": 0,
-      "missing": 156,
+      "missing": 132,
       "issues": [],
       "status_counts": {
-        "awaiting_judge": 6
+        "awaiting_judge": 30
       },
       "complete": false
     },

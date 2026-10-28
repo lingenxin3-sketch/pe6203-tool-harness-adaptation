@@ -1,0 +1,9 @@
+{
+  "verified_at": "2026-10-29T00:37:55+08:00",
+  "purpose": "Development evidence package only, not a formal round or release",
+  "file": "repeat-smoke-20261029-evidence.zip",
+  "bytes": 207323,
+  "sha256": "a904c7a37a868c19429045f3846d8db2e96e09ed3aa3ea1aa7e29fd4c0c3e3aa",
+  "source_records": 3,
+  "zip_crc_and_all_entry_hashes_verified": true
+}

@@ -1,0 +1,14 @@
+{
+  "compatible": true,
+  "checks": {
+    "config": true,
+    "task_ids": true,
+    "coverage": true,
+    "inventory_hashes": true,
+    "source_hashes": true,
+    "split": true
+  },
+  "meaning": "Output directory and round label differ; all experiment settings and recorded protocol hashes must match exactly.",
+  "verified_at": "2026-10-29T00:39:47+08:00",
+  "new_manifest_sha256": "579c60853c83400a015b35ac6ba68fbe97a0f1ebba1427403ace27ffd8381cb2"
+}
