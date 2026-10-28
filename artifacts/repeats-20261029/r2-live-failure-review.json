@@ -1,43 +1,62 @@
 {
-  "collected_at": "2026-10-29T03:08:44+08:00",
+  "collected_at": "2026-10-29T03:57:33+08:00",
   "partial": true,
-  "failures": [
+  "no_execution_retry": true,
+  "records": [
     {
-      "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/117/result.json",
+      "path": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/117/result.json",
+      "idx": 117,
+      "strategy": "full_rewrite",
+      "version": "iter5",
       "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
-      "original_record_sha256": "d386ab7f91de754944650b0adee0e36904bc60c1ae00dbe3964e5b7fc30ff102",
-      "recoverable_from_saved_evidence": true,
-      "messages": 8,
-      "reconstruction_error": null,
-      "no_execution_retry": true
+      "original_sha256": "d386ab7f91de754944650b0adee0e36904bc60c1ae00dbe3964e5b7fc30ff102",
+      "recorded_messages": 8,
+      "read_only_reconstruction_verified": true,
+      "applied": false
     },
     {
-      "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/389/result.json",
+      "path": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/389/result.json",
+      "idx": 389,
+      "strategy": "full_rewrite",
+      "version": "iter5",
       "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
-      "original_record_sha256": "d83845a42fd4d6579774caa7396fdaff6cf8347de99ff913d00f715b6dd22d57",
-      "recoverable_from_saved_evidence": true,
-      "messages": 6,
-      "reconstruction_error": null,
-      "no_execution_retry": true
+      "original_sha256": "d83845a42fd4d6579774caa7396fdaff6cf8347de99ff913d00f715b6dd22d57",
+      "recorded_messages": 6,
+      "read_only_reconstruction_verified": true,
+      "applied": false
     },
     {
-      "source": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/389/result.json",
+      "path": "runs/repeat-r2-20261029/repeat-0/full_rewrite/original/416/result.json",
+      "idx": 416,
+      "strategy": "full_rewrite",
+      "version": "original",
       "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
-      "original_record_sha256": "5a98083d301b3e5fc34ce1da36f2131d995bde50d77babc2fbf90bf1213db0e6",
-      "recoverable_from_saved_evidence": true,
-      "messages": 6,
-      "reconstruction_error": null,
-      "no_execution_retry": true
+      "original_sha256": "72acb8e283d99504ed6e29b21457ba19660d7a6aafeee91ff0c476b513654796",
+      "recorded_messages": 10,
+      "read_only_reconstruction_verified": true,
+      "applied": false
     },
     {
-      "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/117/result.json",
+      "path": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/389/result.json",
+      "idx": 389,
+      "strategy": "no_update",
+      "version": "iter3",
       "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
-      "original_record_sha256": "b29cd48cdfa23b0dab13d2e5c3bb2f6e07f13e200260bdf7e1813c0bf053af92",
-      "recoverable_from_saved_evidence": true,
-      "messages": 16,
-      "reconstruction_error": null,
-      "no_execution_retry": true
+      "original_sha256": "5a98083d301b3e5fc34ce1da36f2131d995bde50d77babc2fbf90bf1213db0e6",
+      "recorded_messages": 6,
+      "read_only_reconstruction_verified": true,
+      "applied": false
+    },
+    {
+      "path": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/117/result.json",
+      "idx": 117,
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "original_sha256": "b29cd48cdfa23b0dab13d2e5c3bb2f6e07f13e200260bdf7e1813c0bf053af92",
+      "recorded_messages": 16,
+      "read_only_reconstruction_verified": true,
+      "applied": false
     }
-  ],
-  "method": "Read-only reconstruction from recorded events; not applied while execution is active"
+  ]
 }

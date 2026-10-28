@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T03:51:32+08:00",
+  "collected_at": "2026-10-29T04:07:33+08:00",
   "phase": "executing_existing_worker",
   "message": "同一执行进程继续运行，未重跑任务。实际输入可比性警示见下方。",
   "rounds": [
@@ -19,14 +19,14 @@
     {
       "name": "repeat-r2-20261029",
       "expected": 162,
-      "found": 154,
+      "found": 160,
       "scored": 0,
-      "failures": 4,
-      "missing": 8,
+      "failures": 5,
+      "missing": 2,
       "issues": [],
       "status_counts": {
-        "awaiting_judge": 150,
-        "infrastructure_error": 4
+        "awaiting_judge": 155,
+        "infrastructure_error": 5
       },
       "complete": false
     },

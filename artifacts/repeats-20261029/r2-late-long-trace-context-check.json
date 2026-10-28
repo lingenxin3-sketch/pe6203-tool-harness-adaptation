@@ -1,0 +1,57 @@
+{
+  "available_records": 152,
+  "checked_records": 6,
+  "selection": "Longest 6 by prompt characters; not exhaustive",
+  "model_vocabulary": "Qwen2.5-7B-Instruct Q4_K_M downloaded judge",
+  "template_allowance_tokens": 256,
+  "safety_tokens": 128,
+  "no_inference": true,
+  "results": [
+    {
+      "record": "repeat-0/no_update/original/416/result.json",
+      "prompt_characters": 65790,
+      "content_tokens": 14829,
+      "with_response_safety_and_template_allowance": 17261,
+      "fits_16384_with_allowance": false
+    },
+    {
+      "record": "repeat-0/no_update/iter3/416/result.json",
+      "prompt_characters": 63699,
+      "content_tokens": 14252,
+      "with_response_safety_and_template_allowance": 16684,
+      "fits_16384_with_allowance": false
+    },
+    {
+      "record": "repeat-0/full_rewrite/iter3/117/result.json",
+      "prompt_characters": 56448,
+      "content_tokens": 13669,
+      "with_response_safety_and_template_allowance": 16101,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/full_rewrite/iter3/267/result.json",
+      "prompt_characters": 52655,
+      "content_tokens": 12206,
+      "with_response_safety_and_template_allowance": 14638,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/selective_patch/original/267/result.json",
+      "prompt_characters": 52399,
+      "content_tokens": 12476,
+      "with_response_safety_and_template_allowance": 14908,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/iter5/117/result.json",
+      "prompt_characters": 49138,
+      "content_tokens": 11650,
+      "with_response_safety_and_template_allowance": 14082,
+      "fits_16384_with_allowance": true
+    }
+  ],
+  "limitation": "Raw prompt token count plus an allowance; exact chat-template validation remains at live judging. Partial round; raw failure rows are not assembled by this read-only checker. Legacy 16384 field is not the actual judge capacity.",
+  "collected_at": "2026-10-29T03:55:19+08:00",
+  "actual_fixed_judge_capacity": 24576,
+  "all_selected_fit_fixed_capacity": true
+}
