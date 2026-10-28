@@ -37,3 +37,17 @@ read-only preflight 已核对 162 条旧记录、四条失败收据、冻结核�
 第一轮发布门 runtime/repeats-20261029/repeat-r2-20261029-gate.json 只有在162评分、审计、新Release匿名下载哈希及最后状态commit远端核验均成功才产生。第二轮只有通过此前门槛才开始。发布失败则留真实状态并停止第二轮。12:00后第二轮若未启动，不自动启动，等待团队决定。
 
 保持每15分钟进度发布，若机器/网络/认证失败不能保证08:00。检查 runtime/repeats-20261029/progress-publication-error.json 和 last-publish.json。不允许仅凭 state 文件判定存活，必须查看实际进程或exec句柄。新Release不能覆盖旧v1.0.0。最终只有486完整、评分、可比且远端证据均核验才报告三轮完成。
+
+## 2026年10月29日0321续接快照
+
+第一新增轮实际运行中，已落盘132/162，评分0，执行异常4。此数仅为带时间戳的快照。actor PID4404（创建于00:34:09）从未重启；旧管理PID6104已在00:57由接管脚本结束，监管PID41868（父33500）持续等同一actor完成。03:21已通过CIM再次核实两者存活。不要启动第二份controller，不要对活进程执行 --resume。
+
+只读观察会话 exec session99236 在等原actor的Windows进程句柄，每50秒输出计数；它不是实验或模型。可继续 write_stdin 轮询该会话。若会话丢失，先用完整CIM查询PID4404、41868及当前state所载PID；受限进程视图可能看不到活进程，不能据此认定停止。若观察仍超时，重查同一进程，不重跑。
+
+监管进程在原actor自然退出且exit code为0后，会自动启动修正后 repeat_campaign.py --resume，跳过所有已保存actor记录，然后整理失败、评分、审计及发布。新controller可能为venv父子两个python进程，运行信息在 controller-continuation.stdout.log、controller-continuation.stderr.log、management-continuation.json。原actor执行日志仍为 repeat-r2-20261029-execution.log。模型切换和已完成记录跳过都是已授权工作，不需要再次询问许可。
+
+截至快照的四条异常：full_rewrite/iter5/117、selective_patch/iter5/117、no_update/iter3/389、full_rewrite/iter5/389。只读重建均成功，分别有8、16、6、6条消息，未应用或重跑，原始哈希在 r2-live-failure-review.json。正式执行结束后使用原finalize程序创建failure-record.json并保留execution_status，再按原协议评分。若新的异常缺少一致轨迹则真实停在不完整状态，不能伪造分数。
+
+模型启动收据 actor-runtime.json 可能会在后续切换被更新，已将00:34的首轮actor原收据按字节复制到 r2-actor-start-runtime.json，哈希9b0d42d4554b610347502c1898f820490ff0453b5d11588f376257ee1d01793f。评分和第二新增轮启动时也应保留每轮独立的模型启动收据，不能把后来的收据误称为前一轮启动状态。
+
+03:20自动发布已远端核验，未见发布错误。当前还没有新轮最终分数或新Release。第一新增轮存在资源可见性混杂，原轮与它不可严格合并；第二新增轮尚未启动，已预声明final-r3等长目录并完成27组无模型检查，但实际输入仍要在运行后核对。即使最终有486条已评分记录，也不能把不兼容轮硬合并成三次可比实验。
