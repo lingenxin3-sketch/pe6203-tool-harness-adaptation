@@ -84,13 +84,20 @@ def package(folder):
             files.add(p)
         for name in ['failure-record.json']:
             p=rp.with_name(name)
-            if p.exists():files.add(p)
+            if p.exists():
+                files.add(p)
+                files.update(x for x in (rp.parent/'workspace').glob('*.stderr.log') if x.is_file())
         for kind in ['created','modified']:
             for rel in r.get('artifact_changes',{}).get(kind,[]):
                 ws=(rp.parent/'workspace').resolve();p=(ws/rel).resolve()
                 if not p.is_relative_to(ws) or not p.is_file():raise ValueError('Artifact outside workspace/missing')
                 files.add(p)
     files.update(p for p in RECEIPTS.rglob('*.json') if p.is_file())
+    # Per-round subprocess logs are closed before packaging. Global model logs
+    # are still mutable and deliberately do not enter a completed evidence ZIP.
+    for suffix in ['execution','scoring','summary']:
+        log=ROOT/'runtime'/CAMPAIGN/f'{folder.name}-{suffix}.log'
+        if log.is_file():files.add(log)
     target=ROOT/'deliverables'/f'{folder.name}-evidence.zip'
     if target.exists():raise FileExistsError('Evidence archive already exists; inspect instead of overwriting')
     manifest=[];target.parent.mkdir(exist_ok=True)

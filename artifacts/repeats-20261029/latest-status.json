@@ -1,7 +1,7 @@
 {
-  "collected_at": "2026-10-29T01:44:14+08:00",
+  "collected_at": "2026-10-29T01:51:48+08:00",
   "phase": "executing_existing_worker",
-  "message": "同一执行进程继续运行，未重跑任务。实际输入可比性警示见下方。",
+  "message": "原执行进程继续；管理程序已接管，禁止因资源清单差异合并旧轮",
   "rounds": [
     {
       "name": "final-v1",
@@ -19,19 +19,19 @@
     {
       "name": "repeat-r2-20261029",
       "expected": 162,
-      "found": 69,
+      "found": 72,
       "scored": 0,
       "failures": 2,
-      "missing": 93,
+      "missing": 90,
       "issues": [],
       "status_counts": {
-        "awaiting_judge": 67,
+        "awaiting_judge": 70,
         "infrastructure_error": 2
       },
       "complete": false
     },
     {
-      "name": "repeat-r3-20261029",
+      "name": "final-r3",
       "expected": 162,
       "found": 0,
       "scored": 0,

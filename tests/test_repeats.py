@@ -93,5 +93,17 @@ class RepeatTests(unittest.TestCase):
         with patch.object(campaign,'read',return_value={'output_name':'unapproved-directory'}),patch.object(campaign,'model') as model:
             with self.assertRaisesRegex(RuntimeError,'predeclaration not verified'):campaign.run_round(2)
             model.assert_not_called()
+    def test_evidence_package_retains_failure_and_closed_phase_logs(self):
+        import zipfile
+        folder=self.root/'runs/synthetic-scored';m={'config':{'repeats':1,'strategies':['no_update'],'versions':['original']},'task_ids':[1]};save(folder/'manifest.json',m)
+        episode=folder/'repeat-0/no_update/original/1';row={'repeat':0,'strategy':'no_update','version':'original','idx':1,'status':'evaluated','execution_status':'infrastructure_error','eval_result':{'valid':True,'aggregate':{'task_fulfillment_mean':2,'planning_and_efficiency_mean':3}}}
+        for name in ['result.json','agent-record.json','failure-record.json']:save(episode/name,row)
+        (episode/'events.jsonl').write_text('{}\n');(episode/'workspace').mkdir();(episode/'workspace/abc.stderr.log').write_text('synthetic server error')
+        runtime=self.root/'runtime'/publisher.CAMPAIGN;runtime.mkdir(parents=True);(runtime/'synthetic-scored-execution.log').write_text('synthetic execution error')
+        with patch.object(publisher,'ROOT',self.root),patch.object(publisher,'RECEIPTS',self.root/'receipts'):
+            archive=publisher.package(folder)
+        with zipfile.ZipFile(archive) as z:
+            self.assertIn('runs/synthetic-scored/repeat-0/no_update/original/1/workspace/abc.stderr.log',z.namelist())
+            self.assertIn(f'runtime/{publisher.CAMPAIGN}/synthetic-scored-execution.log',z.namelist())
 
 if __name__=='__main__':unittest.main()

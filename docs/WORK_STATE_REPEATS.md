@@ -20,6 +20,8 @@ read-only preflight 已核对 162 条旧记录、四条失败收据、冻结核�
 
 第二新增轮路径预声明门也已测试通过，目前相关测试总计36项。等长路径文件系统验证可用 scripts/repeat_validate_path.py 复现，仅创建和清理自己新建的8字符临时测试目录，不调用模型。该测试27个布局均通过；真实第二新增轮仍需逐条核验输入。
 
+随后增加了证据包日志保留测试并通过，目前相关测试总计37项。repeat_publish.package 保留失败案例工具stderr及已结束的每轮execution/scoring/summary日志，不将仍在写入的全局模型服务日志当作完整附件。
+
 旧管理进程 PID6104 载入的是仅比较manifest的旧发布逻辑；actor执行进程 PID4404 必须继续。通过 repeat_supervise_existing.py 先保留worker句柄并防睡眠，再只替换管理程序，持续等待同一worker自然退出；之后 --resume 跳过所有已保存actor记录，再评分发布。接管实际状态以 runtime/repeats-20261029/management-handoff.json 和CIM进程为准，不凭本段判断完成。
 
 脚本职责：repeat_common.py 严格矩阵/可比性/指标；repeat_runner.py 恢复边界适配，首次使用原执行器，已保存不重跑，无结果残留目录阻止恢复；repeat_publish.py 白名单提交、远端逐文件核验、新Release及匿名下载哈希；repeat_campaign.py 控制逐轮执行、评分、发布门和15分钟状态发布。

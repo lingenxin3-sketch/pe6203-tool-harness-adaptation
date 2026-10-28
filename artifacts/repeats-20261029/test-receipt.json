@@ -9,7 +9,7 @@
     "exit_code": 0,
     "log_sha256": "ed58d3f2c47140450360df8b10e0c071d81bffa5cfab61e99503efdd96c7221a"
   },
-  "unique_test_count": 36,
+  "unique_test_count": 37,
   "no_model_calls_in_unit_tests": true,
   "metadata_lock_test": {
     "exit_code": 0,
@@ -21,6 +21,10 @@
     "log_sha256": "c51ec7e6f3b28411463f3def7014ad9a179c4ed1cc8f918fa8e5d248dce79c00"
   },
   "second_round_path_gate": {
+    "count": 1,
+    "exit_code": 0
+  },
+  "closed_log_evidence_test": {
     "count": 1,
     "exit_code": 0
   }
