@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-10-29T00:28:29+08:00",
+  "recorded_at": "2026-10-29T04:15:44+08:00",
   "properties": {
     "default_generation_settings": {
       "params": {
@@ -67,7 +67,7 @@
       "video": false,
       "audio": false
     },
-    "media_marker": "<__media_0JULdAj1mipnwaO82E6wYtpT5pOzj9It__>",
+    "media_marker": "<__media_NY9h1HmuTFENDZhkJMVs5t0NciSvDuL9__>",
     "endpoint_slots": true,
     "endpoint_props": false,
     "endpoint_metrics": false,
@@ -137,7 +137,7 @@
             "text"
           ]
         },
-        "created": 1793204909,
+        "created": 1793218544,
         "owned_by": "llamacpp",
         "meta": {
           "vocab_type": 2,

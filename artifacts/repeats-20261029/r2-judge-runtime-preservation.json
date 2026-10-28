@@ -1,0 +1,9 @@
+{
+  "verified_at": "2026-10-29T04:16:28+08:00",
+  "source_observed_at": "2026-10-29T04:15:44+08:00",
+  "runtime_receipt": "artifacts/repeats-20261029/r2-judge-start-runtime.json",
+  "sha256": "c5ab2a9f1604304ab99ec89e16ba877cdfd4ad480121cb90ea09d62b344e50f7",
+  "capacity": 24576,
+  "model": "qwen2.5-7b-judge",
+  "scope": "First added round judge runtime; retained before any later model switch."
+}

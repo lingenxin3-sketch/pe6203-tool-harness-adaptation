@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-10-29T00:34:09+08:00",
+  "recorded_at": "2026-10-29T04:15:20+08:00",
   "properties": {
     "default_generation_settings": {
       "params": {
@@ -137,7 +137,7 @@
             "text"
           ]
         },
-        "created": 1793205249,
+        "created": 1793218520,
         "owned_by": "llamacpp",
         "meta": {
           "vocab_type": 2,

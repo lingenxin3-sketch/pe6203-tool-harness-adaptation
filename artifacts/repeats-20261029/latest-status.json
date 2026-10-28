@@ -1,7 +1,7 @@
 {
-  "collected_at": "2026-10-29T04:14:41+08:00",
-  "phase": "prepared",
-  "message": "正式前状态已发布，开始逐轮实验",
+  "collected_at": "2026-10-29T04:30:21+08:00",
+  "phase": "scoring",
+  "message": "第2轮评分，保留已有评分和执行证据",
   "rounds": [
     {
       "name": "final-v1",
@@ -20,13 +20,13 @@
       "name": "repeat-r2-20261029",
       "expected": 162,
       "found": 162,
-      "scored": 0,
+      "scored": 30,
       "failures": 5,
       "missing": 0,
       "issues": [],
       "status_counts": {
-        "awaiting_judge": 157,
-        "infrastructure_error": 5
+        "evaluated": 30,
+        "awaiting_judge": 132
       },
       "complete": false
     },

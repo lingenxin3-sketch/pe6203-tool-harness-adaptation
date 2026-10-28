@@ -51,3 +51,15 @@ read-only preflight 已核对 162 条旧记录、四条失败收据、冻结核�
 模型启动收据 actor-runtime.json 可能会在后续切换被更新，已将00:34的首轮actor原收据按字节复制到 r2-actor-start-runtime.json，哈希9b0d42d4554b610347502c1898f820490ff0453b5d11588f376257ee1d01793f。评分和第二新增轮启动时也应保留每轮独立的模型启动收据，不能把后来的收据误称为前一轮启动状态。
 
 03:20自动发布已远端核验，未见发布错误。当前还没有新轮最终分数或新Release。第一新增轮存在资源可见性混杂，原轮与它不可严格合并；第二新增轮尚未启动，已预声明final-r3等长目录并完成27组无模型检查，但实际输入仍要在运行后核对。即使最终有486条已评分记录，也不能把不兼容轮硬合并成三次可比实验。
+
+## 2026年10月29日0417阶段切换快照
+
+原actor PID4404在04:14自然退出，已通过保留的Windows进程句柄核实exit code=0；只读观察会话99236已正常结束，不再轮询它。监管程序自动启动 --resume 管理程序，实际Python管理PID40048、venv启动器PID39668，创建于04:14:34。现已进入scoring，评分子进程记录PID17588。不要启动第二份管理器或评分器。runtime/repeats-20261029/management-continuation.json、state.json、controller-continuation.stdout.log/.stderr.log为本阶段现场信息。
+
+第一新增轮162条全部落盘，execution-audit.json无issues且recorded_invariants_pass=true；评分尚未全部完成，不能称整轮完成。异常共5条，新增full_rewrite/original/416，留下10条消息。五条failure-record.json已按此前原始哈希逐条验证保留，见r2-failure-preservation-verification.json。它们按已有轨迹评分，不重跑。第二新增轮final-r3此时未创建，发布门也未产生。
+
+完整162条输入检查发现123条可见资源文件名清单与旧轮不同（full_rewrite52、no_update17、selective_patch54），没有缺失输入检查。见r2-input-compatibility-final-execution.json。第一新增轮不可与旧轮严格合并，且组内策略有输入可见性混杂，不把所有分数差异归因于策略。较长6条离线评分长度预查最大预留17261<固定容量24576，属于非穷尽检查，正式评分逐条精确容量检查仍为准；见r2-late-long-trace-context-check.json。
+
+本轮judge在04:15:44核验，原模型、24576容量；独立原字节收据为r2-judge-start-runtime.json及r2-judge-runtime-preservation.json。第二新增轮后续actor/judge也须及时保留独立运行收据，不能让全局actor-runtime.json或judge-runtime.json后写版本冒充前轮。
+
+新只读观察会话exec session46604运行runtime/repeats-20261029/wait_campaign.py 40048，保留当前管理进程句柄，每50秒打印两轮真实found/scored/failures及发布回执时间。它不执行实验、不启动模型。后续用write_stdin轮询此会话，单次等待50秒；若会话丢失，先从完整CIM进程视图确认40048及其子进程和当前state，不能因受限观察或等待超时就恢复或重跑。第一轮评分齐备后仍需审计、独立结果、打包、新Release匿名下载SHA和最终commit远端核验，门通过后才启动final-r3。当前尚无新Release。

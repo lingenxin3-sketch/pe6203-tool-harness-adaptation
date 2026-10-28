@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-10-29T04:15:49+08:00",
+  "failures": [
+    {
+      "episode": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/117/result.json",
+      "retained": true
+    },
+    {
+      "episode": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/389/result.json",
+      "retained": true
+    },
+    {
+      "episode": "runs/repeat-r2-20261029/repeat-0/full_rewrite/original/416/result.json",
+      "retained": true
+    },
+    {
+      "episode": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/389/result.json",
+      "retained": true
+    },
+    {
+      "episode": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/117/result.json",
+      "retained": true
+    }
+  ],
+  "all_original_failure_bytes_retained": true
+}

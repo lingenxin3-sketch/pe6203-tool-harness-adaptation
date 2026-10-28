@@ -1,0 +1,947 @@
+{
+  "compatible": false,
+  "checks": {
+    "config": true,
+    "task_ids": true,
+    "coverage": true,
+    "inventory_hashes": true,
+    "source_hashes": true,
+    "split": true
+  },
+  "meaning": "Output directory and round label differ; all experiment settings and recorded protocol hashes must match exactly.",
+  "resource_lists_checked": 162,
+  "resource_list_differences": [
+    {
+      "episode": "repeat-0/full_rewrite/iter3/103/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/105/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/113/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/117/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/139/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/267/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/273/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/274/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/278/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/28/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/283/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/386/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/389/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/393/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/403/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/411/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/416/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/103/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/105/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/113/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/117/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/139/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/267/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/273/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/274/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/278/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/28/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/283/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/386/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/389/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/393/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/403/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/411/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/416/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/103/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/105/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/113/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/117/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/139/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/267/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/273/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/274/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/278/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/28/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/283/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/386/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/389/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/393/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/403/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/411/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/416/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/9/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/103/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/105/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/113/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/117/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/139/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/267/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/273/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/274/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/278/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/28/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/283/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/386/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/389/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/393/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/403/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/411/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/no_update/original/416/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/103/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/105/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/113/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/117/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/139/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/267/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/273/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/274/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/278/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/28/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/283/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/386/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/389/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/393/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/403/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/411/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/416/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/9/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/103/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/105/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/113/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/117/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/139/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/267/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/273/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/274/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/278/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/28/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/283/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/386/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/389/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/393/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/403/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/411/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/416/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/9/result.json",
+      "only_first": [
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/103/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/105/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/113/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/117/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/139/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/267/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/273/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/274/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/278/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/28/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/283/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/386/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/389/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/393/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/403/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/411/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/416/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/9/result.json",
+      "only_first": [
+        "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+        "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf"
+      ],
+      "only_second": []
+    }
+  ],
+  "unavailable_input_checks": [],
+  "inputs_complete": true,
+  "input_limitation": "Windows path length can change the resource listing shown to the model even when fixture bytes and manifest hashes match. No claim that these omitted PDFs caused a score change.",
+  "collected_at": "2026-10-29T04:15:21+08:00",
+  "stage": "execution finished; scoring not yet complete"
+}
