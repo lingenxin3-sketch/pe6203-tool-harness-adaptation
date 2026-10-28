@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-10-29T03:18:27+08:00",
+  "r2_actor_source_recorded_at": "2026-10-29T00:34:09+08:00",
+  "source_sha256": "9b0d42d4554b610347502c1898f820490ff0453b5d11588f376257ee1d01793f",
+  "preserved_copy": "artifacts/repeats-20261029/r2-actor-start-runtime.json",
+  "meaning": "Exact copy of first new round actor startup receipt, saved before any scoring or later round model switch; not a new model launch."
+}
