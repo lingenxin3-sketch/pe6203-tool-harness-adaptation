@@ -1,0 +1,73 @@
+{
+  "observed_at": "2026-10-29T04:54:48+08:00",
+  "partial_round": true,
+  "review_type": "AI-assisted; member verification pending",
+  "scope": "Low-score comparison cases; not proof all grading is correct or incorrect",
+  "no_rescoring": true,
+  "cases": [
+    {
+      "source": "runs/repeat-r2-20261029/repeat-0/no_update/iter5/113/result.json",
+      "source_sha256": "a6c3d7ff3ac175b18a287a24bfb8eed93d1422ff58f08dd744392e5b5855f7ad",
+      "score": {
+        "successful_runs": 1,
+        "total_runs": 1,
+        "task_fulfillment_mean": 1.0,
+        "grounding_mean": 1.0,
+        "planning_and_efficiency_mean": 4.0,
+        "task_fulfillment_reasoning_runs": [
+          "Total requirements: 6. Met requirements: 0. Defect rate: 100%."
+        ],
+        "grounding_reasoning_runs": [
+          "Total claims: 6. Unsupported claims: 6. Defect rate: 100%."
+        ],
+        "planning_efficiency_reasoning_runs": [
+          "Total tool calls: 12. Redundant/unnecessary calls: 9. Defect rate: 75%."
+        ],
+        "task_fulfillment": 1,
+        "grounding": 1,
+        "planning_and_efficiency": 4
+      },
+      "mcp_flagged_errors": 9,
+      "answer_empty": true,
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "root_tasks_file_exists": false
+    },
+    {
+      "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter3/28/result.json",
+      "source_sha256": "fcdd9e73389bec19ea65af1afcbd94b658ba543d3cb953c165e36a6e73c9ecfd",
+      "score": {
+        "successful_runs": 1,
+        "total_runs": 1,
+        "task_fulfillment_mean": 6.0,
+        "grounding_mean": 3.0,
+        "planning_and_efficiency_mean": 5.0,
+        "task_fulfillment_reasoning_runs": [
+          "Total requirements: 3. Met requirements: 2 (comparison and summary). Defect rate: (3 - 2) / 3 * 100% = 33.33%."
+        ],
+        "grounding_reasoning_runs": [
+          "Total claims: 2 (unresolved issues). Grounded claims: 0. Defect rate: (2 - 0) / 2 * 100% = 100%."
+        ],
+        "planning_efficiency_reasoning_runs": [
+          "Total tool calls: 4. Redundant/unnecessary calls: 3 (two tasks_setup and one tasks_add due to errors). Defect rate: (4 - 1) / 4 * 100% = 75%."
+        ],
+        "task_fulfillment": 6,
+        "grounding": 3,
+        "planning_and_efficiency": 5
+      },
+      "mcp_flagged_errors": 3,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [],
+        "deleted": [],
+        "modified": []
+      },
+      "root_tasks_file_exists": false
+    }
+  ]
+}
