@@ -1,0 +1,31 @@
+{
+  "collected_at": "2026-10-29T06:14:04+08:00",
+  "partial": true,
+  "no_execution_retry": true,
+  "records": [
+    {
+      "path": "runs/final-r3/repeat-0/full_rewrite/iter5/117/result.json",
+      "idx": 117,
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "original_sha256": "c3d375a4b91e38db5888f8624c2d6d522916b847a2551cf108bdf6c62275fd4a",
+      "applied": false,
+      "read_only_reconstruction_verified": true,
+      "recorded_messages": 8,
+      "answer_present": false
+    },
+    {
+      "path": "runs/final-r3/repeat-0/selective_patch/original/117/result.json",
+      "idx": 117,
+      "strategy": "selective_patch",
+      "version": "original",
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "original_sha256": "1331d7b8ea8857f54e51bc4fff95a5e4aac002ba47b3130c70e389d27e4fbed1",
+      "applied": false,
+      "read_only_reconstruction_verified": true,
+      "recorded_messages": 8,
+      "answer_present": false
+    }
+  ]
+}

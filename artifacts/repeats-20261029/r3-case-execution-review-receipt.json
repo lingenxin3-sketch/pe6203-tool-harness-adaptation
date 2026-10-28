@@ -1,7 +1,8 @@
 {
   "reviewed_at": "2026-10-29T05:58:36+08:00",
   "cases": [
-    28
+    28,
+    113
   ],
   "planned_cases": [
     28,
@@ -193,8 +194,525 @@
           "todo_checkbox_count": 3
         }
       ]
+    },
+    {
+      "record": "runs/final-r3/repeat-0/no_update/original/113/result.json",
+      "original_result_sha256_at_review": "2183867451cd2f7e2eb8e9462ac90108925d2ef0248ef4ab919760e494a8617c",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 113,
+      "strategy": "no_update",
+      "version": "original",
+      "actual_tool_calls": 3,
+      "model_decision_rounds": 5,
+      "mcp_flagged_errors": 0,
+      "planning_calls": [
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        }
+      ],
+      "planning_flagged_errors": 0,
+      "storage": [
+        {
+          "path": "tasks.json",
+          "sha256": "d4e0c3960bc555a851cd8605a437765bef532139085d827c59f786ccaaaf2294",
+          "task_count": 5,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "10d8a0900a3b3f9d07e733d71bb46abdb5ee9d644806597b7f19872566c82254",
+          "task_count": 0,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        }
+      ],
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      }
+    },
+    {
+      "record": "runs/final-r3/repeat-0/no_update/iter3/113/result.json",
+      "original_result_sha256_at_review": "a463dcd571dea63eafaef2259f3e2f9c6020b9ecd8efc6cbf90add6de847603d",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 113,
+      "strategy": "no_update",
+      "version": "iter3",
+      "actual_tool_calls": 4,
+      "model_decision_rounds": 6,
+      "mcp_flagged_errors": 1,
+      "planning_calls": [
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        },
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "splitDetails",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        }
+      ],
+      "planning_flagged_errors": 1,
+      "storage": [
+        {
+          "path": "tasks.json",
+          "sha256": "493d3a2f9833f45fe986375c361ce910436cafd49b9064c6d839b0f411baeaa9",
+          "task_count": 5,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "1676fd0d7a61098fcfe4d6383421e8b3e3cd766f0c0fe52fb6fbf463c63b08c7",
+          "task_count": 0,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        }
+      ],
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      }
+    },
+    {
+      "record": "runs/final-r3/repeat-0/no_update/iter5/113/result.json",
+      "original_result_sha256_at_review": "0e38fd77994013b0ab8cd723caa93fa85e8e1dd4f415062bee9d690837251ee5",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 113,
+      "strategy": "no_update",
+      "version": "iter5",
+      "actual_tool_calls": 8,
+      "model_decision_rounds": 10,
+      "mcp_flagged_errors": 7,
+      "planning_calls": [
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        },
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "splitDetails",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        },
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "splitDetails",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        },
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "splitDetails",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        },
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "splitDetails",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        },
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "splitDetails",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        },
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "splitDetails",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        }
+      ],
+      "planning_flagged_errors": 7,
+      "storage": [
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "b0e50fa123f06eabb5095ffe337a0121b41f4c90a6a77dac03daba17379d905a",
+          "task_count": 0,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        }
+      ],
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      }
+    },
+    {
+      "record": "runs/final-r3/repeat-0/full_rewrite/original/113/result.json",
+      "original_result_sha256_at_review": "5180ee5e033b054a1b048503ad26bd36f1a99d87feaf7c1bbeca2514d5dd3956",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 113,
+      "strategy": "full_rewrite",
+      "version": "original",
+      "actual_tool_calls": 3,
+      "model_decision_rounds": 5,
+      "mcp_flagged_errors": 0,
+      "planning_calls": [
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        }
+      ],
+      "planning_flagged_errors": 0,
+      "storage": [
+        {
+          "path": "tasks.json",
+          "sha256": "6a61842692169cb153d15b84ae6c977b23e6d8f7c9e415ceadb3bc82c8c8453a",
+          "task_count": 5,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "e77a09f68ff3b24f6352d319accd990d3056b552d06818912a10e722511afb0e",
+          "task_count": 0,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        }
+      ],
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      }
+    },
+    {
+      "record": "runs/final-r3/repeat-0/full_rewrite/iter3/113/result.json",
+      "original_result_sha256_at_review": "2558ab699cc57966bcb36b8aa0c08d49bbedd22de31da186ae214f41f65d11e6",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 113,
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "actual_tool_calls": 6,
+      "model_decision_rounds": 8,
+      "mcp_flagged_errors": 0,
+      "planning_calls": [],
+      "planning_flagged_errors": 0,
+      "storage": [
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "fb701b6c011e5aefc0a965737aaee3b3bb17a2cbe9e63276348d2dc08ab97c95",
+          "task_count": 4,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 4,
+          "separate_subtasks_count": 0
+        }
+      ],
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      }
+    },
+    {
+      "record": "runs/final-r3/repeat-0/full_rewrite/iter5/113/result.json",
+      "original_result_sha256_at_review": "a4ab1571a47d95fcc5db231d9c36a5973c9f371ea30bc52e9ae4fdbfc9723359",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 113,
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "actual_tool_calls": 3,
+      "model_decision_rounds": 5,
+      "mcp_flagged_errors": 0,
+      "planning_calls": [
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "priority",
+            "splitDetails",
+            "tags",
+            "tasks"
+          ],
+          "priority": "high",
+          "tags": [
+            "error detection",
+            "data aggregation",
+            "real-time monitoring",
+            "UI design"
+          ]
+        }
+      ],
+      "planning_flagged_errors": 0,
+      "storage": [
+        {
+          "path": "tasks.json",
+          "sha256": "2e294d15fe70cb9c003d20972e0869a160d5a0c1727bcff86a758698211584b0",
+          "task_count": 5,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "eeb6afbd35a3d2fb0342fb96e8563c23667c3bcb824704c51ebc456bf82a652a",
+          "task_count": 0,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        }
+      ],
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      }
+    },
+    {
+      "record": "runs/final-r3/repeat-0/selective_patch/original/113/result.json",
+      "original_result_sha256_at_review": "fe6e1fc26473a28fe509e77add9d5adff7f202e17e91ae5e241b4290cec0c5e3",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 113,
+      "strategy": "selective_patch",
+      "version": "original",
+      "actual_tool_calls": 3,
+      "model_decision_rounds": 5,
+      "mcp_flagged_errors": 0,
+      "planning_calls": [
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        }
+      ],
+      "planning_flagged_errors": 0,
+      "storage": [
+        {
+          "path": "tasks.json",
+          "sha256": "dddb706829d524a576513d8d859e6803acdfb746ab798304a6438461d8fccdc6",
+          "task_count": 5,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "cd752948d344c4e7193863d15c7b3c23337ac2732e81e308b3abb94f7c7a6dbf",
+          "task_count": 0,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        }
+      ],
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      }
+    },
+    {
+      "record": "runs/final-r3/repeat-0/selective_patch/iter3/113/result.json",
+      "original_result_sha256_at_review": "f7f64e1f2236ff473347e339f38c2836e47b41d3440f99448c599e313320b822",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 113,
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "actual_tool_calls": 2,
+      "model_decision_rounds": 4,
+      "mcp_flagged_errors": 0,
+      "planning_calls": [
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "originalRequest",
+            "splitDetails",
+            "tasks"
+          ],
+          "priority": null,
+          "tags": null
+        }
+      ],
+      "planning_flagged_errors": 0,
+      "storage": [
+        {
+          "path": "tasks.json",
+          "sha256": "098fb55a31248ac21c536e0b3d789174cf0abd714c21656e77fdda0d51f960a8",
+          "task_count": 6,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        }
+      ],
+      "artifact_changes": {
+        "created": [
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      }
+    },
+    {
+      "record": "runs/final-r3/repeat-0/selective_patch/iter5/113/result.json",
+      "original_result_sha256_at_review": "cd007000afa74c6ea407a885c64b8683494f1ef6bb52d9e8cce98e814ac63378",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 113,
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "actual_tool_calls": 3,
+      "model_decision_rounds": 5,
+      "mcp_flagged_errors": 0,
+      "planning_calls": [
+        {
+          "tool": "e54174__request_planning",
+          "keys": [
+            "estimatedDeadline",
+            "originalRequest",
+            "priority",
+            "splitDetails",
+            "tags",
+            "tasks"
+          ],
+          "priority": "high",
+          "tags": [
+            "error-detection",
+            "real-time",
+            "visualization",
+            "alerting"
+          ]
+        }
+      ],
+      "planning_flagged_errors": 0,
+      "storage": [
+        {
+          "path": "tasks.json",
+          "sha256": "36b81f9046992a79bdd732f5dc00ac66082aef2d5c33d27753ecb91523799e65",
+          "task_count": 6,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "27c9a4839d556ee109ea1234401ef0b048618ecf8dcbd71af6ec056edf39dc93",
+          "task_count": 0,
+          "done_true": 0,
+          "approved_true": 0,
+          "status_pending": 0,
+          "separate_subtasks_count": 0
+        }
+      ],
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      }
     }
   ],
   "scope": "AI-assisted execution and file review before judging; not member-independent verification or semantic correctness guarantee. No execution retries or score changes.",
-  "review_document": "docs/追加实验/第二新增轮案例核查.md"
+  "review_document": "docs/追加实验/第二新增轮案例核查.md",
+  "updated_at": "2026-10-29T06:05:53+08:00"
 }
