@@ -283,5 +283,8 @@
       "only_test": []
     }
   ],
-  "limits": "Confirms fixture-name visibility for existing Windows runtime at the same path length. Actual new actor prompts must still be checked. Model, decoding, tasks and method unchanged."
+  "limits": "Confirms fixture-name visibility for existing Windows runtime at the same path length. Actual new actor prompts must still be checked. Model, decoding, tasks and method unchanged.",
+  "reproduction_script": "scripts/repeat_validate_path.py",
+  "reproduction_script_sha256": "8c55ea4bb31565a38faec821a09fe219430e93f814cd352411533af241928842",
+  "temporary_test_cleanup_verified": true
 }

@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T01:05:05+08:00",
+  "collected_at": "2026-10-29T01:07:12+08:00",
   "phase": "executing_existing_worker",
   "message": "原执行进程继续；管理程序已接管，禁止因资源清单差异合并旧轮",
   "rounds": [
@@ -19,13 +19,13 @@
     {
       "name": "repeat-r2-20261029",
       "expected": 162,
-      "found": 46,
+      "found": 47,
       "scored": 0,
       "failures": 0,
-      "missing": 116,
+      "missing": 115,
       "issues": [],
       "status_counts": {
-        "awaiting_judge": 46
+        "awaiting_judge": 47
       },
       "complete": false
     },

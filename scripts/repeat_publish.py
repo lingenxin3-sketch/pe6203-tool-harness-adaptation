@@ -19,13 +19,13 @@ def cmd(*args):
 def sensitive(data):
     patterns=[rb'gh[pousr]_[A-Za-z0-9_]{30,}',rb'github_pat_[A-Za-z0-9_]{30,}',rb'sk-[A-Za-z0-9_-]{30,}',rb'hf_[A-Za-z0-9]{30,}',rb'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----']
     return any(re.search(p,data) for p in patterns)
-def allowed(name):return name.startswith('docs/追加实验/') or name.startswith('artifacts/'+CAMPAIGN+'/') or name in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md']
+def allowed(name):return name.startswith('docs/追加实验/') or name.startswith('artifacts/'+CAMPAIGN+'/') or name in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md']
 def publish(message):
     if cmd('git','branch','--show-current')!=BRANCH:raise RuntimeError('Branch changed; refusing publication')
     staged=cmd('git','diff','--cached','--name-only','-z').split('\0')
     if any(n and not allowed(n) for n in staged):raise RuntimeError('Other staged work exists; preserve it and stop')
     paths=[p for d in [PUBLIC,RECEIPTS] for p in d.rglob('*') if p.is_file() and p.suffix in ['.md','.json','.csv']]
-    paths += [ROOT/p for p in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md'] if (ROOT/p).is_file()]
+    paths += [ROOT/p for p in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md'] if (ROOT/p).is_file()]
     for p in paths:
         if p.stat().st_size>20_000_000 or sensitive(p.read_bytes()):raise RuntimeError('Size/privacy check failed: '+str(p.relative_to(ROOT)))
     cmd('git','add','--',*[p.relative_to(ROOT).as_posix() for p in paths]);cmd('git','diff','--cached','--check')
