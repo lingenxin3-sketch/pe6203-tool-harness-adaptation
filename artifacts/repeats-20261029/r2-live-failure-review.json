@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T01:21:02+08:00",
+  "collected_at": "2026-10-29T02:59:29+08:00",
   "partial": true,
   "failures": [
     {
@@ -8,6 +8,16 @@
       "original_record_sha256": "d386ab7f91de754944650b0adee0e36904bc60c1ae00dbe3964e5b7fc30ff102",
       "recoverable_from_saved_evidence": true,
       "messages": 8,
+      "reconstruction_error": null,
+      "no_execution_retry": true
+    },
+    {
+      "source": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/389/result.json",
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "original_record_sha256": "5a98083d301b3e5fc34ce1da36f2131d995bde50d77babc2fbf90bf1213db0e6",
+      "recoverable_from_saved_evidence": true,
+      "messages": 6,
+      "reconstruction_error": null,
       "no_execution_retry": true
     },
     {
@@ -16,8 +26,9 @@
       "original_record_sha256": "b29cd48cdfa23b0dab13d2e5c3bb2f6e07f13e200260bdf7e1813c0bf053af92",
       "recoverable_from_saved_evidence": true,
       "messages": 16,
+      "reconstruction_error": null,
       "no_execution_retry": true
     }
   ],
-  "method": "Read-only dry-run reconstruction from existing events, not applied during active execution"
+  "method": "Read-only reconstruction from recorded events; not applied while execution is active"
 }
