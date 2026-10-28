@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-29T07:25:40+08:00",
+  "partial": true,
+  "checked_actual_resource_lists": 110,
+  "record_count_observed_after_check": 110,
+  "manifest_and_protocol_checks": {
+    "config": true,
+    "task_ids": true,
+    "coverage": true,
+    "inventory_hashes": true,
+    "source_hashes": true,
+    "split": true
+  },
+  "resource_list_differences": [],
+  "unavailable_input_checks": [],
+  "whole_round_comparability": "Pending complete execution, scoring, runtime and publication verification",
+  "no_inference": true
+}

@@ -131,3 +131,13 @@ original-public-evidence-verification.json保留all_original_raw_evidence_matche
 **最终发布代码待办：** 活controller仍在周期发布，不人工并发Git提交。等管理进程实际退出后，把repeat_pair_comparison.py加入repeat_publish.py的allowed和paths两处显式名单，运行相关发布白名单检查并做真实完整数据分析/独立验算后，一起提交推送并核验远端。不要忘记发布这个新脚本，也不要把未跟踪的dashboard草稿混入。原配置和tool_adapt核心仍不变。R3 judge实际开始时保存独立收据、162完整评分发布/匿名ZIP下载核验、最终old/R3可比性判断、旧文件保护、最新commit和结果/证据链接等全部原目标仍待完成；不提前complete、不称blocked。
 
 07:13补充：07:10:28提交97c4bd9e2ad77a4e4cec5dd9867f4bf3772b3ee5已远端逐文件验证，公开的旧证据来源JSON现已有semantic_match=true与raw_byte_match=false的单条例外说明，冻结原件序列化副本和R2真实gate副本也已公开（分支文字仍可能LF转换，精确原字节待R3新ZIP）。07:13:35又实际通过GitHub API读回该提交状态页及latest-status.json：公开快照采于07:09:26，old162/162/4异常、R2 162/162/5异常、R3 93/0/2异常，完成一次真实的08:00前进度发布要求，见before-0800-progress-verification.json；不把公开93误写成本地当时95。R3本地07:11时95/162、评分0、异常2，原进程继续。新证明JSON在下一心跳发布，不能提前称该证明文件本身已上传。后面继续争取更新更靠近08:00的实时快照，但不为此启用其他模型或子代理。
+
+## 2026年10月29日0736续接补充
+
+当前R3同一执行进程持续，07:35本地114/162条、0评分、2异常，没有新启动或重跑。实际监测会话46604仍保留controller40048句柄，请续同一write_stdin；状态/锁文件不是唯一存活凭据。当前轮属于有已确认进程的等待，并新增了离线评分容量及实际输入核查证据，不是blocked，也不满足整个目标complete。
+
+07:17使用现有check_judge_context.check对当时可用正常轨迹按提示字符长度取最长6条，使用已下载judge词表离线计数、无模型生成，最大预留16273<原固定容量24576；raw异常轨迹被该检查器跳过，报告明确非穷尽，正式评分仍逐条精确容量检查。source analysis/judge-context-preflight.json是R3新分析文件，没有覆盖旧轮。公开副本r3-long-trace-context-check.json带actual_fixed_judge_capacity=24576，不把旧工具的fits_16384字段误当实际容量。没有改变模型、decoder或上下文。
+
+07:25:40实际逐条比较已落盘110条R3与旧轮的第一轮模型请求资源清单，110条均一致、无不可用输入，config/task_ids/coverage/inventory_hashes/source_hashes/split全通过。r3-live-input-compatibility.json明确部分检查，不能提前称162完整可比；最终还须评分/运行条件/全量资源清单复核。
+
+07:26:38提交2afd4e317336e2adf3c9280f807a2c9968d7bfda已远端逐文件核验，已包含r3-long-trace-context-check.json与before-0800-progress-verification.json。因110条输入核查在该次路径收集之后生成，r3-live-input-compatibility.json尚未在此提交内，待下一心跳；不可误称它已上传。R2已完成交付、R3继续执行、评分未开始的状态不变。R3实际进入scoring时保存真正的r3-judge-start-runtime.json；不要提前复制仍属于R2的全局judge运行收据。
