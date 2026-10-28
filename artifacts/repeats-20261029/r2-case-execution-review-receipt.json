@@ -1,101 +1,201 @@
 {
-  "reviewed_at": "2026-10-29T01:18:28+08:00",
+  "reviewed_at": "2026-10-29T01:27:45+08:00",
   "cases": [
     28,
-    113
+    113,
+    117
   ],
   "records": [
     {
       "record": "runs/repeat-r2-20261029/repeat-0/no_update/original/28/result.json",
       "actor_evidence_sha256": "663d545c97880b2911fc749c13b5abb755d780d80e85efb36ee79fe68908a497",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "5e6bb2f94ad14f7b99bcac57e6919866d5466f76a327d52b2f4781123192fc52"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/28/result.json",
       "actor_evidence_sha256": "eea869890e20d6186e354c3593cc37567a93c4f08c2f20d90cabb3ebf26b399e",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "d3a3761b40af12bc9582e0b0b20547582d8d292df0a14dad64d6e27c81fb2aae"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/no_update/iter5/28/result.json",
       "actor_evidence_sha256": "37b716a4d60be74a24a454b3380e2f8734623c6428ca64237838858f3e39668f",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "a045d7b539228fbb79e93a2ff524e1d0172a5c137cb3f4048c62030fbd49551d"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/full_rewrite/original/28/result.json",
       "actor_evidence_sha256": "2e57544ce1825274929be11d52509122bb892731c458fecacd68533825c4f6cb",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "5c811ef8df783bfec8f9d9b4581445dc04a09e4b7637729d01802576261ff4b9"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter3/28/result.json",
       "actor_evidence_sha256": "b66c2cf71ac013a9a1d7dae3f981a92535df0561fefc6677d5d10e0c00b4ba25",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "f1d344c5b9bd8db4829b0065a1f210f2d5114a8936341b007b59671d67c2a31f"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/28/result.json",
       "actor_evidence_sha256": "6d35f0db6c847f8c719f1edd5e0878e44313e0c951580b0dca009d01cb795690",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "26da0b27f12786880781813118085f6d4d85185079f8d274d65bd6c4e47a95ce"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/selective_patch/original/28/result.json",
       "actor_evidence_sha256": "def17ef197f79f1652eb002f57e58e8b3e6695b5969b7f0daf81d2abed24286b",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "1a2d87ee683cb15c22a6626d46be55d2a9f0b046757dca58c1a30575111d41e8"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter3/28/result.json",
       "actor_evidence_sha256": "16eac5962afd002be50fffa9a9f6d9fc83d9fa072f1744ede7f7ddd037c683e7",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "c832b99ff6335e84fde5e059c1e39a5526c34c358af6a0e8ed0dbc6d66f7c3b6"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/28/result.json",
       "actor_evidence_sha256": "5919d3aadb3a5d1ad7a3b26fdd9574121be991781e649dfdbf3ca2e4ab1a6fb6",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "3ffcd12de21b6bb40c138b3e47b09988f35fbd1a46529f7e14993779525ccde3"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/no_update/original/113/result.json",
       "actor_evidence_sha256": "a41e6e2e32f1f819838d48ed794bfcb38e3edbcb7199384e4b4bddc0366885d3",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "54f8c712d14322618c289bff83f18724155f792e9eb91f6c2982209bd4424d61"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/113/result.json",
       "actor_evidence_sha256": "1ad615d7fe79ec15a5e537f9a35c19e5fa1a4d08cdc71788e0d56fff31b30b7c",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "77007fcce58c182ce476ad04617522585769e3f63f7d82183059eddaec7fc0c0"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/no_update/iter5/113/result.json",
       "actor_evidence_sha256": "7b53bdf6b3c67ae6cbd77b0274f5f7ca79ec601191e86c0d0cdaa1d62d844b93",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "219a833ba7741df0f6a02f5cd05586de7baf8176c95527707f15f3c70d9f8af2"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/full_rewrite/original/113/result.json",
       "actor_evidence_sha256": "2d706d944da71b5655ee02b3a3452545b988ae47f585c27942de60d26a6eaf4b",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "df801f7069262de95d5c7dc8ff83a840b3c652e749efc326662111cd0af105f5"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter3/113/result.json",
       "actor_evidence_sha256": "f9faa2f02d1f64f8ac71ad8adff410eb43b94ddd119006a3ba367620d09fe8ea",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "4af8f7cca48a3cd6aeb0b2521e53ecc29593949a728825620ab264096ddf4cb0"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/113/result.json",
       "actor_evidence_sha256": "22fd100e1a5d40b9f10e709b15f10135557b8a44d0233343ecc58315d18c4ec1",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "427067db2d2354ca85d0a7db861a736a8e562064668fd9d0e7a42ba744b874dc"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/selective_patch/original/113/result.json",
       "actor_evidence_sha256": "a72d394ee88c0de14555e3f07bab7fe67f4fb40222b68c3c0e3e724052bdde7e",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "da0d6b1ee6f2334191567296d9d2e30bf89dea04bcaaa89a5ab39cbfacf25c15"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter3/113/result.json",
       "actor_evidence_sha256": "7aa0c655808b8e272e0c72b149e114c37ac2586a4039b63e8960158c3c00fc13",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "97ff5ad41c612a1e055a7dab7ffd7723b4def801dcb845dc7042107ae0d0a4aa"
     },
     {
       "record": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/113/result.json",
       "actor_evidence_sha256": "6a0428043233ff40a1b16488ff70536db4ee84b2bd57ac4f54c3fb4a3f3c4911",
-      "scoring_status_at_review": "awaiting_judge"
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "7b3b701e705a3d5e9229809e4262f218314fb65a8f801471df6ac2dedfa97dcf"
+    },
+    {
+      "record": "runs/repeat-r2-20261029/repeat-0/no_update/original/117/result.json",
+      "actor_evidence_sha256": "225d2d6b2e14a9ca76dc0fb6ba7640fa2a251361018b45b84394bc590d787e78",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "cc594511d04197b17a429bf5cd5715b18cd07da90a181dd1a03bc43d159e0f53"
+    },
+    {
+      "record": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/117/result.json",
+      "actor_evidence_sha256": "54af071511c9d2c4be66d525133ffff8f7a0902b948475087d73d32b9bb2d45b",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "b86381d09ea646e6f493b843c097f89a05c3d5b4bf76b8a3410073112b811c5e"
+    },
+    {
+      "record": "runs/repeat-r2-20261029/repeat-0/no_update/iter5/117/result.json",
+      "actor_evidence_sha256": "21dba08cebb49937233998351b2f5d65caec335095cb8c92ace24310064ea98a",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "c8aa3ca9f403acb7cd3733f2b61f35681df336ec18a3505a5aaf44103b352a3f"
+    },
+    {
+      "record": "runs/repeat-r2-20261029/repeat-0/full_rewrite/original/117/result.json",
+      "actor_evidence_sha256": "a57c949e97c3a038087dabc6ace6461cb74f349ed228a2f4cf173c84b62d0e21",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "4c5e766373456f012b80657ed6c9664c564e9f4ace99517713a29966a82bb446"
+    },
+    {
+      "record": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter3/117/result.json",
+      "actor_evidence_sha256": "62f672bb417a5534e9da8792bd02965f51ade7e4e7af5a8b50aaa222cbd4f406",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "02a47a3082c9efa8991474f5aee1009bcdc30b03349b83941098c70e6228a78f"
+    },
+    {
+      "record": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/117/result.json",
+      "actor_evidence_sha256": "797dfd4d7ac5d4d42e77f1aa883aff8d32fe62971948ea59d09822514781dbb8",
+      "scoring_status_at_review": "infrastructure_error",
+      "failure_basis": "Read-only assembled existing events",
+      "original_result_sha256_at_review": "d386ab7f91de754944650b0adee0e36904bc60c1ae00dbe3964e5b7fc30ff102"
+    },
+    {
+      "record": "runs/repeat-r2-20261029/repeat-0/selective_patch/original/117/result.json",
+      "actor_evidence_sha256": "8020fd058f13c9dfef572e83c4ec145ce8c85154d36dfa7546b393fb864ff789",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "b2145d719fa7daf26d5cebe3a248a5643f8466f63ba666b074083d0ee8b88d69"
+    },
+    {
+      "record": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter3/117/result.json",
+      "actor_evidence_sha256": "3a47d185b9f92360a48c60537ab8b6eb08b8db859f5b802b01a22dd9cfdae55c",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "original_result_sha256_at_review": "145477199bef58622c3474379cabb52b230d1b3b5696ad0fdc90aa2b8ee7f836"
+    },
+    {
+      "record": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/117/result.json",
+      "actor_evidence_sha256": "76aecf26c77dfc7ccd5f67694c4bd8fe6e67e4ed35e90c8eb60aa9300b510890",
+      "scoring_status_at_review": "infrastructure_error",
+      "failure_basis": "Read-only assembled existing events",
+      "original_result_sha256_at_review": "b29cd48cdfa23b0dab13d2e5c3bb2f6e07f13e200260bdf7e1813c0bf053af92"
     }
   ],
-  "scope": "Execution and files reviewed before scores; not independent human review or semantic correctness guarantee",
+  "scope": "Execution and files reviewed before scores; failed rows hashed from read-only event reconstruction. Not independent human review or semantic correctness guarantee.",
   "review_document": "docs/追加实验/第一新增轮案例核查.md"
 }

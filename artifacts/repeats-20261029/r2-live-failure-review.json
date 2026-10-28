@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T01:20:04+08:00",
+  "collected_at": "2026-10-29T01:21:02+08:00",
   "partial": true,
   "failures": [
     {
@@ -8,6 +8,14 @@
       "original_record_sha256": "d386ab7f91de754944650b0adee0e36904bc60c1ae00dbe3964e5b7fc30ff102",
       "recoverable_from_saved_evidence": true,
       "messages": 8,
+      "no_execution_retry": true
+    },
+    {
+      "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/117/result.json",
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "original_record_sha256": "b29cd48cdfa23b0dab13d2e5c3bb2f6e07f13e200260bdf7e1813c0bf053af92",
+      "recoverable_from_saved_evidence": true,
+      "messages": 16,
       "no_execution_retry": true
     }
   ],
