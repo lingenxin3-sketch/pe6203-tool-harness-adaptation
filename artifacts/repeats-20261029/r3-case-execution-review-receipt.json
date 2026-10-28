@@ -1,0 +1,200 @@
+{
+  "reviewed_at": "2026-10-29T05:58:36+08:00",
+  "cases": [
+    28
+  ],
+  "planned_cases": [
+    28,
+    113,
+    117
+  ],
+  "complete_case_matrix": false,
+  "records": [
+    {
+      "record": "runs/final-r3/repeat-0/no_update/original/28/result.json",
+      "original_result_sha256_at_review": "c550e502e54f6a51187231c6259ebfb7ad7c93f6abf951f542829dbc646700fd",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 28,
+      "strategy": "no_update",
+      "version": "original",
+      "actual_tool_calls": 3,
+      "mcp_flagged_errors": 0,
+      "modified_tools": [],
+      "regenerated": [],
+      "created_markdown": [
+        {
+          "path": "anotation_path/markdown/tasks.md",
+          "sha256": "e3fcede6082ff5cd04fab062065c7653a2b2375a34d66afd51116aec07744f5c",
+          "todo_checkbox_count": 3
+        }
+      ]
+    },
+    {
+      "record": "runs/final-r3/repeat-0/no_update/iter3/28/result.json",
+      "original_result_sha256_at_review": "602c335e6e8fc5167a761dd4b752e444e18fd90b3fd7b5f8bcd81917dfd281c1",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 28,
+      "strategy": "no_update",
+      "version": "iter3",
+      "actual_tool_calls": 3,
+      "mcp_flagged_errors": 0,
+      "modified_tools": [],
+      "regenerated": [],
+      "created_markdown": [
+        {
+          "path": "anotation_path/markdown/tasks.md",
+          "sha256": "e3fcede6082ff5cd04fab062065c7653a2b2375a34d66afd51116aec07744f5c",
+          "todo_checkbox_count": 3
+        }
+      ]
+    },
+    {
+      "record": "runs/final-r3/repeat-0/no_update/iter5/28/result.json",
+      "original_result_sha256_at_review": "8752a1cc2148c46f22ea12d1c05114b8283de6da7352321880a5082248b495a5",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 28,
+      "strategy": "no_update",
+      "version": "iter5",
+      "actual_tool_calls": 3,
+      "mcp_flagged_errors": 0,
+      "modified_tools": [
+        "b1f986__read_multiple_files"
+      ],
+      "regenerated": [],
+      "created_markdown": [
+        {
+          "path": "anotation_path/markdown/tasks.md",
+          "sha256": "848996e9c0e957bdf7c4584ec14fe3c69689ba4e1a651569663ec316ec5f0202",
+          "todo_checkbox_count": 3
+        }
+      ]
+    },
+    {
+      "record": "runs/final-r3/repeat-0/full_rewrite/original/28/result.json",
+      "original_result_sha256_at_review": "4c8db3e25421a49a4823272728a1ef6c3fedbb3406f119dd64c40c9c1c7ced6f",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 28,
+      "strategy": "full_rewrite",
+      "version": "original",
+      "actual_tool_calls": 3,
+      "mcp_flagged_errors": 0,
+      "modified_tools": [],
+      "regenerated": [],
+      "created_markdown": [
+        {
+          "path": "markdown/tasks.md",
+          "sha256": "cb01cf89b6122b9511f54d3823608dbf370df20688c251ad06c5932ef02ae804",
+          "todo_checkbox_count": 3
+        }
+      ]
+    },
+    {
+      "record": "runs/final-r3/repeat-0/full_rewrite/iter3/28/result.json",
+      "original_result_sha256_at_review": "d13a85f10c6437db42e50b6995c4d8a64cf222c37ba02619158c89810d1e37f9",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 28,
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "actual_tool_calls": 4,
+      "mcp_flagged_errors": 3,
+      "modified_tools": [],
+      "regenerated": [
+        "897e5b__tasks_add",
+        "897e5b__tasks_setup",
+        "b1f986__read_multiple_files"
+      ],
+      "created_markdown": []
+    },
+    {
+      "record": "runs/final-r3/repeat-0/full_rewrite/iter5/28/result.json",
+      "original_result_sha256_at_review": "c90698c60313259c138300d22b40c3ea866a44858f6f38786a3be5416e3e5e09",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 28,
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "actual_tool_calls": 4,
+      "mcp_flagged_errors": 3,
+      "modified_tools": [
+        "b1f986__read_multiple_files"
+      ],
+      "regenerated": [
+        "897e5b__tasks_add",
+        "897e5b__tasks_setup",
+        "b1f986__read_multiple_files"
+      ],
+      "created_markdown": []
+    },
+    {
+      "record": "runs/final-r3/repeat-0/selective_patch/original/28/result.json",
+      "original_result_sha256_at_review": "6693a126814183373e3e072c6e1a5789b32c0365f0b90d75faaac37cf8c880dc",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 28,
+      "strategy": "selective_patch",
+      "version": "original",
+      "actual_tool_calls": 3,
+      "mcp_flagged_errors": 0,
+      "modified_tools": [],
+      "regenerated": [],
+      "created_markdown": [
+        {
+          "path": "anotation_path/markdown/tasks.md",
+          "sha256": "e3fcede6082ff5cd04fab062065c7653a2b2375a34d66afd51116aec07744f5c",
+          "todo_checkbox_count": 3
+        }
+      ]
+    },
+    {
+      "record": "runs/final-r3/repeat-0/selective_patch/iter3/28/result.json",
+      "original_result_sha256_at_review": "728ab8c57ae1e97df2fe90d4fe6649766a8586e38d8f6e27b3380dbe6d320c68",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 28,
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "actual_tool_calls": 3,
+      "mcp_flagged_errors": 0,
+      "modified_tools": [],
+      "regenerated": [],
+      "created_markdown": [
+        {
+          "path": "anotation_path/markdown/tasks.md",
+          "sha256": "848996e9c0e957bdf7c4584ec14fe3c69689ba4e1a651569663ec316ec5f0202",
+          "todo_checkbox_count": 3
+        }
+      ]
+    },
+    {
+      "record": "runs/final-r3/repeat-0/selective_patch/iter5/28/result.json",
+      "original_result_sha256_at_review": "c20db7d0922d075a71f2d264bc6798c305da0b53f9ef31e8be9440716e8bb2ff",
+      "scoring_status_at_review": "awaiting_judge",
+      "failure_basis": null,
+      "idx": 28,
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "actual_tool_calls": 4,
+      "mcp_flagged_errors": 1,
+      "modified_tools": [
+        "b1f986__read_multiple_files"
+      ],
+      "regenerated": [
+        "b1f986__read_multiple_files"
+      ],
+      "created_markdown": [
+        {
+          "path": "txt/tasks.md",
+          "sha256": "bd8ef600a22c1119b8e436fb4f2d05535a557419b965bd5ae02c3a18c89fac10",
+          "todo_checkbox_count": 3
+        }
+      ]
+    }
+  ],
+  "scope": "AI-assisted execution and file review before judging; not member-independent verification or semantic correctness guarantee. No execution retries or score changes.",
+  "review_document": "docs/追加实验/第二新增轮案例核查.md"
+}
