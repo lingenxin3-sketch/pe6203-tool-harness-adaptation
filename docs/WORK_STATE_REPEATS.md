@@ -115,3 +115,19 @@ R3目前两条异常为full_rewrite/iter5/117（原始SHA c3d375a4b91e38db5888f8
 已准备runtime/repeats-20261029/case_score_table_r3.py并通过语法编译，尚未实际执行。仅当27条选定案例全部按原协议评分后运行（通常全局评分到154条左右），它会先核对27个事件文件SHA、早期实际Markdown/JSON产物SHA、原件字节（正常用agent-record、异常用failure-record）及actor/update调用，再生成r3-case-postscore-review.json并向第二新增轮案例核查.md追加原TF/PE表，绝不重评分。它在未评分或已有输出时拒绝写，不要提前运行或覆盖。准备阶段一次外层PowerShell引号错误已改为apply_patch，编译复核成功，没有执行模型或更动任何实验输出，不能把它计为实验失败。
 
 最终如生成已预声明的old+R3两轮视图，merge_views中的cohorts.n是观测数之和；需另标distinct_tasks（沿用单轮该组人数）和n_observations，不把两个重复当新增独立任务。ECS中跨版本的总体标准差与跨轮均值的样本标准差须区分，n=2不作显著性或普遍优越结论。R2继续独立，整轮总token比full多8.4%的不利结果照样保留。不要为了更好结果再加第三个新轮、改seed、提高上下文或改动原评分。
+
+## 2026年10月29日0709续接补充
+
+R3同一进程继续，07:08实测91/162条、0评分、2异常；只读观察会话仍46604。上一目标轮有具体进程句柄证明的等待，并完成下面原公开证据来源核验及后续分析代码，不是阻塞，不应重启或重跑。
+
+已匿名下载旧v1.0.0公开PE6203_Project4_Submission.zip到新的deliverables/original-v1-20261029-verified.zip（33,217,470字节，SHA f0df5bdecbfc840cfd8b58555733ad5a4bfe99ad742fdedbd6b1f500dbc19fad）。逐项核对全部491份旧原件：490份与公开ZIP、预检和当前字节完全一致；仅no_update/iter5/113/result.json公开ZIP SHA b16ad3442fdc904234a422c2b4fe886d252e7282eaef0c356bb4d2578d8aa0eb与本机及初检SHA 7227279529b71bbe8c95cac2d43c7935b20faeca3e56b3d89170e43205cc4335不同。递归比对完整JSON无数据类型或值变化，排序键紧凑UTF-8规范化SHA相同323fd382bb11d8e3ec2c3e4d9543b2e003fb72c5de4e12b488aa37c6751e20dd。不是仅CRLF/LF，也不是UTF-8 BOM：两份都有5612个CRLF、无BOM，长度492040与492047。旧本机文件仍与初检一致，没有本次改写或重评分；不能把这说成内容变化，也不能说491份原字节都等同。
+
+original-public-evidence-verification.json保留all_original_raw_evidence_matches_public_archive_and_preflight=false，同时all_public_evidence_content_matches_frozen_baseline=true及all_current_original_files_match_preflight=true；这两个口径不矛盾，必须保留单条例外的两种SHA。冻结协议已加来源说明。还用二进制原样复制本机该条到artifacts/repeats-20261029/original-local-serialization/no_update-iter5-113.json，SHA严格72272795...，对应original-local-serialization-provenance.json。该副本不是新episode、不计样本、不改旧文件/旧Release。R3的证据包会自动收录全部campaign JSON，最终必须核验此副本在R3 ZIP内仍为72272795...，让外部可在独立工作副本精确复现冻结原轮。分支文本可能LF规范化，不能拿Git blob SHA充当该原始字节SHA。
+
+新增scripts/repeat_pair_comparison.py（本次自己创建，尚未跟踪/发布，不是队友文件）。它只读old+R3、原始公开来源/原件SHA、162配对、实际初始输入及judge-capacity、模型启动收据、全量audit；gates与完整评分不满足就拒绝生成。--check-ready已针对真实当前状态运行，返回ready_for_full_validation=false、无输出，未运行模型或评分。正常生成只有条件全通过才写original-r3-comparison.json、original-r3-paired-evidence.json及原轮与第二新增轮对照.md；cohorts区分distinct_tasks和n_observations，配对同时存旧本机/旧公开SHA，保留R2独立；不是486或三次汇总。
+
+为使分析来源可复现，已导出实际R2 gate的原字节副本到artifacts/repeats-20261029/publication-gates/repeat-r2-20261029-gate.json（source仍为实际05:37:57通过的门，不伪造时间）。R3最终gate生成后也要导出同目录对应文件；pair script优先读runtime gate，缺失时用公开副本，两者并存必须JSON内容一致。它也检查first gate <= R3 actor启动 <= R3 judge启动 <= R3 gate的时间顺序，容量16k/24k、build b11900固定；不靠未结束的state声明完成。
+
+**最终发布代码待办：** 活controller仍在周期发布，不人工并发Git提交。等管理进程实际退出后，把repeat_pair_comparison.py加入repeat_publish.py的allowed和paths两处显式名单，运行相关发布白名单检查并做真实完整数据分析/独立验算后，一起提交推送并核验远端。不要忘记发布这个新脚本，也不要把未跟踪的dashboard草稿混入。原配置和tool_adapt核心仍不变。R3 judge实际开始时保存独立收据、162完整评分发布/匿名ZIP下载核验、最终old/R3可比性判断、旧文件保护、最新commit和结果/证据链接等全部原目标仍待完成；不提前complete、不称blocked。
+
+07:13补充：07:10:28提交97c4bd9e2ad77a4e4cec5dd9867f4bf3772b3ee5已远端逐文件验证，公开的旧证据来源JSON现已有semantic_match=true与raw_byte_match=false的单条例外说明，冻结原件序列化副本和R2真实gate副本也已公开（分支文字仍可能LF转换，精确原字节待R3新ZIP）。07:13:35又实际通过GitHub API读回该提交状态页及latest-status.json：公开快照采于07:09:26，old162/162/4异常、R2 162/162/5异常、R3 93/0/2异常，完成一次真实的08:00前进度发布要求，见before-0800-progress-verification.json；不把公开93误写成本地当时95。R3本地07:11时95/162、评分0、异常2，原进程继续。新证明JSON在下一心跳发布，不能提前称该证明文件本身已上传。后面继续争取更新更靠近08:00的实时快照，但不为此启用其他模型或子代理。

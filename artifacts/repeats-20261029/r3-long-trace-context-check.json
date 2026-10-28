@@ -1,0 +1,57 @@
+{
+  "available_records": 101,
+  "checked_records": 6,
+  "selection": "Longest 6 by prompt characters; not exhaustive",
+  "model_vocabulary": "Qwen2.5-7B-Instruct Q4_K_M downloaded judge",
+  "template_allowance_tokens": 256,
+  "safety_tokens": 128,
+  "no_inference": true,
+  "results": [
+    {
+      "record": "repeat-0/full_rewrite/iter3/117/result.json",
+      "prompt_characters": 58730,
+      "content_tokens": 13841,
+      "with_response_safety_and_template_allowance": 16273,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/original/273/result.json",
+      "prompt_characters": 56706,
+      "content_tokens": 12919,
+      "with_response_safety_and_template_allowance": 15351,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/selective_patch/iter5/117/result.json",
+      "prompt_characters": 54059,
+      "content_tokens": 13129,
+      "with_response_safety_and_template_allowance": 15561,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/iter5/267/result.json",
+      "prompt_characters": 51681,
+      "content_tokens": 12523,
+      "with_response_safety_and_template_allowance": 14955,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/iter5/117/result.json",
+      "prompt_characters": 49518,
+      "content_tokens": 11552,
+      "with_response_safety_and_template_allowance": 13984,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/full_rewrite/original/267/result.json",
+      "prompt_characters": 46226,
+      "content_tokens": 11361,
+      "with_response_safety_and_template_allowance": 13793,
+      "fits_16384_with_allowance": true
+    }
+  ],
+  "limitation": "Raw prompt token count plus an allowance; exact chat-template validation remains at live judging. Partial round; raw infrastructure-error rows without reconstructed trajectory are omitted. The legacy 16384 flag is not the actual fixed judge capacity.",
+  "collected_at": "2026-10-29T07:17:34+08:00",
+  "actual_fixed_judge_capacity": 24576,
+  "all_selected_fit_fixed_capacity": true
+}

@@ -1,0 +1,60 @@
+{
+  "verified_at": "2026-10-29T07:13:35+08:00",
+  "deadline": "2026-10-29T08:00:00+08:00",
+  "remote_commit": "97c4bd9e2ad77a4e4cec5dd9867f4bf3772b3ee5",
+  "actual_published_snapshot_at": "2026-10-29T07:09:26+08:00",
+  "phase": "executing",
+  "rounds": [
+    {
+      "name": "final-v1",
+      "expected": 162,
+      "found": 162,
+      "scored": 162,
+      "failures": 4,
+      "missing": 0,
+      "issues": [],
+      "status_counts": {
+        "evaluated": 162
+      },
+      "complete": true
+    },
+    {
+      "name": "repeat-r2-20261029",
+      "expected": 162,
+      "found": 162,
+      "scored": 162,
+      "failures": 5,
+      "missing": 0,
+      "issues": [],
+      "status_counts": {
+        "evaluated": 162
+      },
+      "complete": true
+    },
+    {
+      "name": "final-r3",
+      "expected": 162,
+      "found": 93,
+      "scored": 0,
+      "failures": 2,
+      "missing": 69,
+      "issues": [],
+      "status_counts": {
+        "awaiting_judge": 91,
+        "infrastructure_error": 2
+      },
+      "complete": false
+    }
+  ],
+  "status_page_and_counts_read_back_from_github": true,
+  "verified_before_0800_singapore": true,
+  "files": {
+    "docs/追加实验/状态.md": {
+      "sha256": "bbdf8778e25d70e32204b0a99a938d44eaa39abc1fa2ec85caa682fa2c627b29"
+    },
+    "artifacts/repeats-20261029/latest-status.json": {
+      "sha256": "5dfbaf6411e734c7e2a0926e7063a26cfa25d9e62faefae46d8952c6e041b6e4"
+    }
+  },
+  "scope": "A real pre-08:00 publication verified now; not a claim all experiments finished or a guarantee of future network availability."
+}
