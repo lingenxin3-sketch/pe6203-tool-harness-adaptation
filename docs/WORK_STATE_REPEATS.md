@@ -14,7 +14,7 @@ read-only preflight 已核对 162 条旧记录、四条失败收据、冻结核�
 
 开发验证由 runtime/repeats-20261029/smoke.py 运行。新建 runs/repeat-smoke-20261029，仅任务3、不更新、三版，共3条，依次执行、原协议评分、原统计、审计、实际恢复跳过验证。通过后有 artifacts/repeats-20261029/smoke-verification.json。开发轨迹不计正式轮。
 
-33 项相关测试分两批：原核心22项加新增首版8项共30项通过；新增阶段门/隐私测试后的11项通过。新增测试日志 runtime/repeats-20261029/repeat-tests.log。没有运行或修补独立可视化草稿的测试。
+34 项相关测试：原核心22项、追加实验12项均已通过。新增测试日志 runtime/repeats-20261029/repeat-tests.log，最后一次元数据锁测试单独通过。没有运行或修补独立可视化草稿的测试。
 
 脚本职责：repeat_common.py 严格矩阵/可比性/指标；repeat_runner.py 恢复边界适配，首次使用原执行器，已保存不重跑，无结果残留目录阻止恢复；repeat_publish.py 白名单提交、远端逐文件核验、新Release及匿名下载哈希；repeat_campaign.py 控制逐轮执行、评分、发布门和15分钟状态发布。
 

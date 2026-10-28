@@ -62,13 +62,13 @@ class RepeatTests(unittest.TestCase):
     def test_resume_adapter_builds_against_frozen_runner(self):self.assertTrue(callable(build_runner()))
     def test_first_round_failure_or_upload_failure_stops_second(self):
         from unittest.mock import MagicMock
-        with patch.object(campaign,'ROOT',self.root),patch.object(campaign,'RUNTIME',self.root/'runtime'),patch.object(campaign,'acquire',return_value=MagicMock()),patch.object(campaign,'read',return_value={'compatible_preconditions':True}),patch.object(campaign,'state'),patch.object(campaign,'verified_status'),patch.object(campaign.threading,'Thread'),patch.object(campaign.ctypes.windll.kernel32,'SetThreadExecutionState',return_value=1),patch.object(campaign,'run_round',side_effect=RuntimeError('upload failed')) as run,patch.object(sys,'argv',['repeat_campaign.py']):
+        with patch.object(campaign,'ROOT',self.root),patch.object(campaign,'RUNTIME',self.root/'runtime'),patch.object(campaign,'acquire',return_value=MagicMock()),patch.object(campaign,'read',return_value={'compatible_preconditions':True,'passed':True,'actual_resume_skip_verified':True,'audit':{'complete_and_evaluated':True}}),patch.object(campaign,'state'),patch.object(campaign,'verified_status'),patch.object(campaign.threading,'Thread'),patch.object(campaign.ctypes.windll.kernel32,'SetThreadExecutionState',return_value=1),patch.object(campaign,'run_round',side_effect=RuntimeError('upload failed')) as run,patch.object(sys,'argv',['repeat_campaign.py']):
             with self.assertRaisesRegex(RuntimeError,'upload failed'):campaign.main()
             run.assert_called_once_with(1,False)
         campaign.STOP.clear()
     def test_success_without_verified_gate_still_cannot_start_second(self):
         from unittest.mock import MagicMock
-        with patch.object(campaign,'ROOT',self.root),patch.object(campaign,'RUNTIME',self.root/'runtime'),patch.object(campaign,'acquire',return_value=MagicMock()),patch.object(campaign,'read',return_value={'compatible_preconditions':True}),patch.object(campaign,'state'),patch.object(campaign,'verified_status'),patch.object(campaign.threading,'Thread'),patch.object(campaign.ctypes.windll.kernel32,'SetThreadExecutionState',return_value=1),patch.object(campaign,'run_round') as run,patch.object(sys,'argv',['repeat_campaign.py']):
+        with patch.object(campaign,'ROOT',self.root),patch.object(campaign,'RUNTIME',self.root/'runtime'),patch.object(campaign,'acquire',return_value=MagicMock()),patch.object(campaign,'read',return_value={'compatible_preconditions':True,'passed':True,'actual_resume_skip_verified':True,'audit':{'complete_and_evaluated':True}}),patch.object(campaign,'state'),patch.object(campaign,'verified_status'),patch.object(campaign.threading,'Thread'),patch.object(campaign.ctypes.windll.kernel32,'SetThreadExecutionState',return_value=1),patch.object(campaign,'run_round') as run,patch.object(sys,'argv',['repeat_campaign.py']):
             with self.assertRaisesRegex(RuntimeError,'publication gate missing'):campaign.main()
             run.assert_called_once_with(1,False)
         campaign.STOP.clear()
@@ -76,5 +76,15 @@ class RepeatTests(unittest.TestCase):
         self.assertFalse(publisher.allowed('dashboard/server.py'));self.assertFalse(publisher.allowed('runs/final-v1/manifest.json'))
         self.assertTrue(publisher.allowed('docs/追加实验/状态.md'))
         self.assertTrue(publisher.sensitive(b'ghp_'+b'a'*36));self.assertFalse(publisher.sensitive(b'http://127.0.0.1:8081/v1'))
+    def test_transient_metadata_lock_retries_same_bytes_only(self):
+        original=Path.replace;calls=[]
+        def replace(path,target):
+            calls.append(path)
+            if len(calls)==1:raise PermissionError('Synthetic temporary reader lock')
+            return original(path,target)
+        target=self.root/'metadata.json'
+        with patch.object(Path,'replace',new=replace):save(target,{'phase':'testing'})
+        self.assertEqual(len(calls),2);self.assertEqual(calls[0],calls[1])
+        self.assertEqual(json.loads(target.read_text()),{'phase':'testing'})
 
 if __name__=='__main__':unittest.main()

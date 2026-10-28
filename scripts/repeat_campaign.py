@@ -167,6 +167,9 @@ def main():
     guard=acquire();awake=False
     try:
         if not read(ROOT/'artifacts'/CAMPAIGN/'preflight.json')['compatible_preconditions']:raise RuntimeError('Preflight not passed')
+        if not read(ROOT/'artifacts'/CAMPAIGN/'runtime-dependency-verification.json')['passed']:raise RuntimeError('Actual runtime dependencies not verified')
+        smoke=read(ROOT/'artifacts'/CAMPAIGN/'smoke-verification.json')
+        if not smoke.get('actual_resume_skip_verified') or not smoke['audit']['complete_and_evaluated']:raise RuntimeError('Actual development path verification required')
         awake=bool(ctypes.windll.kernel32.SetThreadExecutionState(0x80000001))
         if not awake:raise RuntimeError('Could not request process-lifetime sleep prevention')
         state('prepared','正式前状态已发布，开始逐轮实验',awake_request=True,controller_started_at=now())

@@ -1,0 +1,471 @@
+{
+  "collected_at": "2026-10-29T00:32:08+08:00",
+  "binaries": [
+    {
+      "file": "ggml-cuda.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-base.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-rpc-server.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "LICENSE-LLVM-OpenMP",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-batched-bench-impl.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "mtmd.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-completion-impl.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-sapphirerapids.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-rpc.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-results.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-cli-impl.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-perplexity.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-piledriver.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-cannonlake.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-mtmd-cli.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-gguf-split.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-perplexity-impl.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-minicpmv-cli.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-imatrix.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-skylakex.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-sse42.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-batched-bench.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-qwen2vl-cli.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-tts.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-haswell.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-common.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "libomp.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-connect.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-server-impl.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-alderlake.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-sandybridge.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-gemma3-cli.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-cli.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-bench.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-tokenize.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-completion.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-quantize-impl.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-zen4.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-cascadelake.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-bench-impl.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-server.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-x64.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-cooperlake.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-fit-params-impl.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-ivybridge.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-mtmd-debug.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-fit-params.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "ggml-cpu-icelake.dll",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-llava-cli.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "llama-quantize.exe",
+      "archive": "llama.zip",
+      "passed": true
+    },
+    {
+      "file": "cublas64_12.dll",
+      "archive": "cudart.zip",
+      "passed": true
+    },
+    {
+      "file": "cublasLt64_12.dll",
+      "archive": "cudart.zip",
+      "passed": true
+    },
+    {
+      "file": "cudart64_12.dll",
+      "archive": "cudart.zip",
+      "passed": true
+    }
+  ],
+  "python_packages": [
+    {
+      "package": "annotated-types",
+      "expected": "0.8.0",
+      "actual": "0.8.0",
+      "passed": true
+    },
+    {
+      "package": "anyio",
+      "expected": "4.15.1",
+      "actual": "4.15.1",
+      "passed": true
+    },
+    {
+      "package": "attrs",
+      "expected": "26.1.0",
+      "actual": "26.1.0",
+      "passed": true
+    },
+    {
+      "package": "certifi",
+      "expected": "2026.10.23",
+      "actual": "2026.10.23",
+      "passed": true
+    },
+    {
+      "package": "cffi",
+      "expected": "2.1.1",
+      "actual": "2.1.1",
+      "passed": true
+    },
+    {
+      "package": "click",
+      "expected": "8.5.0",
+      "actual": "8.5.0",
+      "passed": true
+    },
+    {
+      "package": "cryptography",
+      "expected": "50.0.2",
+      "actual": "50.0.2",
+      "passed": true
+    },
+    {
+      "package": "h11",
+      "expected": "0.16.0",
+      "actual": "0.16.0",
+      "passed": true
+    },
+    {
+      "package": "httpcore",
+      "expected": "1.0.9",
+      "actual": "1.0.9",
+      "passed": true
+    },
+    {
+      "package": "httpx",
+      "expected": "0.28.1",
+      "actual": "0.28.1",
+      "passed": true
+    },
+    {
+      "package": "httpx-sse",
+      "expected": "0.4.3",
+      "actual": "0.4.3",
+      "passed": true
+    },
+    {
+      "package": "idna",
+      "expected": "3.20",
+      "actual": "3.20",
+      "passed": true
+    },
+    {
+      "package": "jsonschema",
+      "expected": "4.26.0",
+      "actual": "4.26.0",
+      "passed": true
+    },
+    {
+      "package": "jsonschema-specifications",
+      "expected": "2025.9.1",
+      "actual": "2025.9.1",
+      "passed": true
+    },
+    {
+      "package": "mcp",
+      "expected": "1.30.0",
+      "actual": "1.30.0",
+      "passed": true
+    },
+    {
+      "package": "pycparser",
+      "expected": "3.12",
+      "actual": "3.12",
+      "passed": true
+    },
+    {
+      "package": "pydantic",
+      "expected": "2.14.1",
+      "actual": "2.14.1",
+      "passed": true
+    },
+    {
+      "package": "pydantic-settings",
+      "expected": "2.16.1",
+      "actual": "2.16.1",
+      "passed": true
+    },
+    {
+      "package": "pydantic_core",
+      "expected": "2.50.1",
+      "actual": "2.50.1",
+      "passed": true
+    },
+    {
+      "package": "PyJWT",
+      "expected": "2.15.1",
+      "actual": "2.15.1",
+      "passed": true
+    },
+    {
+      "package": "python-dotenv",
+      "expected": "1.2.4",
+      "actual": "1.2.4",
+      "passed": true
+    },
+    {
+      "package": "python-multipart",
+      "expected": "0.0.32",
+      "actual": "0.0.32",
+      "passed": true
+    },
+    {
+      "package": "pywin32",
+      "expected": "312",
+      "actual": "312",
+      "passed": true
+    },
+    {
+      "package": "referencing",
+      "expected": "0.37.0",
+      "actual": "0.37.0",
+      "passed": true
+    },
+    {
+      "package": "rpds-py",
+      "expected": "2026.9.1",
+      "actual": "2026.9.1",
+      "passed": true
+    },
+    {
+      "package": "sse-starlette",
+      "expected": "3.6.0",
+      "actual": "3.6.0",
+      "passed": true
+    },
+    {
+      "package": "starlette",
+      "expected": "1.10.0",
+      "actual": "1.10.0",
+      "passed": true
+    },
+    {
+      "package": "typing-inspection",
+      "expected": "0.4.4",
+      "actual": "0.4.4",
+      "passed": true
+    },
+    {
+      "package": "typing_extensions",
+      "expected": "4.16.0",
+      "actual": "4.16.0",
+      "passed": true
+    },
+    {
+      "package": "uvicorn",
+      "expected": "0.54.0",
+      "actual": "0.54.0",
+      "passed": true
+    }
+  ],
+  "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "node": "v24.16.0",
+  "judge_adapter_matches_original": true,
+  "passed": true
+}

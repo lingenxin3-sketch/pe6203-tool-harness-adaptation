@@ -5,6 +5,8 @@ import hashlib
 import json
 import math
 import statistics
+import time
+import secrets
 from datetime import datetime, timezone, timedelta
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -16,8 +18,15 @@ VERS=['original','iter3','iter5']
 def now(): return datetime.now(timezone(timedelta(hours=8))).isoformat(timespec='seconds')
 def read(p): return json.loads(p.read_text(encoding='utf-8'))
 def save(p,value):
-    p.parent.mkdir(parents=True,exist_ok=True); tmp=p.with_suffix(p.suffix+'.tmp')
-    tmp.write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf-8'); tmp.replace(p)
+    p.parent.mkdir(parents=True,exist_ok=True); tmp=p.with_suffix(p.suffix+'.'+secrets.token_hex(4)+'.tmp')
+    tmp.write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf-8')
+    # Windows scanners/readers can briefly deny rename. This retries only the
+    # same local metadata replacement, never an experiment or a model request.
+    for attempt in range(20):
+        try:tmp.replace(p);return
+        except PermissionError:
+            if attempt==19:raise
+            time.sleep(.1)
 def sha(p):
     with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
 def grid(m):
