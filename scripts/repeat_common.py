@@ -53,6 +53,28 @@ def inspect(folder):
 def compatibility(a,b):
     checks={k:a.get(k)==b.get(k) for k in ['config','task_ids','coverage','inventory_hashes','source_hashes','split']}
     return {'compatible':all(checks.values()),'checks':checks,'meaning':'Output directory and round label differ; all experiment settings and recorded protocol hashes must match exactly.'}
+def resource_listing(row):
+    calls=row.get('model_calls',{}).get('agent',[])
+    if not calls:return None
+    content=calls[0]['request']['messages'][0].get('content','')
+    prefix='Existing resource files (use these exact paths, never guess filenames):\n'
+    if prefix not in content:return None
+    return content.split(prefix,1)[1].split('\nUsage notes:',1)[0].splitlines()
+def round_compatibility(a,b):
+    result=compatibility(read(a/'manifest.json'),read(b/'manifest.json'))
+    different=[];unavailable=[];checked=0
+    for p in sorted(b.glob('repeat-*/*/*/*/result.json')):
+        other=a/p.relative_to(b)
+        if not other.exists():unavailable.append(p.relative_to(b).as_posix());continue
+        aa=resource_listing(read(other));bb=resource_listing(read(p))
+        if aa is None or bb is None:unavailable.append(p.relative_to(b).as_posix());continue
+        checked+=1
+        if aa!=bb:different.append({'episode':p.relative_to(b).as_posix(),'only_first':sorted(set(aa)-set(bb)),'only_second':sorted(set(bb)-set(aa))})
+    result.update(resource_lists_checked=checked,resource_list_differences=different,unavailable_input_checks=unavailable,
+        inputs_complete=checked==162 and not unavailable,
+        input_limitation='Windows path length can change the resource listing shown to the model even when fixture bytes and manifest hashes match. No claim that these omitted PDFs caused a score change.')
+    result['compatible']=result['compatible'] and checked==162 and not different and not unavailable
+    return result
 def metrics(folder):
     status=inspect(folder)
     if not status['complete']:raise ValueError('Complete scored grid required: '+str(status))
@@ -84,6 +106,7 @@ def merge_views(folders):
     if len(set(p.resolve() for p in folders))!=len(folders):raise ValueError('Duplicate round source')
     ms=[read(p/'manifest.json') for p in folders]
     if any(not compatibility(ms[0],m)['compatible'] for m in ms[1:]):raise ValueError('Incompatible rounds cannot be merged')
+    if ms[0].get('split')=='test' and any(not round_compatibility(folders[0],p)['compatible'] for p in folders[1:]):raise ValueError('Actual input resource lists differ or are unverified; cannot merge rounds')
     views=[metrics(p) for p in folders]; combined=[]
     for pol in ms[0]['config']['strategies']:
         parts=[next(s for s in x['strategies'] if s['strategy']==pol) for x in views]

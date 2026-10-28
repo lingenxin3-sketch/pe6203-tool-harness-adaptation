@@ -16,6 +16,10 @@ read-only preflight 已核对 162 条旧记录、四条失败收据、冻结核�
 
 34 项相关测试：原核心22项、追加实验12项均已通过。新增测试日志 runtime/repeats-20261029/repeat-tests.log，最后一次元数据锁测试单独通过。没有运行或修补独立可视化草稿的测试。
 
+运行中追加实际输入检查发现 Windows 路径长度影响资源文件名清单：部分策略比旧轮少显示1至2个PDF。原配置和源文件字节匹配不足以证明输入一致。见 artifacts/repeats-20261029/compatibility-alert.json。新增逐条资源清单比较和“同manifest但输入不同拒绝合并”测试，追加实验13项通过，总计35项。原轮和新增轮按严格标准分开报告，不产出324/486合并表。禁止为凑三轮重跑或再加第三个新轮。
+
+旧管理进程 PID6104 载入的是仅比较manifest的旧发布逻辑；actor执行进程 PID4404 必须继续。通过 repeat_supervise_existing.py 先保留worker句柄并防睡眠，再只替换管理程序，持续等待同一worker自然退出；之后 --resume 跳过所有已保存actor记录，再评分发布。接管实际状态以 runtime/repeats-20261029/management-handoff.json 和CIM进程为准，不凭本段判断完成。
+
 脚本职责：repeat_common.py 严格矩阵/可比性/指标；repeat_runner.py 恢复边界适配，首次使用原执行器，已保存不重跑，无结果残留目录阻止恢复；repeat_publish.py 白名单提交、远端逐文件核验、新Release及匿名下载哈希；repeat_campaign.py 控制逐轮执行、评分、发布门和15分钟状态发布。
 
 只在 smoke 实际验证通过、分支和准备状态已远端核验、无其他推理进程时启动正式 controller。启动应隐藏后台窗口并记录 PID、日志。它运行期间持有与网页控制器共享的 runtime/dashboard/control.lock，且请求进程级防睡眠。Windows venv 可能显示父子两个 python 进程，不能误判重复启动。以实际 PID、命令行、子进程和输出为准，观察超时不表示进程停止。

@@ -92,8 +92,9 @@ def scored_report(folder,ordinal):
             'score':r['eval_result']['aggregate'],'files':r.get('artifact_changes',{}),'execution_status':r.get('execution_status'),
             'review_status':'自动文件/轨迹索引，待人工确认；不等于正确完成。'})
     save(ROOT/'artifacts'/CAMPAIGN/(folder.name+'-case-index.json'),checks)
-    baseline=read(ROOT/'runs/final-v1/manifest.json');c=compatibility(baseline,read(folder/'manifest.json'));save(ROOT/'artifacts'/CAMPAIGN/(folder.name+'-compatibility.json'),c)
-    lines+=['','## 局限与证据','',f"与原轮 manifest 可比性：{c['compatible']}。运行、工具及模型哈希检查见本分支 artifacts/repeats-20261029。",'',
+    c=round_compatibility(ROOT/'runs/final-v1',folder);save(ROOT/'artifacts'/CAMPAIGN/(folder.name+'-compatibility.json'),c)
+    lines+=['','## 局限与证据','',f"与原轮整体可比性：{c['compatible']}。不只比较 manifest，还逐条比较实际提供给 AI 的资源清单。运行、工具及模型哈希检查见本分支 artifacts/repeats-20261029。",'',
+        '发现资源清单不一致时，原轮与新增轮分别报告，禁止发布324或486条合并结论。Windows长路径遗漏文件名是输入差异，不声称它已被证明导致分数变化。', '',
         '固定 seed、temperature=0，单轮无显著性结论。原任务 113、117 的评分误判不因重复自动消失。新案例索引只做文件存在和轨迹定位，待人工核查；原评分不修改。文件存在不等于内容正确。',
         '','原报告和演讲材料尚未同步更新，仍标作旧单轮。原依赖扩展对照未重跑，仍为单次辅助实验。原评分分歧见 [任务117](../CASE_117_JUDGE_REVIEW.md)。', '',
         '漏更新和过度更新机制参考 [任务113](../CASE_113_REVIEW.md)、[任务28](../CASE_28_REVIEW.md)。任务28仅为关联证据，不作单句改写因果结论。']
@@ -101,7 +102,9 @@ def scored_report(folder,ordinal):
     return c
 def aggregate_views(ordinal):
     folders=[ROOT/'runs'/n for n in NAMES[:ordinal]]
-    if any(not compatibility(read(folders[0]/'manifest.json'),read(p/'manifest.json'))['compatible'] for p in folders[1:]):return
+    if any(not round_compatibility(folders[0],p)['compatible'] for p in folders[1:]):
+        save(ROOT/'artifacts'/CAMPAIGN/f'{ordinal}-round-combination-refused.json',{'collected_at':now(),'reason':'Actual resource listings differ or compatibility is unverified; original and added rounds must be reported separately.','rounds':[p.name for p in folders]})
+        return
     combined=merge_views(folders);save(ROOT/'artifacts'/CAMPAIGN/f'{ordinal}-round-comparison.json',combined)
     # Paired differences retain each original identity, path, manifest and hash.
     paired=[];provenance=[]

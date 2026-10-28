@@ -1,7 +1,7 @@
 {
-  "collected_at": "2026-10-29T00:49:00+08:00",
-  "phase": "executing",
-  "message": "第2轮实际执行；结果逐条保存",
+  "collected_at": "2026-10-29T00:57:20+08:00",
+  "phase": "executing_existing_worker",
+  "message": "同一执行进程继续运行，未重跑任务。实际输入可比性警示见下方。",
   "rounds": [
     {
       "name": "final-v1",
@@ -19,13 +19,13 @@
     {
       "name": "repeat-r2-20261029",
       "expected": 162,
-      "found": 30,
+      "found": 40,
       "scored": 0,
       "failures": 0,
-      "missing": 132,
+      "missing": 122,
       "issues": [],
       "status_counts": {
-        "awaiting_judge": 30
+        "awaiting_judge": 40
       },
       "complete": false
     },

@@ -1,0 +1,216 @@
+{
+  "recorded_at": "2026-10-29T00:56:37+08:00",
+  "message": "更细的实际输入检查发现：新增轮部分策略的资源清单因 Windows 路径长度少显示 1 至 2 个 PDF 文件名。源文件字节、模型、参数及 manifest 相同，但输入可见性不完全一致。原轮与新增轮暂判不具备严格合并条件，将分别报告；不得仅凭 manifest 相同发布 324/486 条合并结果。当前执行继续保留，不重跑、不新增第三轮。",
+  "checked_records": 34,
+  "differences": [
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    }
+  ],
+  "source": "r2-live-input-compatibility.json",
+  "no_causal_score_claim": true
+}

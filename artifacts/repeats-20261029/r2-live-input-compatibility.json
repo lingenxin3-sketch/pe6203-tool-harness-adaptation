@@ -1,0 +1,523 @@
+{
+  "collected_at": "2026-10-29T00:52:03+08:00",
+  "partial": true,
+  "records_checked": 34,
+  "issues": [
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    }
+  ],
+  "checks": [
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "idx": 9,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "idx": 9,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "full_rewrite",
+      "version": "original",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "iter3",
+      "idx": 103,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "iter3",
+      "idx": 105,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "iter3",
+      "idx": 28,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "iter3",
+      "idx": 9,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "iter5",
+      "idx": 103,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "iter5",
+      "idx": 105,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "iter5",
+      "idx": 28,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "iter5",
+      "idx": 9,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "no_update",
+      "version": "original",
+      "idx": 9,
+      "resource_listing_equal": true,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": true,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": false
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 103,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 105,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 28,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    },
+    {
+      "strategy": "selective_patch",
+      "version": "original",
+      "idx": 9,
+      "resource_listing_equal": false,
+      "knowledge_equal": true,
+      "system_equal_after_workspace_normalization": false,
+      "system_comparison_expected_equal": true
+    }
+  ],
+  "scope": "Resource list equality and initial/no-update knowledge/prompt equality except isolated workspace path. Adapted notes may vary as experiment outcomes."
+}

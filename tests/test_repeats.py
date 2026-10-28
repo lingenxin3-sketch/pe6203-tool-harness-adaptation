@@ -23,7 +23,7 @@ class RepeatTests(unittest.TestCase):
             for v in self.m['config']['versions']:
                 for i in self.m['task_ids']:
                     r={'repeat':0,'strategy':pol,'version':v,'idx':i,'question':'synthetic','manifest_hash':digest(self.m),'knowledge':{'tools':{},'notes':{'a':'unchanged'}},
-                       'status':'evaluated','eval_result':{'valid':True,'aggregate':{'task_fulfillment_mean':7,'planning_and_efficiency_mean':8}},'model_calls':{'update':[],'agent':[],'judge':[]}}
+                       'status':'evaluated','eval_result':{'valid':True,'aggregate':{'task_fulfillment_mean':7,'planning_and_efficiency_mean':8}},'model_calls':{'update':[],'agent':[{'request':{'messages':[{'role':'system','content':'Existing resource files (use these exact paths, never guess filenames):\na.txt\nUsage notes: synthetic'}]},'usage':{'total_tokens':10,'wall_seconds':1,'api_usd':0}}],'judge':[]}}
                     save(folder/f'repeat-0/{pol}/{v}/{i}/result.json',r)
         return folder
     def test_complete_three_round_identity_and_sources(self):
@@ -86,5 +86,8 @@ class RepeatTests(unittest.TestCase):
         with patch.object(Path,'replace',new=replace):save(target,{'phase':'testing'})
         self.assertEqual(len(calls),2);self.assertEqual(calls[0],calls[1])
         self.assertEqual(json.loads(target.read_text()),{'phase':'testing'})
+    def test_same_manifest_but_changed_resource_visibility_refuses_merge(self):
+        a=self.make('old');b=self.make('r2');p=b/'repeat-0/full_rewrite/original/0/result.json';r=json.loads(p.read_text());r['model_calls']['agent'][0]['request']['messages'][0]['content']='Existing resource files (use these exact paths, never guess filenames):\nb.txt\nUsage notes: synthetic';save(p,r)
+        with self.assertRaisesRegex(ValueError,'resource lists differ'):merge_views([a,b])
 
 if __name__=='__main__':unittest.main()
