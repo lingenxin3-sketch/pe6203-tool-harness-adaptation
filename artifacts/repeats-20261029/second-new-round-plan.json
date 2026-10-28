@@ -1,0 +1,11 @@
+{
+  "predeclared_at": "2026-10-29T01:04:21+08:00",
+  "output_name": "final-r3",
+  "previous_unexecuted_plan_name": "repeat-r3-20261029",
+  "reason": "Match original 8-character output basename so Windows resource visibility matches original. First new round remains unchanged and separate.",
+  "config_sha256": "a1474b556f9fd2d5b61e76d8ba0a8a23f0707565f9bf7a0ffab0da3e080f188f",
+  "model_decoding_method_unchanged": true,
+  "still_maximum_two_new_rounds": true,
+  "path_validation_receipt": "second-new-round-path-validation.json",
+  "three_round_pooling_not_allowed_if_first_new_input_differs": true
+}

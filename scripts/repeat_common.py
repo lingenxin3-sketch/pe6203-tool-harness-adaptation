@@ -12,7 +12,7 @@ from datetime import datetime, timezone, timedelta
 ROOT=Path(__file__).resolve().parents[1]
 CAMPAIGN='repeats-20261029'
 BRANCH='experiments/repeats-20261029'
-NAMES=['final-v1','repeat-r2-20261029','repeat-r3-20261029']
+NAMES=['final-v1','repeat-r2-20261029','final-r3']
 POLS=['no_update','full_rewrite','selective_patch']
 VERS=['original','iter3','iter5']
 def now(): return datetime.now(timezone(timedelta(hours=8))).isoformat(timespec='seconds')

@@ -89,5 +89,9 @@ class RepeatTests(unittest.TestCase):
     def test_same_manifest_but_changed_resource_visibility_refuses_merge(self):
         a=self.make('old');b=self.make('r2');p=b/'repeat-0/full_rewrite/original/0/result.json';r=json.loads(p.read_text());r['model_calls']['agent'][0]['request']['messages'][0]['content']='Existing resource files (use these exact paths, never guess filenames):\nb.txt\nUsage notes: synthetic';save(p,r)
         with self.assertRaisesRegex(ValueError,'resource lists differ'):merge_views([a,b])
+    def test_second_round_path_must_be_predeclared_before_model_switch(self):
+        with patch.object(campaign,'read',return_value={'output_name':'unapproved-directory'}),patch.object(campaign,'model') as model:
+            with self.assertRaisesRegex(RuntimeError,'predeclaration not verified'):campaign.run_round(2)
+            model.assert_not_called()
 
 if __name__=='__main__':unittest.main()

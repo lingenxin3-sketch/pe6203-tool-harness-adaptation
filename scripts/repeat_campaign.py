@@ -129,6 +129,10 @@ def aggregate_views(ordinal):
 
 def run_round(index,resume=False):
     name=NAMES[index];folder=ROOT/'runs'/name;ordinal=index+1
+    if index==2:
+        plan=read(ROOT/'artifacts'/CAMPAIGN/'second-new-round-plan.json')
+        if plan['output_name']!=name or not read(ROOT/'artifacts'/CAMPAIGN/'second-new-round-path-validation.json')['passed']:raise RuntimeError('Second new round directory predeclaration not verified')
+        if plan['config_sha256']!=sha(ROOT/'configs/experiment.json'):raise RuntimeError('Second new round configuration changed after predeclaration')
     state('loading_actor',f'准备第{ordinal}轮（新增第{index}轮）执行',round=name);model('actor')
     state('executing',f'第{ordinal}轮实际执行；结果逐条保存',round=name)
     args=[sys.executable,ROOT/'scripts/repeat_runner.py',folder]

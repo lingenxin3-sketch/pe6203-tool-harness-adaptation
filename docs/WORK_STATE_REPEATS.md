@@ -28,7 +28,7 @@ read-only preflight 已核对 162 条旧记录、四条失败收据、冻结核�
 
 正式命令 .venv/Scripts/python.exe scripts/repeat_campaign.py。续跑必须先证明旧 controller/child 已终止，再审查 partial result 与日志，显式 --resume。controller 绝不自动清理或重试有 workspace 无 result 的条目。评分中断保留已评分，其他前提见冻结与故障协议。
 
-第一新增轮 runs/repeat-r2-20261029，第二新增轮 runs/repeat-r3-20261029。独立结果为 docs/追加实验/第2轮结果.md 和 第3轮结果.md。每轮有独立 metrics、compatibility、audit、case-index，按可比条件生成2轮或3轮汇总。未完成不可宣称平均分完成。
+第一新增轮 runs/repeat-r2-20261029，第二新增轮在启动前改为 runs/final-r3（与旧轮final-v1等长8字符）。原计划repeat-r3-20261029从未执行，不增加新轮。27组无模型的文件系统检查证明等长目录可恢复对应原轮的基准资源可见性，见 second-new-round-path-validation.json；实际第二新增轮仍需逐条核对。配置、模型、seed均不改。第一新增轮输入差异保留并单列，即使第二新增轮与原轮可比，也不发布含第一新增轮的486合并表。独立结果为 docs/追加实验/第2轮结果.md 和 第3轮结果.md。
 
 第一轮发布门 runtime/repeats-20261029/repeat-r2-20261029-gate.json 只有在162评分、审计、新Release匿名下载哈希及最后状态commit远端核验均成功才产生。第二轮只有通过此前门槛才开始。发布失败则留真实状态并停止第二轮。12:00后第二轮若未启动，不自动启动，等待团队决定。
 

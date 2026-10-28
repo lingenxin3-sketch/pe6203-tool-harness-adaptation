@@ -1,0 +1,287 @@
+{
+  "verified_at": "2026-10-29T01:02:55+08:00",
+  "purpose": "No-model test before second new round; current first new round unchanged",
+  "planned_second_new_round": "final-r3",
+  "same_basename_length": true,
+  "representative_task_id_lengths": [
+    1,
+    2,
+    3
+  ],
+  "fixture_files": 29,
+  "workspace_layout_checks": 27,
+  "passed": true,
+  "checks": [
+    {
+      "idx": 9,
+      "strategy": "no_update",
+      "version": "original",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 9,
+      "strategy": "no_update",
+      "version": "iter3",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 9,
+      "strategy": "no_update",
+      "version": "iter5",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 9,
+      "strategy": "full_rewrite",
+      "version": "original",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 9,
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 9,
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 9,
+      "strategy": "selective_patch",
+      "version": "original",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 9,
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 9,
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 28,
+      "strategy": "no_update",
+      "version": "original",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 28,
+      "strategy": "no_update",
+      "version": "iter3",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 28,
+      "strategy": "no_update",
+      "version": "iter5",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 28,
+      "strategy": "full_rewrite",
+      "version": "original",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 28,
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 28,
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 28,
+      "strategy": "selective_patch",
+      "version": "original",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 28,
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 28,
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 103,
+      "strategy": "no_update",
+      "version": "original",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 103,
+      "strategy": "no_update",
+      "version": "iter3",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 103,
+      "strategy": "no_update",
+      "version": "iter5",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 103,
+      "strategy": "full_rewrite",
+      "version": "original",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 103,
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 103,
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 103,
+      "strategy": "selective_patch",
+      "version": "original",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 103,
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    },
+    {
+      "idx": 103,
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "expected_visible_fixture_names": 55,
+      "actual_visible_fixture_names": 55,
+      "passed": true,
+      "only_old": [],
+      "only_test": []
+    }
+  ],
+  "limits": "Confirms fixture-name visibility for existing Windows runtime at the same path length. Actual new actor prompts must still be checked. Model, decoding, tasks and method unchanged."
+}
