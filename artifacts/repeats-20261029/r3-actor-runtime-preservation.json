@@ -1,0 +1,10 @@
+{
+  "verified_at": "2026-10-29T05:38:59+08:00",
+  "source_observed_at": "2026-10-29T05:38:09+08:00",
+  "runtime_receipt": "artifacts/repeats-20261029/r3-actor-start-runtime.json",
+  "sha256": "bf3d6d9a55b2546c432d96104be9b7d6c1420893e80630df5ff8afd71006f93d",
+  "capacity": 16384,
+  "model": "qwen3-4b",
+  "prior_gate_verified_at": "2026-10-29T05:37:57+08:00",
+  "execution_started_after_prior_gate": true
+}

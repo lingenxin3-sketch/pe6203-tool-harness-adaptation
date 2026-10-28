@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-29T05:37:57+08:00",
+  "scope": "Independent check of actual anonymously downloaded first-added-round archive",
+  "release_url": "https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/repeat-r2-20261029-evidence",
+  "sha256": "9c2c963d0b8fa02267a87034a398672442a10424f22dae81a4298587f137fceb",
+  "archive_bytes": 29696677,
+  "manifest_entries": 867,
+  "counts": {
+    "result.json": 162,
+    "agent-record.json": 162,
+    "events.jsonl": 162,
+    "failure-record.json": 5
+  },
+  "all_entry_hashes_verified": true,
+  "selected_27_graded_records_match_public_review_hashes": true,
+  "crc_verified": true
+}

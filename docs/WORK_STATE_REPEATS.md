@@ -63,3 +63,23 @@ read-only preflight 已核对 162 条旧记录、四条失败收据、冻结核�
 本轮judge在04:15:44核验，原模型、24576容量；独立原字节收据为r2-judge-start-runtime.json及r2-judge-runtime-preservation.json。第二新增轮后续actor/judge也须及时保留独立运行收据，不能让全局actor-runtime.json或judge-runtime.json后写版本冒充前轮。
 
 新只读观察会话exec session46604运行runtime/repeats-20261029/wait_campaign.py 40048，保留当前管理进程句柄，每50秒打印两轮真实found/scored/failures及发布回执时间。它不执行实验、不启动模型。后续用write_stdin轮询此会话，单次等待50秒；若会话丢失，先从完整CIM进程视图确认40048及其子进程和当前state，不能因受限观察或等待超时就恢复或重跑。第一轮评分齐备后仍需审计、独立结果、打包、新Release匿名下载SHA和最终commit远端核验，门通过后才启动final-r3。当前尚无新Release。
+
+## 2026年10月29日0540阶段交付快照
+
+**第一新增轮已完成并核验交付。** runs/repeat-r2-20261029为162条执行、162条有效评分、5条执行异常；全量audit无issues，recorded_invariants_pass和complete_and_evaluated均为true。执行约00:34至04:14，评分04:15至05:35；这些是约数墙钟时间，不是模型请求秒数相加。
+
+第一新增轮发布门在05:37:57实际通过，最终阶段提交e7186eaed5f8206a813ec317381026fbddafae3a，Release为repeat-r2-20261029-evidence，公开ZIP为29,696,677字节，SHA-256为9c2c963d0b8fa02267a87034a398672442a10424f22dae81a4298587f137fceb。实际匿名下载后独立核对867个清单条目的哈希及CRC，内含162份result、162份agent-record、162份events及5份failure-record；27条重点案例的已评分文件哈希与公开核查索引一致。独立归档/远端复核收据为r2-independent-archive-verification.json及r2-independent-remote-verification.json，已实际核对GitHub分支提交、结果页Git blob和Release资产digest。门文件runtime/repeats-20261029/repeat-r2-20261029-gate.json存在。
+
+本轮ECS（原自动评分）为不更新5.982999、全部重写5.611179、选择性更新4.597480；选择性更新这轮不是最高。更新token为104413对36449，节省65.1%；三阶段合计token为全部重写3063088、选择性3321519，后者高8.4%。123条输入资源清单与旧轮不同，并有策略间输入混杂，所以本轮独立报告，不作整体成本或质量的严格因果结论，也不发布含它的324/486合并结论。2-round-combination-refused.json保留拒绝依据。
+
+任务28、113、117共27条完成评分和原件对照，原始字节及执行关键字段均验证一致；见r2-case-postscore-review.json及docs/追加实验/第一新增轮案例核查.md。任务117全部重写Middle、Late有明确评分与实际失败分歧，Late异常、回答为空却TF/PE均10；任务113不更新Late七次规划校验失败，本轮TF1/PE4，与旧轮同类高分不同。任务28全部重写Middle的TF6/PE5识别了部分失败。报告这些具体事实，不能笼统声称全部评分有效或无效，不改分、不把满分解释实际成功。review始终标AI协助、成员独立复核待完成。
+
+第二新增轮final-r3已在05:38:09开始，晚于首轮发布门通过。实际管理PID40048（venv启动器39668）；执行启动器PID37256、实际Python子PID36868，已于05:39完整CIM核对。不要重复启动。actor运行收据已独立保存r3-actor-start-runtime.json及r3-actor-runtime-preservation.json，固定容量16384，原模型不变。只读观察会话仍为46604，它现在同时输出R2和R3计数。05:39时R3已落盘5条、0评分、0异常，首批5条实际资源清单与旧轮一致，仅是部分检查，不能提前称整轮可比。见r3-first-input-check.json。
+
+接下来继续等待同一R3执行进程完成；出现异常时只读assemble审查真实轨迹，保留，不重跑；管理器会自动finalize、审计、切换原judge、评分和发布。R3评分实际开始时须及时保存独立r3-judge-start-runtime.json，不能复制目前仍留存的R2全局judge收据。最终需再次独立核对R3的162条及失败、实际输入可比性、Release匿名下载SHA和远端提交，并核查两次阶段交付顺序、旧结果/主分支保留、无强制486合并。即便R3与旧轮可比，含R2的三轮汇总仍禁止；最多两个新增轮，不再补第三个新轮。
+
+R2结果页追加了成本解释和本轮27条案例链接；独立复核收据、R3启动/首批输入收据及本段文字将由下次15分钟心跳发布。不要把尚未从last-publish.json确认的补充文件称为已远端核验。GitHub文本CRLF转LF与原始ZIP字节的SHA区别，已经实际核对并记录在冻结与故障协议中。
+
+runtime/repeats-20261029/case_score_table.py是本次一次性只读提取及原件验证脚本，已在27条案例全部评分后成功生成公开JSON和表格；不要重复执行覆盖输出，也不要算作新实验。旧Word/PDF/演讲材料和依赖扩展组件对照仍是旧单轮版本，尚未同步更新；没有新增PPT或替团队提交课程。
+
+05:48在R3尚未评分时补充了对照口径预声明：如R3全部评分且与原轮严格可比，可另提供明确名称的“原轮final-v1＋第二新增轮final-r3”324条、每组合2次的对照和配对差，R2继续独立；不得把它说成3次或486可比，也不能按成绩选择纳入轮次。当前campaign.aggregate_views会因R2而拒绝全三轮，额外的原轮/R3视图须在最终核验后用merge_views([old,r3])并逐条来源哈希实现，不能改原记录。若R3不满足严格可比性，则不生成该对照。依据为评分前已发现的输入差异，非结果选择。见冻结与故障协议最后一节。

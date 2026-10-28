@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-10-29T05:38:35+08:00",
+  "commit": "e7186eaed5f8206a813ec317381026fbddafae3a",
+  "remote_branch_matches": true,
+  "result_page_git_blob_sha256": "0c472cd5bbe50152c7e8c22aaa8c793c76d2481b2b7bd6c4fc6699037286536d",
+  "release_target_matches_source_commit": true,
+  "github_asset_digest_matches_downloaded_archive": true,
+  "gate_completed_at": "2026-10-29T05:37:57+08:00",
+  "second_round_state": {
+    "pid": 40048,
+    "phase": "executing",
+    "message": "第3轮实际执行；结果逐条保存",
+    "updated_at": "2026-10-29T05:38:09+08:00",
+    "child_pid": 37256,
+    "awake_request": true,
+    "controller_started_at": "2026-10-29T04:14:38+08:00",
+    "round": "final-r3",
+    "previous_controller": 6104
+  },
+  "release_url": "https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/repeat-r2-20261029-evidence"
+}

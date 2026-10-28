@@ -1,7 +1,7 @@
 {
-  "collected_at": "2026-10-29T05:37:08+08:00",
-  "phase": "round_published",
-  "message": "第2轮已评分、发布且远端验证通过",
+  "collected_at": "2026-10-29T05:49:19+08:00",
+  "phase": "executing",
+  "message": "第3轮实际执行；结果逐条保存",
   "rounds": [
     {
       "name": "final-v1",
@@ -32,13 +32,15 @@
     {
       "name": "final-r3",
       "expected": 162,
-      "found": 0,
+      "found": 25,
       "scored": 0,
       "failures": 0,
-      "missing": 162,
-      "complete": false,
+      "missing": 137,
       "issues": [],
-      "status_counts": {}
+      "status_counts": {
+        "awaiting_judge": 25
+      },
+      "complete": false
     }
   ]
 }

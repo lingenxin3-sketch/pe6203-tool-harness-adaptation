@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-29T05:39:53+08:00",
+  "partial": true,
+  "records_saved": 5,
+  "actual_input_checks": 5,
+  "differences": [],
+  "unavailable": [],
+  "whole_round_comparability": "Pending all 162 actual records and runtime/judge verification"
+}
