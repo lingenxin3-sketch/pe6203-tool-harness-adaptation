@@ -1,0 +1,560 @@
+{
+  "collected_at": "2026-10-29T00:34:56+08:00",
+  "baseline_workspace": "runs/final-v1/repeat-0/no_update/original/9/workspace",
+  "source_files": 29,
+  "passed": true,
+  "files": [
+    {
+      "source": "llms-full.txt",
+      "sha256": "0cb39dcb0bc2541928a4e186256b14f9c8bda35d3fef4e09d53dc7a0af98f141",
+      "variants": [
+        {
+          "path": "llms-full.txt",
+          "sha256": "0cb39dcb0bc2541928a4e186256b14f9c8bda35d3fef4e09d53dc7a0af98f141",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/llms-full.txt",
+          "sha256": "0cb39dcb0bc2541928a4e186256b14f9c8bda35d3fef4e09d53dc7a0af98f141",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "code/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "variants": [
+        {
+          "path": "code/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/code/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "code/log_analysis.py",
+      "sha256": "cd001fc27a45b862065ebbf694fe51b728434ccfcf41e3f00ab00203e346cf32",
+      "variants": [
+        {
+          "path": "code/log_analysis.py",
+          "sha256": "cd001fc27a45b862065ebbf694fe51b728434ccfcf41e3f00ab00203e346cf32",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/code/log_analysis.py",
+          "sha256": "cd001fc27a45b862065ebbf694fe51b728434ccfcf41e3f00ab00203e346cf32",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "code/new_aggregator.py",
+      "sha256": "eeb7401d18cc10211dad03666cae29deab2bdf72d33c6202a0eabac762e32d04",
+      "variants": [
+        {
+          "path": "code/new_aggregator.py",
+          "sha256": "eeb7401d18cc10211dad03666cae29deab2bdf72d33c6202a0eabac762e32d04",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/code/new_aggregator.py",
+          "sha256": "eeb7401d18cc10211dad03666cae29deab2bdf72d33c6202a0eabac762e32d04",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "csv/customers-100.csv",
+      "sha256": "2c36c054711dad021f45cc7e0990bd38864a51d753c8055b63e78014a6bee515",
+      "variants": [
+        {
+          "path": "csv/customers-100.csv",
+          "sha256": "2c36c054711dad021f45cc7e0990bd38864a51d753c8055b63e78014a6bee515",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/csv/customers-100.csv",
+          "sha256": "2c36c054711dad021f45cc7e0990bd38864a51d753c8055b63e78014a6bee515",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "csv/products-100.csv",
+      "sha256": "c6438f797275b1ed8e2b0df78be84051634996eb5babd668a85be943e4fb8480",
+      "variants": [
+        {
+          "path": "csv/products-100.csv",
+          "sha256": "c6438f797275b1ed8e2b0df78be84051634996eb5babd668a85be943e4fb8480",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/csv/products-100.csv",
+          "sha256": "c6438f797275b1ed8e2b0df78be84051634996eb5babd668a85be943e4fb8480",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "excel/goods.xlsx",
+      "sha256": "c7a52eb53e554a67fd8f1a4e7675b97e1a6ada3cf71cabbdd8c721fe1d4431a4",
+      "variants": [
+        {
+          "path": "excel/goods.xlsx",
+          "sha256": "c7a52eb53e554a67fd8f1a4e7675b97e1a6ada3cf71cabbdd8c721fe1d4431a4",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/excel/goods.xlsx",
+          "sha256": "c7a52eb53e554a67fd8f1a4e7675b97e1a6ada3cf71cabbdd8c721fe1d4431a4",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "excel/Local_Electronic_Sales.xlsx",
+      "sha256": "42746c3509041ff144bd16dfbf9870346dbf209dad5e82d77b6816a8cc6566d5",
+      "variants": [
+        {
+          "path": "excel/Local_Electronic_Sales.xlsx",
+          "sha256": "42746c3509041ff144bd16dfbf9870346dbf209dad5e82d77b6816a8cc6566d5",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/excel/Local_Electronic_Sales.xlsx",
+          "sha256": "42746c3509041ff144bd16dfbf9870346dbf209dad5e82d77b6816a8cc6566d5",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "excel/people_data.xlsx",
+      "sha256": "7751d70b07041d4e93f250c9644bd6daf82193e370ff956044a3e6c6d9ef39a5",
+      "variants": [
+        {
+          "path": "excel/people_data.xlsx",
+          "sha256": "7751d70b07041d4e93f250c9644bd6daf82193e370ff956044a3e6c6d9ef39a5",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/excel/people_data.xlsx",
+          "sha256": "7751d70b07041d4e93f250c9644bd6daf82193e370ff956044a3e6c6d9ef39a5",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "figs/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "variants": [
+        {
+          "path": "figs/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/figs/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "files/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "variants": [
+        {
+          "path": "files/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/files/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "html/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "variants": [
+        {
+          "path": "html/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/html/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "html/time.html",
+      "sha256": "3d79aee7fdc480d6e0cb04327f045e91e715b285e48169761d089a860c89f3ea",
+      "variants": [
+        {
+          "path": "html/time.html",
+          "sha256": "3d79aee7fdc480d6e0cb04327f045e91e715b285e48169761d089a860c89f3ea",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/html/time.html",
+          "sha256": "3d79aee7fdc480d6e0cb04327f045e91e715b285e48169761d089a860c89f3ea",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "markdown/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "variants": [
+        {
+          "path": "markdown/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/markdown/.gitkeep",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "markdown/work.md",
+      "sha256": "03f54506a8205b85be1b9e38a77569238f405fefd26b60db6bc0c7e856be92e8",
+      "variants": [
+        {
+          "path": "markdown/work.md",
+          "sha256": "03f54506a8205b85be1b9e38a77569238f405fefd26b60db6bc0c7e856be92e8",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/markdown/work.md",
+          "sha256": "03f54506a8205b85be1b9e38a77569238f405fefd26b60db6bc0c7e856be92e8",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "music/mixkit-retro-game-emergency-alarm-1000.wav",
+      "sha256": "d7d3f5541e9d39092118703826c7a6200d31c4540fa25d0672e2e7a10f22a480",
+      "variants": [
+        {
+          "path": "music/mixkit-retro-game-emergency-alarm-1000.wav",
+          "sha256": "d7d3f5541e9d39092118703826c7a6200d31c4540fa25d0672e2e7a10f22a480",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/music/mixkit-retro-game-emergency-alarm-1000.wav",
+          "sha256": "d7d3f5541e9d39092118703826c7a6200d31c4540fa25d0672e2e7a10f22a480",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "pdf/WebArena.pdf",
+      "sha256": "f9731b92bc3d29a2ea7b5f9cb46b48540c76bc3f84a57e0c48fc37ea73107f95",
+      "variants": [
+        {
+          "path": "pdf/WebArena.pdf",
+          "sha256": "f9731b92bc3d29a2ea7b5f9cb46b48540c76bc3f84a57e0c48fc37ea73107f95",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/pdf/WebArena.pdf",
+          "sha256": "f9731b92bc3d29a2ea7b5f9cb46b48540c76bc3f84a57e0c48fc37ea73107f95",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "picture/clock.png",
+      "sha256": "8a2bcbf91f77e5a9af43f7085b5a97bea7bd92140862b7d88e95e4d196b4fb20",
+      "variants": [
+        {
+          "path": "picture/clock.png",
+          "sha256": "8a2bcbf91f77e5a9af43f7085b5a97bea7bd92140862b7d88e95e4d196b4fb20",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/picture/clock.png",
+          "sha256": "8a2bcbf91f77e5a9af43f7085b5a97bea7bd92140862b7d88e95e4d196b4fb20",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "ppt/build_effective_agents.pptx",
+      "sha256": "217bd88104b68f927901ac29e2a61ab057fd2b820d96b842f222bb1d3a7eb382",
+      "variants": [
+        {
+          "path": "ppt/build_effective_agents.pptx",
+          "sha256": "217bd88104b68f927901ac29e2a61ab057fd2b820d96b842f222bb1d3a7eb382",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/ppt/build_effective_agents.pptx",
+          "sha256": "217bd88104b68f927901ac29e2a61ab057fd2b820d96b842f222bb1d3a7eb382",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "txt/Android.txt",
+      "sha256": "47641549915e662ff590291df266a45f635eedca7c5f1b41a4fa853fe5d2f409",
+      "variants": [
+        {
+          "path": "txt/Android.txt",
+          "sha256": "47641549915e662ff590291df266a45f635eedca7c5f1b41a4fa853fe5d2f409",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/txt/Android.txt",
+          "sha256": "47641549915e662ff590291df266a45f635eedca7c5f1b41a4fa853fe5d2f409",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "txt/log_today.txt",
+      "sha256": "ca16f52bf4b099d2bdff7c2b755466d7b3e41352d92ae7afcca4607ff7b095f9",
+      "variants": [
+        {
+          "path": "txt/log_today.txt",
+          "sha256": "ca16f52bf4b099d2bdff7c2b755466d7b3e41352d92ae7afcca4607ff7b095f9",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/txt/log_today.txt",
+          "sha256": "ca16f52bf4b099d2bdff7c2b755466d7b3e41352d92ae7afcca4607ff7b095f9",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "txt/log_yesterday.txt",
+      "sha256": "5c1ff5f77281d4a9b1f14fdf1ec12d1a82764c4bafe309c518ab0a75e73b1ccc",
+      "variants": [
+        {
+          "path": "txt/log_yesterday.txt",
+          "sha256": "5c1ff5f77281d4a9b1f14fdf1ec12d1a82764c4bafe309c518ab0a75e73b1ccc",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/txt/log_yesterday.txt",
+          "sha256": "5c1ff5f77281d4a9b1f14fdf1ec12d1a82764c4bafe309c518ab0a75e73b1ccc",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "txt/paper_list.bib",
+      "sha256": "5ea5ea095178c40a2d0cd93505dba9850f528280715fe7f9e17193f0a2efaad2",
+      "variants": [
+        {
+          "path": "txt/paper_list.bib",
+          "sha256": "5ea5ea095178c40a2d0cd93505dba9850f528280715fe7f9e17193f0a2efaad2",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/txt/paper_list.bib",
+          "sha256": "5ea5ea095178c40a2d0cd93505dba9850f528280715fe7f9e17193f0a2efaad2",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "word/CV.docx",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "variants": [
+        {
+          "path": "word/CV.docx",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/word/CV.docx",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "word/exchange.docx",
+      "sha256": "3aff9bb070e1636e5c4d9095fd1fc893bc01a6cff04d3f81d8b534f95419adfc",
+      "variants": [
+        {
+          "path": "word/exchange.docx",
+          "sha256": "3aff9bb070e1636e5c4d9095fd1fc893bc01a6cff04d3f81d8b534f95419adfc",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/word/exchange.docx",
+          "sha256": "3aff9bb070e1636e5c4d9095fd1fc893bc01a6cff04d3f81d8b534f95419adfc",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "word/Report_Card.docx",
+      "sha256": "95a33190f29c36d2caac9e0af0a6dee1beada9066e056496c10c9c653046af51",
+      "variants": [
+        {
+          "path": "word/Report_Card.docx",
+          "sha256": "95a33190f29c36d2caac9e0af0a6dee1beada9066e056496c10c9c653046af51",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/word/Report_Card.docx",
+          "sha256": "95a33190f29c36d2caac9e0af0a6dee1beada9066e056496c10c9c653046af51",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+      "sha256": "864815078ad95379ac9c80f0d93d309c47b70384be105cdafc544b907cd50ba8",
+      "variants": [
+        {
+          "path": "pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+          "sha256": "864815078ad95379ac9c80f0d93d309c47b70384be105cdafc544b907cd50ba8",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/pdf/embodied_ai_papers/PaLM-E, An Embodied Multimodal Language Model, Danny Driess et al., 2023, v1_compressed.pdf",
+          "sha256": "864815078ad95379ac9c80f0d93d309c47b70384be105cdafc544b907cd50ba8",
+          "passed": true,
+          "in_initial_snapshot": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "pdf/embodied_ai_papers/RT-2, Vision-Language-Action Models Transfer Web Knowledge to Robotic Control, Anthony Brohan et al., 2023, v1_compressed.pdf",
+      "sha256": "d897153d7f815306080b62c500d340bd69f26d85bcbc06414fb979c80fb8caa9",
+      "variants": [
+        {
+          "path": "pdf/embodied_ai_papers/RT-2, Vision-Language-Action Models Transfer Web Knowledge to Robotic Control, Anthony Brohan et al., 2023, v1_compressed.pdf",
+          "sha256": "d897153d7f815306080b62c500d340bd69f26d85bcbc06414fb979c80fb8caa9",
+          "passed": true,
+          "in_initial_snapshot": false
+        },
+        {
+          "path": "anotation_path/pdf/embodied_ai_papers/RT-2, Vision-Language-Action Models Transfer Web Knowledge to Robotic Control, Anthony Brohan et al., 2023, v1_compressed.pdf",
+          "sha256": "d897153d7f815306080b62c500d340bd69f26d85bcbc06414fb979c80fb8caa9",
+          "passed": true,
+          "in_initial_snapshot": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf",
+      "sha256": "1e297fef9c39259436def0484422f559308f6e2d0ac0281aee89d92af3f37ea0",
+      "variants": [
+        {
+          "path": "pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf",
+          "sha256": "1e297fef9c39259436def0484422f559308f6e2d0ac0281aee89d92af3f37ea0",
+          "passed": true,
+          "in_initial_snapshot": true
+        },
+        {
+          "path": "anotation_path/pdf/embodied_ai_papers/Voyager, An Open-Ended Embodied Agent with Large Language Models, Guanzhi Wang et al., 2023, v2_compressed.pdf",
+          "sha256": "1e297fef9c39259436def0484422f559308f6e2d0ac0281aee89d92af3f37ea0",
+          "passed": true,
+          "in_initial_snapshot": false
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "note": "Windows extended paths check actual copied bytes, including two long PDF paths omitted by the original non-extended file snapshot. No fixture was changed."
+}
