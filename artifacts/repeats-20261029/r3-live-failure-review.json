@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T06:14:04+08:00",
+  "collected_at": "2026-10-29T07:45:01+08:00",
   "partial": true,
   "no_execution_retry": true,
   "records": [
@@ -13,6 +13,18 @@
       "applied": false,
       "read_only_reconstruction_verified": true,
       "recorded_messages": 8,
+      "answer_present": false
+    },
+    {
+      "path": "runs/final-r3/repeat-0/no_update/iter3/389/result.json",
+      "idx": 389,
+      "strategy": "no_update",
+      "version": "iter3",
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "original_sha256": "73795e904581d1670a86e13e12ee43e2d469396bd9e2ab15c561cc5ab9cbae0a",
+      "applied": false,
+      "read_only_reconstruction_verified": true,
+      "recorded_messages": 6,
       "answer_present": false
     },
     {
