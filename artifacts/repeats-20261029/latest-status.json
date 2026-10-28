@@ -1,7 +1,7 @@
 {
-  "collected_at": "2026-10-29T05:33:29+08:00",
-  "phase": "scoring",
-  "message": "第2轮评分，保留已有评分和执行证据",
+  "collected_at": "2026-10-29T05:35:50+08:00",
+  "phase": "publishing",
+  "message": "第2轮已评分审计通过，正在发布证据；尚未满足下一轮门槛",
   "rounds": [
     {
       "name": "final-v1",
@@ -20,15 +20,14 @@
       "name": "repeat-r2-20261029",
       "expected": 162,
       "found": 162,
-      "scored": 158,
+      "scored": 162,
       "failures": 5,
       "missing": 0,
       "issues": [],
       "status_counts": {
-        "evaluated": 158,
-        "awaiting_judge": 4
+        "evaluated": 162
       },
-      "complete": false
+      "complete": true
     },
     {
       "name": "final-r3",

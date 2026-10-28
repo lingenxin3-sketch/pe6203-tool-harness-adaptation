@@ -1,0 +1,245 @@
+{
+  "name": "repeat-r2-20261029",
+  "collected_at": "2026-10-29T05:35:39+08:00",
+  "status": {
+    "name": "repeat-r2-20261029",
+    "expected": 162,
+    "found": 162,
+    "scored": 162,
+    "failures": 5,
+    "missing": 0,
+    "issues": [],
+    "status_counts": {
+      "evaluated": 162
+    },
+    "complete": true
+  },
+  "strategies": [
+    {
+      "strategy": "no_update",
+      "ecs": 5.9829992922411135,
+      "stages": {
+        "original": {
+          "n": 18,
+          "tf": 7.277777777777778,
+          "pe": 7.888888888888889
+        },
+        "iter3": {
+          "n": 18,
+          "tf": 6.944444444444445,
+          "pe": 7.0
+        },
+        "iter5": {
+          "n": 18,
+          "tf": 6.722222222222222,
+          "pe": 6.222222222222222
+        }
+      },
+      "cohorts": [
+        {
+          "version": "iter3",
+          "cohort": "changed",
+          "n": 9,
+          "tf": 7.0,
+          "delta_own_early": -0.5555555555555556,
+          "delta_same_version_no_update": 0.0
+        },
+        {
+          "version": "iter3",
+          "cohort": "unaffected",
+          "n": 9,
+          "tf": 6.888888888888889,
+          "delta_own_early": -0.1111111111111111,
+          "delta_same_version_no_update": 0.0
+        },
+        {
+          "version": "iter5",
+          "cohort": "changed",
+          "n": 10,
+          "tf": 6.8,
+          "delta_own_early": -1.0,
+          "delta_same_version_no_update": 0.0
+        },
+        {
+          "version": "iter5",
+          "cohort": "unaffected",
+          "n": 8,
+          "tf": 6.625,
+          "delta_own_early": 0.0,
+          "delta_same_version_no_update": 0.0
+        }
+      ],
+      "costs": {
+        "update": {
+          "calls": 0,
+          "tokens": 0,
+          "request_seconds": 0,
+          "api_usd": 0
+        },
+        "agent": {
+          "calls": 420,
+          "tokens": 3088764,
+          "request_seconds": 4497.170067099978,
+          "api_usd": 0.0
+        },
+        "judge": {
+          "calls": 54,
+          "tokens": 424142,
+          "request_seconds": 1610.9123969999855,
+          "api_usd": 0.0
+        }
+      }
+    },
+    {
+      "strategy": "full_rewrite",
+      "ecs": 5.61117905619099,
+      "stages": {
+        "original": {
+          "n": 18,
+          "tf": 6.722222222222222,
+          "pe": 6.555555555555555
+        },
+        "iter3": {
+          "n": 18,
+          "tf": 6.611111111111111,
+          "pe": 7.277777777777778
+        },
+        "iter5": {
+          "n": 18,
+          "tf": 6.888888888888889,
+          "pe": 7.111111111111111
+        }
+      },
+      "cohorts": [
+        {
+          "version": "iter3",
+          "cohort": "changed",
+          "n": 9,
+          "tf": 6.666666666666667,
+          "delta_own_early": -0.8888888888888888,
+          "delta_same_version_no_update": -0.3333333333333333
+        },
+        {
+          "version": "iter3",
+          "cohort": "unaffected",
+          "n": 9,
+          "tf": 6.555555555555555,
+          "delta_own_early": 0.6666666666666666,
+          "delta_same_version_no_update": -0.3333333333333333
+        },
+        {
+          "version": "iter5",
+          "cohort": "changed",
+          "n": 10,
+          "tf": 8.1,
+          "delta_own_early": 0.3,
+          "delta_same_version_no_update": 1.3
+        },
+        {
+          "version": "iter5",
+          "cohort": "unaffected",
+          "n": 8,
+          "tf": 5.375,
+          "delta_own_early": 0.0,
+          "delta_same_version_no_update": -1.25
+        }
+      ],
+      "costs": {
+        "update": {
+          "calls": 36,
+          "tokens": 104413,
+          "request_seconds": 304.5489730000081,
+          "api_usd": 0.0
+        },
+        "agent": {
+          "calls": 403,
+          "tokens": 2563956,
+          "request_seconds": 3553.74371289997,
+          "api_usd": 0.0
+        },
+        "judge": {
+          "calls": 54,
+          "tokens": 394719,
+          "request_seconds": 1539.7698338000264,
+          "api_usd": 0.0
+        }
+      }
+    },
+    {
+      "strategy": "selective_patch",
+      "ecs": 4.5974797907065685,
+      "stages": {
+        "original": {
+          "n": 18,
+          "tf": 7.166666666666667,
+          "pe": 7.388888888888889
+        },
+        "iter3": {
+          "n": 18,
+          "tf": 6.277777777777778,
+          "pe": 6.333333333333333
+        },
+        "iter5": {
+          "n": 18,
+          "tf": 5.777777777777778,
+          "pe": 7.166666666666667
+        }
+      },
+      "cohorts": [
+        {
+          "version": "iter3",
+          "cohort": "changed",
+          "n": 9,
+          "tf": 7.888888888888889,
+          "delta_own_early": 0.8888888888888888,
+          "delta_same_version_no_update": 0.8888888888888888
+        },
+        {
+          "version": "iter3",
+          "cohort": "unaffected",
+          "n": 9,
+          "tf": 4.666666666666667,
+          "delta_own_early": -2.6666666666666665,
+          "delta_same_version_no_update": -2.2222222222222223
+        },
+        {
+          "version": "iter5",
+          "cohort": "changed",
+          "n": 10,
+          "tf": 7.5,
+          "delta_own_early": 0.2,
+          "delta_same_version_no_update": 0.7
+        },
+        {
+          "version": "iter5",
+          "cohort": "unaffected",
+          "n": 8,
+          "tf": 3.625,
+          "delta_own_early": -3.375,
+          "delta_same_version_no_update": -3.0
+        }
+      ],
+      "costs": {
+        "update": {
+          "calls": 19,
+          "tokens": 36449,
+          "request_seconds": 113.18793150000056,
+          "api_usd": 0.0
+        },
+        "agent": {
+          "calls": 404,
+          "tokens": 2873558,
+          "request_seconds": 4169.569974700014,
+          "api_usd": 0.0
+        },
+        "judge": {
+          "calls": 54,
+          "tokens": 411512,
+          "request_seconds": 1603.4900098999933,
+          "api_usd": 0.0
+        }
+      }
+    }
+  ],
+  "source_manifest_sha256": "579c60853c83400a015b35ac6ba68fbe97a0f1ebba1427403ace27ffd8381cb2"
+}

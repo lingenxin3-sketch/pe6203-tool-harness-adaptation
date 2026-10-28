@@ -1,0 +1,921 @@
+[
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter3/113/result.json",
+    "task": 113,
+    "strategy": "full_rewrite",
+    "version": "iter3",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 4 (Parse Log Files, Identify Error Patterns, Generate Aggregated Statistics, Design Dashboard UI). Met requirements: 4. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 10 (e.g., 'Project created successfully!', 'Task created successfully!', etc.). All claims are perfectly grounded in tool outputs. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 6. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        ".agentic-tools-mcp/tasks/tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter3/117/result.json",
+    "task": 117,
+    "strategy": "full_rewrite",
+    "version": "iter3",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 5 distinct sub-goals. Met requirements: 5. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 15 (5 sub-goals with 3 claims each). Grounded claims: 15. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 10. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        "sources.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter3/28/result.json",
+    "task": 28,
+    "strategy": "full_rewrite",
+    "version": "iter3",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 6.0,
+      "grounding_mean": 3.0,
+      "planning_and_efficiency_mean": 5.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 3. Met requirements: 2 (comparison and summary). Defect rate: (3 - 2) / 3 * 100% = 33.33%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 2 (unresolved issues). Grounded claims: 0. Defect rate: (2 - 0) / 2 * 100% = 100%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 4. Redundant/unnecessary calls: 3 (two tasks_setup and one tasks_add due to errors). Defect rate: (4 - 1) / 4 * 100% = 75%."
+      ],
+      "task_fulfillment": 6,
+      "grounding": 3,
+      "planning_and_efficiency": 5
+    },
+    "files": {
+      "created": [],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/113/result.json",
+    "task": 113,
+    "strategy": "full_rewrite",
+    "version": "iter5",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 7 distinct tasks. Met requirements: 7 tasks planned and identified. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 7 tasks described in the final answer. All claims are supported by tool outputs. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        ".agentic-tools-mcp/tasks/tasks.json",
+        "tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/117/result.json",
+    "task": 117,
+    "strategy": "full_rewrite",
+    "version": "iter5",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 7 distinct sub-goals. Met requirements: 7. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 7. Grounded claims: 7. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": "infrastructure_error",
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/iter5/28/result.json",
+    "task": 28,
+    "strategy": "full_rewrite",
+    "version": "iter5",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 6.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 4.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 4 (compare logs, summarize changes, create to-do tasks, store in tasks.md). Met requirements: 2 (compared logs, identified resolved issue). Defect rate: (4 - 2) / 4 * 100 = 50%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 2 (resolved database connection issue, no new to-do tasks required). Grounded claims: 2 (all claims supported by tool outputs). Defect rate: (2 - 2) / 2 * 100 = 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 5. Redundant/unnecessary calls: 4 (two calls to tasks_setup for unsupported file types, one call to tasks_add due to incorrect source_id). Defect rate: 4 / 5 * 100 = 80%."
+      ],
+      "task_fulfillment": 6,
+      "grounding": 10,
+      "planning_and_efficiency": 4
+    },
+    "files": {
+      "created": [],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/original/113/result.json",
+    "task": 113,
+    "strategy": "full_rewrite",
+    "version": "original",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 4.0,
+      "grounding_mean": 8.0,
+      "planning_and_efficiency_mean": 9.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 5. Met requirements: 1 (Set up log file parsing pipeline). Defect rate: (5 - 1) / 5 * 100% = 80% defects."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 5. Grounded claims: 4 (Log Analysis Dashboard project, task-1, task-2, task-3). Defect rate: (5 - 4) / 5 * 100% = 20% defects."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0 / 3 * 100% = 0% defects."
+      ],
+      "task_fulfillment": 4,
+      "grounding": 8,
+      "planning_and_efficiency": 9
+    },
+    "files": {
+      "created": [
+        ".agentic-tools-mcp/tasks/tasks.json",
+        "tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/original/117/result.json",
+    "task": 117,
+    "strategy": "full_rewrite",
+    "version": "original",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 7.0,
+      "grounding_mean": 8.0,
+      "planning_and_efficiency_mean": 4.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 6 distinct sub-goals. Met requirements: 4 (data ingestion, preprocessing, real-time processing, route optimization). Defect rate: (6 - 4) / 6 * 100% = 33.33%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 10 (e.g., real-time data ingestion, preprocessing, machine learning-based route optimization, user interface). Grounded claims: 8 (e.g., data ingestion, preprocessing, real-time processing, route optimization, UI visualization, technical feasibility, scalability, integration). Defect rate: (10 - 8) / 10 * 100% = 20%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 10. Redundant/unnecessary calls: 4 (searching for tasks in 'workspace' multiple times, setting up tasks with unsupported file extensions). Defect rate: 4 / 10 * 100% = 40%."
+      ],
+      "task_fulfillment": 7,
+      "grounding": 8,
+      "planning_and_efficiency": 4
+    },
+    "files": {
+      "created": [
+        "sources.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/full_rewrite/original/28/result.json",
+    "task": 28,
+    "strategy": "full_rewrite",
+    "version": "original",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 4. Met requirements: 4. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 2. Unsupported claims: 0. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        "anotation_path/markdown/tasks.md",
+        "sources.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/113/result.json",
+    "task": 113,
+    "strategy": "no_update",
+    "version": "iter3",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 4.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 7.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 5 distinct tasks. Met requirements: 1 task plan created. Defect rate: (5 - 1) / 5 * 100% = 80% defects."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 5 tasks described in the final answer. Grounded claims: 5 tasks described match the tool outputs. Defect rate: 0 / 5 * 100% = 0% defects."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 4. Redundant/unnecessary calls: 1 (the second request_planning call due to missing splitDetails). Defect rate: 1 / 4 * 100% = 25% defects."
+      ],
+      "task_fulfillment": 4,
+      "grounding": 10,
+      "planning_and_efficiency": 7
+    },
+    "files": {
+      "created": [
+        ".agentic-tools-mcp/tasks/tasks.json",
+        "tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/117/result.json",
+    "task": 117,
+    "strategy": "no_update",
+    "version": "iter3",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 7.0,
+      "grounding_mean": 7.0,
+      "planning_and_efficiency_mean": 7.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 5 distinct sub-goals. Met requirements: 4 out of 5. Defect rate: (1/5) * 100% = 20%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 10. Grounded claims: 8. Unsupported claims: 2. Defect rate: (2/10) * 100% = 20%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 10. Redundant/unnecessary calls: 2. Defect rate: (2/10) * 100% = 20%."
+      ],
+      "task_fulfillment": 7,
+      "grounding": 7,
+      "planning_and_efficiency": 7
+    },
+    "files": {
+      "created": [
+        "shrimp/tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/no_update/iter3/28/result.json",
+    "task": 28,
+    "strategy": "no_update",
+    "version": "iter3",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 4. Met requirements: 4. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 3. Unsupported claims: 0. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        "anotation_path/markdown/tasks.md",
+        "sources.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/no_update/iter5/113/result.json",
+    "task": 113,
+    "strategy": "no_update",
+    "version": "iter5",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 1.0,
+      "grounding_mean": 1.0,
+      "planning_and_efficiency_mean": 4.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 6. Met requirements: 0. Defect rate: 100%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 6. Unsupported claims: 6. Defect rate: 100%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 12. Redundant/unnecessary calls: 9. Defect rate: 75%."
+      ],
+      "task_fulfillment": 1,
+      "grounding": 1,
+      "planning_and_efficiency": 4
+    },
+    "files": {
+      "created": [
+        ".agentic-tools-mcp/tasks/tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/no_update/iter5/117/result.json",
+    "task": 117,
+    "strategy": "no_update",
+    "version": "iter5",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 8.0,
+      "grounding_mean": 7.0,
+      "planning_and_efficiency_mean": 4.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 6 distinct sub-goals. Met requirements: 5 out of 6. Defect rate: (1/6) * 100% = 16.7%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 10 atomic factual claims. Grounded claims: 8 out of 10. Defect rate: (2/10) * 100% = 20%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 10. Redundant/unnecessary calls: 4 out of 10. Defect rate: (4/10) * 100% = 40%."
+      ],
+      "task_fulfillment": 8,
+      "grounding": 7,
+      "planning_and_efficiency": 4
+    },
+    "files": {
+      "created": [
+        "shrimp/tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/no_update/iter5/28/result.json",
+    "task": 28,
+    "strategy": "no_update",
+    "version": "iter5",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 4. Met requirements: 4. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 3. Unsupported claims: 0. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        "anotation_path/markdown/tasks.md",
+        "sources.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/no_update/original/113/result.json",
+    "task": 113,
+    "strategy": "no_update",
+    "version": "original",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 4.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 7. Met requirements: 3 (Create project, Define log parsing and error detection logic, Implement aggregation and statistics calculation). Defect rate: (7 - 3) / 7 * 100% = 42.86%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 7. Grounded claims: 7. Defect rate: (7 - 7) / 7 * 100% = 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 10. Redundant/unnecessary calls: 0. Defect rate: 0 / 10 * 100% = 0%."
+      ],
+      "task_fulfillment": 4,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        ".agentic-tools-mcp/tasks/tasks.json",
+        "tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/no_update/original/117/result.json",
+    "task": 117,
+    "strategy": "no_update",
+    "version": "original",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 6 distinct sub-goals. Met requirements: 6. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 15. Grounded claims: 15. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 10. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        "shrimp/tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/no_update/original/28/result.json",
+    "task": 28,
+    "strategy": "no_update",
+    "version": "original",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 3 (compare logs, summarize changes, create tasks). Met requirements: 3. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 3 (create tasks for unresolved issues, store in tasks.md, summarize changes). Grounded claims: 3. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        "anotation_path/markdown/tasks.md",
+        "sources.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter3/113/result.json",
+    "task": 113,
+    "strategy": "selective_patch",
+    "version": "iter3",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 5 distinct sub-goals. Met requirements: 5. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 10 (5 tasks, 5 task descriptions). Grounded claims: 10. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        ".agentic-tools-mcp/tasks/tasks.json",
+        "tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter3/117/result.json",
+    "task": 117,
+    "strategy": "selective_patch",
+    "version": "iter3",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 8.0,
+      "grounding_mean": 7.0,
+      "planning_and_efficiency_mean": 5.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 6 distinct sub-goals. Met requirements: 5 out of 6. Defect rate: (1/6) * 100% = 16.7%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 10 specific points. Grounded claims: 8 out of 10. Defect rate: (2/10) * 100% = 20%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 10. Redundant/unnecessary calls: 4 out of 10. Defect rate: (4/10) * 100% = 40%."
+      ],
+      "task_fulfillment": 8,
+      "grounding": 7,
+      "planning_and_efficiency": 5
+    },
+    "files": {
+      "created": [
+        "shrimp/tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter3/28/result.json",
+    "task": 28,
+    "strategy": "selective_patch",
+    "version": "iter3",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 4. Met requirements: 4. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 4. Unsupported claims: 0. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        "anotation_path/markdown/tasks.md",
+        "sources.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/113/result.json",
+    "task": 113,
+    "strategy": "selective_patch",
+    "version": "iter5",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 4.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 5 distinct sub-goals. Met requirements: 1 (log file ingestion pipeline task). Defect rate: (5 - 1) / 5 * 100% = 80%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 5 distinct sub-goals. Grounded claims: 5 (all claims are supported by tool outputs). Defect rate: (5 - 5) / 5 * 100% = 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0 / 3 * 100% = 0%."
+      ],
+      "task_fulfillment": 4,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        ".agentic-tools-mcp/tasks/tasks.json",
+        "tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/117/result.json",
+    "task": 117,
+    "strategy": "selective_patch",
+    "version": "iter5",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 6.0,
+      "grounding_mean": 6.0,
+      "planning_and_efficiency_mean": 7.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 8 distinct sub-goals. Met requirements: 5 (Establish Real-Time Data Ingestion Pipeline, Implement Real-Time Data Processing Engine, Develop Route Optimization Algorithm, Design Real-Time Feedback Loop, Create User Interface for Route Visualization). Defect rate: (8 - 5) / 8 * 100% = 37.5%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 8 distinct sub-goals. Grounded claims: 5 (Establish Real-Time Data Ingestion Pipeline, Implement Real-Time Data Processing Engine, Develop Route Optimization Algorithm, Design Real-Time Feedback Loop, Create User Interface for Route Visualization). Defect rate: (8 - 5) / 8 * 100% = 37.5%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 7. Redundant/unnecessary calls: 2 (fJHLKMZf4eQlQKRNkyFUjBLWWJHesyc9, szt79IpiWxqcN9eKD8f6w6QsmwZxxdGn). Defect rate: 2 / 7 * 100% ≈ 28.6%."
+      ],
+      "task_fulfillment": 6,
+      "grounding": 6,
+      "planning_and_efficiency": 7
+    },
+    "files": {
+      "created": [],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": "infrastructure_error",
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/iter5/28/result.json",
+    "task": 28,
+    "strategy": "selective_patch",
+    "version": "iter5",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 1.0,
+      "grounding_mean": 1.0,
+      "planning_and_efficiency_mean": 4.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 3 (compare logs, summarize changes, create new to-do tasks). Met requirements: 0. Defect rate: 100%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 2 (Fix database connection failure, Monitor disk space). Grounded claims: 0. Defect rate: 100%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 2 (second tasks_setup call, second tasks_add call). Defect rate: 66.67%."
+      ],
+      "task_fulfillment": 1,
+      "grounding": 1,
+      "planning_and_efficiency": 4
+    },
+    "files": {
+      "created": [],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/original/113/result.json",
+    "task": 113,
+    "strategy": "selective_patch",
+    "version": "original",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 4.0,
+      "grounding_mean": 4.0,
+      "planning_and_efficiency_mean": 9.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 5 distinct sub-goals. Met requirements: 1 (log file parsing pipeline task). Defect rate: (5 - 1) / 5 * 100% = 80% defects."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 5 distinct sub-goals. Grounded claims: 1 (log file parsing pipeline task). Defect rate: (5 - 1) / 5 * 100% = 80% defects."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0 / 3 * 100% = 0% defects."
+      ],
+      "task_fulfillment": 4,
+      "grounding": 4,
+      "planning_and_efficiency": 9
+    },
+    "files": {
+      "created": [
+        ".agentic-tools-mcp/tasks/tasks.json",
+        "tasks.json"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/original/117/result.json",
+    "task": 117,
+    "strategy": "selective_patch",
+    "version": "original",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 4.0,
+      "grounding_mean": 4.0,
+      "planning_and_efficiency_mean": 7.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 6 distinct sub-goals. Met requirements: 2 (data ingestion and route optimization). Defect rate: (6 - 2) / 6 * 100% = 66.67% defects."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 6. Grounded claims: 2 (data ingestion and route optimization). Defect rate: (6 - 2) / 6 * 100% = 66.67% defects."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 10. Redundant/unnecessary calls: 4 (tasks_setup for unsupported file extensions). Defect rate: 4 / 10 * 100% = 40% defects."
+      ],
+      "task_fulfillment": 4,
+      "grounding": 4,
+      "planning_and_efficiency": 7
+    },
+    "files": {
+      "created": [],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  },
+  {
+    "source": "runs/repeat-r2-20261029/repeat-0/selective_patch/original/28/result.json",
+    "task": 28,
+    "strategy": "selective_patch",
+    "version": "original",
+    "score": {
+      "successful_runs": 1,
+      "total_runs": 1,
+      "task_fulfillment_mean": 10.0,
+      "grounding_mean": 10.0,
+      "planning_and_efficiency_mean": 10.0,
+      "task_fulfillment_reasoning_runs": [
+        "Total requirements: 4. Met requirements: 4. Defect rate: 0%."
+      ],
+      "grounding_reasoning_runs": [
+        "Total claims: 3. Unsupported claims: 0. Defect rate: 0%."
+      ],
+      "planning_efficiency_reasoning_runs": [
+        "Total tool calls: 3. Redundant/unnecessary calls: 0. Defect rate: 0%."
+      ],
+      "task_fulfillment": 10,
+      "grounding": 10,
+      "planning_and_efficiency": 10
+    },
+    "files": {
+      "created": [
+        "sources.json",
+        "tasks.md"
+      ],
+      "deleted": [],
+      "modified": []
+    },
+    "execution_status": null,
+    "review_status": "自动文件/轨迹索引，待人工确认；不等于正确完成。"
+  }
+]
