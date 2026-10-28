@@ -85,3 +85,25 @@ runtime/repeats-20261029/case_score_table.py是本次一次性只读提取及原
 05:48在R3尚未评分时补充了对照口径预声明：如R3全部评分且与原轮严格可比，可另提供明确名称的“原轮final-v1＋第二新增轮final-r3”324条、每组合2次的对照和配对差，R2继续独立；不得把它说成3次或486可比，也不能按成绩选择纳入轮次。当前campaign.aggregate_views会因R2而拒绝全三轮，额外的原轮/R3视图须在最终核验后用merge_views([old,r3])并逐条来源哈希实现，不能改原记录。若R3不满足严格可比性，则不生成该对照。依据为评分前已发现的输入差异，非结果选择。见冻结与故障协议最后一节。
 
 05:52续接补充：第二新增轮31/162条落盘、0评分、0异常，同一管理40048与执行37256/36868继续，观察会话46604仍活跃；不要因本次阶段交付回复就停止当前实验，也不要新启动副本。05:50:11进度提交0da9583cdb8b1143ed06c78b0b88ec46a74a4e02已逐文件远端核验，包含R2成本补充、独立归档与远端复核收据、R3actor独立收据和预先声明的对照口径。05:51:41实际检查到28条R3输入资源清单，全部与旧轮一致，见r3-first27-input-check.json（达到27条检查点时实际已增至28，文件内记录真实28）；它仅为部分核验、尚未随下一次心跳发布，不称整轮可比。
+
+## 2026年10月29日0626续接快照
+
+R3正在同一进程执行，06:25实际64/162条、0评分、2条执行异常；管理PID40048及只读观察会话46604仍在工作。没有重跑任何episode。下一步先续同一write_stdin会话；不要启动新controller或模型，也不因一次等待超时判断停止。当前是有具体进程句柄证明的等待，同时完成了下列新证据工作，非阻塞。
+
+新增docs/追加实验/第二新增轮案例核查.md，以及r3-case-execution-review-receipt.json（现27条、cases=[28,113,117]、complete_case_matrix=true，仅指案例子集）。这些案例在评分前完成逐条读取，记录原始result字节SHA、实际文件SHA、调用及搜索返回。任务28/113旧18条原件和实际产物在加入117时再次校验未变；r3-case-event-freeze.json再冻结27条的事件日志SHA。后续评分完成要用这些原始SHA核对normal的agent-record.json、异常的failure-record.json，并核对事件不变，再补原自动分数表；不要直接复用硬编码R2路径的一次性case_score_table.py。
+
+任务28：不更新三版、全部重写Early、选择性更新三版共7条真实创建任务Markdown，各3个未勾选待办；路径有anotation_path/markdown/tasks.md、markdown/tasks.md、txt/tasks.md。全部重写Middle相关契约未改却重写3说明，随后虚构source_id_1、两次拿txt日志初始化来源，3次错误、无文件。选择性更新Late4次调用中第一次添加缺来源失败，后初始化txt/tasks.md取得真实编号再添加成功，有恢复但多一次失败步骤。多数文件仍把昨天数据库错误断言为未解决，两份日志不支持该断言；今天无该报错也不证明已经解决。selective Late有核实历史故障措辞，不能笼统说所有内容相同或全错。
+
+任务113：root tasks.json结构是requests数组内嵌tasks，不能只读顶层tasks（那会误数0）。根计划任务数依次为不更新5/5/无、全部重写5/无/5、选择性更新5/6/6；所有done/approved=false。全部重写Middle另一个.agentic-tools-mcp/tasks/tasks.json有4条pending、subtasks为空，不能说没有计划。不更新Late7次规划均缺priority/tags等必填字段，8个工具调用、7错误，没有root计划；selective Middle仅2个工具调用、6个计划任务，未创建另一套项目，不混淆工具族的前置条件。
+
+任务117：九条模型轮数/工具调用数/真实Shrimp任务数为no_update Early12/12/0、Middle12/12/0、Late12/12/5；full Early12/12/0、Middle12/12/0、Late3/3/0；selective Early3/3/0、Middle10/8/6、Late12/22/0。只有selective Middle有非空最终回答。12步指模型决策，22个工具调用未违反12轮上限，不能据此造假定性。full Middle三次split_tasks正文为JSON非法控制字符错误，isError却false；实际无Shrimp任务文件，必须区分MCP错误标记和语义失败。
+
+R3目前两条异常为full_rewrite/iter5/117（原始SHA c3d375a4b91e38db5888f8624c2d6d522916b847a2551cf108bdf6c62275fd4a）与selective_patch/original/117（1331d7b8ea8857f54e51bc4fff95a5e4aac002ba47b3130c70e389d27e4fbed1）。两者均8条可只读重建消息、回答为空、split返回未闭合字符串，无任务文件；未应用finalize、未重试。见r3-live-failure-review.json；后续若有新异常更新只读检查。selective Early的adaptation.status=initial，在更新前异常，不能归因于选择性更新。
+
+本轮117并非所有搜索都报错：no_update Late注册了基准work.md（工作方法指南）后用真实来源ID查询，正常返回空数组；没取到历史交通任务，不能说已找到可复用经验。full Middle最后注册了work.md但未再查询。selective Middle两次把真实Shrimp任务UUID当成另一套工具的source_id，已实际核对两次UUID均属其任务列表，两次来源不存在。其余档案搜索失败或未调用，细节在27条receipt中；不能复制R2“没有有效查询”的事实到R3。
+
+新增within-round-input-fairness-check.json，实际检查旧轮54个同题同版本的跨策略组全部资源清单一致，R2的54组全部不同，R3当时完整的12组一致。R2的输入混杂已量化，不只跨轮不匹配，策略间也不公平；严格独立报告，不作ECS差异因果归因。R3这一份仍是部分检查，末尾必须更新核验全部54组，再核实old/R3全部162输入匹配及运行judge条件。
+
+06:22:13实际进度提交ee1940681f0710e393ea5a90cadcafbf62cc2037远端逐文件核验，公开R3案例receipt当时仅[28,113]共18条，任务117补充及27条事件冻结在06:23以后生成，尚待下一心跳公开，不能误称已上传。持续15分钟发布，注意last-publish.json及publication-error日志。原来R2已完成的证据、提交、费用和限制仍如上，不动原轮、main、旧v1.0.0或无关可视化草稿。
+
+后续R3自然完成执行时管理器会整理失败、审计、切换原judge评分、统计及发布新Release。评分实际开始后及时独立保存r3-judge-start-runtime.json，不要提前复制仍属于R2的global judge-runtime.json。完成后独立下载校验R3ZIP全部162来源、失败和日志，远端核验commit/结果页；审查27条原分数与已核对事实，不改分；若old/R3严格可比，再按已预声明的原轮+第二新增轮324视图提供两次对照，保留R2独立且不称486可比。完整目标尚未完成，不更新goal为complete，也不是blocked；继续至第二轮实际评分发布验证及最终要求逐项审计。
