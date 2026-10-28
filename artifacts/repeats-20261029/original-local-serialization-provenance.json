@@ -1,0 +1,12 @@
+{
+  "copied_at": "2026-10-29T07:05:43+08:00",
+  "kind": "Frozen original-round serialization copy, not a new episode or rescoring",
+  "original_source": "runs/final-v1/repeat-0/no_update/iter5/113/result.json",
+  "copy": "artifacts/repeats-20261029/original-local-serialization/no_update-iter5-113.json",
+  "raw_sha256": "7227279529b71bbe8c95cac2d43c7935b20faeca3e56b3d89170e43205cc4335",
+  "public_v1_archive_record_sha256": "b16ad3442fdc904234a422c2b4fe886d252e7282eaef0c356bb4d2578d8aa0eb",
+  "canonical_json_sha256": "323fd382bb11d8e3ec2c3e4d9543b2e003fb72c5de4e12b488aa37c6751e20dd",
+  "original_file_unchanged": true,
+  "intended_evidence_archive": "final-r3-evidence.zip",
+  "git_text_note": "Branch text can have LF normalization; the new evidence ZIP preserves this exact copied byte sequence."
+}

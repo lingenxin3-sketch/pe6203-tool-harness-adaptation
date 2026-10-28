@@ -1382,7 +1382,8 @@
       "source": "runs/final-v1/repeat-0/no_update/iter5/113/result.json",
       "archive_entry": "runs/final-v1/repeat-0/no_update/iter5/113/result.json",
       "sha256": "b16ad3442fdc904234a422c2b4fe886d252e7282eaef0c356bb4d2578d8aa0eb",
-      "matches_preflight_and_current": false
+      "matches_preflight_and_current": false,
+      "canonical_json_content_equal": true
     },
     {
       "source": "runs/final-v1/repeat-0/no_update/iter5/117/agent-record.json",
@@ -2962,5 +2963,21 @@
       "sha256": "ef83c4ffe412acf53cac5c70f691f291b7bebaf7bbf9b1910a125e93f2b2bccd",
       "matches_preflight_and_current": true
     }
-  ]
+  ],
+  "semantic_verified_at": "2026-10-29T06:53:34+08:00",
+  "serialization_differences": [
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/113/result.json",
+      "public_archive_sha256": "b16ad3442fdc904234a422c2b4fe886d252e7282eaef0c356bb4d2578d8aa0eb",
+      "frozen_local_sha256": "7227279529b71bbe8c95cac2d43c7935b20faeca3e56b3d89170e43205cc4335",
+      "preflight_sha256": "7227279529b71bbe8c95cac2d43c7935b20faeca3e56b3d89170e43205cc4335",
+      "canonical_json_sha256": "323fd382bb11d8e3ec2c3e4d9543b2e003fb72c5de4e12b488aa37c6751e20dd",
+      "canonical_json_values_equal": true,
+      "raw_bytes_equal": false,
+      "only_crlf_normalization": false
+    }
+  ],
+  "all_current_original_files_match_preflight": true,
+  "all_public_evidence_content_matches_frozen_baseline": true,
+  "interpretation": "490 files match byte-for-byte. One result JSON differs in serialization; complete canonical JSON content is identical. Keep both original hashes; do not rewrite either file or claim identical bytes."
 }
