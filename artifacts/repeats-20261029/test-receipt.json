@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-10-29T00:29:12+08:00",
+  "core_and_initial_repeat_tests": {
+    "count": 30,
+    "exit_code": 0
+  },
+  "updated_repeat_tests": {
+    "count": 11,
+    "exit_code": 0,
+    "log_sha256": "ed58d3f2c47140450360df8b10e0c071d81bffa5cfab61e99503efdd96c7221a"
+  },
+  "unique_test_count": 33,
+  "no_model_calls_in_unit_tests": true
+}
