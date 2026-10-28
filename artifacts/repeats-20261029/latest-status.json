@@ -1,7 +1,7 @@
 {
-  "collected_at": "2026-10-29T05:35:50+08:00",
-  "phase": "publishing",
-  "message": "第2轮已评分审计通过，正在发布证据；尚未满足下一轮门槛",
+  "collected_at": "2026-10-29T05:37:08+08:00",
+  "phase": "round_published",
+  "message": "第2轮已评分、发布且远端验证通过",
   "rounds": [
     {
       "name": "final-v1",
