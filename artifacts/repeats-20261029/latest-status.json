@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T04:30:21+08:00",
+  "collected_at": "2026-10-29T04:46:07+08:00",
   "phase": "scoring",
   "message": "第2轮评分，保留已有评分和执行证据",
   "rounds": [
@@ -20,13 +20,13 @@
       "name": "repeat-r2-20261029",
       "expected": 162,
       "found": 162,
-      "scored": 30,
+      "scored": 62,
       "failures": 5,
       "missing": 0,
       "issues": [],
       "status_counts": {
-        "evaluated": 30,
-        "awaiting_judge": 132
+        "evaluated": 62,
+        "awaiting_judge": 100
       },
       "complete": false
     },
