@@ -1,4 +1,6 @@
-# Verified result tables
+# Verified result tables — original round (historical)
+
+> These tables cover final-v1 only. They are not the latest repeated-run summary. See the [final results](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md) for all three rounds and the explicitly limited two-round comparison. Numerical values below are preserved.
 
 Source: `final-v1`; split: **test**; 18 tasks; 1 repetition per configuration.
 

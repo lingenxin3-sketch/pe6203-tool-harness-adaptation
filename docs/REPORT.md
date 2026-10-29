@@ -1,6 +1,8 @@
 # Dependency-aware selective tool knowledge adaptation
 
-PE6203 Group Project 4 | Experimental report, 27 October 2026
+PE6203 Group Project 4 | Original-round experimental report, 27 October 2026
+
+> Historical scope: this report, its PDF and Figure 1 cover final-v1 only (162 main episodes plus 6 supplementary episodes), not the subsequent two rounds. The original PDF remains unchanged. For the completed repeats, input-comparability exclusions and the 324-observation descriptive comparison, see the [final results](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md). Across the two comparable rounds, selective patching uses 65.1% fewer update tokens but 5.6% more recorded total tokens than full rewrite. No three-round pooled conclusion is supported.
 
 **Abstract.** We evaluate a dependency-aware selective tool-knowledge update against no update and full rewrite on 18 fixed MCPEvol-Bench tasks across three environment versions (162 episodes), with six supplementary component-comparison episodes. All models run locally. Selective patching uses 65.1% fewer adaptation tokens than full rewrite and attains ECS 6.33, compared with 5.24 for full rewrite and 6.28 for no update. It does not consistently improve task scores: no update has the highest Late TF, and dependency expansion shows no reliable benefit in the small comparison. Raw traces reveal stale-parameter failures, regressions after unnecessary rewriting, and overgenerous local judgments. The main finding is a measurable reduction in update work with mixed execution outcomes, rather than universal performance superiority. All 168 formal records are scored and pass protocol/evidence checks; four execution exceptions remain included.
 

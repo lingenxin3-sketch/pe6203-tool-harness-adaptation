@@ -1,44 +1,33 @@
 # 企业 AI 工具更新与能力保持
 
-PE6203 Group Project 4 实现：在官方 MCPEvol-Bench 的工具环境变化后，比较不更新、全部重写、局部修补三种策略。目标是在恢复受影响任务的同时保留原有能力，并记录更新开销。
+PE6203 Group Project 4：使用官方 MCPEvol-Bench，比较工具升级后“不更新、全部重写、选择性更新”三种办法。系统更新的是工具说明与参数结构，没有重新训练 AI。
 
-## 一句话讲清楚
+企业 AI 原来会用一套工具，工具升级后，旧用法可能失效。我们的程序读取新旧工具接口，识别改动及明确关联的工具，只为受影响部分重新生成说明，其余说明保留。随后让同一个 AI 真正执行任务，保存调用、报错和生成文件，再用独立本地模型评分并核查实际产物。
 
-企业里的 AI 原来会使用一套工具，工具升级后，旧用法可能失效。这个项目比较三种办法：继续用旧说明、把说明全部重写、只修补改动及相关部分。我们让同一个 AI 真正执行任务，再检查任务结果、工具调用和生成文件，判断哪种办法更有效、更新成本更低。
+## 最新结果与证据
 
-例如，旧工具只要求填写“任务名称和内容”，升级后又要求“优先级和标签”。保留旧说明的 AI 可能反复报错；更新说明后，AI 才能正确填写。另一方面，把本来没变的说明也全部重写，可能删掉有用细节。
+- [最终结果与核验](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md)：三轮概况、可比范围、失败与证据下载。
+- [原轮与第二新增轮的可比对照](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/原轮与第二新增轮对照.md)：TF、PE、ECS、成本与逐条来源。
+- [安装与复现](docs/REPRODUCTION.md) · [课程要求与证据对照](docs/REQUIREMENTS_EVIDENCE_ZH.md) · [18个任务的产物核查标准](docs/TASK_REVIEW_GUIDE_ZH.md)。
 
-## 先看这些材料
+| 轮次 | 已评分 / 计划 | 执行异常 | ECS：不更新 / 全部重写 / 选择性更新 |
+|---|---:|---:|---|
+| 原轮 final-v1 | 162 / 162 | 4 | 6.280 / 5.239 / 6.332 |
+| 第一新增轮 repeat-r2-20261029 | 162 / 162 | 5 | 5.983 / 5.611 / 4.597 |
+| 第二新增轮 final-r3 | 162 / 162 | 5 | 4.929 / 5.340 / 6.152 |
 
-- [追加实验与最终可比对照](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md)
-- [原轮英文报告（PDF）](output/pdf/PE6203_Project4_Report.pdf)
-- [原轮提交包与实验记录下载](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/v1.0.0)
-- [原轮结果表](artifacts/final-result-tables.md) · [老师要求与证据对照](docs/REQUIREMENTS_EVIDENCE_ZH.md)
-- [安装与复现](docs/REPRODUCTION.md)
+共486条已评分记录，均保留失败。第一新增轮有123条跨轮资源清单差异、54组策略间输入差异，单独报告，不能把三轮直接合并成“三次可比重复”。只有原轮与第二新增轮按已披露的实际输入和评分条件提供324条描述性对照：18个不同任务、每组合两次。
 
-代码仓库不包含大型模型和逐次实验目录。完整证据在上述发布附件的 ZIP 内，不能仅凭下载源代码判断原始实验记录缺失。模型下载地址及校验值见复现说明。
+该可比对照中，选择性更新的 ECS 轮均值为6.242，不更新5.605、全部重写5.289；选择性更新比全部重写少用65.1%的**更新 token**，但执行、更新和评分三阶段已记录总 token **增加5.6%**。这支持“减少更新工作量”，不证明总成本下降或任务效果普遍更好。ECS 衡量跨版本得分保持，不等于成功率。
 
-## 项目亮点
+原英文报告、PDF、结果表及图只覆盖原单轮，作为历史版本保留，不能用它们代表三轮总结：[原轮报告](docs/REPORT.md) · [原轮PDF说明](output/pdf/README.md) · [原轮结果表](artifacts/final-result-tables.md) · [原轮图表说明](artifacts/figures/README.md)。
 
-1. **真的运行工具。** 不是只有聊天回答；保留工具调用、报错和生成文件。
-2. **比较公平、证据可查。** 三种策略使用同一套模型设置和任务，完成 162 条主实验、6 条组件对照，并保留失败。
-3. **方法有明确取舍。** 局部修补比全部重写少用 65.1% 的更新 token，但不保证任务分数更高，也没有减少本次实验的总推理 token。
-4. **发现评分也会出错。** 有些记录得分很高，却没有生成要求的任务文件；报告用实际证据说明分歧。
-5. **全程本地模型。** 无需付费 API；附代码、报告、原始记录和复现步骤。
+## 系统实现
 
-## 当前状态
-
-代码、正式实验、结果分析和英文报告已完成。全部使用免费本地模型。以下是研究结果，不是课程成绩预测。
-
-- 官方基准固定在 `888c779a0fe735f612ca62bdd1fdd7c9e6bf8701`。
-- 已下载原始、iter3、iter5 官方服务包；从包内提取依赖，未改写服务器源码。
-- 使用本机 Qwen3-4B-Instruct-2507 Q4_K_M 执行任务和更新知识，随后切换到 Qwen2.5-7B-Instruct Q4_K_M 评分；均通过 llama.cpp b11900 运行，不调用付费 API。
-- 已实现工具差异检测、依赖影响扩展、局部更新、全量更新和不更新。
-- 已实现 MCP 工具执行、原始轨迹保存、官方评分提示和 ECS 函数接入。
-- 正式 162 条主实验及 6 条组件对照均已执行、评分，通过完整性和冻结配置核查；四次主实验执行异常保留在统计中。
-- 同一冻结程序的 9 条独立开发验证已完成执行、评分和核查；独立安装环境的 22 项测试通过。开发验证不混入正式成绩。
-- 局部修补相对全部重写节省 65.1% 的更新 token；ECS 为 6.33（不更新 6.28，全部重写 5.24）。最后版本的任务得分以不更新最高，不能声称局部修补全面胜出。
-- 已逐字节核对三个版本提取的 32,388 个文件，均与官方压缩包相同，详情见 `artifacts/server-source-audit.json`。
+- 三种策略共用执行程序、任务和模型设置；保留原始响应、工具返回、知识变化、文件及失败记录。
+- 自研方法识别工具、参数及描述变化，再沿工具名称的明确引用扩展影响范围；隐含操作依赖仍可能漏检。
+- Actor/updater 使用 Qwen3-4B-Instruct-2507 Q4_K_M，judge 使用 Qwen2.5-7B-Instruct Q4_K_M，由 llama.cpp b11900 本地运行，无付费 API。
+- 官方基准固定为 `888c779a0fe735f612ca62bdd1fdd7c9e6bf8701`；三个版本共32,388个提取文件与官方压缩包逐字节核对一致，见 `artifacts/server-source-audit.json`。
 
 ## 运行
 
@@ -84,34 +73,31 @@ flowchart TB
 
 图中题目只进入执行程序，评分只发生在执行之后；它们都不参与生成工具说明。关联范围依据工具名的明确引用扩展，不能保证识别所有隐含依赖。图示为有效更新路径；生成格式无效时保留此前知识并记录失败。
 
-## 公平性与局限
+## 研究边界
 
-- 所有策略固定模型、解码设置、任务、步数上限和评审规则。
-- 测试任务来自官方 201 个选定任务，使用公开原题；开发任务与正式任务分离。
-- 为适应本机资源，只选不依赖付费服务的本地工作流，不能声称代表整个基准。
-- 官方评分脚本存在固定端口连接和缺失模块导入。适配层从源码提取纯函数并调用原始评分提示及 ECS 实现，不改变评分公式。
-- 评审模型为独立的本地 7B 模型，在正式实验前以两个开发案例校准；其评分可靠性仍需要轨迹核查，不是教师官方排名。
-- API 账单为零不等于计算没有成本，仍记录 tokens 和时间，硬件与电费不折算为美元。
-- `scripts/windows_loader.mjs` 只将 Windows 绝对导入路径转换成文件 URL，不修改工具实现。
+- 固定18个任务、三个策略、三个环境版本；测试任务与开发任务分开，不代表整个基准。
+- seed=6203、temperature=0 的重复描述相同设置下的执行稳定性，不是新增独立任务或统计显著性证据。Early尚未更新就有分数差异，不能把所有差距归因于更新方法。
+- 第二轮输入可见性不同，因此保留该轮并单独报告；原轮与第二新增轮的比较也披露旧客户端检查及JSON序列化差异，详见最终核验页。
+- 独立本地7B模型的自动评分有已保存的误判。任务113、117存在调用失败却得高分的情况；评分和真实完成度必须分开看，原分数不修改。
+- 原单次依赖扩展组件对照只有6条，不混入主实验重复，也没有证明依赖扩展一定有效。
+- 成本只统计已返回并保存用量的调用；中断等未返回调用的成本未知。本地API零计费不含硬件、电费或开发成本，请求累计耗时也不等于完整运行时间。
+- 官方评分适配层保留原提示和ECS公式；Windows路径适配只处理加载兼容性，不改工具实现。
 
-## 文件导航
+## 代码与复现材料
 
-- `tool_adapt/knowledge.py`：变化检测和更新边界。
-- `tool_adapt/mcp_runtime.py`：官方工具启动、调用与实验目录隔离。
-- `tool_adapt/agent.py`：三种策略共用的固定 Agent 循环。
-- `tool_adapt/official.py`：官方评分函数的可移植接入。
-- `tool_adapt/experiment.py`：实验编排和证据保存。
-- `configs/experiment.json`：任务划分和运行协议。
-- `artifacts/inventory/`：三个官方版本的实际工具清单。
-- `runs/`：本机真实运行记录，不自动上传。
-- `docs/REPRODUCTION.md`：依赖校验、运行、评分和结果核查说明。
-- `docs/TASK_REVIEW_GUIDE_ZH.md`：18 个任务分别应该检查什么。
-- `docs/REPORT.md`：最终英文报告源文稿；PDF 位于 `output/pdf/PE6203_Project4_Report.pdf`。
-- `artifacts/final-result-tables.md`：经核验的完整结果表。
-- `docs/REQUIREMENTS_EVIDENCE_ZH.md`：老师要求与实际证据对照。
+| 路径 | 内容 |
+|---|---|
+| `tool_adapt/knowledge.py` | 契约变化检测、关联扩展与更新边界 |
+| `tool_adapt/mcp_runtime.py`、`agent.py` | 工具连接、目录隔离与共用执行循环 |
+| `tool_adapt/official.py`、`experiment.py` | 官方评分接入、实验编排与证据保存 |
+| `configs/experiment.json`、`artifacts/inventory/` | 冻结配置及三个版本的工具清单 |
+| `docs/REPRODUCTION.md` | 依赖、运行、评分和复现方法 |
+| `docs/TASK_REVIEW_GUIDE_ZH.md` | 每个任务应检查的调用和实际产物 |
+
+源码仓库不包含模型权重和完整逐次运行目录；原始记录分别保存在[原轮](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/v1.0.0)、[第一新增轮](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/repeat-r2-20261029-evidence)、[第二新增轮](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/final-r3-evidence)证据发布包中。下载地址、哈希和核验索引见最终结果页。旧发布包保持原样，文档整理不重写历史证据。
 
 ## 来源与贡献声明
 
-官方基准：https://github.com/Octobrist/MCPEvol-Bench
+官方基准：[MCPEvol-Bench](https://github.com/Octobrist/MCPEvol-Bench)。
 
-本项目由 AI 协助开发。团队成员应在实际完成验证、分析或修改后记录个人贡献，不应将计划分工写成已完成工作。当前尚未填写任何同学的个人贡献声明。
+本项目由AI协助代码开发、文档整理和证据核查。AI辅助核查不等于成员独立复核；个人贡献须依据实际完成的工作记录，目前未填写成员个人贡献声明。
