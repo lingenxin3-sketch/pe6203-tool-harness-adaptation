@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T08:46:36+08:00",
+  "collected_at": "2026-10-29T09:02:49+08:00",
   "phase": "executing",
   "message": "第3轮实际执行；结果逐条保存",
   "rounds": [
@@ -32,13 +32,13 @@
     {
       "name": "final-r3",
       "expected": 162,
-      "found": 154,
+      "found": 156,
       "scored": 0,
       "failures": 4,
-      "missing": 8,
+      "missing": 6,
       "issues": [],
       "status_counts": {
-        "awaiting_judge": 150,
+        "awaiting_judge": 152,
         "infrastructure_error": 4
       },
       "complete": false

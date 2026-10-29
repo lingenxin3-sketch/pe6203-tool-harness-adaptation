@@ -163,3 +163,13 @@ controller40048与观察会话46604仍经实际Windows进程句柄核实运行�
 08:31:31提交a43d367711e4463b10ab2cfd236252fe0ad6acf1已由现有发布程序逐文件远端读回验证。last-publish.json明确包含状态页、冻结协议、compatibility-alert.json、original-effective-context-verification.json及runtime-request-protocol-check.json；现在这些证据和修正文案确实已公开，源脚本仍待管理器结束后加入白名单再上传。未人工并发Git提交。
 
 repeat_pair_comparison.py已补充每条old/R3配对中的同题同版本no_update对照原件路径、SHA和TF/PE配对差；cohorts仍区分不同任务与重复观测。语法编译及真实--check-ready已通过预期拒绝（R3未评分齐备），没有生成对照、没有模型调用、没有变更原件。所有最终162评分/审计、独立R3judge收据、27案例评分核查、ZIP原字节及远端验证、完整实际输入/运行条件、两个新脚本最终发布等待办继续有效。不要因本阶段回复就停止现有进程，也不要提前标goal complete。
+
+## 2026年10月29日0850续接补充
+
+原controller40048及只读会话46604持续经Windows句柄确认存活。08:50实际155/162保存、0评分、4异常，剩余任务416的7个组合；no_update/original及iter3已自然保存，未重跑。最后任务每条规划较长，不能把几分钟没有新result当停止。08:37和08:41实读iter3轨迹分别到step3和step5，08:47它已保存，说明期间确在推进；GPU只读观察约98%利用率、约5GB/6GB显存，未调整任何性能或模型设置。
+
+08:34在新保存的416/original长轨迹出现后，原离线check_judge_context对150条可用正常轨迹按提示字符长度选6条计数，包含no_update/original/416（预留17587，六条最大），均低于固定24576。4条raw异常尚未finalize，原检查器按既有逻辑跳过；不是全162或穷尽容量保证。只调用本地llama-tokenize的词表计数，不生成模型输出、不评分。analysis/judge-context-preflight.json是可重算的分析文件，更新后另存带时间的公开快照r3-long-trace-context-check-after416-first.json；旧07:17的101条/6条快照r3-long-trace-context-check.json仍原样保留。
+
+08:47:45进度提交edd7fe4e216ec28b84e5ecd05587453df3c872a6已逐文件远端核验，last-publish.json确认新长轨迹检查已公开（远端SHA9735ea11e5889c2789a853d06a6516d7f626fd8f97ff766ab2aef362682609ff）。R3当前仍executing，全局judge-runtime.json仍是R2，不能复制成R3评分收据。两个未跟踪的自有分析脚本仍待管理器真正退出后加入发布白名单allowed/paths两处再发布；pair脚本补了成本仅包含已保存返回用量、原轮未返回中断成本未知的说明，语法编译成功，无实验变更。
+
+接续仍先轮询46604，绝不新启动或重试现有actor；R3真正评分时保存独立judge收据，完成162评分和审计、27案例评分表、全部输入162及组内54公平性、独立ZIP/原始副本SHA、Release和远端核验、实际gate导出，再在controller exit0后发布两脚本及符合条件的old+R3两轮对照、最终逐项终审。目标仍active，上一轮有新保存记录、真实长度核验及远端发布证据，不是blocked。12:00仍是争取目标，未伪造最终分数或承诺准时完成。
