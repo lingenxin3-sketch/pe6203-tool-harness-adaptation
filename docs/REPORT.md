@@ -317,7 +317,7 @@ See `docs/REPRODUCTION.md` for installation, hash verification, execution, judgi
 
 After formal scoring, the final frozen workflow was run on development task 3 under all three policies and versions. All nine episodes completed execution and scoring, with no terminal execution exceptions, and passed the recorded-invariant audit. Core source hashes match the formal run. This verifies the final execution-to-scoring workflow; it is excluded from formal performance statistics and does not constitute another benchmark repetition. A separately installed Python environment also passed all 22 tests. The checks and package evidence are local, not a claim of reproduction on a second machine.
 
-AI assisted code and document preparation. The six-person plan in `docs/TEAM_PLAN_ZH.md` is a proposed allocation of substantive verification and implementation work; it is not evidence that named students have completed those activities. Actual contributions must be recorded after the work is performed. Slides are outside the current requested deliverables.
+AI assisted code and document preparation. Proposed allocations of work are not evidence that named students have completed those activities. Actual contributions must be recorded after the work is performed. Slides are outside the current requested deliverables.
 
 ## Sources
 

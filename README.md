@@ -10,10 +10,10 @@ PE6203 Group Project 4 实现：在官方 MCPEvol-Bench 的工具环境变化后
 
 ## 先看这些材料
 
-- [完整英文报告](output/pdf/PE6203_Project4_Report.pdf)
-- [完整提交包与原始实验记录下载](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/v1.0.0)
-- [结果表](artifacts/final-result-tables.md) · [老师要求与证据对照](docs/REQUIREMENTS_EVIDENCE_ZH.md)
-- [六人分工及接下来要做的事](docs/TEAM_PLAN_ZH.md) · [10 分钟演示指南](docs/DEMO_GUIDE_ZH.md)
+- [追加实验与最终可比对照](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md)
+- [原轮英文报告（PDF）](output/pdf/PE6203_Project4_Report.pdf)
+- [原轮提交包与实验记录下载](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/v1.0.0)
+- [原轮结果表](artifacts/final-result-tables.md) · [老师要求与证据对照](docs/REQUIREMENTS_EVIDENCE_ZH.md)
 - [安装与复现](docs/REPRODUCTION.md)
 
 代码仓库不包含大型模型和逐次实验目录。完整证据在上述发布附件的 ZIP 内，不能仅凭下载源代码判断原始实验记录缺失。模型下载地址及校验值见复现说明。
@@ -104,14 +104,11 @@ flowchart TB
 - `configs/experiment.json`：任务划分和运行协议。
 - `artifacts/inventory/`：三个官方版本的实际工具清单。
 - `runs/`：本机真实运行记录，不自动上传。
-- `docs/TEAM_PLAN_ZH.md`：六个人的具体工作、验收成果和 29 日前安排。
 - `docs/REPRODUCTION.md`：依赖校验、运行、评分和结果核查说明。
 - `docs/TASK_REVIEW_GUIDE_ZH.md`：18 个任务分别应该检查什么。
-- `docs/DEMO_GUIDE_ZH.md`：不制作 PPT 时如何演示真实记录。
 - `docs/REPORT.md`：最终英文报告源文稿；PDF 位于 `output/pdf/PE6203_Project4_Report.pdf`。
 - `artifacts/final-result-tables.md`：经核验的完整结果表。
 - `docs/REQUIREMENTS_EVIDENCE_ZH.md`：老师要求与实际证据对照。
-- `docs/SUBMISSION_GUIDE_ZH.md`：提交包内容与上传说明。
 
 ## 来源与贡献声明
 
