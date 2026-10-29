@@ -173,3 +173,5 @@ repeat_pair_comparison.py已补充每条old/R3配对中的同题同版本no_upda
 08:47:45进度提交edd7fe4e216ec28b84e5ecd05587453df3c872a6已逐文件远端核验，last-publish.json确认新长轨迹检查已公开（远端SHA9735ea11e5889c2789a853d06a6516d7f626fd8f97ff766ab2aef362682609ff）。R3当前仍executing，全局judge-runtime.json仍是R2，不能复制成R3评分收据。两个未跟踪的自有分析脚本仍待管理器真正退出后加入发布白名单allowed/paths两处再发布；pair脚本补了成本仅包含已保存返回用量、原轮未返回中断成本未知的说明，语法编译成功，无实验变更。
 
 接续仍先轮询46604，绝不新启动或重试现有actor；R3真正评分时保存独立judge收据，完成162评分和审计、27案例评分表、全部输入162及组内54公平性、独立ZIP/原始副本SHA、Release和远端核验、实际gate导出，再在controller exit0后发布两脚本及符合条件的old+R3两轮对照、最终逐项终审。目标仍active，上一轮有新保存记录、真实长度核验及远端发布证据，不是blocked。12:00仍是争取目标，未伪造最终分数或承诺准时完成。
+
+09:04续接：controller40048和只读会话46604经实际句柄持续存活；R3现156/162保存、0评分、4异常，最后任务416的no_update三个版本已自然保存，剩余full/selective六个组合。09:00:53还实读到Late的step10，随后09:01保存，未重跑。09:03:57进度提交59abaca4b9f26f1359f63f1b1a9693e865f33090已远端逐文件核验，当前无progress-publication-error.json。目标仍active，是真实执行进展/已确认进程等待，不是blocked；全部评分、独立judge收据、完整输入/评分/证据核验、两脚本最终发布与条件性配对分析待办照旧，不能提前complete或重启。
