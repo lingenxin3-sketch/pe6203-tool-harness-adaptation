@@ -1,0 +1,9 @@
+{
+  "collected_at": "2026-10-29T10:52:16+08:00",
+  "reason": "Actual resource listings differ or compatibility is unverified; original and added rounds must be reported separately.",
+  "rounds": [
+    "final-v1",
+    "repeat-r2-20261029",
+    "final-r3"
+  ]
+}

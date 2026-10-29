@@ -1,0 +1,17 @@
+{
+  "compatible": true,
+  "checks": {
+    "config": true,
+    "task_ids": true,
+    "coverage": true,
+    "inventory_hashes": true,
+    "source_hashes": true,
+    "split": true
+  },
+  "meaning": "Output directory and round label differ; all experiment settings and recorded protocol hashes must match exactly.",
+  "resource_lists_checked": 162,
+  "resource_list_differences": [],
+  "unavailable_input_checks": [],
+  "inputs_complete": true,
+  "input_limitation": "Windows path length can change the resource listing shown to the model even when fixture bytes and manifest hashes match. No claim that these omitted PDFs caused a score change."
+}

@@ -1,0 +1,245 @@
+{
+  "name": "final-r3",
+  "collected_at": "2026-10-29T10:52:08+08:00",
+  "status": {
+    "name": "final-r3",
+    "expected": 162,
+    "found": 162,
+    "scored": 162,
+    "failures": 5,
+    "missing": 0,
+    "issues": [],
+    "status_counts": {
+      "evaluated": 162
+    },
+    "complete": true
+  },
+  "strategies": [
+    {
+      "strategy": "no_update",
+      "ecs": 4.928679107544627,
+      "stages": {
+        "original": {
+          "n": 18,
+          "tf": 6.055555555555555,
+          "pe": 6.944444444444445
+        },
+        "iter3": {
+          "n": 18,
+          "tf": 7.5,
+          "pe": 7.222222222222222
+        },
+        "iter5": {
+          "n": 18,
+          "tf": 6.777777777777778,
+          "pe": 6.611111111111111
+        }
+      },
+      "cohorts": [
+        {
+          "version": "iter3",
+          "cohort": "changed",
+          "n": 9,
+          "tf": 8.333333333333334,
+          "delta_own_early": 2.2222222222222223,
+          "delta_same_version_no_update": 0.0
+        },
+        {
+          "version": "iter3",
+          "cohort": "unaffected",
+          "n": 9,
+          "tf": 6.666666666666667,
+          "delta_own_early": 0.6666666666666666,
+          "delta_same_version_no_update": 0.0
+        },
+        {
+          "version": "iter5",
+          "cohort": "changed",
+          "n": 10,
+          "tf": 7.3,
+          "delta_own_early": 0.8,
+          "delta_same_version_no_update": 0.0
+        },
+        {
+          "version": "iter5",
+          "cohort": "unaffected",
+          "n": 8,
+          "tf": 6.125,
+          "delta_own_early": 0.625,
+          "delta_same_version_no_update": 0.0
+        }
+      ],
+      "costs": {
+        "update": {
+          "calls": 0,
+          "tokens": 0,
+          "request_seconds": 0,
+          "api_usd": 0
+        },
+        "agent": {
+          "calls": 425,
+          "tokens": 2985646,
+          "request_seconds": 5416.086188099893,
+          "api_usd": 0.0
+        },
+        "judge": {
+          "calls": 54,
+          "tokens": 416731,
+          "request_seconds": 1622.1893542999605,
+          "api_usd": 0.0
+        }
+      }
+    },
+    {
+      "strategy": "full_rewrite",
+      "ecs": 5.339748750522908,
+      "stages": {
+        "original": {
+          "n": 18,
+          "tf": 6.888888888888889,
+          "pe": 7.277777777777778
+        },
+        "iter3": {
+          "n": 18,
+          "tf": 6.611111111111111,
+          "pe": 7.111111111111111
+        },
+        "iter5": {
+          "n": 18,
+          "tf": 7.555555555555555,
+          "pe": 8.0
+        }
+      },
+      "cohorts": [
+        {
+          "version": "iter3",
+          "cohort": "changed",
+          "n": 9,
+          "tf": 8.222222222222221,
+          "delta_own_early": 0.2222222222222222,
+          "delta_same_version_no_update": -0.1111111111111111
+        },
+        {
+          "version": "iter3",
+          "cohort": "unaffected",
+          "n": 9,
+          "tf": 5.0,
+          "delta_own_early": -0.7777777777777778,
+          "delta_same_version_no_update": -1.6666666666666667
+        },
+        {
+          "version": "iter5",
+          "cohort": "changed",
+          "n": 10,
+          "tf": 7.4,
+          "delta_own_early": -0.8,
+          "delta_same_version_no_update": 0.1
+        },
+        {
+          "version": "iter5",
+          "cohort": "unaffected",
+          "n": 8,
+          "tf": 7.75,
+          "delta_own_early": 2.5,
+          "delta_same_version_no_update": 1.625
+        }
+      ],
+      "costs": {
+        "update": {
+          "calls": 36,
+          "tokens": 104426,
+          "request_seconds": 300.75754569996934,
+          "api_usd": 0.0
+        },
+        "agent": {
+          "calls": 401,
+          "tokens": 2656393,
+          "request_seconds": 4182.157361599966,
+          "api_usd": 0.0
+        },
+        "judge": {
+          "calls": 54,
+          "tokens": 397538,
+          "request_seconds": 1570.8247904999953,
+          "api_usd": 0.0
+        }
+      }
+    },
+    {
+      "strategy": "selective_patch",
+      "ecs": 6.152443202372131,
+      "stages": {
+        "original": {
+          "n": 18,
+          "tf": 7.722222222222222,
+          "pe": 7.222222222222222
+        },
+        "iter3": {
+          "n": 18,
+          "tf": 7.055555555555555,
+          "pe": 7.388888888888889
+        },
+        "iter5": {
+          "n": 18,
+          "tf": 6.555555555555555,
+          "pe": 7.166666666666667
+        }
+      },
+      "cohorts": [
+        {
+          "version": "iter3",
+          "cohort": "changed",
+          "n": 9,
+          "tf": 8.0,
+          "delta_own_early": -0.6666666666666666,
+          "delta_same_version_no_update": -0.3333333333333333
+        },
+        {
+          "version": "iter3",
+          "cohort": "unaffected",
+          "n": 9,
+          "tf": 6.111111111111111,
+          "delta_own_early": -0.6666666666666666,
+          "delta_same_version_no_update": -0.5555555555555556
+        },
+        {
+          "version": "iter5",
+          "cohort": "changed",
+          "n": 10,
+          "tf": 7.4,
+          "delta_own_early": -1.4,
+          "delta_same_version_no_update": 0.1
+        },
+        {
+          "version": "iter5",
+          "cohort": "unaffected",
+          "n": 8,
+          "tf": 5.5,
+          "delta_own_early": -0.875,
+          "delta_same_version_no_update": -0.625
+        }
+      ],
+      "costs": {
+        "update": {
+          "calls": 19,
+          "tokens": 36449,
+          "request_seconds": 112.16953459999786,
+          "api_usd": 0.0
+        },
+        "agent": {
+          "calls": 405,
+          "tokens": 2846206,
+          "request_seconds": 3432.7050796000476,
+          "api_usd": 0.0
+        },
+        "judge": {
+          "calls": 54,
+          "tokens": 385204,
+          "request_seconds": 1521.6224087999872,
+          "api_usd": 0.0
+        }
+      }
+    }
+  ],
+  "source_manifest_sha256": "579c60853c83400a015b35ac6ba68fbe97a0f1ebba1427403ace27ffd8381cb2"
+}
