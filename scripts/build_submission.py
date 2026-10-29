@@ -2,12 +2,37 @@
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 import zipfile
 
 from audit_experiment import audit
 from analyze_comparisons import compare
 
 ROOT = Path(__file__).resolve().parents[1]
+
+SOURCE_DIRECTORIES = ['tool_adapt', 'scripts', 'tests', 'configs', 'artifacts', 'docs', 'output/pdf', 'archive']
+ROOT_FILES = ['README.md', 'pyproject.toml', 'requirements-lock.txt', 'requirements-report.txt', '.gitignore']
+INTERNAL_DOCUMENTS = {
+    'docs/REPORT_DRAFT.md', 'docs/WORK_STATE.md', 'docs/TEAM_PLAN_ZH.md',
+    'docs/DEMO_GUIDE_ZH.md', 'docs/SUBMISSION_GUIDE_ZH.md',
+    'docs/WORK_STATE_REPEATS.md', 'docs/追加实验/执行指南.md',
+}
+
+
+def source_files():
+    """Package reviewed Git-tracked sources, never ignored or untracked drafts."""
+    paths = subprocess.check_output(
+        ['git', 'ls-files', '-z', '--', *SOURCE_DIRECTORIES, *ROOT_FILES], cwd=ROOT,
+    ).decode('utf-8').split('\0')
+    files = set()
+    for name in filter(None, paths):
+        path = ROOT/name
+        if name in INTERNAL_DOCUMENTS or '__pycache__' in path.parts or path.suffix == '.pyc':
+            continue
+        if not path.resolve().is_relative_to(ROOT.resolve()) or not path.is_file():
+            raise ValueError(f'Tracked package source is missing or outside the project: {name}')
+        files.add(path)
+    return files
 
 
 def collect():
@@ -19,14 +44,7 @@ def collect():
     for name in ['docs/REPORT.md', 'output/pdf/PE6203_Project4_Report.pdf']:
         if not (ROOT/name).is_file():
             raise FileNotFoundError(f'Final reviewed report missing: {name}')
-    files = set()
-    for directory in ['tool_adapt', 'scripts', 'tests', 'configs', 'artifacts', 'docs', 'output/pdf']:
-        for path in (ROOT/directory).rglob('*'):
-            if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc':
-                if path.name not in {'REPORT_DRAFT.md', 'WORK_STATE.md'}:
-                    files.add(path)
-    for name in ['README.md', 'pyproject.toml', 'requirements-lock.txt', 'requirements-report.txt', '.gitignore']:
-        files.add(ROOT/name)
+    files = source_files()
     for name in ['final-v1', 'ablation-v1', 'final-workflow-verification']:
         folder = ROOT/'runs'/name
         files.add(folder/'manifest.json')
@@ -67,10 +85,12 @@ def collect():
 
 
 if __name__ == '__main__':
-    files = collect()
     directory = ROOT/'deliverables'
-    directory.mkdir(exist_ok=True)
     target = directory/'PE6203_Project4_Submission.zip'
+    if target.exists():
+        raise FileExistsError(f'Existing evidence package must be preserved: {target}')
+    files = collect()
+    directory.mkdir(exist_ok=True)
     temporary = target.with_suffix('.zip.tmp')
     manifest = []
     with zipfile.ZipFile(temporary, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:

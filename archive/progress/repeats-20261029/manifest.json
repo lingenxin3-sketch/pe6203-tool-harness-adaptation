@@ -1,0 +1,77 @@
+{
+  "archived_on": "2026-10-29",
+  "source_commit": "7256812e5204c0a51d07f4fd69f1236153f784c5",
+  "policy": "Relocation only. Contents preserved. Historical paths and hashes inside prior receipts are not rewritten. Git normalizes text line endings; Git blob SHA and local byte SHA-256 are distinguished.",
+  "files": [
+    {
+      "original_path": "artifacts/repeats-20261029/before-0800-progress-verification.json",
+      "archived_path": "archive/progress/repeats-20261029/before-0800-progress-verification.json",
+      "git_blob_sha_before_move": "2c2bc2071b377b8efde8e83a5cd4dd4cb005324e",
+      "local_bytes_sha256": "fb660fc54ff59b19a188486825b75fdb843090d3b77e9efee3b2cf4e9647af25",
+      "bytes": 1632
+    },
+    {
+      "original_path": "artifacts/repeats-20261029/first-automatic-progress-verification.json",
+      "archived_path": "archive/progress/repeats-20261029/first-automatic-progress-verification.json",
+      "git_blob_sha_before_move": "f3537d36e96e311e793489ab46a43c47c157856a",
+      "local_bytes_sha256": "d58a9b779b9ceaf2a0c1110ed2835d49a61a922b93f017e6ce14ac2434570586",
+      "bytes": 417
+    },
+    {
+      "original_path": "artifacts/repeats-20261029/r2-live-input-compatibility.json",
+      "archived_path": "archive/progress/repeats-20261029/r2-live-input-compatibility.json",
+      "git_blob_sha_before_move": "db70a40c09b8a39bb880f7dd7d8136421106ef11",
+      "local_bytes_sha256": "b564e5f1d32c9e04bf94e364aa4f13278f368b73b24fd7a167c403fe1da4ce8f",
+      "bytes": 16080
+    },
+    {
+      "original_path": "artifacts/repeats-20261029/r2-live-invariant-audit.json",
+      "archived_path": "archive/progress/repeats-20261029/r2-live-invariant-audit.json",
+      "git_blob_sha_before_move": "4f37a571f9ba61a001b12373dab173e74fe7601f",
+      "local_bytes_sha256": "229a0ab97d46adbe2c1ef624b1a4385d4d8d2446f3f553aab33f5a09dc58edea",
+      "bytes": 13251
+    },
+    {
+      "original_path": "artifacts/repeats-20261029/r2-midpoint-audit.json",
+      "archived_path": "archive/progress/repeats-20261029/r2-midpoint-audit.json",
+      "git_blob_sha_before_move": "f12191efc0e3f2bdd4ae8289dbe9ea827ef68cbc",
+      "local_bytes_sha256": "3930749d8b8173272e9aa8163780bdeae400575602240145eb409e154eebf572",
+      "bytes": 9084
+    },
+    {
+      "original_path": "artifacts/repeats-20261029/r2-start-compatibility.json",
+      "archived_path": "archive/progress/repeats-20261029/r2-start-compatibility.json",
+      "git_blob_sha_before_move": "780b4682a02e8360746935cc2ce756e0dd6594bf",
+      "local_bytes_sha256": "5b762440934f49f8b5248866ede65b1c47952c16adf1dbbcfcf48a1bc92215ac",
+      "bytes": 464
+    },
+    {
+      "original_path": "artifacts/repeats-20261029/r3-first-input-check.json",
+      "archived_path": "archive/progress/repeats-20261029/r3-first-input-check.json",
+      "git_blob_sha_before_move": "ce0b5d0b8f87257c25ea3454b3e857964c55efc6",
+      "local_bytes_sha256": "d8989a50b2c89a95692ae1b1329b7fffea1e3591f5a9947a9cda7d563b8488a5",
+      "bytes": 262
+    },
+    {
+      "original_path": "artifacts/repeats-20261029/r3-first27-input-check.json",
+      "archived_path": "archive/progress/repeats-20261029/r3-first27-input-check.json",
+      "git_blob_sha_before_move": "267a2827df99f4a2caade682edcd37b472ddbd58",
+      "local_bytes_sha256": "02ca18ec33e30a06ec02ec40ac1e14b8e89ab9591d3abcb8c1194bccf9f2b5f5",
+      "bytes": 341
+    },
+    {
+      "original_path": "artifacts/repeats-20261029/r3-live-input-compatibility.json",
+      "archived_path": "archive/progress/repeats-20261029/r3-live-input-compatibility.json",
+      "git_blob_sha_before_move": "5a9141c8a85b0826be34193f28f9d4e777669a41",
+      "local_bytes_sha256": "4e3dae76ac57f1ebbca4dbec12631a57380030d2ec180de85213161febf2fdd7",
+      "bytes": 548
+    },
+    {
+      "original_path": "artifacts/repeats-20261029/within-round-input-fairness-check.json",
+      "archived_path": "archive/progress/repeats-20261029/within-round-input-fairness-check.json",
+      "git_blob_sha_before_move": "f19abee48694aa9c8f92226ea974a8d44b6e09f3",
+      "local_bytes_sha256": "0c3b69ef369f7ba59de15a537403a88a657875ff1768cb9305351b175653e671",
+      "bytes": 109810
+    }
+  ]
+}

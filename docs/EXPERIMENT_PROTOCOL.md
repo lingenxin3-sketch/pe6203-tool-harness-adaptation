@@ -1,4 +1,6 @@
-# Experiment protocol
+# Original-round experiment protocol (historical)
+
+> Scope: this document records the protocol declared for final-v1, including its original one-run compute budget and pre-scoring amendment. Two added rounds were later completed without rewriting that original plan. Only final-v1 and final-r3 form the 324-observation descriptive comparison; R2 remains separate due to actual input differences. See the [final results](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md). Historical implementation-stage notes are not current course submission instructions.
 
 ## Research question
 
@@ -52,7 +54,7 @@ Compare selective patch with dependency expansion disabled on predeclared depend
 
 ## Deliverables
 
-Code, installation and execution commands, frozen configuration, raw run evidence, required metrics and cost tables, failure examples, limitations and a final report. No slides are requested at this stage. Human team contributions should be recorded only after those members perform the work; AI assistance must be disclosed.
+Code, installation and execution commands, frozen configuration, raw run evidence, required metrics and cost tables, failure examples, limitations and a final report. Slides were outside the original implementation-stage deliverables; the course presentation requirements are listed in `docs/REQUIREMENTS_EVIDENCE_ZH.md`. Human team contributions should be recorded only after those members perform the work; AI assistance must be disclosed.
 
 ## Pre-scoring judge capacity amendment
 

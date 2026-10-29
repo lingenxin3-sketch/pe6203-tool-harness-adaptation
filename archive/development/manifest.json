@@ -1,0 +1,21 @@
+{
+  "archived_on": "2026-10-29",
+  "source_commit": "7256812e5204c0a51d07f4fd69f1236153f784c5",
+  "policy": "Relocation only. Contents preserved. Historical paths and hashes inside prior receipts are not rewritten. Git normalizes text line endings; Git blob SHA and local byte SHA-256 are distinguished.",
+  "files": [
+    {
+      "original_path": "configs/development-task101.json",
+      "archived_path": "archive/development/configs/development-task101.json",
+      "git_blob_sha_before_move": "c78e1d2319dcc3ba08f2d29d0921f098fbfc26da",
+      "local_bytes_sha256": "6890817c79050c42068ce22c95e2fad322e1b9cbd259ec77390b9f6f2ecc1599",
+      "bytes": 2086
+    },
+    {
+      "original_path": "scripts/run_pilot.py",
+      "archived_path": "archive/development/scripts/run_pilot.py",
+      "git_blob_sha_before_move": "716934cda885f9a2d36fea14687b856518f1baf5",
+      "local_bytes_sha256": "e4f7e1f39274c14481fb30d928fb32cbefd99618f8134d3e900b5f610182c950",
+      "bytes": 2011
+    }
+  ]
+}
