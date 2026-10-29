@@ -1,4 +1,6 @@
-# Reproducing the experiment
+# Reproducing the original pipeline and inspecting completed repeats
+
+The installation and full-pipeline commands below reproduce the original final-v1 experiment (162 main episodes plus 6 component-comparison episodes). They do not reproduce all three completed rounds by themselves. The completed project has 486 scored records; only final-v1 and final-r3 form the 324-observation descriptive comparison. See the [final results](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md) for round-specific data, exclusions and evidence downloads. Existing scored directories and published ZIPs must be preserved.
 
 ## Tested environment and downloads
 
@@ -77,7 +79,7 @@ Run the independent protocol and paired-comparison checks after the full pipelin
 
 The last command replays saved evidence without a model call and clearly labels it as a replay. It is useful for inspecting the update, calls and artifacts together. `paired-comparisons.json` includes independent arithmetic verification and stage-specific cohort denominators. Audit success establishes recorded protocol invariants, not semantic correctness of every answer.
 
-The experiment uses a local subset and one repetition, so neither a universal benchmark win nor statistical significance can be claimed. Local judge disagreement should be reported separately without rewriting scores to match the desired conclusion.
+The original pipeline uses a local subset and one repetition per configuration. Two later rounds were completed, but R2 has input-list differences and remains separate; the original-plus-R3 comparison has 18 distinct tasks and two observations per configuration. Neither a universal benchmark win nor statistical significance can be claimed. Local judge disagreement should be reported separately without rewriting scores to match the desired conclusion.
 
 ## Exporting the report figure
 
@@ -89,7 +91,7 @@ Before final packaging, verify the final workflow on held-out development task 3
 
 This requires the formal pipeline to have completed and passed its audits. It runs nine development episodes (three methods × three versions), switches local models sequentially, scores and audits the saved traces, and checks that core source hashes match the formal run. Its directory is `runs/final-workflow-verification`. It is post-formal reproduction evidence only, excluded from benchmark statistics and method tuning. It refuses to overwrite an existing verification run. Earlier development runs used earlier source revisions and do not substitute for this check.
 
-Use the optional report environment described above (including `requirements-report.txt`). After all formal scores and aggregates exist:
+Use a separate optional report environment with `requirements-report.txt` installed; setup commands are given in the packaging section below. After all formal scores and aggregates exist:
 
 ```powershell
 runtime/report-venv/Scripts/python.exe scripts/plot_results.py runs/final-v1 --output artifacts/figures
@@ -99,13 +101,25 @@ The script independently recomputes and checks scores before plotting; incomplet
 
 ## Report and submission packaging
 
-The PDF in the original release is the preserved original-round publication. To generate a new PDF from the current report source, use the optional report environment:
+The PDF in the original release is the preserved original-round publication. To inspect a newly rendered report without replacing that historical PDF, use a separate report environment and a preview output:
 
 ```powershell
-runtime/report-venv/Scripts/python.exe scripts/render_report.py docs/REPORT.md output/pdf/PE6203_Project4_Report.pdf
+python -m venv runtime/report-venv
+runtime/report-venv/Scripts/python.exe -m pip install -r requirements-report.txt
+runtime/report-venv/Scripts/python.exe scripts/render_report.py docs/REPORT.md tmp/PE6203_Project4_Report-preview.pdf
 ```
 
-Review the generated PDF before publishing it. `scripts/build_submission.py` packages the report, code and saved evidence after its completeness checks. Existing release attachments remain historical evidence and are not replaced by documentation cleanup.
+Review the preview before publishing any new report. `scripts/build_submission.py` requires a Git checkout and selects source files from the Git-tracked list, including the archive. Review and stage or commit intended source changes first; untracked drafts, ignored local documents and the explicit internal-document exclusion list are not packaged. This Git filter applies to source collection only: the required ignored `runs/` evidence, events, failures and created/modified artifacts are still explicitly collected and verified.
+
+The packager still checks the original main, component and development-verification runs; it is not a new three-round evidence archive builder. The two added rounds retain their separate Release packages. An existing `deliverables/PE6203_Project4_Submission.zip` is refused rather than overwritten. Existing release attachments remain historical evidence and are not replaced by documentation cleanup.
+
+## Completed added rounds and archives
+
+The completed added rounds are `repeat-r2-20261029` and `final-r3`. Each contains 162 scored episodes. The first has 123 cross-round resource-list differences and 54 within-round strategy-group differences; it is reported independently. Only the original and final-r3 satisfy the disclosed actual-input and scoring-condition comparison, giving 324 observations over 18 distinct tasks, not three comparable repetitions.
+
+The experiment branch contains `repeat_preflight.py`, `repeat_runner.py` and `repeat_campaign.py` for prechecks and sequential execution; `repeat_common.py`, `repeat_pair_comparison.py` and `repeat_verify_archive.py` support completeness, comparison and archive verification. These helpers do not replace the frozen actor/updater core. Their completed campaign state and existing evidence must not be restarted just to view results. Inspect the saved metrics, pair index and Releases through the final-results page; a fresh repeat study must use separately prepared output directories and documented runtime conditions.
+
+The [early development archive](../archive/development/README.md) contains the old task101 configuration and task3 pilot source, preserved for history rather than execution from their relocated paths. Ten partial progress snapshots are in the [experiment-branch progress archive](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/archive/progress/repeats-20261029/README.md). Archive manifests map old paths to new paths and distinguish original Git blob hashes from local-byte SHA-256. Historical receipts and old ZIPs retain their original paths and are not rewritten.
 
 ## Judge capacity amendment
 

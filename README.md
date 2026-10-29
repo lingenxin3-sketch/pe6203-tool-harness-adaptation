@@ -96,6 +96,8 @@ flowchart TB
 
 源码仓库不包含模型权重和完整逐次运行目录；原始记录分别保存在[原轮](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/v1.0.0)、[第一新增轮](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/repeat-r2-20261029-evidence)、[第二新增轮](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/final-r3-evidence)证据发布包中。下载地址、哈希和核验索引见最终结果页。旧发布包保持原样，文档整理不重写历史证据。
 
+历史材料已分类保存在[早期开发归档](archive/development/README.md)和[追加实验进度归档](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/archive/progress/repeats-20261029/README.md)；归档清单保留原路径与哈希，不混作当前正式运行入口。
+
 ## 来源与贡献声明
 
 官方基准：[MCPEvol-Bench](https://github.com/Octobrist/MCPEvol-Bench)。
