@@ -101,6 +101,10 @@ flowchart TB
 
 历史材料已分类保存在[早期开发归档](archive/development/README.md)和[追加实验进度归档](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/archive/progress/repeats-20261029/README.md)；归档清单保留原路径与哈希，不混作当前正式运行入口。
 
+## 成员个人成果入口
+
+- [E · LIN GENXIN：失败案例、真实产物与评分核查](contributions/members/E_LIN_GENXIN/README.md)。已分配责任并建立记录目录；实际核查和成果完成情况以本人记录为准，其余成员按分工逐步导入。
+
 ## 来源与贡献声明
 
 官方基准：[MCPEvol-Bench](https://github.com/Octobrist/MCPEvol-Bench)。

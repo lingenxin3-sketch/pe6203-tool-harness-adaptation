@@ -1,6 +1,6 @@
 {
   "status": "planned_responsibilities_not_completed_contributions",
-  "member_names": "a-f placeholders; replace with real names only when supplied",
+  "member_names": "Role letters retained; E assigned to LIN GENXIN. Actual completion requires member records.",
   "presentation_seconds": 540,
   "shared_transition_seconds": 60,
   "members": {
@@ -222,7 +222,11 @@
       "questions": [
         "isError=false就成功吗？还要读返回正文并检查实际文件。",
         "文件没生成能直接归因于某句改写吗？不能，需要排除其他操作原因或做控制实验。"
-      ]
+      ],
+      "name": "LIN GENXIN",
+      "member_code": "E",
+      "member_folder": "contributions/members/E_LIN_GENXIN",
+      "actual_completion_status": "pending_member_record"
     },
     "f": {
       "title": "报告整合、交付与材料一致性",

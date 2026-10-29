@@ -14,6 +14,9 @@ import build_member_packages as packages
 
 class MemberPackageTests(unittest.TestCase):
     def test_partition_rejects_duplicate_unsafe_and_unknown_paths(self):
+        self.assertEqual(packages.owner('contributions/members/E_LIN_GENXIN/README.md'),'e')
+        with self.assertRaisesRegex(ValueError,'Unknown member'):
+            packages.owner('contributions/members/Z_UNKNOWN/README.md')
         with self.assertRaisesRegex(ValueError,'Duplicate'):
             packages.partition(['README.md','README.md'])
         with self.assertRaisesRegex(ValueError,'Unsafe'):

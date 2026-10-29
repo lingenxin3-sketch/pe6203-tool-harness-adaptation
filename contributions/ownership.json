@@ -1,7 +1,7 @@
 {
   "status": "planned_responsibilities_not_completed_contributions",
-  "scope": "Complete experiments/repeats-20261029 snapshot; main is a subset. ZIP manifests pin the exact source commit.",
-  "total_files": 213,
+  "scope": "Complete submission/named-members-20261029 tree: shared experiment baseline plus E assigned records; not completed individual authorship.",
+  "total_files": 219,
   "overlap": 0,
   "members": {
     "a": {
@@ -163,7 +163,7 @@
       ]
     },
     "e": {
-      "count": 41,
+      "count": 47,
       "files": [
         "artifacts/incidents/117-full_rewrite-iter5.json",
         "artifacts/incidents/393-model-service-excerpt.txt",
@@ -195,6 +195,12 @@
         "artifacts/repeats-20261029/r3-failures-postscore-review.json",
         "artifacts/repeats-20261029/r3-live-failure-review.json",
         "artifacts/repeats-20261029/repeat-r2-20261029-case-index.json",
+        "contributions/members/E_LIN_GENXIN/ACTUAL_WORK.md",
+        "contributions/members/E_LIN_GENXIN/FILE_LIST.md",
+        "contributions/members/E_LIN_GENXIN/README.md",
+        "contributions/members/E_LIN_GENXIN/results/case-113-review.md",
+        "contributions/members/E_LIN_GENXIN/results/case-28-review.md",
+        "contributions/members/E_LIN_GENXIN/results/judge-disagreement-review.md",
         "docs/CASE_113_REVIEW.md",
         "docs/CASE_117_JUDGE_REVIEW.md",
         "docs/CASE_28_REVIEW.md",
@@ -206,7 +212,9 @@
         "scripts/finalize_failed_episodes.py",
         "scripts/inspect_tool_errors.py",
         "tests/test_failure_accounting.py"
-      ]
+      ],
+      "name": "LIN GENXIN",
+      "record_folder": "contributions/members/E_LIN_GENXIN"
     },
     "f": {
       "count": 34,

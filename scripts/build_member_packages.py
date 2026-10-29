@@ -36,6 +36,10 @@ def owner(name):
     p = PurePosixPath(name)
     if p.is_absolute() or '..' in p.parts or '\\' in name:
         raise ValueError('Unsafe source path: '+name)
+    if name.startswith('contributions/members/'):
+        member = p.parts[2].split('_',1)[0].lower()
+        if member not in MEMBERS: raise ValueError('Unknown member directory: '+name)
+        return member
     if name == 'README.md' or name.startswith(('contributions/', 'output/pdf/')):
         return 'f'
     if name in {'.gitattributes', '.gitignore', 'pyproject.toml', 'requirements-lock.txt', 'requirements-report.txt'}:
@@ -126,7 +130,7 @@ def build(ref, output):
         items = []
         guide = f'''# 成员{member}集合包：{role['title']}
 
-本包用于组织实际工作，不证明成员已经完成开发或核查。现有代码和文档是共同AI协助基线，成员姓名尚未填入。
+本包用于组织实际工作，不证明成员已经完成开发或核查。现有代码和文档是共同AI协助基线；已登记的负责人见任务卡，实际完成情况由本人记录。
 
 源代码快照：{commit}
 完整共同项目：{REPO}/tree/{commit}
