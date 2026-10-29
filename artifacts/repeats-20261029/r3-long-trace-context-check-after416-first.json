@@ -1,0 +1,57 @@
+{
+  "available_records": 150,
+  "checked_records": 6,
+  "selection": "Longest 6 by prompt characters; not exhaustive",
+  "model_vocabulary": "Qwen2.5-7B-Instruct Q4_K_M downloaded judge",
+  "template_allowance_tokens": 256,
+  "safety_tokens": 128,
+  "no_inference": true,
+  "results": [
+    {
+      "record": "repeat-0/no_update/original/416/result.json",
+      "prompt_characters": 68476,
+      "content_tokens": 15155,
+      "with_response_safety_and_template_allowance": 17587,
+      "fits_16384_with_allowance": false
+    },
+    {
+      "record": "repeat-0/full_rewrite/iter3/117/result.json",
+      "prompt_characters": 58730,
+      "content_tokens": 13841,
+      "with_response_safety_and_template_allowance": 16273,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/original/273/result.json",
+      "prompt_characters": 56706,
+      "content_tokens": 12919,
+      "with_response_safety_and_template_allowance": 15351,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/selective_patch/iter5/117/result.json",
+      "prompt_characters": 54059,
+      "content_tokens": 13129,
+      "with_response_safety_and_template_allowance": 15561,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/iter5/267/result.json",
+      "prompt_characters": 51681,
+      "content_tokens": 12523,
+      "with_response_safety_and_template_allowance": 14955,
+      "fits_16384_with_allowance": true
+    },
+    {
+      "record": "repeat-0/no_update/iter5/117/result.json",
+      "prompt_characters": 49518,
+      "content_tokens": 11552,
+      "with_response_safety_and_template_allowance": 13984,
+      "fits_16384_with_allowance": true
+    }
+  ],
+  "limitation": "Raw prompt token count plus an allowance; exact chat-template validation remains at live judging.",
+  "checked_at": "2026-10-29T08:34:41+08:00",
+  "actual_fixed_judge_capacity": 24576,
+  "scope": "Partial execution, longest six by prompt characters including newly completed task416; not an exhaustive capacity guarantee"
+}

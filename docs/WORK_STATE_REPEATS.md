@@ -153,3 +153,13 @@ original-public-evidence-verification.json保留all_original_raw_evidence_matche
 **管理器真正结束后再修改发布白名单：** 现在有两个自己新增、未跟踪的公开分析脚本scripts/repeat_pair_comparison.py和scripts/repeat_original_context_audit.py，都需加入repeat_publish.py的allowed及paths两处名单，再做相关白名单验证、提交推送和远端读回。当前管理器载入旧模块，仍在心跳发布，不人工并发Git操作。新原轮上下文核验JSON及冻结协议会自动进入心跳/R3 ZIP；源脚本尚未上传，不能提前声称代码已发布。无关dashboard草稿继续不动。
 
 剩余全目标未变：续同一会话等待R3执行完成，真实切换judge后保存独立r3-judge-start-runtime.json；27条案例全评分后运行已准备的case_score_table_r3.py一次；完成162评分审计、实际资源清单162及同轮54组公平性检查、新Release匿名下载SHA与全ZIP条目核验（含旧冻结序列化副本72272795...）、远端提交验证，导出实际R3 gate。控制器exit0后再做原轮+R3条件成立的324条对照及完整要求终审；R2独立，永不强合486，不追加第三个新轮。当前是有进程句柄凭据的等待，有持续实质核验进展，goal仍active，不是blocked或complete。
+
+## 2026年10月29日0832续接补充
+
+controller40048与观察会话46604仍经实际Windows进程句柄核实运行。08:31时R3为153条保存、0评分、4异常，剩余任务416的9个组合。当前no_update/original/416有17条事件，最后model_response/tool_result为step7，轨迹持续更新，尚无完整result.json；不是进程停止，不可重启或重跑。上一目标轮是有具体工作状态变化和进程句柄的进展/等待，无阻塞。
+
+发现状态页alert尾段仍用00:56的“第二新增轮尚未开始”旧文案，已在08:28:25更新compatibility-alert.json的message，并用initial_message原样保留最早说明，recorded_at、初始34条检查及差异证据不变。当前说明明确R2已162条评分独立发布、123条跨轮差异和54组组内差异；R3已05:38:09开始、输入110条部分核查尚非全量完成，仅条件通过后做old+R3的324对照。以后R3结束仍须更新当前解释，不能把初始发现记录误写成当前数量。
+
+08:31:31提交a43d367711e4463b10ab2cfd236252fe0ad6acf1已由现有发布程序逐文件远端读回验证。last-publish.json明确包含状态页、冻结协议、compatibility-alert.json、original-effective-context-verification.json及runtime-request-protocol-check.json；现在这些证据和修正文案确实已公开，源脚本仍待管理器结束后加入白名单再上传。未人工并发Git提交。
+
+repeat_pair_comparison.py已补充每条old/R3配对中的同题同版本no_update对照原件路径、SHA和TF/PE配对差；cohorts仍区分不同任务与重复观测。语法编译及真实--check-ready已通过预期拒绝（R3未评分齐备），没有生成对照、没有模型调用、没有变更原件。所有最终162评分/审计、独立R3judge收据、27案例评分核查、ZIP原字节及远端验证、完整实际输入/运行条件、两个新脚本最终发布等待办继续有效。不要因本阶段回复就停止现有进程，也不要提前标goal complete。
