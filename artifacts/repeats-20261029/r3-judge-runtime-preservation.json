@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-29T09:33:46+08:00",
+  "source_observed_at": "2026-10-29T09:32:53+08:00",
+  "runtime_receipt": "artifacts/repeats-20261029/r3-judge-start-runtime.json",
+  "sha256": "21431230a512d27efb6882896fa7542646b66d5fe2fe0f99cb7a1d1fecff5ca5",
+  "capacity": 24576,
+  "model": "qwen2.5-7b-judge",
+  "source_phase": "scoring",
+  "source_round": "final-r3",
+  "byte_exact_copy": true
+}

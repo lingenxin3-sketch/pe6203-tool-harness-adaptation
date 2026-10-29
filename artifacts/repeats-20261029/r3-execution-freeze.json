@@ -1,0 +1,1477 @@
+{
+  "collected_at": "2026-10-29T09:33:15+08:00",
+  "status_at_snapshot": {
+    "name": "final-r3",
+    "expected": 162,
+    "found": 162,
+    "scored": 0,
+    "failures": 5,
+    "missing": 0,
+    "issues": [],
+    "status_counts": {
+      "awaiting_judge": 162
+    },
+    "complete": false
+  },
+  "records": [
+    {
+      "episode": "repeat-0/full_rewrite/iter3/103/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/103/agent-record.json",
+      "pre_scoring_sha256": "c79a4a22443d80d9737a9ac3e436b47330a76d3b127636a66f79e54745869928",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/103/events.jsonl",
+      "events_sha256": "5aa75d6491ac39bb61d6c6b5fc583c747dc2707929f8bad81875c3d085226493",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/105/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/105/result.json",
+      "pre_scoring_sha256": "45866fed998e4a322ff85f39424ecb59454cf2be96b24a44861df4370288334d",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/105/events.jsonl",
+      "events_sha256": "c98493a0c83d17ebf50a4d029c0b2fbd37ec726f6835bcfbd73f4da14e8bdece",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/113/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/113/result.json",
+      "pre_scoring_sha256": "2558ab699cc57966bcb36b8aa0c08d49bbedd22de31da186ae214f41f65d11e6",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/113/events.jsonl",
+      "events_sha256": "6185a7bdb12f9e1feca7e60bdfc2bc91f5e236ed67fa5df4b905c7ba230da142",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/117/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/117/result.json",
+      "pre_scoring_sha256": "f704687de937563417e9860dc0698cf6eca6129bf73f4d3ef622037094e882aa",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/117/events.jsonl",
+      "events_sha256": "66b29793fe55b766e3609b7e0efbb33a6538dc00decffa5984c7ff2b1da60495",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/139/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/139/result.json",
+      "pre_scoring_sha256": "fa2649178341943c4f2e479c6af2a2ba7094ef806b28cd868a5bf4c200899b9a",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/139/events.jsonl",
+      "events_sha256": "a25b9d9bddd4b92c546d0d025ad4de0874147645b26c6b0698259a6cb9b2fd0a",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/267/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/267/result.json",
+      "pre_scoring_sha256": "617584151edb02cdf6ed504c51fbff344f28c10926001c6f5651f8c8969a394f",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/267/events.jsonl",
+      "events_sha256": "944eb7f89a153003ec0623f04413e1f0af387947bc94be1a91e1f6d001b48b22",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/273/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/273/result.json",
+      "pre_scoring_sha256": "451d9a00e8f11347222a9c55b41d983440898eeb54fc73e3bb49795422ba25f8",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/273/events.jsonl",
+      "events_sha256": "e02ea4430efd869b1f0a1bca04ff224b1e42e9d2fa7ae7d648f4f05c07ee2a34",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/274/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/274/result.json",
+      "pre_scoring_sha256": "0524953028e4d4ca2d7f7c31c69b98ec9a295fe85c64808f56211303ca0b8096",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/274/events.jsonl",
+      "events_sha256": "b39e0c32aa4908147c03e12bd2ded6aafb4fabd0d3fe0bb9c80bc1c82a49d47f",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/278/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/278/result.json",
+      "pre_scoring_sha256": "bb8d26dccfbf2b23e942f6f9dc44f9719b4d2dca9df73e75b9f814b3508a40b1",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/278/events.jsonl",
+      "events_sha256": "aba23c392e29d07479aeb25f33c85303cdba49c29217acf6dceb4190891fca8c",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/28/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/28/result.json",
+      "pre_scoring_sha256": "d13a85f10c6437db42e50b6995c4d8a64cf222c37ba02619158c89810d1e37f9",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/28/events.jsonl",
+      "events_sha256": "a32dde452fee04c470d8c10dbc1924da40379cc7d818a767fb4aa0f68b93e2ae",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/283/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/283/result.json",
+      "pre_scoring_sha256": "f1088e98c2bc9219c8e298f38b469927d78cefe32918e8ef8c92067ab0c5dee1",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/283/events.jsonl",
+      "events_sha256": "a7125f9682d0d7c968658272fed8fa3a554f66a303b1a1482409dd9e4346a3ec",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/386/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/386/result.json",
+      "pre_scoring_sha256": "acd9cf5e03469fec8ae2bf36dde44a79332f32500d8dfd9159eb6337c5fce59e",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/386/events.jsonl",
+      "events_sha256": "d2fa35dc1b438ff372af4b574d42cfb4ee6b62678cbb12358a8ee6765dcd640e",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/389/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/389/result.json",
+      "pre_scoring_sha256": "5201f2d64311855d1bebda0ff30fe11e302a6cd3b6f91d41c7d1e01cd6dfaf1e",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/389/events.jsonl",
+      "events_sha256": "69d5152211a021fbccc31c11adca8a49c8328099ac64adbed6289359818d992a",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/393/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/393/result.json",
+      "pre_scoring_sha256": "70ade5d65425da6ef722b9745aa511b50650c9f0d053250b2f893a67856743cd",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/393/events.jsonl",
+      "events_sha256": "0044f095d0dd7ceb7ddbe992708c6b885491bbc5fbcb56edbc5e476ab1ac212e",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/403/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/403/result.json",
+      "pre_scoring_sha256": "5e0c4624cc213e9194ec9e6c9fab9a8ae1553378b09edb4d732b63c3a8327da1",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/403/events.jsonl",
+      "events_sha256": "087a5c0d36dc2f87231d7264f240e511a3b63bf11a41f251dd442d5c7bd671c6",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/411/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/411/result.json",
+      "pre_scoring_sha256": "3a76479fa3174b0d8c1e3b5f4bdddda47d466149b6d23bf3294c5556fba70da7",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/411/events.jsonl",
+      "events_sha256": "3f68c67281d9c48d72d656b32e1f511a6687442fd594114dca01e8c46a4a5845",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/416/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/416/result.json",
+      "pre_scoring_sha256": "5693284f8089b726814b986ef00e4a78c8d702f244399ed9d16ecc351e664a2a",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/416/events.jsonl",
+      "events_sha256": "6ecbd99e63e190985f6934f2873bf39bab8d8b1442438e878b6e92d8a4df509e",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter3/9/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter3/9/result.json",
+      "pre_scoring_sha256": "f468dabf5651f97ffb9f6ec3eab553f1910501b1595283efd7da6c9bbce59a35",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter3/9/events.jsonl",
+      "events_sha256": "444f575803421af93107c1e8b980833126bf559e451210f173fc22e16e2093f4",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/103/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/103/result.json",
+      "pre_scoring_sha256": "b4484304fb6e320bf1d46ed3106566fac58d4933f0e7b42e86f1321003af5b21",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/103/events.jsonl",
+      "events_sha256": "315a60496043c86e8e92e24f15a061709ce083d631c37be317135f505ef81741",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/105/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/105/result.json",
+      "pre_scoring_sha256": "b093b9b2b566585c596a0f808c3526e676ea9cc7d3d2c00e228fa3e8b12145e5",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/105/events.jsonl",
+      "events_sha256": "3209fd8d87fa35eacccc1170469c0206c851e6e237a8495501b2c2f6af1833db",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/113/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/113/result.json",
+      "pre_scoring_sha256": "a4ab1571a47d95fcc5db231d9c36a5973c9f371ea30bc52e9ae4fdbfc9723359",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/113/events.jsonl",
+      "events_sha256": "02bb14ea5eae6234d967d2d0ed5bf887415f2e43db6029fe1d89b134b594b25a",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/117/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/117/result.json",
+      "pre_scoring_sha256": "0e3e142fe946d51e445cb85ed6a12a91c508c385ff9baa6c7c31b8f6755d9b40",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/117/events.jsonl",
+      "events_sha256": "b2db65f92e457144e2035e8d064030d771bd787ddd5c3b2ea1f47bbc92449f5e",
+      "raw_failure_source": "runs/final-r3/repeat-0/full_rewrite/iter5/117/failure-record.json",
+      "raw_failure_sha256": "c3d375a4b91e38db5888f8624c2d6d522916b847a2551cf108bdf6c62275fd4a"
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/139/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/139/result.json",
+      "pre_scoring_sha256": "4e47822b6edfa32028f6d4bfe71ac2793054295ab29b09c3e32aa4c624bad457",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/139/events.jsonl",
+      "events_sha256": "6a073fc89fd2605992512f02a280b9d3c2cb4448d41cd827db80975a00cd0713",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/267/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/267/result.json",
+      "pre_scoring_sha256": "272609413d3b163a663fd04e882e94e1b851765f5f5c85977b65e7f015f60ea9",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/267/events.jsonl",
+      "events_sha256": "5ebee8c13529a60c09b56a9a3a77114eedcf775c582eaa26ce7abeb4f38461d0",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/273/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/273/result.json",
+      "pre_scoring_sha256": "f1c058fef831a1a4cc91d57f0b29b0f0ebeb997fda13e5683ff8d5c70c1245ce",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/273/events.jsonl",
+      "events_sha256": "43583306978808666ac71d6bea8de0e463accde28d84421a31885c829b69ba1e",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/274/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/274/result.json",
+      "pre_scoring_sha256": "7a745d80fb13f7c94313f86c3d778d2c0f88edd04a26c81d486734da1219aca5",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/274/events.jsonl",
+      "events_sha256": "5e48216f9024328eedf832eb5c9ca2e75786c75add1fccf2cbacbb69620395a9",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/278/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/278/result.json",
+      "pre_scoring_sha256": "c6ca4b507bdc4689316c9179fed908dd02bcd0d2040904c0fbc35a56786b676a",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/278/events.jsonl",
+      "events_sha256": "27bee06c64f5e84b94ad40e731cbd2e16aee77ebcb1f69b09f62b1c67a111843",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/28/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/28/result.json",
+      "pre_scoring_sha256": "c90698c60313259c138300d22b40c3ea866a44858f6f38786a3be5416e3e5e09",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/28/events.jsonl",
+      "events_sha256": "3d65c61005287feb75a0635c7a0274240139d63c10749de7fc3124aaa66c69a4",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/283/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/283/result.json",
+      "pre_scoring_sha256": "ec49c4218dc4e1f38c40056b5014fda333d507d9da79880f135367a86f9d1a91",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/283/events.jsonl",
+      "events_sha256": "cc0de06bc9cd4a43be4f1341ff999de7ff7b2c87596969939e574348e8a3ea41",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/386/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/386/result.json",
+      "pre_scoring_sha256": "d3760d7bf5df69f55c02fbef307f49bd1fe092fec9893a61c720938b1a32f581",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/386/events.jsonl",
+      "events_sha256": "40f6648a75d69f563a2a3a84280556b2758663a0919ddcf1f13f09f2666652ac",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/389/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/389/result.json",
+      "pre_scoring_sha256": "fd5f709116a937e98691c0c6eaf96a7b326914e39f7db3d6713a3524f8b34ace",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/389/events.jsonl",
+      "events_sha256": "256aa1ed6787232e0c2a3cca284aab44e642182bd182a4a46246873749e1d918",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/393/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/393/result.json",
+      "pre_scoring_sha256": "90ba990d463cb341515662028a1b379975edb3c295512eaf74ea3b349d2dbecf",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/393/events.jsonl",
+      "events_sha256": "373bb78f075c7ab1af01b6a711eefde5a0997022b6a33ea5b90080ebf7f5ca99",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/403/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/403/result.json",
+      "pre_scoring_sha256": "5651786c7fcdcc62400f4b2282a11890071efd2e2fd0f8d0526192d8086ada92",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/403/events.jsonl",
+      "events_sha256": "88a66f1bbeb5a6e5b21236ac36f79179b24c7011a10bce2c95a99274bd81c00c",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/411/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/411/result.json",
+      "pre_scoring_sha256": "f1400a0a0fc79134634aa7037f85c50b0456715490c36cdbd023f434bb125db1",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/411/events.jsonl",
+      "events_sha256": "7d35df4a17c554aee0b693837595052936fe3bef24e14ff7b44c3016a94c806b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/416/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/416/result.json",
+      "pre_scoring_sha256": "be1df90c142b0fe84b7df0f54ef4fbbbca965fea8b2a221637058e8724b876a7",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/416/events.jsonl",
+      "events_sha256": "4c36c5aa0ab8c58bf613171f2b0953b563c2692c0831f0b7777d8720e73aa770",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/iter5/9/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/iter5/9/result.json",
+      "pre_scoring_sha256": "52b5d5b1356f444d10977c938a8aff61e570bf33a7d4ba07aef4839a0bd329db",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/iter5/9/events.jsonl",
+      "events_sha256": "e7c35bdd63dde9b20dcb171248e4c382761775f95edec6d98edbb1642e613b76",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/103/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/103/result.json",
+      "pre_scoring_sha256": "8ffa5efdfbd1206496ba8b739d7c54588142b8fa888c3d887dd43b7f2aad7742",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/103/events.jsonl",
+      "events_sha256": "5e4d6695c3e039cbf91e0c8110700c1d702ab0dd18e20d7b93f1b907b66f3d66",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/105/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/105/result.json",
+      "pre_scoring_sha256": "313fdb057dd300cd6652f5dbc99c840b617dcab4171ca80d9b8b6fefc2985ea9",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/105/events.jsonl",
+      "events_sha256": "47e2aec28bdc8c18bdf09d30de7742377d2c13c4208a04133eabcdbe2d2cdbec",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/113/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/113/result.json",
+      "pre_scoring_sha256": "5180ee5e033b054a1b048503ad26bd36f1a99d87feaf7c1bbeca2514d5dd3956",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/113/events.jsonl",
+      "events_sha256": "01143e8ce7a298943ba7088308d5ac99fb225c6e107eb6586e0f244b3d0e16fd",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/117/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/117/result.json",
+      "pre_scoring_sha256": "01c1259d0dc3f6caca9ded41fae8388ee52c2ff7d9a7b5d8cefe8e2b05c0a184",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/117/events.jsonl",
+      "events_sha256": "9085b26901203df3341af8d37fc6012604b6dcaf6902802bd357b68d35747cd9",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/139/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/139/result.json",
+      "pre_scoring_sha256": "5151da18fe19e47efe03bf27efa50ee1ad27f9d7fa8d231ab1aa5667654fa18b",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/139/events.jsonl",
+      "events_sha256": "b04b6683d9e76f77aa757e570a6f2f52082d5ad757925edc7152a9650c79def4",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/267/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/267/result.json",
+      "pre_scoring_sha256": "392240ca547642362f26af11331f7d6dbb2f5188e7f670825146ea99b002103b",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/267/events.jsonl",
+      "events_sha256": "8f812dafeff73368edd17e4d69c43c4fb40154b1f5587b400cd2c29ee1449bd5",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/273/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/273/result.json",
+      "pre_scoring_sha256": "ff721ab6347410c5af378f9bf51d1104b8e5cc529768cdd5ff041f134a964def",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/273/events.jsonl",
+      "events_sha256": "92e687c1e92a7b1eced18df19846511b42ad8789f0431201c012a67793253090",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/274/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/274/result.json",
+      "pre_scoring_sha256": "d8cfdcead67b0197d5a4367d6bffc813812d6adcc8ce7d29a774b7cccaf39532",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/274/events.jsonl",
+      "events_sha256": "e5f82f359a0e5f5cc4cde84bce31493ebf1e58cccd195723331fb85050f92f9d",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/278/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/278/result.json",
+      "pre_scoring_sha256": "5a3f346120a25fa1a913a02e37b29c02b3dccc84996d4169ac4b72b47b030949",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/278/events.jsonl",
+      "events_sha256": "5bfba4e0d5787e3312c43df5de072f9dc2d8457b264a37fd0a943d8dbed4ffee",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/28/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/28/result.json",
+      "pre_scoring_sha256": "4c8db3e25421a49a4823272728a1ef6c3fedbb3406f119dd64c40c9c1c7ced6f",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/28/events.jsonl",
+      "events_sha256": "f2e57969461162d26f44a4e313f7adfe3eeffad92522e9ca48b22dddc5166b18",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/283/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/283/result.json",
+      "pre_scoring_sha256": "dd9ae3167559344089beb7b72effd777fc054750f4a43ff9c53e99771f12d145",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/283/events.jsonl",
+      "events_sha256": "0140321ec963836494acea1a280a2d2c9a061090e18de6eaa6ae7163a44beaa4",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/386/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/386/result.json",
+      "pre_scoring_sha256": "b5b0769c15c5b793b4faa5c2786623e94d1ac5df3d67a6e5260b1d76bb6900c9",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/386/events.jsonl",
+      "events_sha256": "c2647f2f2aa2c73167915fff1ab4e0b066c56c4211f8db3c48ae12e6c04e3715",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/389/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/389/result.json",
+      "pre_scoring_sha256": "e053e94eaf731d721f6cf86037187a24e853c02990231b42cf2e08ce1b29f4c2",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/389/events.jsonl",
+      "events_sha256": "bde3e9b48a492181fcf965ddfef8932f2f0e95c0fcd67ca1442928af0c2bf3e7",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/393/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/393/result.json",
+      "pre_scoring_sha256": "aff62666ff159357d0737d2666a381dd6e4ea5702cd5265f9ab377a56d0f8817",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/393/events.jsonl",
+      "events_sha256": "d97aa3b3c0aba923734962dc1b6ade7e1f938cf6fa3364f761f0561fddc611f8",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/403/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/403/result.json",
+      "pre_scoring_sha256": "f3f379968f13556c74d56883c28b33cc2906aa974f20ca2dfaa472339311cff3",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/403/events.jsonl",
+      "events_sha256": "6603cb48f77dc2c65c75f7b31a3792e64169ab3a6abb2d9bb5e70876eba740d8",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/411/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/411/result.json",
+      "pre_scoring_sha256": "d6bae4bfc4bc98313192cab854a9f8ecf20798d6dcb113dfc154014fcd4d7f15",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/411/events.jsonl",
+      "events_sha256": "83d71c8f52e3a7d43909bf23bb05b4b8063c58843bfde4c048b96dfeb73f802d",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/416/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/416/result.json",
+      "pre_scoring_sha256": "1a9378674d9dfe5299f9cc273178f57fb34467835d6d9feebdbc2328deafdd57",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/416/events.jsonl",
+      "events_sha256": "b566467352b8d80bdc58d0e28838eca0dc38a448fa1f2ae774b1481f67fbd334",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/full_rewrite/original/9/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/full_rewrite/original/9/result.json",
+      "pre_scoring_sha256": "434f2107230e0785d9f9b496ab6ec204d6101d1ac8c0a25cfb8a2b12fb799444",
+      "events_source": "runs/final-r3/repeat-0/full_rewrite/original/9/events.jsonl",
+      "events_sha256": "37c9c7fb9e059c83b60e9835df9ba1fce2f89b9ed9f84dccc0113cdbd1e09856",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/103/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/103/result.json",
+      "pre_scoring_sha256": "307db868db12a66fb0c69ecfeeefb849bd57b4ac3aed2f4c857e61e1d918f6b7",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/103/events.jsonl",
+      "events_sha256": "4feeb7715e10648ce1f58017e4af121ae7261efe7c049bcc9e8865e64626ab66",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/105/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/105/result.json",
+      "pre_scoring_sha256": "73c992df04cefeb1c8c3b971f8b375fcb31ff0a449c1df1ffdd379ceca8405b0",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/105/events.jsonl",
+      "events_sha256": "8fc69dc626bb732833a45b0269fd184d81c8681f8885564ef87a86c832bca486",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/113/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/113/result.json",
+      "pre_scoring_sha256": "a463dcd571dea63eafaef2259f3e2f9c6020b9ecd8efc6cbf90add6de847603d",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/113/events.jsonl",
+      "events_sha256": "98741088929fb6cd7414cb6b67b336890c0109dcddd5ec7eda5246533746128b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/117/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/117/result.json",
+      "pre_scoring_sha256": "20967e3797f94d58b69550cc263142c2fd3b048f8a4c9172696487ef210a2839",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/117/events.jsonl",
+      "events_sha256": "a7ff179b3d33b9422b45ba909f088cd5ab41779578bdbdaa95fbafc4edd0afbd",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/139/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/139/result.json",
+      "pre_scoring_sha256": "a5681f745f0b2358921eb4ca21069be620c680fc85c32bce47030027d19d55f8",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/139/events.jsonl",
+      "events_sha256": "923d03d824dd8aa6754a288b7f975d8653f9067ecc04b3edd0a4f5651fd3278d",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/267/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/267/result.json",
+      "pre_scoring_sha256": "efcc923fe05d8792ae1a6e4f3de02f13490788d56281e209b28f871b137d4610",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/267/events.jsonl",
+      "events_sha256": "0bcfac2bb53a679d15ab98300390d933af7e42c987cb10d935a639a004378a2b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/273/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/273/result.json",
+      "pre_scoring_sha256": "b07e984cc93446b69531100cde5af94de7ad91eda80249802df9b1ec76822baa",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/273/events.jsonl",
+      "events_sha256": "57a46f6a6c83b99f630822e80b79cfb79af2e6d705763390d82775db9626f8d1",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/274/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/274/result.json",
+      "pre_scoring_sha256": "8c8d11e3c7767a9c81e3d3d4f1dbf63dc8810708637352c017451e6525df7149",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/274/events.jsonl",
+      "events_sha256": "371fdd1defd264d19c9bbd554a97c2ef520a12ad06508a2118f3b18e72d847be",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/278/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/278/result.json",
+      "pre_scoring_sha256": "05a4225cbb8580dbc1119923e5b6fec10f67188c2f04a1684cc4aa9b1f69ca68",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/278/events.jsonl",
+      "events_sha256": "044db76e75881975d2b68d942d526ace0346a77103f18accf266757c45e9b41e",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/28/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/28/result.json",
+      "pre_scoring_sha256": "602c335e6e8fc5167a761dd4b752e444e18fd90b3fd7b5f8bcd81917dfd281c1",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/28/events.jsonl",
+      "events_sha256": "00def2c4e165997046656f3cdeda9c66771351656294c571a5db5b71de25777a",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/283/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/283/result.json",
+      "pre_scoring_sha256": "7d2333f76cdfe21e0d8be0b5ee231c80a2504e27658502baea6415ccbaee95dd",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/283/events.jsonl",
+      "events_sha256": "67d31ca4de85b35125f1f89da20caaca02beb2b89013bdf3b096f8ce6a634111",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/386/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/386/result.json",
+      "pre_scoring_sha256": "c61b8dfc1dfc0766dd5b8da1519d0d5482129eb959d2e9904774c8cf00d43117",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/386/events.jsonl",
+      "events_sha256": "7189c562f6a1743b952751f73bdf9795278c568477d78ec42503faacb9b3076f",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/389/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/389/result.json",
+      "pre_scoring_sha256": "45555f1c97c43830cb93b9c60a723098ee578c164844b7088e2c5956ee31ddfa",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/389/events.jsonl",
+      "events_sha256": "8c308cf2534cb933eda8ba46197f0e712fe85b86fc7b8173ffc9ca6fae064e7b",
+      "raw_failure_source": "runs/final-r3/repeat-0/no_update/iter3/389/failure-record.json",
+      "raw_failure_sha256": "73795e904581d1670a86e13e12ee43e2d469396bd9e2ab15c561cc5ab9cbae0a"
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/393/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/393/result.json",
+      "pre_scoring_sha256": "aa74f008f509438e1d929e7fd69b55f0d6389394f33290551caf71b6ffdd0243",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/393/events.jsonl",
+      "events_sha256": "d1658480fb8ff25de02a9ad8bf0bb89b9e79f4a755e3041d9654cdd152be2038",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/403/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/403/result.json",
+      "pre_scoring_sha256": "606f6359011a5d9cafe14dbb3cc90354a08c5e7fc124aa8013358f7d4873c0ba",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/403/events.jsonl",
+      "events_sha256": "9ebc2cfccadeb85eb9d28c21b0c63f354908e18042f17417f20432dd6843853a",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/411/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/411/result.json",
+      "pre_scoring_sha256": "e261d675e263c0223c2a7352b3d88961b4979858f81ffc06a126520894ed694d",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/411/events.jsonl",
+      "events_sha256": "3add7027981b285a2919332473ed1314b958fe3ef471c61a907e1fb109e9b8e4",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/416/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/416/result.json",
+      "pre_scoring_sha256": "5e81162df3b72e9bc119a79339604908ebe370523b6d29cd739b59cdc6e8f68a",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/416/events.jsonl",
+      "events_sha256": "253abdd8caff02f79b121ce29b2ec08ef3c7576002d79c545894ada2c11095fa",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter3/9/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter3/9/result.json",
+      "pre_scoring_sha256": "ce17145a65c18d46f41a61ad4742749143e94e49ff8ee2cc14dee6871e50d306",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter3/9/events.jsonl",
+      "events_sha256": "b885ecd5b75a8be5a08f2afc7a64232ce718f9cb21b77af0a9ae48d3939cb5ba",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/103/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/103/result.json",
+      "pre_scoring_sha256": "d67420f2de8ed698e71749a0b9e0ba4552951064c66db3839695215fbcd3cd36",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/103/events.jsonl",
+      "events_sha256": "8d7a8e47610ca309a67c65adda79a83652c1603788b14af3f54dbae435af8738",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/105/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/105/result.json",
+      "pre_scoring_sha256": "1082c80658767039ff33b56746c704cd62d802fce7901e91ee0e84a175ffdecd",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/105/events.jsonl",
+      "events_sha256": "c3c803423d0cb7ca7642e0380a2e1b92da6030da74224649cb4a7b902188172e",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/113/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/113/result.json",
+      "pre_scoring_sha256": "0e38fd77994013b0ab8cd723caa93fa85e8e1dd4f415062bee9d690837251ee5",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/113/events.jsonl",
+      "events_sha256": "20c63b4852b67c7d1d8bbf6d8166a686b31cfe80197825b94ddb4ff0ebda0250",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/117/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/117/result.json",
+      "pre_scoring_sha256": "c6884761f57e04e6acce34a903f095d776368adfb87de5f696931c6ad12a3706",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/117/events.jsonl",
+      "events_sha256": "ebd0f85b4067a3ff7b861e9c1ec6df0f579308dc77b9c561131539866f1335e7",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/139/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/139/result.json",
+      "pre_scoring_sha256": "b02059d1f23351703d63412a1a677c9a406f02cba93a966b0cac8fda006e81c2",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/139/events.jsonl",
+      "events_sha256": "ec01e67d5323615614989fcbdaff178b2d2a1830869a54a22de345169f82d524",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/267/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/267/result.json",
+      "pre_scoring_sha256": "da0d5b3ee99a0007eceb704baa2d93d9b85b206af56ee5c34d2d1bf4cdd0ded4",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/267/events.jsonl",
+      "events_sha256": "73b964f084c9a14fc46150c471bdf7ce43c2caaa05c1192a09a9e60272d85d56",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/273/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/273/result.json",
+      "pre_scoring_sha256": "86edd8c9ce0756ea10b9275b0b5669c13eda8697bd4cb807e599bba7c3e949d9",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/273/events.jsonl",
+      "events_sha256": "08ddf802efd8a8a853562caa207a62cda53612dccf764623672b807bbb8fcd10",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/274/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/274/result.json",
+      "pre_scoring_sha256": "7df81460538bf91e0c66b671d759a5b47b367f20d50d7215e08496f7d137727f",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/274/events.jsonl",
+      "events_sha256": "433e910b28fece0689096929dd4adcc8f2b140ddfaf9810f212f0b103a6330d1",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/278/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/278/result.json",
+      "pre_scoring_sha256": "1ec2aa0559190aad88c9ff9944b02b87d71bf1abd5239d138a4f68a48a0eac8d",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/278/events.jsonl",
+      "events_sha256": "bf8ffdc8202b14cbfbf23fefb3ec7da6e3632cd83892fc5f7039607b01f822e0",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/28/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/28/result.json",
+      "pre_scoring_sha256": "8752a1cc2148c46f22ea12d1c05114b8283de6da7352321880a5082248b495a5",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/28/events.jsonl",
+      "events_sha256": "1cf1d3ee98fb9d9ec204d5e3eb60b925618d260e8686696436a91645d100f3fa",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/283/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/283/result.json",
+      "pre_scoring_sha256": "cd02b137edb2e9530cea151316b789ccf7972b2f617887f97816cc2512382869",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/283/events.jsonl",
+      "events_sha256": "9ff97becc6749d1741dc30dcde2751e74eb721219de9ae03d67f3f59e6130a30",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/386/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/386/result.json",
+      "pre_scoring_sha256": "278c3b4540c27139bbd193f0a142e7d08cba84223e4f77440f7ebd77a99727f4",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/386/events.jsonl",
+      "events_sha256": "aee65b2f19ecd075c76994bce12c981cb905c5215d5344adf60b7460d7c15a87",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/389/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/389/result.json",
+      "pre_scoring_sha256": "51169d33933e456ecdbcc6f6f37076637a3d04c3fb7cf757bcd1b1363a4da401",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/389/events.jsonl",
+      "events_sha256": "c2cf155f402d2dce582a888c4d66f110a549b62646d09e5117c456e6628021f4",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/393/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/393/result.json",
+      "pre_scoring_sha256": "e3b067d004b39b61e60a34b14238e7503bb3953730c181fa27029c07183c1a4d",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/393/events.jsonl",
+      "events_sha256": "1d0aaf39fd525aface1892abd71d7dd02eab5c6aa07feea4fb3665803a822a8d",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/403/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/403/result.json",
+      "pre_scoring_sha256": "df97279080154759b5636cc9092783e8c638004000fd56982d862b314caf84e4",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/403/events.jsonl",
+      "events_sha256": "8793edaba5920138c261f86ff0a03b524812d01b990f3a0550dd26eb43ee762c",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/411/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/411/result.json",
+      "pre_scoring_sha256": "9ed2556181e097a0f1f9c6905ae483df8e7f7e6f68294066a9784923dd1a3cab",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/411/events.jsonl",
+      "events_sha256": "c6cb3aa3c908fa431da7afe15c8feecd43d7272480fffd4f5be4492ced77af8d",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/416/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/416/result.json",
+      "pre_scoring_sha256": "6534df1cea2956bc7740b6549ee48f58ab206ee996a14a4fa5c20fb96ffb3dce",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/416/events.jsonl",
+      "events_sha256": "6ffce3527b8073547689dca3e809ae16d55e3e33c7f6367a73de1ac83a65f66b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/iter5/9/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/iter5/9/result.json",
+      "pre_scoring_sha256": "f65a13ba27a7be18fff4e579321a88b6b0e70442eb114f130a73912bfb909e59",
+      "events_source": "runs/final-r3/repeat-0/no_update/iter5/9/events.jsonl",
+      "events_sha256": "41570675fa65b88198d34b3661d7217db89f717c2e8748508af2464297ebb9f7",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/103/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/103/result.json",
+      "pre_scoring_sha256": "71ab3f55134d294a90ed62cb6fff7e473bb99bbfce8585aea8c286cdc160b7f1",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/103/events.jsonl",
+      "events_sha256": "1c2a68222c7d80caf4f89300c5e1feacd35de65581967feb805e4ce633b2f659",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/105/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/105/result.json",
+      "pre_scoring_sha256": "3127043ac81844f9387acdd1a4a272ab2692b255005ed4e06b7888ede2cf7b28",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/105/events.jsonl",
+      "events_sha256": "dbb459a749872ec77a9dbfc4336239a64954d03ef5be96a3b12bf00e747a42f0",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/113/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/113/result.json",
+      "pre_scoring_sha256": "2183867451cd2f7e2eb8e9462ac90108925d2ef0248ef4ab919760e494a8617c",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/113/events.jsonl",
+      "events_sha256": "5dbad7c7441b613bdea2276bcdd123aa81c831e0afbf5972d54d2e3b95ec5635",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/117/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/117/result.json",
+      "pre_scoring_sha256": "4b650a9a27588402202e4ea3610e54888924f7311e5c7e7d0f062d3ba6143d37",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/117/events.jsonl",
+      "events_sha256": "a82f53c7c219774d2eb160b9f9c3fb98157f586502e21499115d75efc9f92042",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/139/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/139/result.json",
+      "pre_scoring_sha256": "2d906e84ea209966cbef85b94fc574a845f58378d922c4da8a2ea6f4b908436b",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/139/events.jsonl",
+      "events_sha256": "97970ba1abeb36a25f849f4c841013ba15b6b2f3dfd407c8ca5f821df9bafed5",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/267/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/267/result.json",
+      "pre_scoring_sha256": "34a281e3eda08d3b537d2e08700ab67f55960a92ce9ec26fafe153c97930b7de",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/267/events.jsonl",
+      "events_sha256": "64630c0e6ee6af4ed761786491482aff9af45e512e4c4b2628a315864fc5214b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/273/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/273/result.json",
+      "pre_scoring_sha256": "97dc1d04a952a2c146e86a1f53c631fa4a50cc09387e85e51cc2de8d3c4abe45",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/273/events.jsonl",
+      "events_sha256": "eeb2325d66f77c1d6a2e91536637e59fc16fe43cc2100a98edc27f74baa0a49c",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/274/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/274/result.json",
+      "pre_scoring_sha256": "b746ef2f32accfceb96449287e7b52af95c0e077e9773d09966376aa37f80091",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/274/events.jsonl",
+      "events_sha256": "a657b366aa4198d6655334e0e54b982347ccd3e729860d4f688fa598061960fb",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/278/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/278/result.json",
+      "pre_scoring_sha256": "5d2684815cffe16c7ccd0554a1faed3297d0507212a6ec9061fce0b9806a4cc4",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/278/events.jsonl",
+      "events_sha256": "50543e406e2637f3484126a1a464d7a24fa6d6a286079f9f1ba832a2ca3d719a",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/28/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/28/result.json",
+      "pre_scoring_sha256": "c550e502e54f6a51187231c6259ebfb7ad7c93f6abf951f542829dbc646700fd",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/28/events.jsonl",
+      "events_sha256": "4351b766c25b527f1edae95ebd9adf61a51812d2101904350ad32786d9c7fff5",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/283/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/283/result.json",
+      "pre_scoring_sha256": "b4ba930e59ec499036db8999b719983fa8f9839d5a514c0e80988a147dfcf211",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/283/events.jsonl",
+      "events_sha256": "483859a768e7583221cdf2f8bf79ed98c7587e7b6ebf2b662d424e36f80df9e5",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/386/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/386/result.json",
+      "pre_scoring_sha256": "488e6b0687f40595f19a69c7ca039a8a86b7ba54c4beb783538b8c830f589b6f",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/386/events.jsonl",
+      "events_sha256": "c0efc48a22853507197f5f474becba1d5e3e1458d780843d95c5ee562bb9d9b5",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/389/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/389/result.json",
+      "pre_scoring_sha256": "ace2ea73b3186379b207afe44cf77f2acbd3df8cfc7d4f27027c8a53296693b8",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/389/events.jsonl",
+      "events_sha256": "0d284709811ef5d3957dd824a534a84bd507736f0fd50f9932326a6b9f711af6",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/393/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/393/result.json",
+      "pre_scoring_sha256": "becc32d3289a61160aca6e74d7e65db8d127576f459ab58b83080217410ffb65",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/393/events.jsonl",
+      "events_sha256": "4453988be48029dbcf3d3dee89f1e699deca67b870d064bc40ed1b67d4f4d95d",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/403/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/403/result.json",
+      "pre_scoring_sha256": "2463f5729ea7e852e2ff993234f1985edd832a30e72a71fb66abd7de97f22560",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/403/events.jsonl",
+      "events_sha256": "05fc0440e47ca18a45d86489eff8c8dcce948b17b360ed53b0f02028294829d3",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/411/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/411/result.json",
+      "pre_scoring_sha256": "70136d65767747b418601792041931a98268202469ff4ce973b9c83a54fbdea9",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/411/events.jsonl",
+      "events_sha256": "b1b7dba5088109d6a3d9524a99965cb58510999c3df23217067d073ce46d3e6c",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/416/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/416/result.json",
+      "pre_scoring_sha256": "6c045c288c4a35b30c568cf1079bb2c6f2a12735a1f399f75bae1ded88430503",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/416/events.jsonl",
+      "events_sha256": "9d4515635eeebfc7b2035a0ab94c4f10e07e7a25f34f07fe0f9055635cca24d5",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/no_update/original/9/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/no_update/original/9/result.json",
+      "pre_scoring_sha256": "03dcf9aa406c947cc3a8bbfae91b29077e4c3ab652ed3b104c3c59598cff0859",
+      "events_source": "runs/final-r3/repeat-0/no_update/original/9/events.jsonl",
+      "events_sha256": "cd53fba11a2c223760249c7ada5333f6be6e4a12f6f051efe6b7f1f747347eca",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/103/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/103/result.json",
+      "pre_scoring_sha256": "bd147df4a2e61ff9aec68a7ceed31ffb5962f2514aa12e050b44cccf07c0eee2",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/103/events.jsonl",
+      "events_sha256": "7d1f1b915dd93cb734b69bf9939412b7ba45962034d7b12656b55bca39d8c2d4",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/105/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/105/result.json",
+      "pre_scoring_sha256": "aa99a579b8895da5e4320d4baa5d37dc90e9f68cf4af659d9e55722bf728a70c",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/105/events.jsonl",
+      "events_sha256": "e87e855ea4714bf9c75aaa0b926f621daa1e9bf158b55e57abf463239e49423b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/113/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/113/result.json",
+      "pre_scoring_sha256": "f7f64e1f2236ff473347e339f38c2836e47b41d3440f99448c599e313320b822",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/113/events.jsonl",
+      "events_sha256": "f02c434f6fa993e1c8ef38570e6663610094a8a2225290739cdd8551005f43be",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/117/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/117/result.json",
+      "pre_scoring_sha256": "71184b7fdce6238d505baadb8daa457908b6641ca9cf1dfb73b9487f7be380d7",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/117/events.jsonl",
+      "events_sha256": "05261d5d3fd73f473758158fe5511d6b86a6fc8ed7fa664ef44db84706c9c74e",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/139/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/139/result.json",
+      "pre_scoring_sha256": "cc0ee8031e4c1d0f4c6bc01533b8f4dbaf8a61cd674d33d32a7e7d373043dc40",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/139/events.jsonl",
+      "events_sha256": "33a7da1889a4335f038c4aa54cb09273b47b85b1f6a8f9219141c0b78a6bb6e2",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/267/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/267/result.json",
+      "pre_scoring_sha256": "557326c72ed714261d161af4cd48e8b632612d7244d4151f19b9d00cbb8d5ac1",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/267/events.jsonl",
+      "events_sha256": "fa314e18c505b7b761008f59b502c0eab2829cb85a1a0b9fd87e1bda4e27a875",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/273/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/273/result.json",
+      "pre_scoring_sha256": "0adb527aeff5882db47915e23e0052e7bd8e19f848c5c30f0f5fd9e562720164",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/273/events.jsonl",
+      "events_sha256": "ff16467f57ad36e90d58497f57fa4489846b25c36ee95d91bc875c6bd7acb72e",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/274/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/274/result.json",
+      "pre_scoring_sha256": "1546673950b4effa61182f5a10efaf59ad4ea2cef8761616f7a75b5678eb9a4f",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/274/events.jsonl",
+      "events_sha256": "65bc8c3eb964eec9ce31d1dea85b63cbcf53047a1a8e4c5404372b22a1f3a0ea",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/278/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/278/result.json",
+      "pre_scoring_sha256": "ef9561ef4c8edd51b6724be636dc62f0ccac7449e7e41f0c883c7561e0a981e3",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/278/events.jsonl",
+      "events_sha256": "ddd910bb496bfe3839ba622cca45e81d2d8059af5dae814ea1bc200682ad795d",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/28/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/28/result.json",
+      "pre_scoring_sha256": "728ab8c57ae1e97df2fe90d4fe6649766a8586e38d8f6e27b3380dbe6d320c68",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/28/events.jsonl",
+      "events_sha256": "9a33d98aaad9c3c7aa87dc828442d61c05894d483fa3a3b7ee34c8821c1f54ab",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/283/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/283/result.json",
+      "pre_scoring_sha256": "5fb6d14b04907eb791c67e9e60df6d7c6f74ed58a72f648118c5d9c33e2f60d7",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/283/events.jsonl",
+      "events_sha256": "71e91a383cfd8c95cb308fa52240f35d87fa42a94fc3f282c3d4ed98c5df9110",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/386/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/386/result.json",
+      "pre_scoring_sha256": "79ea36e4cc8d2ab1ae36f2b58acb6696b39ac25d863b5b0b1c76983a295882c8",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/386/events.jsonl",
+      "events_sha256": "e92868ceba7781292289fe397d223b288373679a68637b4a50bee6cf64ca7aae",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/389/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/389/result.json",
+      "pre_scoring_sha256": "1ed8bffbcfe4a36a743e88185770052b1997201baedb23601ef5b61091ae9e2c",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/389/events.jsonl",
+      "events_sha256": "791c4025387d1e2e9c16f5cc0fe3dbbe14d1de0b88bad7de7271a3b6fc1537a6",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/393/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/393/result.json",
+      "pre_scoring_sha256": "576d59d06a75694ab9533fd9d15a9b5606dd9224548a61a3ef2468bee3db7183",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/393/events.jsonl",
+      "events_sha256": "54c7a8345c4260f49858d08dfe2933b88a2c92b13a86735962a9202a59c3fe01",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/403/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/403/result.json",
+      "pre_scoring_sha256": "4b92c48168b9261ce6e8adcf72ab004fefc4c4dde17b5031b24b19b0bdf5a1c1",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/403/events.jsonl",
+      "events_sha256": "bcf71286f4d12171e868273486ae8525542706ee8ff109f1ca83ecfc8735bcfd",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/411/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/411/result.json",
+      "pre_scoring_sha256": "8e7ee866f0120dd5397fe12761f2f8c63d593e090fff9a48bff9d4469d408cf9",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/411/events.jsonl",
+      "events_sha256": "995b6c9cef15d0aa9723cb70376ad9721c0ae61789cc7ddcc5e5e37c8889bdf4",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/416/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/416/result.json",
+      "pre_scoring_sha256": "45d6e8522b40a864c4106387362050eb3a9d0e9482b983a7729064ac8bc2ab65",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/416/events.jsonl",
+      "events_sha256": "d19c7ec61c6f2b8682148008eec818a6782259dddcbecbd2542ac87a9826d299",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter3/9/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter3/9/result.json",
+      "pre_scoring_sha256": "7ae9ae96b5641ee6257304fb965ccb56f00e3ce3bb1371b277b57e90834834d9",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter3/9/events.jsonl",
+      "events_sha256": "1ad47ba82e98cfd40abccd06266f2b528dcf3822ead2d50db37442313ace9432",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/103/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/103/result.json",
+      "pre_scoring_sha256": "22f7885526ab8fc078330ad680939876c67576b5d1affd9e2c4a91ad7513ff50",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/103/events.jsonl",
+      "events_sha256": "3de82ae0c3fb3b1c7c992b0696b66f082ef8991bf7737782a612d824b594328d",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/105/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/105/result.json",
+      "pre_scoring_sha256": "649a89f7449cbcb4c1469130df2603a9cb82a993a6052e46c5a69b0547cc5f69",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/105/events.jsonl",
+      "events_sha256": "63fd3b9b7c96e624057cd2662a44266db756f776d8a92a00d366e64bf7974ac5",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/113/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/113/result.json",
+      "pre_scoring_sha256": "cd007000afa74c6ea407a885c64b8683494f1ef6bb52d9e8cce98e814ac63378",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/113/events.jsonl",
+      "events_sha256": "eef99f69547f80c3d4e88d02eccd536daa4776db08b8e1df2ae7833ccbd6a2d6",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/117/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/117/result.json",
+      "pre_scoring_sha256": "139a563b6701a59ca0f49f749dbbd62de1673bbc720cec8cc1e51d5fda07370b",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/117/events.jsonl",
+      "events_sha256": "e37017c075fdc779861df4ee5f23bd00faa958e9e7ab05dd70129ea9995fbe18",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/139/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/139/result.json",
+      "pre_scoring_sha256": "3724a7810bac8a8ae7888757471d4b83bb69d3255199a638d929b4fef2d16aaa",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/139/events.jsonl",
+      "events_sha256": "109cd67ef2edf268fbccfe7a9bec5566fc0385c832b94bbc428a0d8648b0b90b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/267/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/267/result.json",
+      "pre_scoring_sha256": "8f9e5339137ba6d90377a1ed0c625fe149298670439c2b7dbef2819fb27beac6",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/267/events.jsonl",
+      "events_sha256": "d902b546af079deda22c2d8340e6f2845359333c11e3ec2c4e3dc125760a1673",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/273/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/273/result.json",
+      "pre_scoring_sha256": "2d194012f198d7e78292db1b44644f2911cc31850b320b613eafe78455bef586",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/273/events.jsonl",
+      "events_sha256": "78b1188a7f25ac560e2970de42773e3cbac7f7e49a8ba564733f6bec9241f5fd",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/274/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/274/result.json",
+      "pre_scoring_sha256": "85a43011f30827901ec57f7f75afec47bbbe273d608ef899a16dd18dac7f816b",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/274/events.jsonl",
+      "events_sha256": "a7a49bf5fcacf4899a079d5f4fbff2d9afb4f7b1409f6348bbffc7142cfd969b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/278/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/278/result.json",
+      "pre_scoring_sha256": "0402185b127d443fc46539f2f6da8acb47f681b4174cc05fd2212fb16640513b",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/278/events.jsonl",
+      "events_sha256": "2aa240e3aeacb9b57ac41cc50f08d30cd8be48f4deb16d80895df92ef0dc0377",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/28/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/28/result.json",
+      "pre_scoring_sha256": "c20db7d0922d075a71f2d264bc6798c305da0b53f9ef31e8be9440716e8bb2ff",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/28/events.jsonl",
+      "events_sha256": "bc31ddb83aedf821699b8af811ee46d57d46a4a933cd58739e01f44c672af9a7",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/283/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/283/result.json",
+      "pre_scoring_sha256": "5becd4958b97fed1f1f2ffe08a4c6ee8e65dc67c962a27322a30ef065da1d5b9",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/283/events.jsonl",
+      "events_sha256": "40876c5784c4e23b6b70d2f5f0fcd0e6ae22a1b5547d3c1fd5bdacfce503da7f",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/386/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/386/result.json",
+      "pre_scoring_sha256": "3e2ac5cfac7bcf51741cfd12862a34b1bc9c0710c4c7becb22fbdf90b9c12a00",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/386/events.jsonl",
+      "events_sha256": "5bb803f698d199112b85c280a2f3ab79f556d9faf699e7e257b5a3aee4b6739c",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/389/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/389/result.json",
+      "pre_scoring_sha256": "3dd78ba0506d2f5891a80142a53a8e01edfc5b3aed0e8dece44e8ae7c1e0d19c",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/389/events.jsonl",
+      "events_sha256": "39e355dfa754dfc96b066c38ac1e4b6aa80e5976a1e788f16b886d0655db43b0",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/393/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/393/result.json",
+      "pre_scoring_sha256": "2eb544fea36b0ef8627f0934d511d9dfff2b31f810107fb597a9f49717e00dd9",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/393/events.jsonl",
+      "events_sha256": "c07cd8f73446be00392c60fe2d904d8f91aecdc6d9643b4e838a9b0052cae2c7",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/403/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/403/result.json",
+      "pre_scoring_sha256": "592ffa64f5daf651566f5081f9e4968773ceacf6b42a8d0c8b5fae6f359df07e",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/403/events.jsonl",
+      "events_sha256": "4d9a368dfa3dc79b8047e2f0540382f441c78761db34349a703daf79ade34890",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/411/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/411/result.json",
+      "pre_scoring_sha256": "1c1405aaa3ceb394404796d01a4d075c84433f0fec5e54281b8ab2c2b8289d86",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/411/events.jsonl",
+      "events_sha256": "d43087f193b94895b9eee71799fdd5191b5d7745b877456853b7bc7562678489",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/416/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/416/result.json",
+      "pre_scoring_sha256": "64e35ba1dfba7443512b960006fc826aa8ae7046bbbc22ad6ee7e4178703de9c",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/416/events.jsonl",
+      "events_sha256": "7caa8655da7864769157d10ac946d1e4dcd350b65aa039843f950d0935f4a486",
+      "raw_failure_source": "runs/final-r3/repeat-0/selective_patch/iter5/416/failure-record.json",
+      "raw_failure_sha256": "4a1306245504dd63c2f4ca324d77a1f3cf214d874d9a20833d4c0424801d7470"
+    },
+    {
+      "episode": "repeat-0/selective_patch/iter5/9/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/iter5/9/result.json",
+      "pre_scoring_sha256": "98be6afe2acd09c216af321c6b8f4b833c01b66d2e8d279f7671d35f8fc3413b",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/iter5/9/events.jsonl",
+      "events_sha256": "a2db4a2cf3eb2a0f913f4b5a5446e07b889b8ec01b800b23d26d4f667c7b3ab6",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/103/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/103/result.json",
+      "pre_scoring_sha256": "58b828f7cc7e2877e3ffa75534e09f35bd4e2f79cd183a96ddd6a3d41e45def0",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/103/events.jsonl",
+      "events_sha256": "02b54575420e85fb78e2e8f9f4e406f2d04166ee9ee1afdea891e3e6509923e2",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/105/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/105/result.json",
+      "pre_scoring_sha256": "1b9dfd1eed313e269c6cfb222739a980331e7fc8a30abaf7361f8ad0927b32a9",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/105/events.jsonl",
+      "events_sha256": "d5eb811c016eedded4cd4ffea85777cadfe19e6fecd339ceec8d1600cf00cb33",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/113/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/113/result.json",
+      "pre_scoring_sha256": "fe6e1fc26473a28fe509e77add9d5adff7f202e17e91ae5e241b4290cec0c5e3",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/113/events.jsonl",
+      "events_sha256": "03a55c1ef51793f9f375c6a09f551cee0de897416fdeb7ec71db2ae99a4710a7",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/117/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/117/result.json",
+      "pre_scoring_sha256": "bcfdf005a83781bb83891adaeb9f18d6fc43ecf2370e547c80296dc5307bbe6c",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/117/events.jsonl",
+      "events_sha256": "0ab4360f94bcde0590915110e794442336bc940aeff549b4cd5fe439b9d05e3b",
+      "raw_failure_source": "runs/final-r3/repeat-0/selective_patch/original/117/failure-record.json",
+      "raw_failure_sha256": "1331d7b8ea8857f54e51bc4fff95a5e4aac002ba47b3130c70e389d27e4fbed1"
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/139/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/139/result.json",
+      "pre_scoring_sha256": "86827859bd79ed49e038d24a71d8e702b48524fd371dfea0ce200612ff0d9bea",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/139/events.jsonl",
+      "events_sha256": "3d8ffef6db372adcbe65a0dcce8cc7c6fcef9dfe8e4ae7a6f4709b7a63eb08ef",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/267/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/267/result.json",
+      "pre_scoring_sha256": "6d0a5d164367199bcc17e7d7543d810d38f88d44256d6fe42c33172f82959958",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/267/events.jsonl",
+      "events_sha256": "9ac1684efc3d50c731dc6b0f9330b1d60fc72ae01f33bec8b3b1940cbfbf06b9",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/273/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/273/result.json",
+      "pre_scoring_sha256": "45771c84f49352b9a690fa09ba7ca9569858821996c8d7b2130480949dc0ecb6",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/273/events.jsonl",
+      "events_sha256": "807916ff445683c8b4c1cf1a218a76c2c64d0b3f1b9fce24308094c5ee12b28f",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/274/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/274/result.json",
+      "pre_scoring_sha256": "b51abd7d4285b28c969b81df7db1d2308adf3030eb7f703d8179199329c5b431",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/274/events.jsonl",
+      "events_sha256": "3e0574df9c7fda762c936f5be23edac5921f56aaab0a320bedcab24e403d9c54",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/278/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/278/result.json",
+      "pre_scoring_sha256": "193bdec1dcc179f4d7ab2286a8463a76eb9d24bba11c0a7531a3f9e24e95e80f",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/278/events.jsonl",
+      "events_sha256": "ead38cccb87ef2da67d18c300fa3270b8c3fc13d6a5ebba1e54c3e124dbf8c7b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/28/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/28/result.json",
+      "pre_scoring_sha256": "6693a126814183373e3e072c6e1a5789b32c0365f0b90d75faaac37cf8c880dc",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/28/events.jsonl",
+      "events_sha256": "dfeebe96cf456e33a2fc3bc40d0c0d52a8fa0a9c3bfdbd174219d15ba9150434",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/283/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/283/result.json",
+      "pre_scoring_sha256": "f05f004acebf199ee2d159d59f366dbaf974422ee3d44fb9355b3d86d0bb3313",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/283/events.jsonl",
+      "events_sha256": "110889d2178d76ebc60227099d31ca49095c80bfed090081c0de3a1d9f74261a",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/386/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/386/result.json",
+      "pre_scoring_sha256": "c4ab65646f5c41ca04e07bc7b8c964d5454116c54d2afbce202f122429c48449",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/386/events.jsonl",
+      "events_sha256": "9304a93d6914b61a92685d4a6ecb4f7f96c53f5f5afd167bd5616a2e08534d29",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/389/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/389/result.json",
+      "pre_scoring_sha256": "2493819e6d9292250653cfe3689ce8461f20048d02a63791413e2c8bd2a6575c",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/389/events.jsonl",
+      "events_sha256": "b22d0afc98e445e05c3b5eb22d9216f875d3d28ce267efa075ebb10de55435d6",
+      "raw_failure_source": "runs/final-r3/repeat-0/selective_patch/original/389/failure-record.json",
+      "raw_failure_sha256": "a6ace730c1a2bbd848c9cca95a2f7ae12c116daf38880a6ffe566b5eeccf7829"
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/393/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/393/result.json",
+      "pre_scoring_sha256": "1847a177830d8ce6df879320ee69593e3574c4152d6306b9f7ff6e3a718710b2",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/393/events.jsonl",
+      "events_sha256": "2b534942684fe8b1d3a77601a286771ab6142044cbf6dd86cced4c53e2e2f497",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/403/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/403/result.json",
+      "pre_scoring_sha256": "5152d8ddf66f0676544221c4a1b779a8992e0ca51c90085c7d9e7d5637161946",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/403/events.jsonl",
+      "events_sha256": "b670010b389d2264e41c65553868fb95868316358c83ca8f32b37082330ae79b",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/411/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/411/result.json",
+      "pre_scoring_sha256": "772b048f5ab468c29e467a00f6be5e5a3002837a04c9617c2aee96001059fdce",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/411/events.jsonl",
+      "events_sha256": "f7160997cb2a1aa5a1b503f18dd864295bd26ce528523e2b363d82b54181cb0f",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/416/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/416/result.json",
+      "pre_scoring_sha256": "1af184152229aa888877466d535bd35aed7f15f098a4a151a46c2206f765a276",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/416/events.jsonl",
+      "events_sha256": "504d7bee1e8201a55deba50104058b3e3442dd775ab252de84394e798f9e4018",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    },
+    {
+      "episode": "repeat-0/selective_patch/original/9/result.json",
+      "pre_scoring_source": "runs/final-r3/repeat-0/selective_patch/original/9/result.json",
+      "pre_scoring_sha256": "404e86faca56af33f3d5143cd820191373f6f6866b3fe856eb54caa85efd4db5",
+      "events_source": "runs/final-r3/repeat-0/selective_patch/original/9/events.jsonl",
+      "events_sha256": "c14de9e3c5e7003afedf7151a71853955f09bf2bbca4a1a164018f0b66d796d2",
+      "raw_failure_source": null,
+      "raw_failure_sha256": null
+    }
+  ],
+  "scope": "All 162 normalized actor records and closed event traces. Prefer an already-created pre-scoring agent-record archive; otherwise use the still-unscored result. Raw infrastructure failure files are indexed separately. No model call, rescoring or raw-record write."
+}
