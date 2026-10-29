@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T09:35:14+08:00",
+  "collected_at": "2026-10-29T09:51:37+08:00",
   "phase": "scoring",
   "message": "第3轮评分，保留已有评分和执行证据",
   "rounds": [
@@ -33,13 +33,13 @@
       "name": "final-r3",
       "expected": 162,
       "found": 162,
-      "scored": 4,
+      "scored": 39,
       "failures": 5,
       "missing": 0,
       "issues": [],
       "status_counts": {
-        "evaluated": 4,
-        "awaiting_judge": 158
+        "evaluated": 39,
+        "awaiting_judge": 123
       },
       "complete": false
     }

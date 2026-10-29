@@ -1,0 +1,71 @@
+{
+  "verified_at": "2026-10-29T09:39:12+08:00",
+  "failure_count": 5,
+  "all_five_match_complete_execution_snapshot": true,
+  "all_four_previously_frozen_failures_preserved": true,
+  "snapshot_sha256": "4d06a8452d8cd686585cccca40be4cf991ca0d212153011047e38de176ee2d39",
+  "earlier_live_review_sha256": "c06ce01d1d4273fef5646e9f27be1f015ff5f681ab6c6b340f7832bb9b6812dd",
+  "records": [
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/iter5/117/failure-record.json",
+      "sha256": "c3d375a4b91e38db5888f8624c2d6d522916b847a2551cf108bdf6c62275fd4a",
+      "matches_complete_execution_snapshot": true,
+      "matches_earlier_live_freeze": true,
+      "first_independent_hash_after_finalization": false,
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "normalized_messages": 8,
+      "answer_nonempty": false,
+      "adaptation_status": "ok",
+      "retained_agent_calls": 3
+    },
+    {
+      "source": "runs/final-r3/repeat-0/no_update/iter3/389/failure-record.json",
+      "sha256": "73795e904581d1670a86e13e12ee43e2d469396bd9e2ab15c561cc5ab9cbae0a",
+      "matches_complete_execution_snapshot": true,
+      "matches_earlier_live_freeze": true,
+      "first_independent_hash_after_finalization": false,
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "normalized_messages": 6,
+      "answer_nonempty": false,
+      "adaptation_status": "ok",
+      "retained_agent_calls": 2
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/iter5/416/failure-record.json",
+      "sha256": "4a1306245504dd63c2f4ca324d77a1f3cf214d874d9a20833d4c0424801d7470",
+      "matches_complete_execution_snapshot": true,
+      "matches_earlier_live_freeze": null,
+      "first_independent_hash_after_finalization": true,
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "normalized_messages": 8,
+      "answer_nonempty": false,
+      "adaptation_status": "ok",
+      "retained_agent_calls": 3
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/original/117/failure-record.json",
+      "sha256": "1331d7b8ea8857f54e51bc4fff95a5e4aac002ba47b3130c70e389d27e4fbed1",
+      "matches_complete_execution_snapshot": true,
+      "matches_earlier_live_freeze": true,
+      "first_independent_hash_after_finalization": false,
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "normalized_messages": 8,
+      "answer_nonempty": false,
+      "adaptation_status": "initial",
+      "retained_agent_calls": 3
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/original/389/failure-record.json",
+      "sha256": "a6ace730c1a2bbd848c9cca95a2f7ae12c116daf38880a6ffe566b5eeccf7829",
+      "matches_complete_execution_snapshot": true,
+      "matches_earlier_live_freeze": true,
+      "first_independent_hash_after_finalization": false,
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "normalized_messages": 6,
+      "answer_nonempty": false,
+      "adaptation_status": "initial",
+      "retained_agent_calls": 2
+    }
+  ],
+  "scope": "Five raw failure copies retained. The last selective_patch/iter5/416 was first independently hashed after finalization; no earlier independent pre-finalization hash is claimed. No retry, rescoring or raw-record change. Infrastructure_error is the program status, not proof of a hardware root cause."
+}

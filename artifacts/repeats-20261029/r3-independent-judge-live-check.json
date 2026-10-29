@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-29T09:36:00+08:00",
+  "round": "final-r3",
+  "phase": "scoring",
+  "model_ids": [
+    "qwen2.5-7b-judge"
+  ],
+  "n_ctx": 24576,
+  "build_info": "b11900-74b104c9b",
+  "generation_settings_equal_actual_start": true,
+  "generation_settings_sha256": "8c17481a64d0b517f6989735858917413ad1b203c669f181bde10f3f51944422",
+  "start_receipt_sha256": "21431230a512d27efb6882896fa7542646b66d5fe2fe0f99cb7a1d1fecff5ca5",
+  "read_only_endpoints": [
+    "/props",
+    "/v1/models"
+  ],
+  "no_inference": true
+}
