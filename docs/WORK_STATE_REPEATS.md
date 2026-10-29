@@ -177,3 +177,23 @@ repeat_pair_comparison.py已补充每条old/R3配对中的同题同版本no_upda
 09:04续接：controller40048和只读会话46604经实际句柄持续存活；R3现156/162保存、0评分、4异常，最后任务416的no_update三个版本已自然保存，剩余full/selective六个组合。09:00:53还实读到Late的step10，随后09:01保存，未重跑。09:03:57进度提交59abaca4b9f26f1359f63f1b1a9693e865f33090已远端逐文件核验，当前无progress-publication-error.json。目标仍active，是真实执行进展/已确认进程等待，不是blocked；全部评分、独立judge收据、完整输入/评分/证据核验、两脚本最终发布与条件性配对分析待办照旧，不能提前complete或重启。
 
 09:24续接：同一controller40048及会话46604实际Windows句柄仍存活，R3已159/162保存、0评分、4异常。最后任务416的no_update和full_rewrite六个组合均已自然保存，只剩selective_patch三个版本，不重跑、不更改配置。新进度提交b101acc56d23a091d54667ea813bf31d607d9053在09:20:09远端逐文件核验；其真实快照为09:19:01、157保存/0评分/4异常，不能把公开157说成本地随后159。现有公开说明及运行收据的wxid_/xwechat_files只读检索无匹配，仅是该范围检查，最终证据包仍须完整敏感信息检查。当前属真实记录增加与已确认进程等待，goal active；两个自有分析脚本仍未加入白名单，R3judge尚未启动，所有评分、162输入、54公平组、27案例、ZIP和发布终审待办继续有效。下轮先续46604，实际切换评分后保存真正的独立R3judge收据，不能拿R2全局judge收据替代。
+
+## 2026年10月29日0951评分阶段交接
+
+R3已于09:32:38完成全部162条执行并由原管理器整理失败、执行审计通过，recorded_invariants_pass=true、issues=[]、missing=[]；尚未全评分，complete_and_evaluated=false不是执行缺失。最终5条异常：先前4条之外新增selective_patch/iter5/416，保留3次模型调用、8条重建消息、空回答、adaptation.status=ok，泛化ExceptionGroup不能直接认定硬件根因。原actor已结束，不能再启动repeat_runner。controller40048仍运行；同一只读观察会话46604有效，09:51看到37/162有效评分、5异常。管理器记录的评分启动器child_pid=45596；若观察丢失仍先完整CIM确认，不凭state/lock重启。
+
+新judge确实于09:32:53核验并开始评分，24576容量、qwen2.5-7b-judge、build b11900-74b104c9b。09:33:46独立按字节复制为r3-judge-start-runtime.json，SHA21431230a512d27efb6882896fa7542646b66d5fe2fe0f99cb7a1d1fecff5ca5，provenance为r3-judge-runtime-preservation.json。09:36还实际GET本机/props、/v1/models，确认身份、容量和完整default_generation_settings与启动收据一致，无模型生成请求，见r3-independent-judge-live-check.json；保留默认设置和逐请求解码覆盖的区别，不把服务端默认temperature当实际请求值。
+
+09:33:15在有效评分仍为0时，对全162条闭合执行数据生成r3-execution-freeze.json（SHA4d06a8452d8cd686585cccca40be4cf991ca0d212153011047e38de176ee2d39）：优先用已创建的agent-record，否则用尚未评分result，记录全部pre_scoring_sha256、events_sha256及5份raw_failure_sha256。这不等于“评分模型尚未发出首个请求”，实际judge已09:32:53开始；以后只能称当时有效评分0的完整执行快照。最终所有162份agent-record及事件须逐字节匹配本快照，才可宣称执行证据未变。
+
+09:34完整162条实际输入核查全部通过：config/task_ids/coverage/inventory_hashes/source_hashes/split均相同，资源清单162匹配、0差异、0不可用；r3-input-compatibility-final-execution.json。新增within-round-input-fairness-final.json覆盖三轮各54组：原轮0差异、R2全54组差异、R3 0差异，旧部分检查文件保留原样。R2仍独立，不能强合486。R3最终可比性仍需全部评分/实际调用参数及后续证据核验，不能只凭这些输入检查提前完成。
+
+09:39生成r3-failure-preservation-verification.json，5份failure-record均匹配09:33全量快照，先前4份也匹配此前live冻结SHA；新416/Late首次独立哈希在finalize之后，没有更早独立哈希，文件中明确说明。新增原件SHA4a1306245504dd63c2f4ca324d77a1f3cf214d874d9a20833d4c0424801d7470。不能把5条失败说成4条，也不以技术status直接归因策略或硬件。全部失败评分后另核对它们的原评分与实际轨迹，不改分；新416不在预先27案例中，独立失败核查不算额外实验。
+
+两个自己新增的未跟踪分析脚本仍待controller真正exit后加入repeat_publish.py的allowed和paths再公开，绝不并发Git。repeat_pair_comparison.py新增input_fairness()（已实际对三轮完整数据运行成功）与verify_execution_freeze()（需全部agent-record产生后运行，不能提前验证全162）。最终generate会再次做全54组公平性与全162执行快照核对，并逐条检查old/R3的模型、解码、指纹、judge零消息删减，条件全过才生成324视图。没有变更冻结核心/模型/评分。源码已语法编译；完整数据生成与独立复算仍待完成。
+
+09:36:32的进度提交27874e23781a8688d06316feb09ea40b9ad7d393已远端逐文件核验，last-publish明确包含执行快照、R3judge独立原字节收据/保存说明、162输入全核查和54组公平性最终核查；当时尚不含09:36实际GET独立证明和09:39失败保存证明，它们等下次心跳，不能说已经上传。09:41已更新兼容性alert为当前执行完毕/评分中，并保留message_history和initial_message。当前goal active，有实质新执行、验证与已确认进程等待，不是blocked/complete。
+
+后续重点：续46604等同一评分进程；预选27条全评分后运行case_score_table_r3.py一次，核对原件/事件/实际产物并解释原评分与实际失败，不伪造成员复核；全162评分后做指纹/输入/成本独立核验、5异常评分核查、新ZIP完整逐条SHA/CRC（包括旧序列化副本72272795...）、Release/远端和实际R3gate导出。controller exit0后再发布两脚本、条件允许的old+R3对照及最终逐项核对；仍不强合486，不加第三个新轮，不更新旧主分支/旧Release，不提前goal complete。
+
+09:57补充：同一实际句柄确认controller40048继续scoring，R3已49/162有效评分、全部162执行、5异常，无重跑。09:52:55提交75cf83b944b7b64d831da07abfbd4b17d431f06f已远端逐文件核验，last-publish明确确认r3-independent-judge-live-check.json与r3-failure-preservation-verification.json均已上传；此前09:36“不含”的说明仅历史快照。新pair脚本真实--check-ready在09:56返回false（48评分、R3发布门未产生），没有生成最终对照，正确保留全范围目标；目前是持续评分与验证进展，不是blocked/complete。先继续46604，等预选27条全评分再跑私有case_score_table_r3.py一次；五条异常的评分核查也待分数全部出现。两个未跟踪自有分析脚本仍需管理器实际退出后加入发布名单再发布，全部最终指纹、ZIP、gate、比较与完成审计任务继续有效。
