@@ -97,6 +97,16 @@ runtime/report-venv/Scripts/python.exe scripts/plot_results.py runs/final-v1 --o
 
 The script independently recomputes and checks scores before plotting; incomplete or unscored runs are rejected. It exports PNG, editable SVG and the exact plotted values in `figure-data.json`. The plot uses the full 1–10 score range and states the task and repetition counts. Development layout previews require `--development`, are visibly labeled, and belong in `tmp/`, not the submitted formal figures.
 
+## Report and submission packaging
+
+The PDF in the original release is the preserved original-round publication. To generate a new PDF from the current report source, use the optional report environment:
+
+```powershell
+runtime/report-venv/Scripts/python.exe scripts/render_report.py docs/REPORT.md output/pdf/PE6203_Project4_Report.pdf
+```
+
+Review the generated PDF before publishing it. `scripts/build_submission.py` packages the report, code and saved evidence after its completeness checks. Existing release attachments remain historical evidence and are not replaced by documentation cleanup.
+
 ## Judge capacity amendment
 
 Complete pre-scoring inspection found four main prompts exceeding the original 16,384-token reserved budget (largest estimate 20,317). The formal judge uses 24,576 tokens uniformly, as recorded in `configs/judge-capacity.json`. Use `scripts/judge_with_capacity.py RUN_DIRECTORY` for scoring. It checks the live server capacity, preserves the official prompt and all actor evidence, records the amendment, and skips existing evaluated records. Actor/updater capacity remains 16,384; core source is unchanged.

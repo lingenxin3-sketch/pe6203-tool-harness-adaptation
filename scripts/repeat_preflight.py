@@ -19,7 +19,7 @@ def stamp(): return datetime.now(timezone(timedelta(hours=8))).isoformat(timespe
 def main():
     DEST.mkdir(parents=True,exist_ok=True)
     baseline=ROOT/'runs/final-v1'; m=json.loads((baseline/'manifest.json').read_text(encoding='utf-8'))
-    result={'collected_at':stamp(),'baseline':'runs/final-v1','guide_sha256':sha(ROOT/'docs/追加实验/执行指南.md'),
+    result={'collected_at':stamp(),'baseline':'runs/final-v1','protocol_hashes':{p:sha(ROOT/p) for p in ['docs/EXPERIMENT_PROTOCOL.md','docs/追加实验/冻结与故障协议.md']},
             'config_matches_original':json.loads((ROOT/'configs/experiment.json').read_text())==m['config'],
             'baseline_audit':audit(baseline),'baseline_manifest_sha256':sha(baseline/'manifest.json'),
             'dependencies':[], 'servers':[],

@@ -12,6 +12,7 @@ from repeat_common import *
 
 REPO='lingenxin3-sketch/pe6203-tool-harness-adaptation'
 PUBLIC=ROOT/'docs/追加实验'; RECEIPTS=ROOT/'artifacts'/CAMPAIGN
+INTERNAL_DOCUMENTS = {'docs/SUBMISSION_GUIDE_ZH.md', 'docs/DEMO_GUIDE_ZH.md', 'docs/TEAM_PLAN_ZH.md', 'docs/WORK_STATE_REPEATS.md', 'docs/追加实验/执行指南.md'}
 def cmd(*args):
     p=subprocess.run(list(map(str,args)),cwd=ROOT,capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=180)
     if p.returncode:raise RuntimeError('Command failed: '+str(args[:2])+' '+p.stderr[-1200:]+' '+p.stdout[-1200:])
@@ -19,13 +20,16 @@ def cmd(*args):
 def sensitive(data):
     patterns=[rb'gh[pousr]_[A-Za-z0-9_]{30,}',rb'github_pat_[A-Za-z0-9_]{30,}',rb'sk-[A-Za-z0-9_-]{30,}',rb'hf_[A-Za-z0-9]{30,}',rb'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----']
     return any(re.search(p,data) for p in patterns)
-def allowed(name):return name.startswith('docs/追加实验/') or name.startswith('artifacts/'+CAMPAIGN+'/') or name in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','scripts/repeat_pair_comparison.py','scripts/repeat_original_context_audit.py','scripts/repeat_verify_archive.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md']
+def allowed(name):
+    if name in INTERNAL_DOCUMENTS:return False
+    return name.startswith('docs/追加实验/') or name.startswith('artifacts/'+CAMPAIGN+'/') or name in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','scripts/repeat_pair_comparison.py','scripts/repeat_original_context_audit.py','scripts/repeat_verify_archive.py','tests/test_repeats.py']
 def publish(message):
     if cmd('git','branch','--show-current')!=BRANCH:raise RuntimeError('Branch changed; refusing publication')
     staged=cmd('git','diff','--cached','--name-only','-z').split('\0')
     if any(n and not allowed(n) for n in staged):raise RuntimeError('Other staged work exists; preserve it and stop')
     paths=[p for d in [PUBLIC,RECEIPTS] for p in d.rglob('*') if p.is_file() and p.suffix in ['.md','.json','.csv']]
-    paths += [ROOT/p for p in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','scripts/repeat_pair_comparison.py','scripts/repeat_original_context_audit.py','scripts/repeat_verify_archive.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md'] if (ROOT/p).is_file()]
+    paths += [ROOT/p for p in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','scripts/repeat_pair_comparison.py','scripts/repeat_original_context_audit.py','scripts/repeat_verify_archive.py','tests/test_repeats.py'] if (ROOT/p).is_file()]
+    paths = [p for p in paths if p.relative_to(ROOT).as_posix() not in INTERNAL_DOCUMENTS]
     for p in paths:
         if p.stat().st_size>20_000_000 or sensitive(p.read_bytes()):raise RuntimeError('Size/privacy check failed: '+str(p.relative_to(ROOT)))
     cmd('git','add','--',*[p.relative_to(ROOT).as_posix() for p in paths]);cmd('git','diff','--cached','--check')
@@ -67,7 +71,7 @@ def status(phase,message,extra=''):
         '','第一轮新增完成评分、162 条审计、证据发布及远端验证后才启动第二轮。12:00 是争取目标；若届时尚未启动第二轮则不自动启动，等待团队决定。',
         '','固定 seed=6203、temperature=0，重复反映相同设置下的执行稳定性，不等于独立采样或统计显著性。',
         '','旧 PDF、原结果表和六人演讲稿仍是原轮版本。原依赖扩展对照仍为单次辅助实验，不并入主实验重复。',
-        '','[冻结与故障协议](冻结与故障协议.md)　[执行指南](执行指南.md)', '',extra]
+        '','[冻结与故障协议](冻结与故障协议.md)　[实验协议](../EXPERIMENT_PROTOCOL.md)', '',extra]
     for i in [2,3]:
         if (PUBLIC/f'第{i}轮结果.md').exists():lines.append(f'[第{i}轮结果](第{i}轮结果.md)')
     alert=RECEIPTS/'compatibility-alert.json'
