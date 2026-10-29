@@ -1,7 +1,7 @@
 {
-  "collected_at": "2026-10-29T10:54:08+08:00",
-  "phase": "round_published",
-  "message": "第3轮已评分、发布且远端验证通过",
+  "collected_at": "2026-10-29T10:55:29+08:00",
+  "phase": "completed",
+  "message": "新增两轮已逐轮评分、核验、发布；三轮汇总仅在可比时提供",
   "rounds": [
     {
       "name": "final-v1",
