@@ -10,7 +10,7 @@ from analyze_comparisons import compare
 
 ROOT = Path(__file__).resolve().parents[1]
 
-SOURCE_DIRECTORIES = ['tool_adapt', 'scripts', 'tests', 'configs', 'artifacts', 'docs', 'output/pdf', 'archive']
+SOURCE_DIRECTORIES = ['tool_adapt', 'scripts', 'tests', 'configs', 'artifacts', 'docs', 'output/pdf', 'archive', 'contributions']
 ROOT_FILES = ['README.md', 'pyproject.toml', 'requirements-lock.txt', 'requirements-report.txt', '.gitignore']
 INTERNAL_DOCUMENTS = {
     'docs/REPORT_DRAFT.md', 'docs/WORK_STATE.md', 'docs/TEAM_PLAN_ZH.md',
@@ -41,7 +41,8 @@ def collect():
         if not result['complete_and_evaluated']:
             raise ValueError(f'{name} is incomplete or failed invariant checks')
     compare(ROOT/'runs/final-v1', ROOT/'runs/ablation-v1')
-    for name in ['docs/REPORT.md', 'output/pdf/PE6203_Project4_Report.pdf']:
+    for name in ['docs/REPORT.md', 'output/pdf/PE6203_Project4_Report.pdf',
+                 'output/pdf/PE6203_Project4_Final_Report.pdf']:
         if not (ROOT/name).is_file():
             raise FileNotFoundError(f'Final reviewed report missing: {name}')
     files = source_files()

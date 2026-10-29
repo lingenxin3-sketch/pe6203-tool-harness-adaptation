@@ -1,0 +1,39 @@
+{
+  "report_date": "2026-10-29",
+  "evidence_ref": "25805e942c422a8d7cf1d736e5d2647b76ec2125",
+  "main_records": 486,
+  "comparable_records": 324,
+  "distinct_tasks": 18,
+  "comparable_repeats_per_configuration": 2,
+  "excluded_from_pool": "repeat-r2-20261029",
+  "source_canonical_json_sha256": {
+    "comparison": "a705517f7665aad45cabedc139c5b3111dbd1268ff79615cb93d2ebf3483f422",
+    "r2": "29849cf77664753ae6337cc9da21d92ccac5a55d7cb1855f8a2dbd60cef3bc13",
+    "r3": "8a95cdb473c78435370c760edf4b096eaaf8bbc031e4530147ba66316ae78ad4"
+  },
+  "strategies": [
+    {
+      "strategy": "no_update",
+      "ecs_mean": 5.604516920104675,
+      "ecs_sample_sd": 0.9557790004869864,
+      "update_tokens": 0,
+      "total_recorded_tokens": 6816584
+    },
+    {
+      "strategy": "full_rewrite",
+      "ecs_mean": 5.289388662976975,
+      "ecs_sample_sd": 0.07121991880975377,
+      "update_tokens": 208898,
+      "total_recorded_tokens": 6342924
+    },
+    {
+      "strategy": "selective_patch",
+      "ecs_mean": 6.242467263330612,
+      "ecs_sample_sd": 0.12731324794738613,
+      "update_tokens": 72898,
+      "total_recorded_tokens": 6699203
+    }
+  ],
+  "update_token_saving_percent": 65.10354335608766,
+  "total_recorded_token_increase_percent": 5.616952055550395
+}

@@ -1,5 +1,6 @@
-# Original report PDF (historical)
+# Report versions
 
-`PE6203_Project4_Report.pdf` is the preserved 27 October 2026 original-round report, covering 162 main episodes and 6 supplementary component-comparison episodes. Its text, tables and figure do not include the two added rounds. The PDF and the original v1.0.0 release attachment have not been replaced.
+- [Integrated final report - 29 October 2026](PE6203_Project4_Final_Report.pdf): three independently reported rounds (486 scored episodes), the declared R1+R3 comparison (324 observations), recovery/retention, phase-specific costs and current case analysis. Current source: [docs/REPORT.md](../../docs/REPORT.md).
+- [Original report - 27 October 2026](PE6203_Project4_Report.pdf): preserved original-round publication (162 main episodes and 6 supplementary episodes). Its bytes and original v1.0.0 release attachment remain unchanged. The [historical Markdown source](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/78254c420692cd21745c1c0d28af82f6fe28991f/docs/REPORT.md) is available at the prior commit.
 
-For the completed repeats, exclusions, cost caveats and evidence downloads, read the [final results](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md). Only the original round and second added round form the 324-observation descriptive comparison; there is no three-round pooled claim. Source annotations added to `docs/REPORT.md` after the original publication do not imply that this PDF was regenerated.
+The integrated report does not pool all three rounds: R2 remains separate because actual input lists differ. Update-token savings of 65.1% are not total-token savings; recorded total tokens are 5.6% higher for selective patch than full rewrite in the comparable two-round analysis. All original scores and negative results remain preserved.

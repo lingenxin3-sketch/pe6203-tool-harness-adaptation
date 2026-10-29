@@ -6,6 +6,9 @@ PE6203 Group Project 4：使用官方 MCPEvol-Bench，比较工具升级后“�
 
 ## 最新结果与证据
 
+- [最新完整报告（PDF，8页）](output/pdf/PE6203_Project4_Final_Report.pdf) · [报告源文稿](docs/REPORT.md)。
+- [六人实质工作与集合包](contributions/README.md)：a—f任务、学习内容、文件归属和下载入口；当前为计划分工，实际贡献待成员完成后记录。
+
 - [最终结果与核验](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md)：三轮概况、可比范围、失败与证据下载。
 - [原轮与第二新增轮的可比对照](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/原轮与第二新增轮对照.md)：TF、PE、ECS、成本与逐条来源。
 - [安装与复现](docs/REPRODUCTION.md) · [课程要求与证据对照](docs/REQUIREMENTS_EVIDENCE_ZH.md) · [18个任务的产物核查标准](docs/TASK_REVIEW_GUIDE_ZH.md)。
@@ -20,7 +23,7 @@ PE6203 Group Project 4：使用官方 MCPEvol-Bench，比较工具升级后“�
 
 该可比对照中，选择性更新的 ECS 轮均值为6.242，不更新5.605、全部重写5.289；选择性更新比全部重写少用65.1%的**更新 token**，但执行、更新和评分三阶段已记录总 token **增加5.6%**。这支持“减少更新工作量”，不证明总成本下降或任务效果普遍更好。ECS 衡量跨版本得分保持，不等于成功率。
 
-原英文报告、PDF、结果表及图只覆盖原单轮，作为历史版本保留，不能用它们代表三轮总结：[原轮报告](docs/REPORT.md) · [原轮PDF说明](output/pdf/README.md) · [原轮结果表](artifacts/final-result-tables.md) · [原轮图表说明](artifacts/figures/README.md)。
+最新正式报告已整合三轮独立结果、324条可比对照、恢复保持、分阶段成本和最新案例。原单轮材料作为历史版本保留：[原轮PDF](output/pdf/PE6203_Project4_Report.pdf) · [报告版本说明](output/pdf/README.md) · [原轮结果表](artifacts/final-result-tables.md) · [原轮图表说明](artifacts/figures/README.md)。
 
 ## 系统实现
 
@@ -102,4 +105,4 @@ flowchart TB
 
 官方基准：[MCPEvol-Bench](https://github.com/Octobrist/MCPEvol-Bench)。
 
-本项目由AI协助代码开发、文档整理和证据核查。AI辅助核查不等于成员独立复核；个人贡献须依据实际完成的工作记录，目前未填写成员个人贡献声明。
+本项目由AI协助代码开发、文档整理和证据核查。AI辅助核查不等于成员独立复核；六人计划责任见`contributions/`，各包明确共同来源；个人贡献须依据本人实际完成的核查、分析或修改记录，当前不预填完成声明。
