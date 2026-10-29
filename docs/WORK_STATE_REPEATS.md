@@ -141,3 +141,15 @@ original-public-evidence-verification.json保留all_original_raw_evidence_matche
 07:25:40实际逐条比较已落盘110条R3与旧轮的第一轮模型请求资源清单，110条均一致、无不可用输入，config/task_ids/coverage/inventory_hashes/source_hashes/split全通过。r3-live-input-compatibility.json明确部分检查，不能提前称162完整可比；最终还须评分/运行条件/全量资源清单复核。
 
 07:26:38提交2afd4e317336e2adf3c9280f807a2c9968d7bfda已远端逐文件核验，已包含r3-long-trace-context-check.json与before-0800-progress-verification.json。因110条输入核查在该次路径收集之后生成，r3-live-input-compatibility.json尚未在此提交内，待下一心跳；不可误称它已上传。R2已完成交付、R3继续执行、评分未开始的状态不变。R3实际进入scoring时保存真正的r3-judge-start-runtime.json；不要提前复制仍属于R2的全局judge运行收据。
+
+## 2026年10月29日0818续接补充
+
+同一controller40048及只读观察会话46604继续运行，08:17实际R3为148/162保存、0评分、4执行异常，原始记录没有重跑。最新进度提交b542c7bcb274642d34c573c8b1e4ff76db3affa8在08:15:16逐文件远端核验。07:59:06的555b2b2376023fca3ce18192023c47221fa10790也已核验，08:00前真实发布要求此前已满足，不把尚未完成的R3称为完成。
+
+新增只读核验scripts/repeat_original_context_audit.py，已对真实旧公开ZIP和原件成功运行，生成original-effective-context-verification.json：旧162条judge调用中前39条没有context_limit字段，使用16384客户端检查，后123条为24576 adapter；不是所有客户端实现相同。但旧公开artifacts/judge-runtime.json、首个judge.stderr启动行及两次故障恢复收据证实服务器从首条评分开始就是24576。前39条最长预留15505<16384，162条dropped_messages均为0，且前39条SHA与原故障归档一致，故保留评分输入未被该检查差异删减。报告effective_context_check_pass=true与client_guard_identical_for_every_original_call=false同时保留。旧评分服务两次失败未返回的调用成本仍未知；不能把它们计为0。冻结协议已补充说明，等待下次心跳上传。
+
+新脚本首次诊断时发现第二次恢复收据没有顶层context，应读取server_generation_settings.n_ctx；在没有生成输出时修正，随后真实核验成功。它仅只读ZIP/原件，没有模型请求或实验输出写入，这不是新增实验异常。配对脚本已引入该只读验证，并逐条检查old/R3的model、temperature、seed、max_tokens、backend fingerprint及judge零删减；真实--check-ready仍false，因为R3尚未全评分/发布，不写对照结果。
+
+**管理器真正结束后再修改发布白名单：** 现在有两个自己新增、未跟踪的公开分析脚本scripts/repeat_pair_comparison.py和scripts/repeat_original_context_audit.py，都需加入repeat_publish.py的allowed及paths两处名单，再做相关白名单验证、提交推送和远端读回。当前管理器载入旧模块，仍在心跳发布，不人工并发Git操作。新原轮上下文核验JSON及冻结协议会自动进入心跳/R3 ZIP；源脚本尚未上传，不能提前声称代码已发布。无关dashboard草稿继续不动。
+
+剩余全目标未变：续同一会话等待R3执行完成，真实切换judge后保存独立r3-judge-start-runtime.json；27条案例全评分后运行已准备的case_score_table_r3.py一次；完成162评分审计、实际资源清单162及同轮54组公平性检查、新Release匿名下载SHA与全ZIP条目核验（含旧冻结序列化副本72272795...）、远端提交验证，导出实际R3 gate。控制器exit0后再做原轮+R3条件成立的324条对照及完整要求终审；R2独立，永不强合486，不追加第三个新轮。当前是有进程句柄凭据的等待，有持续实质核验进展，goal仍active，不是blocked或complete。

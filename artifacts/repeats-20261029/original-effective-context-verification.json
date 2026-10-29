@@ -1,0 +1,2253 @@
+{
+  "checked_at": "2026-10-29T08:15:52+08:00",
+  "round": "final-v1",
+  "original_archive_sha256": "f0df5bdecbfc840cfd8b58555733ad5a4bfe99ad742fdedbd6b1f500dbc19fad",
+  "archived_evidence": [
+    {
+      "source": "artifacts/judge-runtime.json",
+      "archive_sha256": "f98b379b096b18f39872533a5ec0f1cff4287bab5034464b31be1f640a7f8476",
+      "same_local_bytes": true
+    },
+    {
+      "source": "artifacts/incidents/judge-oom-after39/judge.stderr.log",
+      "archive_sha256": "f57c7e102f39300f632aaedbf51b0d0c3428db14599e4b719246812481cd4d21",
+      "same_local_bytes": true
+    },
+    {
+      "source": "artifacts/incidents/judge-oom-after39/incident.json",
+      "archive_sha256": "9f0692da4b4418f09a0cb64f9f9269990ee7266093f6584db17025275609b8f4",
+      "same_local_bytes": true
+    },
+    {
+      "source": "artifacts/incidents/judge-oom-after39/recovery-verification.json",
+      "archive_sha256": "ac3c9c7b73ac27d46975ff96876ecd2ef920681a2e4830c4396be1f9cd9cc378",
+      "same_local_bytes": true
+    },
+    {
+      "source": "artifacts/incidents/judge-allocation-after57/recovery-verification.json",
+      "archive_sha256": "c30d8efbe506fbba13a5b3fa58e30dfeea974853829610e6253785b3794914ab",
+      "same_local_bytes": true
+    },
+    {
+      "source": "tool_adapt/llm.py",
+      "archive_sha256": "6ac263da421250e297d1965866a5a2cde7ac3f396bbc4d501a1f9c63d3646311",
+      "same_local_bytes": true
+    },
+    {
+      "source": "scripts/judge_with_capacity.py",
+      "archive_sha256": "6a5bea59f626463cc1560c24f0caafc3b83249a7e26545c6233e1aa4a3ef7927",
+      "same_local_bytes": true
+    },
+    {
+      "source": "configs/judge-capacity.json",
+      "archive_sha256": "d1917165bbd76582ded5244c3d07ce9da97e9bf2fbaa9af8f71d725f80de8025",
+      "same_local_bytes": true
+    }
+  ],
+  "server_runtime_24576_verified": true,
+  "archived_server_startup_lines": [
+    "0.07.565.630 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 24576, kv_unified = 'false'"
+  ],
+  "retained_judge_calls": 162,
+  "earlier_client_guard_calls": 39,
+  "earlier_client_guard_capacity": 16384,
+  "later_client_guard_capacity": 24576,
+  "earlier_max_reserved_tokens": 15505,
+  "all_saved_judge_inputs_unpruned": true,
+  "effective_context_check_pass": true,
+  "client_guard_identical_for_every_original_call": false,
+  "issues": [],
+  "records": [
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/103/result.json",
+      "sha256": "a7d97712ec51bc926eda72a32ac91071dc05ae83d3e56a92ef11e254fbe20d99",
+      "context": {
+        "prompt_tokens_checked": 5674,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7850,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/105/result.json",
+      "sha256": "85aea04da7cf7d4856b414bbd2b106378d876b4cde2afcbb4eb9ca9e8b1bf12a",
+      "context": {
+        "prompt_tokens_checked": 5154,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7330,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/113/result.json",
+      "sha256": "51af87a092611c103b03fabe03a56cc7dc34938583e2b7b27bebd5ddecf1c1a5",
+      "context": {
+        "prompt_tokens_checked": 8203,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10379,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/117/result.json",
+      "sha256": "e6bd8ed6d339b37603f424e13f2b88fa1ffb49155438737c69946f1e417b59d8",
+      "context": {
+        "prompt_tokens_checked": 13329,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 15505,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/139/result.json",
+      "sha256": "d5f856a43ec580499b3947a0410de2d009bfc804127ddaf74a3a2763b190b6a8",
+      "context": {
+        "prompt_tokens_checked": 5511,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7687,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/267/result.json",
+      "sha256": "ab29827e95ac3ee1a61e48d9976585f9f10bfd166c72cb50b2aaf7edcdceed31",
+      "context": {
+        "prompt_tokens_checked": 5901,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8077,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/273/result.json",
+      "sha256": "f4513cb4ad243d12f57adda310719e36179531cde867846c232320875f7ff07a",
+      "context": {
+        "prompt_tokens_checked": 6939,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9115,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/274/result.json",
+      "sha256": "0b844a1cb2860bc01ec85bdbd9fc2a8248f793b3f38458223d719300f2ac392d",
+      "context": {
+        "prompt_tokens_checked": 5669,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7845,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/278/result.json",
+      "sha256": "286d0489d6de21b08cd315de0b6fb07c7b355551ae3354656d236d0d9b0d07b9",
+      "context": {
+        "prompt_tokens_checked": 8985,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 11161,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/28/result.json",
+      "sha256": "2379eb184c6489428f8c94a35bafceecaae4b073e204bc0af4fd94b8701c7664",
+      "context": {
+        "prompt_tokens_checked": 3254,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5430,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/283/result.json",
+      "sha256": "c9aad734f27b84d0d5f92dfed53fcc363828c06b4ceae9e7501b98dcbe9f0ac8",
+      "context": {
+        "prompt_tokens_checked": 7147,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9323,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/386/result.json",
+      "sha256": "12b06a6a21c49cb54cd81be08dfe6caf36ec899584cf72a8f38e43fad8d9f8a2",
+      "context": {
+        "prompt_tokens_checked": 12619,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 14795,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/389/result.json",
+      "sha256": "2ed37240cecf69b1310ec0b72d9c9b424ccef44c8e45d178444fe08a1ca0af76",
+      "context": {
+        "prompt_tokens_checked": 10474,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12650,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/393/result.json",
+      "sha256": "046df0314370dec8a364a31198e389618526a8f36c3dbee456fdc037c8d61495",
+      "context": {
+        "prompt_tokens_checked": 5506,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7682,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/403/result.json",
+      "sha256": "e5656feef34bdf08e87d0a24f05a1fb929666c1c5cffdfa9364cc6c8911d7d53",
+      "context": {
+        "prompt_tokens_checked": 5327,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7503,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/411/result.json",
+      "sha256": "b52b3cd0d4598555e50b786e45e8e0edfc9e319ef7ff8f9e852ed443795cffed",
+      "context": {
+        "prompt_tokens_checked": 8091,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10267,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/416/result.json",
+      "sha256": "9870d098fda1e9f340578a840bb378ff5c7648b2f4311d97579a5fa913aa4f3b",
+      "context": {
+        "prompt_tokens_checked": 8573,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10749,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter3/9/result.json",
+      "sha256": "ef83c4ffe412acf53cac5c70f691f291b7bebaf7bbf9b1910a125e93f2b2bccd",
+      "context": {
+        "prompt_tokens_checked": 3803,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5979,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/103/result.json",
+      "sha256": "7de8c49043b8f64d7b0ff9f7a9f7d5e7a362a14a11ab68d49e8f0291a683d2f0",
+      "context": {
+        "prompt_tokens_checked": 7945,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10121,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/105/result.json",
+      "sha256": "93368d84993fb22909e6bdd840b08c5533a2d063965927a0f100806878673e2d",
+      "context": {
+        "prompt_tokens_checked": 5661,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7837,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/113/result.json",
+      "sha256": "31e94de3f1b328d306bdb2fe6edb3e1cc430319e26cdf8f17ee71cb838ab0c41",
+      "context": {
+        "prompt_tokens_checked": 9851,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12027,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/117/result.json",
+      "sha256": "e5f8b358256f7bd3a8c958678f1c08b4d316f21e4b8fa083ee63c72636603118",
+      "context": {
+        "prompt_tokens_checked": 10451,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12627,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/139/result.json",
+      "sha256": "b61c271096f8fbdd64066ed693d727750c4a22fdf5311eb958a5ca0ecbf3bae3",
+      "context": {
+        "prompt_tokens_checked": 7111,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9287,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/267/result.json",
+      "sha256": "1de522478f574a1c07ccdc6f4994827496b97baf744b35ff8c6c16e182cdf803",
+      "context": {
+        "prompt_tokens_checked": 7651,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9827,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/273/result.json",
+      "sha256": "67fecea19c1e91d2c7a705a3854187ee66d9c889b801f6258459514abd91610d",
+      "context": {
+        "prompt_tokens_checked": 11806,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 13982,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/274/result.json",
+      "sha256": "009c9ba2a76c38894c6790422e85cb595182bf10650329da09ec6cff9c04a74d",
+      "context": {
+        "prompt_tokens_checked": 6324,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8500,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/278/result.json",
+      "sha256": "6253834e41d7d94bb442a70ab581fd6964da58639d11860295117a4b69d844f1",
+      "context": {
+        "prompt_tokens_checked": 6137,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8313,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/28/result.json",
+      "sha256": "bd2d5f471fa39f2dc49a4c75b6a1762dd15bc460d28fe46b1afb2973bd5da996",
+      "context": {
+        "prompt_tokens_checked": 3225,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5401,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/283/result.json",
+      "sha256": "b75fd3139b9f8c2e754e48497fbc3b44fc7650614b684e12990feb2b6a5acfdb",
+      "context": {
+        "prompt_tokens_checked": 10494,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12670,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/386/result.json",
+      "sha256": "82e319e3ee829f94eae103041251b2b6ea0f9169ec55cbb891e32c2e802b20b3",
+      "context": {
+        "prompt_tokens_checked": 6489,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8665,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/389/result.json",
+      "sha256": "ee585afeddbb75c2cd5ab03504c89af0e9956531033a2ee8284043133ffe1f27",
+      "context": {
+        "prompt_tokens_checked": 7080,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9256,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/393/result.json",
+      "sha256": "17c7008ef20b8a79d31547bcfc46828b6bfab284d0e8c74b835ec127581c769b",
+      "context": {
+        "prompt_tokens_checked": 5862,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8038,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/403/result.json",
+      "sha256": "77a2a68c01232195b0e51bd41ce2e5c630e6fb293e059b19ade23153aba9d3c3",
+      "context": {
+        "prompt_tokens_checked": 5501,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7677,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/411/result.json",
+      "sha256": "182083d9cffaf00479456a34fb5c9819c151bbb38f764b46fc745bb91b482f16",
+      "context": {
+        "prompt_tokens_checked": 6515,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8691,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/416/result.json",
+      "sha256": "1ba648410f745f7845ce4f64a2bc571cdc920394f909632c125f67edad3c800a",
+      "context": {
+        "prompt_tokens_checked": 9289,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 11465,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/iter5/9/result.json",
+      "sha256": "d27e0f37ce8a297c0b330dce4a2559aa7aefa3ab117d2faf15d136d99ce24e18",
+      "context": {
+        "prompt_tokens_checked": 3761,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5937,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/103/result.json",
+      "sha256": "4b4e3e4497cb337e3be8cb49a09d250d950663fe34bdce4ea1283626cc40c8db",
+      "context": {
+        "prompt_tokens_checked": 5480,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7656,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/105/result.json",
+      "sha256": "8afae8b1784587f0ba116bf2be836459cf2ce6ad802f165cb8de602d12bf79f4",
+      "context": {
+        "prompt_tokens_checked": 5284,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7460,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/113/result.json",
+      "sha256": "2bce5fc8603775ac10cd5b364aa7c9080877d26c3e2b0ccbe2801b84fb4249ab",
+      "context": {
+        "prompt_tokens_checked": 5417,
+        "dropped_messages": 0
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7593,
+      "recorded_context_limit": null,
+      "pre_recovery_record": true
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/117/result.json",
+      "sha256": "251ef8abbd748d3fd1f03fe3658f619f6bb0c546b1e406ef69d8f0f3e7fed9d5",
+      "context": {
+        "prompt_tokens_checked": 9046,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 11222,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/139/result.json",
+      "sha256": "1026b14d3a20456fa12ec692c78a5f55355e82955b67f47ff7d539d3e4280ce3",
+      "context": {
+        "prompt_tokens_checked": 5920,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8096,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/267/result.json",
+      "sha256": "0c1b5170bb0acca228ae97d79d52131cd9fe5494832c6dcc90f92b9289a3eb1d",
+      "context": {
+        "prompt_tokens_checked": 7308,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9484,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/273/result.json",
+      "sha256": "1333abd4c565821e2e6ea1880a8bb40a49b178dd96f6fbb2a37d5074794e9367",
+      "context": {
+        "prompt_tokens_checked": 8757,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10933,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/274/result.json",
+      "sha256": "9ba9409dd8fb5bcb1ba10c2c96125d978d3a1f3c6145ab2853a3956463e27155",
+      "context": {
+        "prompt_tokens_checked": 5716,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7892,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/278/result.json",
+      "sha256": "24a2e388d74858b5d884478245f0849b6b7a615fe6dbf472c46eb71144dffb1c",
+      "context": {
+        "prompt_tokens_checked": 7446,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9622,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/28/result.json",
+      "sha256": "a8651fa78d988b5395ae127b15afc5c96d81ddeb8347c5c23afc789436cfc483",
+      "context": {
+        "prompt_tokens_checked": 3350,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5526,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/283/result.json",
+      "sha256": "10c3c656c4e4c2cc4cbb0bf76799f7830b43f134d062ad081f5a91feaca5d93d",
+      "context": {
+        "prompt_tokens_checked": 6020,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8196,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/386/result.json",
+      "sha256": "ea061088b3d9269491420cc885b08820e6550756e5d574a69026be6a2feb1965",
+      "context": {
+        "prompt_tokens_checked": 10975,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 13151,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/389/result.json",
+      "sha256": "58e2dd5794be2cecadff4080ef3439df96cc26c139c2c70be2f62d652af32e55",
+      "context": {
+        "prompt_tokens_checked": 9600,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 11776,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/393/result.json",
+      "sha256": "ddb9d7ca627d09c55b9c8e244299f02555f460ed593773dc46c2d82330fc305f",
+      "context": {
+        "prompt_tokens_checked": 5416,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7592,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/403/result.json",
+      "sha256": "d0924850495b2c636da702a01f24a49d43e9a3055f351222083a725285d4c631",
+      "context": {
+        "prompt_tokens_checked": 5448,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7624,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/411/result.json",
+      "sha256": "852235299840b9aea6ec57e621a85b254ed99a5baac172d1b84527ab1dc8c20e",
+      "context": {
+        "prompt_tokens_checked": 7637,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9813,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/416/result.json",
+      "sha256": "16b3376db052cfa146ce48c16c3e1ba2048fbfee319171d5d0d188cfbad1e34f",
+      "context": {
+        "prompt_tokens_checked": 15245,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 17421,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/full_rewrite/original/9/result.json",
+      "sha256": "77d2fb0f625a07308414a7618f92daca29ac1a91bc81abd05d8461caa2147820",
+      "context": {
+        "prompt_tokens_checked": 3216,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5392,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/103/result.json",
+      "sha256": "4d0c7769296e2205ed35aaf7fbdee63f8a06ca58109629ccf118d50ece368e4f",
+      "context": {
+        "prompt_tokens_checked": 7092,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9268,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/105/result.json",
+      "sha256": "c2c809e5efc7ce52378b76325239918b696ecfa74ea39bda6329637d90b882ae",
+      "context": {
+        "prompt_tokens_checked": 5244,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7420,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/113/result.json",
+      "sha256": "4023a5ec6d807a1ee9efbba3e250cf60767a2dc2d6c4587c44accbd4b33cc082",
+      "context": {
+        "prompt_tokens_checked": 6085,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8261,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/117/result.json",
+      "sha256": "52ec67005d50ebfc978be2dacc0c2810abe2a3d53dc5edece5d10e42cc0eef20",
+      "context": {
+        "prompt_tokens_checked": 10946,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 13122,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/139/result.json",
+      "sha256": "e1f60422710bf2f1be33c550767421834933126b746c29566bda4292c7e49d21",
+      "context": {
+        "prompt_tokens_checked": 6106,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8282,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/267/result.json",
+      "sha256": "dfb8d7f66b02b1878fb89c8b6811c0e7a644ba47e8f066212adec5a65a23094b",
+      "context": {
+        "prompt_tokens_checked": 7277,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9453,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/273/result.json",
+      "sha256": "22ea4265b0a80f06c436a252404c44ce9d9ec0e0541e4f49f78db97c0e0c81df",
+      "context": {
+        "prompt_tokens_checked": 7651,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9827,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/274/result.json",
+      "sha256": "c0411e06d1c83b8ac70c586a977ffcbd0ac99372047e1b0762bc269fa5bd9a0d",
+      "context": {
+        "prompt_tokens_checked": 5931,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8107,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/278/result.json",
+      "sha256": "533c9116542a0f7044f7df63621ecf990ef0753271c671b7210bfb941a2083ce",
+      "context": {
+        "prompt_tokens_checked": 7149,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9325,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/28/result.json",
+      "sha256": "8063c20929fcae002da244fdde2b21704b0e3f46aed8eca63ad5f0f2033f3828",
+      "context": {
+        "prompt_tokens_checked": 3444,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5620,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/283/result.json",
+      "sha256": "9a3e9b34ce9eccec45964b8d0e46c6fd50f4ac0dc1a6dcc7848a6fb0fa84ca42",
+      "context": {
+        "prompt_tokens_checked": 7002,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9178,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/386/result.json",
+      "sha256": "af300d2ea2b0402bdfed0696fb09765d7ecf37a65c4c6553cf1c1e77ce18e71a",
+      "context": {
+        "prompt_tokens_checked": 6658,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8834,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/389/result.json",
+      "sha256": "b66c611fe3f786aa519cad256e743775f602e6c1accf6479630b5baf9709ecd1",
+      "context": {
+        "prompt_tokens_checked": 13075,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 15251,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/393/result.json",
+      "sha256": "ad4bad6a8f9f15fdf329a81244b0f14891858144025d0649e5c139336f348306",
+      "context": {
+        "prompt_tokens_checked": 5339,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7515,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/403/result.json",
+      "sha256": "1244869e252c0105991c6aa42c7b000a4770d9fb0232a9d905d457b5d980f5aa",
+      "context": {
+        "prompt_tokens_checked": 5434,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7610,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/411/result.json",
+      "sha256": "eda287f5c1eda61009d1ffb5c238ab9c42cf17ffeb8b663da57381f87dccf36b",
+      "context": {
+        "prompt_tokens_checked": 6462,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8638,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/416/result.json",
+      "sha256": "6f6ffe36ca8367916d4cb6fd005be53660cefcce5391d36e5da19bbd942cc84a",
+      "context": {
+        "prompt_tokens_checked": 19245,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 21421,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter3/9/result.json",
+      "sha256": "6f9dbd20d58a1dafdee5b993b1fbf356ae8ab7c09f5e895460dd7a29b81ec1eb",
+      "context": {
+        "prompt_tokens_checked": 3281,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5457,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/103/result.json",
+      "sha256": "e3984a0612c1d8145b11e7adeb859d31e606aa776b70f4db3ad1a0d0f8f02ae0",
+      "context": {
+        "prompt_tokens_checked": 8643,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10819,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/105/result.json",
+      "sha256": "417b87f93220665a4b6a49368f6d2c80ac946a72641135067c00ea5d9da0ee3e",
+      "context": {
+        "prompt_tokens_checked": 6123,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8299,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/113/result.json",
+      "sha256": "7227279529b71bbe8c95cac2d43c7935b20faeca3e56b3d89170e43205cc4335",
+      "context": {
+        "prompt_tokens_checked": 8750,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10926,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/117/result.json",
+      "sha256": "09fc2c75d804cece2fb5ce734b0c22765397ad96bb2cbbd896376d0e8dab85c6",
+      "context": {
+        "prompt_tokens_checked": 11751,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 13927,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/139/result.json",
+      "sha256": "b0435547e604023c09229efb06ab242992ed415b331637476fec4132cccbda98",
+      "context": {
+        "prompt_tokens_checked": 6167,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8343,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/267/result.json",
+      "sha256": "ea149ac1293356342cb456139b19c0f2bf5422af575caa1c730b4894b0df1502",
+      "context": {
+        "prompt_tokens_checked": 9914,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12090,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/273/result.json",
+      "sha256": "6445b2845ff083d0afb7905a0145fe24a2532da8aa214c4dc0824b0497ee6364",
+      "context": {
+        "prompt_tokens_checked": 7954,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10130,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/274/result.json",
+      "sha256": "6968f8b70f65ab6d096f3dacf406841c4f0f6b950ed09d4ccb80583c55dc087d",
+      "context": {
+        "prompt_tokens_checked": 5335,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7511,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/278/result.json",
+      "sha256": "8706248a9c9c9cd611fedadc38d18a3988e783f5c43bde3801781f875dd2a5eb",
+      "context": {
+        "prompt_tokens_checked": 6862,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9038,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/28/result.json",
+      "sha256": "6cef90fca2a26d95ef6a0df938df691486748dad0d4143b76ec756e04ce2b975",
+      "context": {
+        "prompt_tokens_checked": 3490,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5666,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/283/result.json",
+      "sha256": "066f6b67038625838552536fca44f01a7e92bea0ac01a5353ba45d309778d266",
+      "context": {
+        "prompt_tokens_checked": 9239,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 11415,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/386/result.json",
+      "sha256": "c0500361a4498511e76a255534ee86c4e3f0e2029cd5ebc1ca677ba9ac326979",
+      "context": {
+        "prompt_tokens_checked": 6613,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8789,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/389/result.json",
+      "sha256": "0f879033f25e2985b65a449df2f2f4904612d6e06d20e7f3480ae71d974423fa",
+      "context": {
+        "prompt_tokens_checked": 9966,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12142,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/393/result.json",
+      "sha256": "bd682359c0813c2ea86c19c59ac73c9980032fe6d3cd4c93edd6e7337ad8e27e",
+      "context": {
+        "prompt_tokens_checked": 6461,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8637,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/403/result.json",
+      "sha256": "cd8d9780365eaf551f2fe452803713290ed37c46413327aa3c379a1ced2ad444",
+      "context": {
+        "prompt_tokens_checked": 5471,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7647,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/411/result.json",
+      "sha256": "c8c62d902a1e1e3d06ddfb94e42cc91fdfcf6686284387a657805cbcbe211d8c",
+      "context": {
+        "prompt_tokens_checked": 6798,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8974,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/416/result.json",
+      "sha256": "12eab29192084d3802c3ebba1d7f8e4cbc299126504a516f7c6d05eaf91dd868",
+      "context": {
+        "prompt_tokens_checked": 11392,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 13568,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/iter5/9/result.json",
+      "sha256": "238d5e71b5249796bef0c257aec1972f79befa5a15e55d2d947dea2e8f7239ea",
+      "context": {
+        "prompt_tokens_checked": 4356,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 6532,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/103/result.json",
+      "sha256": "25bc62786304926231b5e3186ccd99c5ec9df7dc420b522cc742281cd226a940",
+      "context": {
+        "prompt_tokens_checked": 5542,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7718,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/105/result.json",
+      "sha256": "1448c897f5c34a72e27b36ca0a25ece6a6bf297303122064368fcb42207c8ffe",
+      "context": {
+        "prompt_tokens_checked": 5521,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7697,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/113/result.json",
+      "sha256": "b3d0745ea62119502290a01e9298da9e7762a4bc13c498170f1d8e9e21fa763d",
+      "context": {
+        "prompt_tokens_checked": 5564,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7740,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/117/result.json",
+      "sha256": "14348d14be03fc2b2f065fd2acc2a3c150812b7fa5aa33b41fce199c9de696e8",
+      "context": {
+        "prompt_tokens_checked": 8530,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10706,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/139/result.json",
+      "sha256": "cd22cd193417f6ff0d1d7d25f67e6c62a781ae5d13a24cfb334db6a55c329cf1",
+      "context": {
+        "prompt_tokens_checked": 5055,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7231,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/267/result.json",
+      "sha256": "3fbd04b9dedf0cc9f3085621a0defac454f90ac185dd619a7f55954f06553d33",
+      "context": {
+        "prompt_tokens_checked": 7210,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9386,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/273/result.json",
+      "sha256": "db70ecb924e07d59f8b1a5ed9d31fe494ae90475d88ccf23b10369a52a902500",
+      "context": {
+        "prompt_tokens_checked": 7597,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9773,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/274/result.json",
+      "sha256": "20a768a3f9b303823f260a86bf7f6d5f99133605c11ac66b1923f0e5e806922d",
+      "context": {
+        "prompt_tokens_checked": 6632,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8808,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/278/result.json",
+      "sha256": "6572cc1b8a7f3f5eb7a93dd4d3e75649e035c56008d05204ea5b0ed78519b6d2",
+      "context": {
+        "prompt_tokens_checked": 7448,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9624,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/28/result.json",
+      "sha256": "a6965dfda2ae2a2b79a9df799bd41015867baa692892bb4dda07abfb8bfd5cc1",
+      "context": {
+        "prompt_tokens_checked": 3375,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5551,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/283/result.json",
+      "sha256": "1671dcebedd66382a66b44bc818d8431d3ad06175e04c1357ac97a8a34a12f5d",
+      "context": {
+        "prompt_tokens_checked": 6720,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8896,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/386/result.json",
+      "sha256": "3a06fe5fd9d0277ac22c49e315ee86e58d7a28b47cb474019d996e5dfc5d1d47",
+      "context": {
+        "prompt_tokens_checked": 10297,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12473,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/389/result.json",
+      "sha256": "d6b3de075fde2420dac4d57e3061644ca1fa0bf5c9c8b6fa137e390cb688c50e",
+      "context": {
+        "prompt_tokens_checked": 11761,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 13937,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/393/result.json",
+      "sha256": "8d4dd76bff2adc0e0430851ccfaa47a4670e3c76b4d5f45d1c5c30e7dfdd5bc7",
+      "context": {
+        "prompt_tokens_checked": 5294,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7470,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/403/result.json",
+      "sha256": "de5cc49e6d8fb072c97f0998966f14ef70590f460995db5fd36eab0841b89580",
+      "context": {
+        "prompt_tokens_checked": 5493,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7669,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/411/result.json",
+      "sha256": "ca0bb3c0d4c5600ab2b0ba319352571a1a5c806237bfe98ffa50537cb07d5273",
+      "context": {
+        "prompt_tokens_checked": 6613,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8789,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/416/result.json",
+      "sha256": "9af126f9965506f279c890b971f9eb33e15951ac3859d5fafd8bd6f9a1d3559f",
+      "context": {
+        "prompt_tokens_checked": 15857,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 18033,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/no_update/original/9/result.json",
+      "sha256": "46f1a534e4d1197c2e8bc3b09485ea85f8aa2309f4adb024cc116b8bef5a213d",
+      "context": {
+        "prompt_tokens_checked": 3147,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5323,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/103/result.json",
+      "sha256": "cce2a3205fd696a62acfa4157c336426d96d20396d42fc6848f231c2a2522ff4",
+      "context": {
+        "prompt_tokens_checked": 5630,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7806,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/105/result.json",
+      "sha256": "ba26d4fdb8b757906425a4df90241698d10b8c7f9b17e2db2034389fc194e754",
+      "context": {
+        "prompt_tokens_checked": 5438,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7614,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/113/result.json",
+      "sha256": "0ce9988a298304007a52b09ce391adc52dadda4b2fbeec09a172ab897aca0e1a",
+      "context": {
+        "prompt_tokens_checked": 5816,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7992,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/117/result.json",
+      "sha256": "104e789d2db0f2d575a1a779d297c906a62a51d6fa3c30629bc2bc1705a2910e",
+      "context": {
+        "prompt_tokens_checked": 12171,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 14347,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/139/result.json",
+      "sha256": "765d20f808db9f62469aa680837847c0359e87be1904fd676df4f3f7dee2cff3",
+      "context": {
+        "prompt_tokens_checked": 4506,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 6682,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/267/result.json",
+      "sha256": "21f20f4d82cb574b3927e41939ac6cea10d8658dd3376f5e9b3b4d73ca616afa",
+      "context": {
+        "prompt_tokens_checked": 8243,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10419,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/273/result.json",
+      "sha256": "6179c9034af30015e13397dfb7d945d3643282a096441f2bc71834da771f8b05",
+      "context": {
+        "prompt_tokens_checked": 10021,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12197,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/274/result.json",
+      "sha256": "17a35d78696494afe0455fd9207e86622c2908d0075b4220a16cf62c41d7c89c",
+      "context": {
+        "prompt_tokens_checked": 5496,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7672,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/278/result.json",
+      "sha256": "ade78a8ce03ba9efe96ef1544554044dc86f5b1c1af7d4c5ecc0d768b8125c7f",
+      "context": {
+        "prompt_tokens_checked": 7602,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9778,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/28/result.json",
+      "sha256": "5977fbe737baafaba960267ce61bbe25d683fbdd5aa2c36050f956778d7e52d9",
+      "context": {
+        "prompt_tokens_checked": 3371,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5547,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/283/result.json",
+      "sha256": "d366278806fc056d0cf11e4977de4f8c44331832adaecb7e60a123604ac29ece",
+      "context": {
+        "prompt_tokens_checked": 7100,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9276,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/386/result.json",
+      "sha256": "bafdfe6dbd0861c76f1e56fa4aff92e095f225129f81b381732a6426f587e1b2",
+      "context": {
+        "prompt_tokens_checked": 10908,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 13084,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/389/result.json",
+      "sha256": "a06dc22b1c2c98fee445d1277f0477a8ea7f5cac52301187b77f4d9e09af5e60",
+      "context": {
+        "prompt_tokens_checked": 13447,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 15623,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/393/result.json",
+      "sha256": "0a80d8e03fcac93035fab4cb2f0b8a7ec002c4f660ec177f22de9d9c7861af9a",
+      "context": {
+        "prompt_tokens_checked": 7217,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9393,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/403/result.json",
+      "sha256": "7b8f4684d1df8edc76534bb43fcaa88255ceb5c8c8b5d9bf7919f6a6cc76fb8d",
+      "context": {
+        "prompt_tokens_checked": 5494,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7670,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/411/result.json",
+      "sha256": "f5bb99e9f35f3c12a4801842f534d5b6539015e49fbc9641fada1714a81c1efc",
+      "context": {
+        "prompt_tokens_checked": 6195,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8371,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/416/result.json",
+      "sha256": "7eb44aa2387f889a2674984731ed662b0928385026c57b0d8ddfbeb0acf5576f",
+      "context": {
+        "prompt_tokens_checked": 15679,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 17855,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter3/9/result.json",
+      "sha256": "0b140a994b8193604721d03b10110613bea2b25f9d9298c60785aaf82dc2c533",
+      "context": {
+        "prompt_tokens_checked": 3271,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5447,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/103/result.json",
+      "sha256": "c182a9b2608d42bb5478a09bdede59cc27a1b7fada65f7f4999574e1a971ef45",
+      "context": {
+        "prompt_tokens_checked": 7892,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10068,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/105/result.json",
+      "sha256": "ae3ce1f7bcdc37f4a35ba749af9f7079eed85238be8740e3bd920cf20599020c",
+      "context": {
+        "prompt_tokens_checked": 6378,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8554,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/113/result.json",
+      "sha256": "fff1488a5d208f5f228e0e90a40132245394361e514589b3460895bed96da668",
+      "context": {
+        "prompt_tokens_checked": 7156,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9332,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/117/result.json",
+      "sha256": "ef28d63efbfe8f28f83239900f82e270fb596bb3789e037fccaee7aab7a28ab7",
+      "context": {
+        "prompt_tokens_checked": 13016,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 15192,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/139/result.json",
+      "sha256": "91fadebca3a01af87fb3012d192ca073278d81d08fb16395e8752e23587c4fb9",
+      "context": {
+        "prompt_tokens_checked": 6574,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8750,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/267/result.json",
+      "sha256": "eb8bd55cadda7152520ae690a3fcb2b3d0379c21d74914a51c47ea40825803bd",
+      "context": {
+        "prompt_tokens_checked": 7693,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9869,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/273/result.json",
+      "sha256": "ddefe134c59e33221ed466d3fb5bde4494925eb18ee9fa955e8e63fd63c979e4",
+      "context": {
+        "prompt_tokens_checked": 8983,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 11159,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/274/result.json",
+      "sha256": "4208d048680b240f174861f4c3ef3e72fa3718eb0ee32a424408d7dfc19156b6",
+      "context": {
+        "prompt_tokens_checked": 5715,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7891,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/278/result.json",
+      "sha256": "677fe753760925d96cf3f23a584ee7f5f542b3fa5238f7da1ae028239d406600",
+      "context": {
+        "prompt_tokens_checked": 6808,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8984,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/28/result.json",
+      "sha256": "cad5ce5c1ca6fb7dd2fc3eedc5b6c5135aa123e6dfdb96edd1aa6707fa132644",
+      "context": {
+        "prompt_tokens_checked": 3587,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5763,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/283/result.json",
+      "sha256": "fed88d434e46eae4f008495f5f6decf8f2a59717e9d2a3c1eb4c2ac4bc939964",
+      "context": {
+        "prompt_tokens_checked": 10222,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12398,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/386/result.json",
+      "sha256": "155ac0038f6d619a83ab47ed6a2d963b1494f510993db8b0f53bc47c637663f3",
+      "context": {
+        "prompt_tokens_checked": 10238,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12414,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/389/result.json",
+      "sha256": "cb5bebf9abdc102f864414e23692ebc5b05dda2548fcd54a9bba393eb6d9ef1b",
+      "context": {
+        "prompt_tokens_checked": 11084,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 13260,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/393/result.json",
+      "sha256": "f157c12d18925a3c348495dabfeb238b0d8a1201f5ee577b80bdd94a55ce6293",
+      "context": {
+        "prompt_tokens_checked": 5802,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7978,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/403/result.json",
+      "sha256": "50d78d51b3577874a7e2f1f5312b70789d2b3e3206f2f663abbc958f264c8116",
+      "context": {
+        "prompt_tokens_checked": 5489,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7665,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/411/result.json",
+      "sha256": "27bd431ea0de914f49d446afc49f7c0a477953d7ef5d4d3a5ef63d2b7fe44660",
+      "context": {
+        "prompt_tokens_checked": 6379,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8555,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/416/result.json",
+      "sha256": "81c30938a359ba094c28dceb242d5e921fddfe430569796937387d8499015a37",
+      "context": {
+        "prompt_tokens_checked": 10974,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 13150,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/iter5/9/result.json",
+      "sha256": "5c627b7088871135cfa864ececf30152ab31e6f45d3ca802319bdd0dbf2f7fc6",
+      "context": {
+        "prompt_tokens_checked": 3833,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 6009,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/103/result.json",
+      "sha256": "f3566e41a02c77ae45c49b2a32e399de04d10971bb19ef1ef85ab068bc7d741c",
+      "context": {
+        "prompt_tokens_checked": 5936,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8112,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/105/result.json",
+      "sha256": "9d55de3a8e2f092f608563bd73cea01307da1a5ec5288e9bc4b38c07d6c07cdc",
+      "context": {
+        "prompt_tokens_checked": 5164,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7340,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/113/result.json",
+      "sha256": "b06eb03a4fb9418cd087da9cd25e8fed75786ced6923ce498dc8a26998337b93",
+      "context": {
+        "prompt_tokens_checked": 5597,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7773,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/117/result.json",
+      "sha256": "a81cd3caf8f6dbe81658f808dfd19a4eaa512406f8c13154c664cec580223c01",
+      "context": {
+        "prompt_tokens_checked": 10608,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 12784,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/139/result.json",
+      "sha256": "9a8ac78d5b6df82e80711bd5bd3af9011f35942777497cd7bc9c83c5b5601836",
+      "context": {
+        "prompt_tokens_checked": 5161,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7337,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/267/result.json",
+      "sha256": "8bd6c40861b020f99f458afbeb5cffad7f2326541481b695531ff1f8d04ec5c6",
+      "context": {
+        "prompt_tokens_checked": 13055,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 15231,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/273/result.json",
+      "sha256": "b60f6c102bf7470c07007a4fef6d888b5e5094270ac563f5bde0e3f4f51494a1",
+      "context": {
+        "prompt_tokens_checked": 9751,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 11927,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/274/result.json",
+      "sha256": "d6295edb506078231aaf35b4b3f836993a9a678de181bae9adc6ee584a850d6e",
+      "context": {
+        "prompt_tokens_checked": 5932,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8108,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/278/result.json",
+      "sha256": "d4978a565a8fc54fd5744cb7111e6e00eb1ac173d43258b2e4bfe78d68b4fac4",
+      "context": {
+        "prompt_tokens_checked": 7055,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9231,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/28/result.json",
+      "sha256": "0d3697301e1741f60e021391221443231bb3de1196242ef2a6c833dab3acb3de",
+      "context": {
+        "prompt_tokens_checked": 3721,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5897,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/283/result.json",
+      "sha256": "96f23f6bbac40a33e1df82e3f937ff19b540f562e8aedfcacd43eacb0f423bf2",
+      "context": {
+        "prompt_tokens_checked": 6199,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 8375,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/386/result.json",
+      "sha256": "776cabf8bb3fb22deb6cc612412a7e070be0b62d7a4505a9f9fa6496932682ad",
+      "context": {
+        "prompt_tokens_checked": 8683,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 10859,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/389/result.json",
+      "sha256": "61d35e50bd7f8c29a66d10573e4471e48d0d340317159b05d61f304ac61a32d8",
+      "context": {
+        "prompt_tokens_checked": 7821,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9997,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/393/result.json",
+      "sha256": "e9ba5630ccd2f41f11df4b66852c40bc3cebb86f18e8bc71902cc2064aedcee8",
+      "context": {
+        "prompt_tokens_checked": 4977,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7153,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/403/result.json",
+      "sha256": "d95530b1dee495dede74f8585ab34061ff7eb09e29f0dd2091262dbde268db98",
+      "context": {
+        "prompt_tokens_checked": 5496,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 7672,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/411/result.json",
+      "sha256": "1409054ef038188403d96361bd29d75f69ebe88aed71c186f7a01625e2420827",
+      "context": {
+        "prompt_tokens_checked": 6975,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 9151,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/416/result.json",
+      "sha256": "2a10a0c65e00dec8fb48c24cd9a645697b08ce1b15945865a3e557e32f1bf667",
+      "context": {
+        "prompt_tokens_checked": 8939,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 11115,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    },
+    {
+      "source": "runs/final-v1/repeat-0/selective_patch/original/9/result.json",
+      "sha256": "61e4b94ec16beddff82af512ae38998372efe1e1a3c0d5086fea1480e893f688",
+      "context": {
+        "prompt_tokens_checked": 3163,
+        "dropped_messages": 0,
+        "context_limit": 24576,
+        "capacity_policy": "configs/judge-capacity.json"
+      },
+      "request_message_count": 1,
+      "reserved_tokens": 5339,
+      "recorded_context_limit": 24576,
+      "pre_recovery_record": false
+    }
+  ],
+  "interpretation": "Original server used 24576 throughout. The first 39 retained calls used the earlier 16384 client guard, fit that guard, and dropped zero messages; their hashes match the archived pre-recovery scores. The later 123 used the 24576 adapter. This difference did not alter the retained judge inputs. It must still be disclosed; this is not proof of identical hardware load, cache state, or deterministic outputs. No model requests, rescoring or raw-record changes are performed."
+}
