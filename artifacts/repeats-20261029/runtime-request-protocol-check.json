@@ -1,0 +1,169 @@
+{
+  "checked_at": "2026-10-29T08:04:33+08:00",
+  "original_archive_startup_and_protocol_files": [
+    {
+      "source": "scripts/start-local-model.ps1",
+      "archive_entry": "scripts/start-local-model.ps1",
+      "sha256": "8cb4b71f94f6f4bda1bc2992e70d9edc4c0c91d0d8827fa60742eff3b452b117",
+      "same_current_bytes": true
+    },
+    {
+      "source": "scripts/start-judge.ps1",
+      "archive_entry": "scripts/start-judge.ps1",
+      "sha256": "9271b7463878d838ccb74b3bff7ed279305c2c691f4dc5c36440f3f69ea49c55",
+      "same_current_bytes": true
+    },
+    {
+      "source": "scripts/judge_with_capacity.py",
+      "archive_entry": "scripts/judge_with_capacity.py",
+      "sha256": "6a5bea59f626463cc1560c24f0caafc3b83249a7e26545c6233e1aa4a3ef7927",
+      "same_current_bytes": true
+    },
+    {
+      "source": "configs/judge-capacity.json",
+      "archive_entry": "configs/judge-capacity.json",
+      "sha256": "d1917165bbd76582ded5244c3d07ce9da97e9bf2fbaa9af8f71d725f80de8025",
+      "same_current_bytes": true
+    },
+    {
+      "source": "configs/experiment.json",
+      "archive_entry": "configs/experiment.json",
+      "sha256": "a1474b556f9fd2d5b61e76d8ba0a8a23f0707565f9bf7a0ffab0da3e080f188f",
+      "same_current_bytes": true
+    }
+  ],
+  "rounds": [
+    {
+      "round": "final-v1",
+      "scope": "Complete saved round calls",
+      "roles": {
+        "agent": {
+          "calls": 1234,
+          "models": {
+            "qwen3-4b": 1234
+          },
+          "fingerprints": {
+            "b11900-74b104c9b": 1234
+          },
+          "context_limits": {
+            "not-recorded": 1234
+          },
+          "issues": []
+        },
+        "update": {
+          "calls": 55,
+          "models": {
+            "qwen3-4b": 55
+          },
+          "fingerprints": {
+            "b11900-74b104c9b": 55
+          },
+          "context_limits": {
+            "not-recorded": 55
+          },
+          "issues": []
+        },
+        "judge": {
+          "calls": 162,
+          "models": {
+            "qwen2.5-7b-judge": 162
+          },
+          "fingerprints": {
+            "b11900-74b104c9b": 162
+          },
+          "context_limits": {
+            "not-recorded": 39,
+            "24576": 123
+          },
+          "issues": []
+        }
+      }
+    },
+    {
+      "round": "repeat-r2-20261029",
+      "scope": "Complete saved round calls",
+      "roles": {
+        "agent": {
+          "calls": 1227,
+          "models": {
+            "qwen3-4b": 1227
+          },
+          "fingerprints": {
+            "b11900-74b104c9b": 1227
+          },
+          "context_limits": {
+            "not-recorded": 1227
+          },
+          "issues": []
+        },
+        "update": {
+          "calls": 55,
+          "models": {
+            "qwen3-4b": 55
+          },
+          "fingerprints": {
+            "b11900-74b104c9b": 55
+          },
+          "context_limits": {
+            "not-recorded": 55
+          },
+          "issues": []
+        },
+        "judge": {
+          "calls": 162,
+          "models": {
+            "qwen2.5-7b-judge": 162
+          },
+          "fingerprints": {
+            "b11900-74b104c9b": 162
+          },
+          "context_limits": {
+            "24576": 162
+          },
+          "issues": []
+        }
+      }
+    },
+    {
+      "round": "final-r3",
+      "scope": "All saved calls available at check time; R3 judging not yet run",
+      "roles": {
+        "agent": {
+          "calls": 997,
+          "models": {
+            "qwen3-4b": 997
+          },
+          "fingerprints": {
+            "b11900-74b104c9b": 997
+          },
+          "context_limits": {
+            "not-recorded": 997
+          },
+          "issues": []
+        },
+        "update": {
+          "calls": 45,
+          "models": {
+            "qwen3-4b": 45
+          },
+          "fingerprints": {
+            "b11900-74b104c9b": 45
+          },
+          "context_limits": {
+            "not-recorded": 45
+          },
+          "issues": []
+        },
+        "judge": {
+          "calls": 0,
+          "models": {},
+          "fingerprints": {},
+          "context_limits": {},
+          "issues": []
+        }
+      }
+    }
+  ],
+  "all_observed_model_decoding_and_backend_checks_pass": true,
+  "limits": "Actor/update context_limit is not stored per response. The archived startup scripts match byte-for-byte, and actual new runtime receipts record capacities. This is not a claim every physical load/power state is identical. R3 judging and full-round verification remain pending."
+}

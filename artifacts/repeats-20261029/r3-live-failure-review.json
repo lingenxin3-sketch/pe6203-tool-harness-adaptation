@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-29T07:45:01+08:00",
+  "collected_at": "2026-10-29T07:59:39+08:00",
   "partial": true,
   "no_execution_retry": true,
   "records": [
@@ -13,7 +13,8 @@
       "applied": false,
       "read_only_reconstruction_verified": true,
       "recorded_messages": 8,
-      "answer_present": false
+      "answer_present": false,
+      "adaptation_status": "ok"
     },
     {
       "path": "runs/final-r3/repeat-0/no_update/iter3/389/result.json",
@@ -25,7 +26,8 @@
       "applied": false,
       "read_only_reconstruction_verified": true,
       "recorded_messages": 6,
-      "answer_present": false
+      "answer_present": false,
+      "adaptation_status": "ok"
     },
     {
       "path": "runs/final-r3/repeat-0/selective_patch/original/117/result.json",
@@ -37,7 +39,21 @@
       "applied": false,
       "read_only_reconstruction_verified": true,
       "recorded_messages": 8,
-      "answer_present": false
+      "answer_present": false,
+      "adaptation_status": "initial"
+    },
+    {
+      "path": "runs/final-r3/repeat-0/selective_patch/original/389/result.json",
+      "idx": 389,
+      "strategy": "selective_patch",
+      "version": "original",
+      "error": "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)",
+      "original_sha256": "a6ace730c1a2bbd848c9cca95a2f7ae12c116daf38880a6ffe566b5eeccf7829",
+      "applied": false,
+      "read_only_reconstruction_verified": true,
+      "recorded_messages": 6,
+      "answer_present": false,
+      "adaptation_status": "initial"
     }
   ]
 }
