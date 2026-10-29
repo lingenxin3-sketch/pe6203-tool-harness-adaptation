@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-10-29T11:45:17+08:00",
-  "status": "local_checks_complete_final_publication_pending",
+  "status": "verified_complete",
   "guide_sha256": "142fb9ada1c246ec729f2eb33042d498397c597b80108ee37ef9b6e6fb8bb726",
   "rounds": [
     {
@@ -209,8 +209,10 @@
     },
     {
       "requirement": "新分析和验证源代码、报告与最终状态远端逐文件核验",
-      "status": "pending_final_publication",
-      "evidence": []
+      "status": "verified",
+      "evidence": [
+        "final-publication-verification.json"
+      ]
     },
     {
       "requirement": "旧Word/PDF/演讲及单次组件对照标为旧版；成员复核待本人完成",
@@ -224,5 +226,7 @@
     "成员独立核查案例",
     "按新结果更新旧Word/PDF和演讲材料；原单次辅助对照不并入"
   ],
-  "boundary": "No paid inference API, extra subagent, third new main round, force push, main merge, old release overwrite, email, fabricated member contribution, or course-system submission."
+  "boundary": "No paid inference API, extra subagent, third new main round, force push, main merge, old release overwrite, email, fabricated member contribution, or course-system submission.",
+  "completed_verification_at": "2026-10-29T11:49:49+08:00",
+  "verified_source_report_commit": "5d85029220f0f617e234d59dae37c2ae92631e2a"
 }
