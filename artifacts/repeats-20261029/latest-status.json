@@ -1,7 +1,7 @@
 {
-  "collected_at": "2026-10-29T10:55:29+08:00",
-  "phase": "completed",
-  "message": "新增两轮已逐轮评分、核验、发布；三轮汇总仅在可比时提供",
+  "collected_at": "2026-10-29T11:46:24+08:00",
+  "phase": "final_publication",
+  "message": "两轮新增实验均已评分、审计、发布并完成独立证据核验；最终补充分析源码和报告正在发布，最终远端回执尚待生成。",
   "rounds": [
     {
       "name": "final-v1",

@@ -1,0 +1,228 @@
+{
+  "checked_at": "2026-10-29T11:45:17+08:00",
+  "status": "local_checks_complete_final_publication_pending",
+  "guide_sha256": "142fb9ada1c246ec729f2eb33042d498397c597b80108ee37ef9b6e6fb8bb726",
+  "rounds": [
+    {
+      "name": "final-v1",
+      "expected": 162,
+      "found": 162,
+      "scored": 162,
+      "failures": 4,
+      "missing": 0,
+      "issues": [],
+      "status_counts": {
+        "evaluated": 162
+      },
+      "complete": true
+    },
+    {
+      "name": "repeat-r2-20261029",
+      "expected": 162,
+      "found": 162,
+      "scored": 162,
+      "failures": 5,
+      "missing": 0,
+      "issues": [],
+      "status_counts": {
+        "evaluated": 162
+      },
+      "complete": true
+    },
+    {
+      "name": "final-r3",
+      "expected": 162,
+      "found": 162,
+      "scored": 162,
+      "failures": 5,
+      "missing": 0,
+      "issues": [],
+      "status_counts": {
+        "evaluated": 162
+      },
+      "complete": true
+    }
+  ],
+  "total_scored_records": 486,
+  "comparable_observations": 324,
+  "distinct_tasks": 18,
+  "no_three_round_comparable_pool": true,
+  "requirements": [
+    {
+      "requirement": "每轮18任务、3策略、3版本的完整唯一矩阵",
+      "status": "verified",
+      "evidence": [
+        "preflight.json",
+        "repeat-r2-20261029-metrics.json",
+        "final-r3-metrics.json"
+      ]
+    },
+    {
+      "requirement": "最多追加两轮；开发验证及旧单次组件对照不混入",
+      "status": "verified",
+      "evidence": [
+        "smoke-verification.json",
+        "3-round-combination-refused.json"
+      ]
+    },
+    {
+      "requirement": "开始前冻结原配置、模型、代码和依赖",
+      "status": "verified",
+      "evidence": [
+        "preflight.json",
+        "runtime-dependency-verification.json",
+        "final-preservation-verification.json"
+      ]
+    },
+    {
+      "requirement": "正式执行前公开准备页并同步验证后才启动",
+      "status": "verified",
+      "evidence": [
+        "final-independent-statistics-and-order-verification.json"
+      ]
+    },
+    {
+      "requirement": "必要无模型测试和实际开发链路、续跑跳过验证",
+      "status": "verified",
+      "evidence": [
+        "test-receipt.json",
+        "smoke-verification.json"
+      ]
+    },
+    {
+      "requirement": "运行中真实带时间进度，08:00前公开快照",
+      "status": "verified",
+      "evidence": [
+        "first-automatic-progress-verification.json",
+        "before-0800-progress-verification.json"
+      ]
+    },
+    {
+      "requirement": "第一新增轮162评分、失败、原始证据与远端验证",
+      "status": "verified",
+      "evidence": [
+        "r2-independent-archive-verification.json",
+        "r2-independent-remote-verification.json"
+      ]
+    },
+    {
+      "requirement": "第一发布门通过后才启动第二新增轮",
+      "status": "verified",
+      "evidence": [
+        "publication-gates/repeat-r2-20261029-gate.json",
+        "r3-actor-runtime-preservation.json"
+      ]
+    },
+    {
+      "requirement": "第二新增轮162评分、审计、原始证据与远端验证",
+      "status": "verified",
+      "evidence": [
+        "r3-independent-archive-verification.json",
+        "r3-independent-remote-verification.json",
+        "publication-gates/final-r3-gate.json"
+      ]
+    },
+    {
+      "requirement": "逐条实际输入及同题同版本组内公平性核对",
+      "status": "verified",
+      "evidence": [
+        "r3-input-compatibility-final-execution.json",
+        "within-round-input-fairness-final.json"
+      ]
+    },
+    {
+      "requirement": "历史客户端检查与序列化格式差异如实披露",
+      "status": "verified",
+      "evidence": [
+        "original-effective-context-verification.json",
+        "original-public-evidence-verification.json",
+        "original-local-serialization-provenance.json"
+      ]
+    },
+    {
+      "requirement": "R2独立，只有原轮加R3的324条描述性对照",
+      "status": "verified",
+      "evidence": [
+        "original-r3-comparison.json",
+        "original-r3-paired-evidence.json",
+        "3-round-combination-refused.json"
+      ]
+    },
+    {
+      "requirement": "TF/PE/ECS、恢复保持、配对差、18独立任务分母和轮间标准差",
+      "status": "verified",
+      "evidence": [
+        "original-r3-comparison.json",
+        "final-independent-statistics-and-order-verification.json"
+      ]
+    },
+    {
+      "requirement": "更新、执行、评审成本分别计，更新节省不冒充总成本",
+      "status": "verified",
+      "evidence": [
+        "repeat-r2-20261029-metrics.json",
+        "final-r3-metrics.json",
+        "original-r3-comparison.json"
+      ]
+    },
+    {
+      "requirement": "全162执行副本、事件及失败原件未被评分改写",
+      "status": "verified",
+      "evidence": [
+        "r3-execution-freeze.json",
+        "original-r3-comparison.json",
+        "r3-independent-archive-verification.json"
+      ]
+    },
+    {
+      "requirement": "全部失败保留；27预选案例及全部5异常评分分歧核查",
+      "status": "verified",
+      "evidence": [
+        "r3-case-postscore-review.json",
+        "r3-failures-postscore-review.json",
+        "r3-failure-preservation-verification.json"
+      ]
+    },
+    {
+      "requirement": "漏更新与过度更新案例保留，人工复核未冒认",
+      "status": "verified",
+      "evidence": [
+        "r3-case-execution-review-receipt.json",
+        "r3-case-postscore-review.json"
+      ]
+    },
+    {
+      "requirement": "旧491原件、main、旧tag、旧Release保持原状",
+      "status": "verified",
+      "evidence": [
+        "final-preservation-verification.json",
+        "r3-independent-remote-verification.json"
+      ]
+    },
+    {
+      "requirement": "新证据ZIP匿名下载、全清单SHA/CRC和原件来源可复现",
+      "status": "verified",
+      "evidence": [
+        "r2-independent-archive-verification.json",
+        "r3-independent-archive-verification.json"
+      ]
+    },
+    {
+      "requirement": "新分析和验证源代码、报告与最终状态远端逐文件核验",
+      "status": "pending_final_publication",
+      "evidence": []
+    },
+    {
+      "requirement": "旧Word/PDF/演讲及单次组件对照标为旧版；成员复核待本人完成",
+      "status": "verified",
+      "evidence": [
+        "r3-case-postscore-review.json"
+      ]
+    }
+  ],
+  "human_followup": [
+    "成员独立核查案例",
+    "按新结果更新旧Word/PDF和演讲材料；原单次辅助对照不并入"
+  ],
+  "boundary": "No paid inference API, extra subagent, third new main round, force push, main merge, old release overwrite, email, fabricated member contribution, or course-system submission."
+}

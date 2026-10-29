@@ -1,0 +1,179 @@
+{
+  "checked_at": "2026-10-29T11:36:25+08:00",
+  "all_three_independent_round_tf_pe_ecs_and_cost_recalculations_match": true,
+  "all_162_paired_source_hashes_match": true,
+  "two_round_mean_and_sample_sd_match": true,
+  "cohort_observations_are_twice_distinct_tasks": true,
+  "rounds": {
+    "final-v1": {
+      "no_update": {
+        "ecs": 6.280354732664724,
+        "costs": {
+          "agent": {
+            "calls": 426,
+            "tokens": 3007538
+          },
+          "update": {
+            "calls": 0,
+            "tokens": 0
+          },
+          "judge": {
+            "calls": 54,
+            "tokens": 406669
+          }
+        }
+      },
+      "full_rewrite": {
+        "ecs": 5.2390285754310435,
+        "costs": {
+          "agent": {
+            "calls": 403,
+            "tokens": 2682307
+          },
+          "update": {
+            "calls": 36,
+            "tokens": 104472
+          },
+          "judge": {
+            "calls": 54,
+            "tokens": 397788
+          }
+        }
+      },
+      "selective_patch": {
+        "ecs": 6.332491324289093,
+        "costs": {
+          "agent": {
+            "calls": 405,
+            "tokens": 2985921
+          },
+          "update": {
+            "calls": 19,
+            "tokens": 36449
+          },
+          "judge": {
+            "calls": 54,
+            "tokens": 408974
+          }
+        }
+      }
+    },
+    "repeat-r2-20261029": {
+      "no_update": {
+        "ecs": 5.9829992922411135,
+        "costs": {
+          "agent": {
+            "calls": 420,
+            "tokens": 3088764
+          },
+          "update": {
+            "calls": 0,
+            "tokens": 0
+          },
+          "judge": {
+            "calls": 54,
+            "tokens": 424142
+          }
+        }
+      },
+      "full_rewrite": {
+        "ecs": 5.61117905619099,
+        "costs": {
+          "agent": {
+            "calls": 403,
+            "tokens": 2563956
+          },
+          "update": {
+            "calls": 36,
+            "tokens": 104413
+          },
+          "judge": {
+            "calls": 54,
+            "tokens": 394719
+          }
+        }
+      },
+      "selective_patch": {
+        "ecs": 4.5974797907065685,
+        "costs": {
+          "agent": {
+            "calls": 404,
+            "tokens": 2873558
+          },
+          "update": {
+            "calls": 19,
+            "tokens": 36449
+          },
+          "judge": {
+            "calls": 54,
+            "tokens": 411512
+          }
+        }
+      }
+    },
+    "final-r3": {
+      "no_update": {
+        "ecs": 4.928679107544627,
+        "costs": {
+          "agent": {
+            "calls": 425,
+            "tokens": 2985646
+          },
+          "update": {
+            "calls": 0,
+            "tokens": 0
+          },
+          "judge": {
+            "calls": 54,
+            "tokens": 416731
+          }
+        }
+      },
+      "full_rewrite": {
+        "ecs": 5.339748750522908,
+        "costs": {
+          "agent": {
+            "calls": 401,
+            "tokens": 2656393
+          },
+          "update": {
+            "calls": 36,
+            "tokens": 104426
+          },
+          "judge": {
+            "calls": 54,
+            "tokens": 397538
+          }
+        }
+      },
+      "selective_patch": {
+        "ecs": 6.152443202372131,
+        "costs": {
+          "agent": {
+            "calls": 405,
+            "tokens": 2846206
+          },
+          "update": {
+            "calls": 19,
+            "tokens": 36449
+          },
+          "judge": {
+            "calls": 54,
+            "tokens": 385204
+          }
+        }
+      }
+    }
+  },
+  "chronology": {
+    "pre_run_preparation_commit": "fbae625b58006bad2601ed3fb0ce76b0d88be72c",
+    "preparation_commit_time": "2026-10-29T00:33:40+08:00",
+    "first_actor": "2026-10-29T00:34:09+08:00",
+    "first_publication_gate": "2026-10-29T05:37:57+08:00",
+    "second_actor": "2026-10-29T05:38:09+08:00",
+    "second_judge": "2026-10-29T09:32:53+08:00",
+    "second_publication_gate": "2026-10-29T10:55:24+08:00",
+    "staged_order_verified": true,
+    "scope": "Commit timestamp plus original synchronous publish-before-actor control flow and original controller log; completed gates are actual verified publication receipts."
+  }
+}

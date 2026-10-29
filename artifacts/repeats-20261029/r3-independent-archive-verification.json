@@ -1,0 +1,29 @@
+{
+  "verified_at": "2026-10-29T11:28:32+08:00",
+  "round": "final-r3",
+  "archive": "deliverables/final-r3-evidence-remote-verified.zip",
+  "archive_sha256": "402d9a8005bc5848890fc60919dac4eef531ccf2a96a750e6b5c67f920f34c8c",
+  "archive_bytes": 29825930,
+  "manifest_entries": 909,
+  "all_entry_sizes_hashes_and_crc_pass": true,
+  "raw_counts": {
+    "result.json": 162,
+    "agent-record.json": 162,
+    "events.jsonl": 162,
+    "failure-record.json": 5
+  },
+  "unique_scored_episodes": 162,
+  "all_raw_sources_match_local_analyzed_dataset": true,
+  "all_scored_results_preserve_actor_fields": true,
+  "closed_phase_logs": [
+    "runtime/repeats-20261029/final-r3-execution.log",
+    "runtime/repeats-20261029/final-r3-scoring.log",
+    "runtime/repeats-20261029/final-r3-summary.log"
+  ],
+  "archive_access_receipt": "2026-10-29T10:54:04+08:00",
+  "scope": "Independent examination of the actual cached anonymous remote download. Later analysis/gate/source-code additions are on the branch and are not claimed to be inside this immutable ZIP.",
+  "all_162_execution_snapshots_match_sealed_raw_evidence": true,
+  "original_local_serialization_entry": "artifacts/repeats-20261029/original-local-serialization/no_update-iter5-113.json",
+  "original_local_serialization_sha256": "7227279529b71bbe8c95cac2d43c7935b20faeca3e56b3d89170e43205cc4335",
+  "case_postscore_review_in_original_zip": false
+}

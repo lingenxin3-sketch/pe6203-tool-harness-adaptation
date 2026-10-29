@@ -1,0 +1,750 @@
+{
+  "reviewed_at": "2026-10-29T11:25:26+08:00",
+  "selected_records": 27,
+  "all_original_execution_bytes_verified": true,
+  "whole_round_status_at_review": {
+    "name": "final-r3",
+    "expected": 162,
+    "found": 162,
+    "scored": 162,
+    "failures": 5,
+    "missing": 0,
+    "issues": [],
+    "status_counts": {
+      "evaluated": 162
+    },
+    "complete": true
+  },
+  "review_type": "AI-assisted evidence comparison; member verification pending",
+  "no_rescoring": true,
+  "all_event_bytes_verified": true,
+  "all_reviewed_artifact_bytes_verified": true,
+  "records": [
+    {
+      "source": "runs/final-r3/repeat-0/no_update/original/28/result.json",
+      "source_sha256": "327737217e80b8954c03a1564564a9cad0060b29ddd479e340b9a7780223cd78",
+      "agent_record_sha256": "c550e502e54f6a51187231c6259ebfb7ad7c93f6abf951f542829dbc646700fd",
+      "original_execution_record": "runs/final-r3/repeat-0/no_update/original/28/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 28,
+      "strategy": "no_update",
+      "version": "original",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          "anotation_path/markdown/tasks.md",
+          "sources.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/no_update/iter3/28/result.json",
+      "source_sha256": "1636f061e179d482b1719a96b1ba2b0ccccffd32e8e216083a599be7f3b5cb91",
+      "agent_record_sha256": "602c335e6e8fc5167a761dd4b752e444e18fd90b3fd7b5f8bcd81917dfd281c1",
+      "original_execution_record": "runs/final-r3/repeat-0/no_update/iter3/28/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 28,
+      "strategy": "no_update",
+      "version": "iter3",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          "anotation_path/markdown/tasks.md",
+          "sources.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/no_update/iter5/28/result.json",
+      "source_sha256": "042359baff84a478e6d58187b74a6cb617a0184c0957e47d7500e7e01535eaf9",
+      "agent_record_sha256": "8752a1cc2148c46f22ea12d1c05114b8283de6da7352321880a5082248b495a5",
+      "original_execution_record": "runs/final-r3/repeat-0/no_update/iter5/28/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 28,
+      "strategy": "no_update",
+      "version": "iter5",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          "anotation_path/markdown/tasks.md",
+          "sources.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/original/28/result.json",
+      "source_sha256": "e8d46c9af9cf064371de650d3cf2832b99e50e8b529437ec6fa190bbc9b31006",
+      "agent_record_sha256": "4c8db3e25421a49a4823272728a1ef6c3fedbb3406f119dd64c40c9c1c7ced6f",
+      "original_execution_record": "runs/final-r3/repeat-0/full_rewrite/original/28/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 28,
+      "strategy": "full_rewrite",
+      "version": "original",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          "markdown/tasks.md",
+          "sources.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/iter3/28/result.json",
+      "source_sha256": "619162afff862eef815741c155a99316e73cd1364025c4b22bca3ab88f1b1dbf",
+      "agent_record_sha256": "d13a85f10c6437db42e50b6995c4d8a64cf222c37ba02619158c89810d1e37f9",
+      "original_execution_record": "runs/final-r3/repeat-0/full_rewrite/iter3/28/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 28,
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "tf": 1.0,
+      "pe": 4.0,
+      "actual_tool_calls": 4,
+      "mcp_flagged_tool_errors": 3,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/iter5/28/result.json",
+      "source_sha256": "321b83288c2a99e5582cb52f8ed2d54251a3cf163325d8a47769a478216b69de",
+      "agent_record_sha256": "c90698c60313259c138300d22b40c3ea866a44858f6f38786a3be5416e3e5e09",
+      "original_execution_record": "runs/final-r3/repeat-0/full_rewrite/iter5/28/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 28,
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "tf": 1.0,
+      "pe": 4.0,
+      "actual_tool_calls": 4,
+      "mcp_flagged_tool_errors": 3,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/original/28/result.json",
+      "source_sha256": "124a4e52aafdab5e8ca8f12c30e27784e4653d1327dbf5f926cbc3d5dec75e29",
+      "agent_record_sha256": "6693a126814183373e3e072c6e1a5789b32c0365f0b90d75faaac37cf8c880dc",
+      "original_execution_record": "runs/final-r3/repeat-0/selective_patch/original/28/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 28,
+      "strategy": "selective_patch",
+      "version": "original",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          "anotation_path/markdown/tasks.md",
+          "sources.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/iter3/28/result.json",
+      "source_sha256": "96656ea70693b2c895ed98f42de8e5a384696db9a4c6433c07b73df0dae8b6d1",
+      "agent_record_sha256": "728ab8c57ae1e97df2fe90d4fe6649766a8586e38d8f6e27b3380dbe6d320c68",
+      "original_execution_record": "runs/final-r3/repeat-0/selective_patch/iter3/28/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 28,
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          "anotation_path/markdown/tasks.md",
+          "sources.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/iter5/28/result.json",
+      "source_sha256": "1103267ad173b838265fdb6d2960c5da9ec6a3f7d15eb42d846951834c42822e",
+      "agent_record_sha256": "c20db7d0922d075a71f2d264bc6798c305da0b53f9ef31e8be9440716e8bb2ff",
+      "original_execution_record": "runs/final-r3/repeat-0/selective_patch/iter5/28/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 28,
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "tf": 10.0,
+      "pe": 7.0,
+      "actual_tool_calls": 4,
+      "mcp_flagged_tool_errors": 1,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          "sources.json",
+          "txt/tasks.md"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/no_update/original/113/result.json",
+      "source_sha256": "4ec25e424456f6b7e727f41917c90b3baf0ffd14c58b29d8f3b65aabdf51b7f0",
+      "agent_record_sha256": "2183867451cd2f7e2eb8e9462ac90108925d2ef0248ef4ab919760e494a8617c",
+      "original_execution_record": "runs/final-r3/repeat-0/no_update/original/113/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 113,
+      "strategy": "no_update",
+      "version": "original",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": "tasks.json",
+          "sha256": "d4e0c3960bc555a851cd8605a437765bef532139085d827c59f786ccaaaf2294"
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "10d8a0900a3b3f9d07e733d71bb46abdb5ee9d644806597b7f19872566c82254"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/no_update/iter3/113/result.json",
+      "source_sha256": "cca88671b0bdfd3f2c1bd28784cb2e765ff3db43a1433038035c3b66e51ab4d9",
+      "agent_record_sha256": "a463dcd571dea63eafaef2259f3e2f9c6020b9ecd8efc6cbf90add6de847603d",
+      "original_execution_record": "runs/final-r3/repeat-0/no_update/iter3/113/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 113,
+      "strategy": "no_update",
+      "version": "iter3",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 4,
+      "mcp_flagged_tool_errors": 1,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": "tasks.json",
+          "sha256": "493d3a2f9833f45fe986375c361ce910436cafd49b9064c6d839b0f411baeaa9"
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "1676fd0d7a61098fcfe4d6383421e8b3e3cd766f0c0fe52fb6fbf463c63b08c7"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/no_update/iter5/113/result.json",
+      "source_sha256": "6820aff7bebc857a862b7cd53e1acf2cf11338fb7fe6466ed2def29da12114b2",
+      "agent_record_sha256": "0e38fd77994013b0ab8cd723caa93fa85e8e1dd4f415062bee9d690837251ee5",
+      "original_execution_record": "runs/final-r3/repeat-0/no_update/iter5/113/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 113,
+      "strategy": "no_update",
+      "version": "iter5",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 8,
+      "mcp_flagged_tool_errors": 7,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "b0e50fa123f06eabb5095ffe337a0121b41f4c90a6a77dac03daba17379d905a"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/original/113/result.json",
+      "source_sha256": "084abf38602db5ac9f9944456dc2f3abdc51412820cf7740ffbb0c06e4914b98",
+      "agent_record_sha256": "5180ee5e033b054a1b048503ad26bd36f1a99d87feaf7c1bbeca2514d5dd3956",
+      "original_execution_record": "runs/final-r3/repeat-0/full_rewrite/original/113/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 113,
+      "strategy": "full_rewrite",
+      "version": "original",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": "tasks.json",
+          "sha256": "6a61842692169cb153d15b84ae6c977b23e6d8f7c9e415ceadb3bc82c8c8453a"
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "e77a09f68ff3b24f6352d319accd990d3056b552d06818912a10e722511afb0e"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/iter3/113/result.json",
+      "source_sha256": "1980183b1acd55dedec0e8bd5722a98c5333e52bae6da2431989928625acdc71",
+      "agent_record_sha256": "2558ab699cc57966bcb36b8aa0c08d49bbedd22de31da186ae214f41f65d11e6",
+      "original_execution_record": "runs/final-r3/repeat-0/full_rewrite/iter3/113/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 113,
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 6,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "fb701b6c011e5aefc0a965737aaee3b3bb17a2cbe9e63276348d2dc08ab97c95"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/iter5/113/result.json",
+      "source_sha256": "c8ae4da7c3f84822c9642bfcd03b588303f41aa3f634b0399649d54fe2f475b0",
+      "agent_record_sha256": "a4ab1571a47d95fcc5db231d9c36a5973c9f371ea30bc52e9ae4fdbfc9723359",
+      "original_execution_record": "runs/final-r3/repeat-0/full_rewrite/iter5/113/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 113,
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": "tasks.json",
+          "sha256": "2e294d15fe70cb9c003d20972e0869a160d5a0c1727bcff86a758698211584b0"
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "eeb6afbd35a3d2fb0342fb96e8563c23667c3bcb824704c51ebc456bf82a652a"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/original/113/result.json",
+      "source_sha256": "e10e63decfccd6cbdbbb06e92dd607146dbfbbd8ec18f9e039939b290dec83e6",
+      "agent_record_sha256": "fe6e1fc26473a28fe509e77add9d5adff7f202e17e91ae5e241b4290cec0c5e3",
+      "original_execution_record": "runs/final-r3/repeat-0/selective_patch/original/113/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 113,
+      "strategy": "selective_patch",
+      "version": "original",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": "tasks.json",
+          "sha256": "dddb706829d524a576513d8d859e6803acdfb746ab798304a6438461d8fccdc6"
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "cd752948d344c4e7193863d15c7b3c23337ac2732e81e308b3abb94f7c7a6dbf"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/iter3/113/result.json",
+      "source_sha256": "eb4578c99530ee90a219953b273e60f6e0c3ea3de1b9f411ffab2a6e7491bc45",
+      "agent_record_sha256": "f7f64e1f2236ff473347e339f38c2836e47b41d3440f99448c599e313320b822",
+      "original_execution_record": "runs/final-r3/repeat-0/selective_patch/iter3/113/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 113,
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "tf": 4.0,
+      "pe": 9.0,
+      "actual_tool_calls": 2,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": "tasks.json",
+          "sha256": "098fb55a31248ac21c536e0b3d789174cf0abd714c21656e77fdda0d51f960a8"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/iter5/113/result.json",
+      "source_sha256": "3e4c295588f3f62666ed9311acf0a006b97a83dea90e1c9f11b6dd9fa658dbea",
+      "agent_record_sha256": "cd007000afa74c6ea407a885c64b8683494f1ef6bb52d9e8cce98e814ac63378",
+      "original_execution_record": "runs/final-r3/repeat-0/selective_patch/iter5/113/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 113,
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "tf": 4.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 0,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          ".agentic-tools-mcp/tasks/tasks.json",
+          "tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": "tasks.json",
+          "sha256": "36b81f9046992a79bdd732f5dc00ac66082aef2d5c33d27753ecb91523799e65"
+        },
+        {
+          "path": ".agentic-tools-mcp/tasks/tasks.json",
+          "sha256": "27c9a4839d556ee109ea1234401ef0b048618ecf8dcbd71af6ec056edf39dc93"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/no_update/original/117/result.json",
+      "source_sha256": "ecddd87b4d3fa6c97e656faa93d091829edb6e99a0a1446a7cd922e56b477362",
+      "agent_record_sha256": "4b650a9a27588402202e4ea3610e54888924f7311e5c7e7d0f062d3ba6143d37",
+      "original_execution_record": "runs/final-r3/repeat-0/no_update/original/117/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 117,
+      "strategy": "no_update",
+      "version": "original",
+      "tf": 4.0,
+      "pe": 4.0,
+      "actual_tool_calls": 12,
+      "mcp_flagged_tool_errors": 8,
+      "execution_status": null,
+      "answer_empty": true,
+      "artifact_changes": {
+        "created": [],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/no_update/iter3/117/result.json",
+      "source_sha256": "0e2b580f11eecbfe207d09bd3ac8b1367aee01cf420231a87ded64622e2c9bb3",
+      "agent_record_sha256": "20967e3797f94d58b69550cc263142c2fd3b048f8a4c9172696487ef210a2839",
+      "original_execution_record": "runs/final-r3/repeat-0/no_update/iter3/117/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 117,
+      "strategy": "no_update",
+      "version": "iter3",
+      "tf": 7.0,
+      "pe": 7.0,
+      "actual_tool_calls": 12,
+      "mcp_flagged_tool_errors": 7,
+      "execution_status": null,
+      "answer_empty": true,
+      "artifact_changes": {
+        "created": [],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/no_update/iter5/117/result.json",
+      "source_sha256": "9e70470defc41d0aab5c01c59e37c5c52cca5a35cf0c72d4ab887354406ce27b",
+      "agent_record_sha256": "c6884761f57e04e6acce34a903f095d776368adfb87de5f696931c6ad12a3706",
+      "original_execution_record": "runs/final-r3/repeat-0/no_update/iter5/117/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 117,
+      "strategy": "no_update",
+      "version": "iter5",
+      "tf": 8.0,
+      "pe": 8.0,
+      "actual_tool_calls": 12,
+      "mcp_flagged_tool_errors": 7,
+      "execution_status": null,
+      "answer_empty": true,
+      "artifact_changes": {
+        "created": [
+          "shrimp/tasks.json",
+          "sources.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": "shrimp/tasks.json",
+          "sha256": "7d8c0de05751bdafe269e8b2f176063db302f1de4ddbb133b5d4a3ec57ba0530"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/original/117/result.json",
+      "source_sha256": "d625be25f6500c1539b09f1d57a342540ec1efd7c767aa6d74e3aa5ef113069a",
+      "agent_record_sha256": "01c1259d0dc3f6caca9ded41fae8388ee52c2ff7d9a7b5d8cefe8e2b05c0a184",
+      "original_execution_record": "runs/final-r3/repeat-0/full_rewrite/original/117/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 117,
+      "strategy": "full_rewrite",
+      "version": "original",
+      "tf": 7.0,
+      "pe": 4.0,
+      "actual_tool_calls": 12,
+      "mcp_flagged_tool_errors": 8,
+      "execution_status": null,
+      "answer_empty": true,
+      "artifact_changes": {
+        "created": [],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/iter3/117/result.json",
+      "source_sha256": "5e9c4a6810eb0dec953819226994d7e97be89129d70f8c34cfbfc964fbf4d846",
+      "agent_record_sha256": "f704687de937563417e9860dc0698cf6eca6129bf73f4d3ef622037094e882aa",
+      "original_execution_record": "runs/final-r3/repeat-0/full_rewrite/iter3/117/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 117,
+      "strategy": "full_rewrite",
+      "version": "iter3",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 12,
+      "mcp_flagged_tool_errors": 2,
+      "execution_status": null,
+      "answer_empty": true,
+      "artifact_changes": {
+        "created": [
+          "sources.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/full_rewrite/iter5/117/result.json",
+      "source_sha256": "1a62ecc291770a5e8d83e1ad3c8fbd8cc27ba2e6d2de5339c32a7953255d095c",
+      "agent_record_sha256": "0e3e142fe946d51e445cb85ed6a12a91c508c385ff9baa6c7c31b8f6755d9b40",
+      "original_execution_record": "runs/final-r3/repeat-0/full_rewrite/iter5/117/failure-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 117,
+      "strategy": "full_rewrite",
+      "version": "iter5",
+      "tf": 8.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 1,
+      "execution_status": "infrastructure_error",
+      "answer_empty": true,
+      "artifact_changes": {
+        "created": [],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/original/117/result.json",
+      "source_sha256": "42abdce6f488a5468e0ac81f0fe7b2e15e3ebf944107013eaeb0cf08bf1465f4",
+      "agent_record_sha256": "bcfdf005a83781bb83891adaeb9f18d6fc43ecf2370e547c80296dc5307bbe6c",
+      "original_execution_record": "runs/final-r3/repeat-0/selective_patch/original/117/failure-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 117,
+      "strategy": "selective_patch",
+      "version": "original",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 3,
+      "mcp_flagged_tool_errors": 1,
+      "execution_status": "infrastructure_error",
+      "answer_empty": true,
+      "artifact_changes": {
+        "created": [],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/iter3/117/result.json",
+      "source_sha256": "272142828a39bbb8a6816b00fba01d52c89fc8207c8d5b9f9d13f4477f20abe5",
+      "agent_record_sha256": "71184b7fdce6238d505baadb8daa457908b6641ca9cf1dfb73b9487f7be380d7",
+      "original_execution_record": "runs/final-r3/repeat-0/selective_patch/iter3/117/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 117,
+      "strategy": "selective_patch",
+      "version": "iter3",
+      "tf": 10.0,
+      "pe": 10.0,
+      "actual_tool_calls": 8,
+      "mcp_flagged_tool_errors": 4,
+      "execution_status": null,
+      "answer_empty": false,
+      "artifact_changes": {
+        "created": [
+          "shrimp/tasks.json"
+        ],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": [
+        {
+          "path": "shrimp/tasks.json",
+          "sha256": "656a38e7e30fb32da0a8cc603004776edbca1c8ae57187e6dffe9600d29a8d5e"
+        }
+      ]
+    },
+    {
+      "source": "runs/final-r3/repeat-0/selective_patch/iter5/117/result.json",
+      "source_sha256": "63e61f4bb2d6ec5a9787abb12b409c9a8e7c243cdb61326afb49d5a58a018dc9",
+      "agent_record_sha256": "139a563b6701a59ca0f49f749dbbd62de1673bbc720cec8cc1e51d5fda07370b",
+      "original_execution_record": "runs/final-r3/repeat-0/selective_patch/iter5/117/agent-record.json",
+      "original_execution_bytes_verified": true,
+      "idx": 117,
+      "strategy": "selective_patch",
+      "version": "iter5",
+      "tf": 7.0,
+      "pe": 7.0,
+      "actual_tool_calls": 22,
+      "mcp_flagged_tool_errors": 13,
+      "execution_status": null,
+      "answer_empty": true,
+      "artifact_changes": {
+        "created": [],
+        "deleted": [],
+        "modified": []
+      },
+      "stored_plan_files": []
+    }
+  ],
+  "limits": "These are original automatic scores, not actual success rates. MCP error flags miss semantic failures. File existence does not prove correctness. Resource listing confounding remains."
+}

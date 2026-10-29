@@ -1,0 +1,43 @@
+{
+  "verified_at": "2026-10-29T11:34:54+08:00",
+  "original_raw_files_checked": 491,
+  "all_original_raw_sha256_unchanged": true,
+  "original_manifest_sha256": "579c60853c83400a015b35ac6ba68fbe97a0f1ebba1427403ace27ffd8381cb2",
+  "core_source_files_checked": 10,
+  "all_frozen_core_sources_unchanged": true,
+  "original_configuration_and_upstream_commit_unchanged": true,
+  "downloaded_archives_and_model_files_checked": 8,
+  "all_download_sizes_and_sha256_match_original_lock": true,
+  "server_source_audits": [
+    {
+      "version": "original",
+      "checked_archive_files": 10951,
+      "missing": [],
+      "modified": [],
+      "passed": true,
+      "scope": "All extracted archive members; extra runtime-generated files are not source changes."
+    },
+    {
+      "version": "iter3",
+      "checked_archive_files": 10651,
+      "missing": [],
+      "modified": [],
+      "passed": true,
+      "scope": "All extracted archive members; extra runtime-generated files are not source changes."
+    },
+    {
+      "version": "iter5",
+      "checked_archive_files": 10786,
+      "missing": [],
+      "modified": [],
+      "passed": true,
+      "scope": "All extracted archive members; extra runtime-generated files are not source changes."
+    }
+  ],
+  "all_three_server_source_audits_pass": true,
+  "fixture_source_files_checked": 29,
+  "original_workspace_fixture_copies_checked": 58,
+  "all_fixture_bytes_unchanged": true,
+  "python_packages_checked": 30,
+  "all_frozen_python_package_versions_match": true
+}

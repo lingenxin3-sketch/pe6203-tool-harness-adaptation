@@ -19,13 +19,13 @@ def cmd(*args):
 def sensitive(data):
     patterns=[rb'gh[pousr]_[A-Za-z0-9_]{30,}',rb'github_pat_[A-Za-z0-9_]{30,}',rb'sk-[A-Za-z0-9_-]{30,}',rb'hf_[A-Za-z0-9]{30,}',rb'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----']
     return any(re.search(p,data) for p in patterns)
-def allowed(name):return name.startswith('docs/追加实验/') or name.startswith('artifacts/'+CAMPAIGN+'/') or name in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md']
+def allowed(name):return name.startswith('docs/追加实验/') or name.startswith('artifacts/'+CAMPAIGN+'/') or name in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','scripts/repeat_pair_comparison.py','scripts/repeat_original_context_audit.py','scripts/repeat_verify_archive.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md']
 def publish(message):
     if cmd('git','branch','--show-current')!=BRANCH:raise RuntimeError('Branch changed; refusing publication')
     staged=cmd('git','diff','--cached','--name-only','-z').split('\0')
     if any(n and not allowed(n) for n in staged):raise RuntimeError('Other staged work exists; preserve it and stop')
     paths=[p for d in [PUBLIC,RECEIPTS] for p in d.rglob('*') if p.is_file() and p.suffix in ['.md','.json','.csv']]
-    paths += [ROOT/p for p in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md'] if (ROOT/p).is_file()]
+    paths += [ROOT/p for p in ['scripts/repeat_common.py','scripts/repeat_preflight.py','scripts/repeat_runner.py','scripts/repeat_publish.py','scripts/repeat_campaign.py','scripts/repeat_supervise_existing.py','scripts/repeat_validate_path.py','scripts/repeat_pair_comparison.py','scripts/repeat_original_context_audit.py','scripts/repeat_verify_archive.py','tests/test_repeats.py','docs/WORK_STATE_REPEATS.md'] if (ROOT/p).is_file()]
     for p in paths:
         if p.stat().st_size>20_000_000 or sensitive(p.read_bytes()):raise RuntimeError('Size/privacy check failed: '+str(p.relative_to(ROOT)))
     cmd('git','add','--',*[p.relative_to(ROOT).as_posix() for p in paths]);cmd('git','diff','--cached','--check')
@@ -54,13 +54,16 @@ def publish(message):
 def status(phase,message,extra=''):
     PUBLIC.mkdir(parents=True,exist_ok=True)
     statuses=[inspect(ROOT/'runs'/n) for n in NAMES]
+    finished=phase in ['final_publication','final_verified']
+    monitor_note=('实验管理进程已正常退出，原每15分钟自动心跳已结束。本页为带采集时间的交付快照，后续更新由明确的发布操作完成。'
+                  if finished else '运行期间进程请求 Windows 保持唤醒，不更改系统电源计划。断电、合盖、重启和网络故障仍可能中断；定时发布不作保证。计划每 15 分钟更新真实快照，并尽力覆盖 08:00 前的状态。')
     lines=['# 追加实验状态','',f'采集时间：{now()}（新加坡时间 UTC+8）。',f'','阶段：'+phase,'',message,'',
         '| 轮次 | 已保存 / 计划 | 有效评分 | 执行异常 | 缺失 |','|---|---:|---:|---:|---:|']
     for s in statuses:lines.append(f"| {s['name']} | {s['found']} / {s['expected']} | {s['scored']} | {s['failures']} | {s['missing']} |")
     pre=RECEIPTS/'preflight.json'; ok=pre.exists() and read(pre).get('compatible_preconditions')
-    lines+=['','旧轮兼容前提核验：'+('通过；新增轮完成后还须核对实际 manifest、运行和评分收据。' if ok else '尚未完成。'),'',
+    lines+=['','旧轮兼容前提核验：'+('旧原件保留及新增轮实际输入、模型和评分收据均已完成核查；各轮可比性分别见结果页。' if finished else ('通过；新增轮完成后还须核对实际 manifest、运行和评分收据。' if ok else '尚未完成。')),'',
         '当前计数来自完整落盘的 result.json；有效评分不等于任务实际成功。尚未完成的轮次不发布最终平均数。',
-        '','运行期间进程请求 Windows 保持唤醒，不更改系统电源计划。断电、合盖、重启和网络故障仍可能中断；定时发布不作保证。计划每 15 分钟更新真实快照，并尽力覆盖 08:00 前的状态。',
+        '',monitor_note,
         '','第一轮新增完成评分、162 条审计、证据发布及远端验证后才启动第二轮。12:00 是争取目标；若届时尚未启动第二轮则不自动启动，等待团队决定。',
         '','固定 seed=6203、temperature=0，重复反映相同设置下的执行稳定性，不等于独立采样或统计显著性。',
         '','旧 PDF、原结果表和六人演讲稿仍是原轮版本。原依赖扩展对照仍为单次辅助实验，不并入主实验重复。',

@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-29T11:32:04+08:00",
+  "latest_branch_commit": "076377285b9c98009c28a69d0dee778255e4c389",
+  "gate_result_commit": "6e33964b26b51fba96f200cde3850c46a7db9370",
+  "result_blob_sha256": "2a492890fd42e16c98e748c46494ce3a4c9a049fa3dface07076f3275ece3c78",
+  "remote_result_bytes_match_git_blob": true,
+  "main_unchanged": "d471239f99f95f7c6aadcb8070852f293eb1b95b",
+  "original_tag_points_to_recorded_original_commit": "d471239f99f95f7c6aadcb8070852f293eb1b95b",
+  "original_release_asset_id": 681814323,
+  "original_release_asset_sha256": "sha256:f0df5bdecbfc840cfd8b58555733ad5a4bfe99ad742fdedbd6b1f500dbc19fad",
+  "new_release_url": "https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/final-r3-evidence",
+  "new_release_target": "c80c6d1f283e2baa8339953da5084fb021fc7041",
+  "new_release_asset_id": 687154835,
+  "new_release_asset_digest": "sha256:402d9a8005bc5848890fc60919dac4eef531ccf2a96a750e6b5c67f920f34c8c",
+  "new_release_asset_bytes": 29825930,
+  "note": "Local old tag is absent; original tag was checked directly on GitHub against the recorded original source commit."
+}
