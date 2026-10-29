@@ -12,16 +12,24 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_RIGHT
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Preformatted, Image
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Preformatted, Image, KeepTogether
 
 
 def inline(text):
     text = text.replace('\u2011', '-').replace('\u2013', '-').replace('\u2014', ' - ')
+    links = []
+    def markdown_link(match):
+        links.append((match.group(1), match.group(2)))
+        return f'LINKPLACEHOLDER{len(links)-1}END'
+    text = re.sub(r'\[([^\]]+)\]\((https?://[^\s)]+)\)', markdown_link, text)
     text = escape(text)
     text = re.sub(r'`([^`]+)`', r'<font name="Courier" size="8">\1</font>', text)
     text = re.sub(r'\*\*([^*]+)\*\*', r'<b>\1</b>', text)
     text = re.sub(r'\*([^*]+)\*', r'<i>\1</i>', text)
     text = re.sub(r'(https?://[^\s<>]+)', r'<link href="\1" color="#17618a">\1</link>', text)
+    for i, (label, url) in enumerate(links):
+        text = text.replace(f'LINKPLACEHOLDER{i}END',
+                            f'<link href="{escape(url, quote=True)}" color="#17618a">{escape(label)}</link>')
     return text
 
 
@@ -75,7 +83,13 @@ def render(source, destination):
             ('LEFTPADDING', (0, 0), (-1, -1), 6), ('RIGHTPADDING', (0, 0), (-1, -1), 6),
             ('TOPPADDING', (0, 0), (-1, -1), 6), ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
             ('LINEBELOW', (0, -1), (-1, -1), .4, colors.HexColor('#cbd5dd'))]))
-        story.extend([table, Spacer(1, 9)])
+        block = table
+        if len(rows) <= 6:
+            preceding = []
+            if story and isinstance(story[-1], Paragraph) and getattr(story[-1].style, 'keepWithNext', 0):
+                preceding.append(story.pop())
+            block = KeepTogether(preceding+[table])
+        story.extend([block, Spacer(1, 9)])
         table_lines.clear()
 
     in_code, code_lines = False, []

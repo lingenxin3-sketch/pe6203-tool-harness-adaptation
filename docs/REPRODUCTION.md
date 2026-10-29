@@ -101,17 +101,18 @@ The script independently recomputes and checks scores before plotting; incomplet
 
 ## Report and submission packaging
 
-The PDF in the original release is the preserved original-round publication. To inspect a newly rendered report without replacing that historical PDF, use a separate report environment and a preview output:
+The current integrated report is `docs/REPORT.md`, published as `output/pdf/PE6203_Project4_Final_Report.pdf`. The original release PDF remains unchanged. Report regeneration reads frozen metrics from the complete experiment branch; on main alone those supplemental source JSON files are absent, so use the experiment-branch checkout. To regenerate the text and inspect a preview without replacing either published PDF:
 
 ```powershell
 python -m venv runtime/report-venv
 runtime/report-venv/Scripts/python.exe -m pip install -r requirements-report.txt
-runtime/report-venv/Scripts/python.exe scripts/render_report.py docs/REPORT.md tmp/PE6203_Project4_Report-preview.pdf
+.venv/Scripts/python.exe scripts/write_final_report.py
+runtime/report-venv/Scripts/python.exe scripts/render_report.py docs/REPORT.md tmp/PE6203_Project4_Final_Report-preview.pdf
 ```
 
 Review the preview before publishing any new report. `scripts/build_submission.py` requires a Git checkout and selects source files from the Git-tracked list, including the archive. Review and stage or commit intended source changes first; untracked drafts, ignored local documents and the explicit internal-document exclusion list are not packaged. This Git filter applies to source collection only: the required ignored `runs/` evidence, events, failures and created/modified artifacts are still explicitly collected and verified.
 
-The packager still checks the original main, component and development-verification runs; it is not a new three-round evidence archive builder. The two added rounds retain their separate Release packages. An existing `deliverables/PE6203_Project4_Submission.zip` is refused rather than overwritten. Existing release attachments remain historical evidence and are not replaced by documentation cleanup.
+The packager includes the integrated report, both PDF versions and the planned member-work documentation. It still checks the original main, component and development-verification runs; it is not a new three-round evidence archive builder. The two added rounds retain their separate Release packages. An existing `deliverables/PE6203_Project4_Submission.zip` is refused rather than overwritten. Existing release attachments remain historical evidence and are not replaced by documentation cleanup.
 
 ## Completed added rounds and archives
 
@@ -120,6 +121,12 @@ The completed added rounds are `repeat-r2-20261029` and `final-r3`. Each contain
 The experiment branch contains `repeat_preflight.py`, `repeat_runner.py` and `repeat_campaign.py` for prechecks and sequential execution; `repeat_common.py`, `repeat_pair_comparison.py` and `repeat_verify_archive.py` support completeness, comparison and archive verification. These helpers do not replace the frozen actor/updater core. Their completed campaign state and existing evidence must not be restarted just to view results. Inspect the saved metrics, pair index and Releases through the final-results page; a fresh repeat study must use separately prepared output directories and documented runtime conditions.
 
 The [early development archive](../archive/development/README.md) contains the old task101 configuration and task3 pilot source, preserved for history rather than execution from their relocated paths. Ten partial progress snapshots are in the [experiment-branch progress archive](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/archive/progress/repeats-20261029/README.md). Archive manifests map old paths to new paths and distinguish original Git blob hashes from local-byte SHA-256. Historical receipts and old ZIPs retain their original paths and are not rewritten.
+
+## Six planned member work packages
+
+See [the responsibility index](../contributions/README.md) for the a-f tasks, learning notes, presentation allocation and exact disjoint ownership map. These packages identify intended follow-up responsibilities, not completed individual authorship. The full experiment-branch commit is the common baseline; each ZIP pins its source commit and hashes. Model weights and full runs remain shared evidence downloads.
+
+`scripts/build_member_packages.py --ref COMMIT --output NEW_DIRECTORY` rebuilds six packages from committed bytes, refusing an existing directory. Untracked/dirty files do not enter that snapshot. `--write-ownership` is a maintainer action after reviewing the staged file set; any changed allocation must be reviewed before committing. Members should keep their own actual review/change records and never rewrite frozen benchmark results.
 
 ## Judge capacity amendment
 

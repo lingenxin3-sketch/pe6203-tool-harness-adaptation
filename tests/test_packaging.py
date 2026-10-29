@@ -70,7 +70,8 @@ class PackagingTests(unittest.TestCase):
 
     def test_collect_keeps_ignored_raw_failures_events_and_created_artifacts(self):
         self.write('.gitignore', 'runs/\ndocs/追加实验/执行指南.md\n')
-        for name in ['docs/REPORT.md', 'output/pdf/PE6203_Project4_Report.pdf']:
+        for name in ['docs/REPORT.md', 'output/pdf/PE6203_Project4_Report.pdf',
+                     'output/pdf/PE6203_Project4_Final_Report.pdf']:
             self.write(name)
         self.git('add', '--', '.gitignore', 'docs', 'output')
         self.write('docs/追加实验/执行指南.md')
