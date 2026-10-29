@@ -1,0 +1,41 @@
+{
+  "verified_at": "2026-10-29T10:54:04+08:00",
+  "release": {
+    "assets": [
+      {
+        "apiUrl": "https://api.github.com/repos/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/assets/687154834",
+        "contentType": "application/octet-stream",
+        "createdAt": "2026-10-29T02:53:53Z",
+        "digest": "sha256:e107b3f29e65919564b9b4aee9d6d9b12b9d11f526c79b6ea244b0ef4eb64e18",
+        "downloadCount": 0,
+        "id": "RA_kwDOVZUP5c4o9SaS",
+        "label": "",
+        "name": "final-r3-evidence.sha256",
+        "size": 89,
+        "state": "uploaded",
+        "updatedAt": "2026-10-29T02:53:53Z",
+        "url": "https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/download/final-r3-evidence/final-r3-evidence.sha256"
+      },
+      {
+        "apiUrl": "https://api.github.com/repos/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/assets/687154835",
+        "contentType": "application/zip",
+        "createdAt": "2026-10-29T02:53:53Z",
+        "digest": "sha256:402d9a8005bc5848890fc60919dac4eef531ccf2a96a750e6b5c67f920f34c8c",
+        "downloadCount": 0,
+        "id": "RA_kwDOVZUP5c4o9SaT",
+        "label": "",
+        "name": "final-r3-evidence.zip",
+        "size": 29825930,
+        "state": "uploaded",
+        "updatedAt": "2026-10-29T02:53:57Z",
+        "url": "https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/download/final-r3-evidence/final-r3-evidence.zip"
+      }
+    ],
+    "tagName": "final-r3-evidence",
+    "targetCommitish": "c80c6d1f283e2baa8339953da5084fb021fc7041",
+    "url": "https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/final-r3-evidence"
+  },
+  "sha256": "402d9a8005bc5848890fc60919dac4eef531ccf2a96a750e6b5c67f920f34c8c",
+  "anonymous_download_verified": true,
+  "source_commit": "c80c6d1f283e2baa8339953da5084fb021fc7041"
+}
