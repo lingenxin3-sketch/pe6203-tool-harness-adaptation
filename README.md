@@ -7,8 +7,8 @@ PE6203 Group Project4：在MCPEvol-Bench的工具环境升级后，比较不更�
 ## 报告与结果入口
 
 - [最新完整报告PDF](output/pdf/PE6203_Project4_Final_Report.pdf) · [报告源文稿](docs/REPORT.md)。
-- [三轮结果与证据索引](docs/追加实验/交付与核验.md)。
-- [原轮与第二新增轮的可比对照](docs/追加实验/原轮与第二新增轮对照.md)。
+- [三轮结果与证据索引](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/submission/named-members-20261029/docs/追加实验/交付与核验.md)。
+- [原轮与第二新增轮的可比对照](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/submission/named-members-20261029/docs/追加实验/原轮与第二新增轮对照.md)。
 - [安装与复现](docs/REPRODUCTION.md) · [课程要求与证据对应](docs/REQUIREMENTS_EVIDENCE_ZH.md)。
 
 ## 仓库结构
@@ -22,7 +22,6 @@ PE6203 Group Project4：在MCPEvol-Bench的工具环境升级后，比较不更�
 | `artifacts/` | 工具清单、结果数据、故障证据与核验收据 |
 | `docs/` | 方法、完整报告、失败案例与复现说明 |
 | `output/pdf/` | 最新报告与原单轮历史报告 |
-| `contributions/` | 实名责任表、负责文件索引与个人成果目录 |
 | `archive/` | 已分类保存的历史开发材料和中途快照 |
 
 ## 方法
@@ -57,10 +56,10 @@ PE6203 Group Project4：在MCPEvol-Bench的工具环境升级后，比较不更�
 | B | LIU ZHEYUAN | 工具知识与选择性修补 | [查看](tool_adapt/knowledge.py) |
 | C | HE YUJIE | 实验设计与复现 | [查看](configs/experiment.json) |
 | D | SHISHUYI | 指标、恢复保持与成本 | [查看](artifacts/final-report-data.json) |
-| E | LIN GENXIN | 失败案例与评分核查 | [查看](contributions/members/E_LIN_GENXIN/README.md) |
+| E | LIN GENXIN | 失败案例与评分核查 | [查看](docs/CASE_113_REVIEW.md) |
 | F | PAN JUNKUN | 报告整合与交付一致性 | [查看](docs/REPORT.md) |
 
-完整责任索引见[contributions](contributions/README.md)。分工表说明板块责任，个人实际完成情况以相应成果记录为准。
+上表说明六人的负责范围。代码与实验资料使用统一目录，不按姓名重复拆出六套系统。
 
 ## 复现与原始证据
 
