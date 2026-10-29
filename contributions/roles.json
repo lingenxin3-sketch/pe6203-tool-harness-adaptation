@@ -1,6 +1,6 @@
 {
   "status": "planned_responsibilities_not_completed_contributions",
-  "member_names": "Role letters retained; E assigned to LIN GENXIN. Actual completion requires member records.",
+  "member_names": "Names supplied by the team; responsibility assignments, not completed contribution claims.",
   "presentation_seconds": 540,
   "shared_transition_seconds": 60,
   "members": {
@@ -45,7 +45,8 @@
       "questions": [
         "这个系统有没有重新训练AI？没有，改变的是工具契约和使用说明。",
         "为什么AI说做完了还不够？必须查调用返回和真实文件。"
-      ]
+      ],
+      "name": "SU YANG"
     },
     "b": {
       "title": "工具知识变化与选择性修补",
@@ -88,7 +89,8 @@
       "questions": [
         "新接口从哪里取得？程序读取当前公开工具契约。",
         "依赖扩展是否理解所有操作顺序？不能，它主要识别明确工具名引用。"
-      ]
+      ],
+      "name": "LIU ZHEYUAN"
     },
     "c": {
       "title": "实验设计、运行与复现核验",
@@ -133,7 +135,8 @@
       "questions": [
         "为什么不直接平均三轮？第二轮实际资源清单不一致。",
         "固定seed和温度0能证明显著性吗？不能，这些重复主要描述执行稳定性。"
-      ]
+      ],
+      "name": "HE YUJIE"
     },
     "d": {
       "title": "指标计算、恢复保持与成本分析",
@@ -177,7 +180,8 @@
       "questions": [
         "为什么ECS高不能说全面更好？Late TF及恢复保持并不一致，评分本身也有盲点。",
         "±0.127表示什么？两次轮均值间的样本标准差，n=2。"
-      ]
+      ],
+      "name": "SHISHUYI"
     },
     "e": {
       "title": "失败案例、真实产物与评分核查",
@@ -272,7 +276,8 @@
       "questions": [
         "拿到文件包就是已经完成个人贡献吗？不是，要完成核查或修改并留下真实证据。",
         "老师怎样定位原始证据？从首页进入最终结果页和三轮Release，再按来源索引核对。"
-      ]
+      ],
+      "name": "PAN JUNKUN"
     }
   }
 }

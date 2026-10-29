@@ -15,7 +15,8 @@
         "tool_adapt/cli.py",
         "tool_adapt/llm.py",
         "tool_adapt/mcp_runtime.py"
-      ]
+      ],
+      "name": "SU YANG"
     },
     "b": {
       "count": 7,
@@ -27,7 +28,8 @@
         "scripts/probe_servers.py",
         "tests/test_knowledge.py",
         "tool_adapt/knowledge.py"
-      ]
+      ],
+      "name": "LIU ZHEYUAN"
     },
     "c": {
       "count": 83,
@@ -115,7 +117,8 @@
         "tests/test_protocol.py",
         "tests/test_repeats.py",
         "tool_adapt/experiment.py"
-      ]
+      ],
+      "name": "HE YUJIE"
     },
     "d": {
       "count": 40,
@@ -160,7 +163,8 @@
         "tests/test_judge_capacity.py",
         "tool_adapt/official.py",
         "tool_adapt/results.py"
-      ]
+      ],
+      "name": "SHISHUYI"
     },
     "e": {
       "count": 47,
@@ -253,7 +257,8 @@
         "scripts/write_final_report.py",
         "tests/test_member_packages.py",
         "tests/test_packaging.py"
-      ]
+      ],
+      "name": "PAN JUNKUN"
     }
   }
 }
