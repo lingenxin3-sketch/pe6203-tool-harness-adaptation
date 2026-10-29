@@ -210,7 +210,7 @@ Installation, frozen downloads, model startup and original-pipeline commands are
 
 Three public Releases retain the original evidence packages. The R2 and R3 ZIPs were anonymously downloaded and checked for all entry sizes, SHA hashes and CRC. R3 has 909 manifest entries, including 162 results, 162 actor copies, 162 event logs and five failure originals. Later pair analyses and scored-case reviews are branch supplements, not falsely represented as original ZIP entries. Ten intermediate progress receipts and two old development sources have only been relocated into documented archives; historical receipt paths are not rewritten.
 
-Code development, report preparation and evidence checks used AI assistance. Allocating existing files to members is a plan for substantive follow-up work, not proof that those members authored or verified them. The six work packages define intended responsibilities; personal contribution records must describe actual completed checks, analyses or changes and their evidence. No individual completion is asserted here. The course presentation remains 10 minutes plus 5 minutes Q&A and should use this integrated report's current findings.
+Code development, report preparation and evidence checks used AI assistance. The project README lists the six members and their responsibility areas. Scientific conclusions are supported by the saved experiment sources rather than inferred from file ownership or upload activity.
 
 ## 10. Conclusion
 

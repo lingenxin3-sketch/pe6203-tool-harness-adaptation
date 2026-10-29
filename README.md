@@ -1,108 +1,74 @@
-# 企业 AI 工具更新与能力保持
+# 企业AI工具更新与能力保持
 
-PE6203 Group Project 4：使用官方 MCPEvol-Bench，比较工具升级后“不更新、全部重写、选择性更新”三种办法。系统更新的是工具说明与参数结构，没有重新训练 AI。
+PE6203 Group Project4：在MCPEvol-Bench的工具环境升级后，比较不更新、全部重写、选择性修补三种工具知识策略。系统更新工具契约和用法说明，基础模型权重不变。
 
-企业 AI 原来会用一套工具，工具升级后，旧用法可能失效。我们的程序读取新旧工具接口，识别改动及明确关联的工具，只为受影响部分重新生成说明，其余说明保留。随后让同一个 AI 真正执行任务，保存调用、报错和生成文件，再用独立本地模型评分并核查实际产物。
+企业AI使用的工具改变后，旧参数或旧规则可能导致调用失败。我们检测公开工具接口的变化，只为受影响及明确关联的工具重新生成说明，再让同一个AI执行任务，保存调用、返回、文件和评分，以评估恢复、保持与更新开销。
 
-## 最新结果与证据
+## 报告与结果入口
 
-- [最新完整报告（PDF，8页）](output/pdf/PE6203_Project4_Final_Report.pdf) · [报告源文稿](docs/REPORT.md)。
-- [六人实质工作与集合包](contributions/README.md)：a—f任务、学习内容、文件归属和下载入口；当前为计划分工，实际贡献待成员完成后记录。
+- [最新完整报告PDF](output/pdf/PE6203_Project4_Final_Report.pdf) · [报告源文稿](docs/REPORT.md)。
+- [三轮结果与证据索引](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/submission/named-members-20261029/docs/追加实验/交付与核验.md)。
+- [原轮与第二新增轮的可比对照](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/submission/named-members-20261029/docs/追加实验/原轮与第二新增轮对照.md)。
+- [安装与复现](docs/REPRODUCTION.md) · [课程要求与证据对应](docs/REQUIREMENTS_EVIDENCE_ZH.md)。
 
-- [最终结果与核验](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/交付与核验.md)：三轮概况、可比范围、失败与证据下载。
-- [原轮与第二新增轮的可比对照](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/docs/追加实验/原轮与第二新增轮对照.md)：TF、PE、ECS、成本与逐条来源。
-- [安装与复现](docs/REPRODUCTION.md) · [课程要求与证据对照](docs/REQUIREMENTS_EVIDENCE_ZH.md) · [18个任务的产物核查标准](docs/TASK_REVIEW_GUIDE_ZH.md)。
+## 仓库结构
 
-| 轮次 | 已评分 / 计划 | 执行异常 | ECS：不更新 / 全部重写 / 选择性更新 |
-|---|---:|---:|---|
-| 原轮 final-v1 | 162 / 162 | 4 | 6.280 / 5.239 / 6.332 |
-| 第一新增轮 repeat-r2-20261029 | 162 / 162 | 5 | 5.983 / 5.611 / 4.597 |
-| 第二新增轮 final-r3 | 162 / 162 | 5 | 4.929 / 5.340 / 6.152 |
-
-共486条已评分记录，均保留失败。第一新增轮有123条跨轮资源清单差异、54组策略间输入差异，单独报告，不能把三轮直接合并成“三次可比重复”。只有原轮与第二新增轮按已披露的实际输入和评分条件提供324条描述性对照：18个不同任务、每组合两次。
-
-该可比对照中，选择性更新的 ECS 轮均值为6.242，不更新5.605、全部重写5.289；选择性更新比全部重写少用65.1%的**更新 token**，但执行、更新和评分三阶段已记录总 token **增加5.6%**。这支持“减少更新工作量”，不证明总成本下降或任务效果普遍更好。ECS 衡量跨版本得分保持，不等于成功率。
-
-最新正式报告已整合三轮独立结果、324条可比对照、恢复保持、分阶段成本和最新案例。原单轮材料作为历史版本保留：[原轮PDF](output/pdf/PE6203_Project4_Report.pdf) · [报告版本说明](output/pdf/README.md) · [原轮结果表](artifacts/final-result-tables.md) · [原轮图表说明](artifacts/figures/README.md)。
-
-## 系统实现
-
-- 三种策略共用执行程序、任务和模型设置；保留原始响应、工具返回、知识变化、文件及失败记录。
-- 自研方法识别工具、参数及描述变化，再沿工具名称的明确引用扩展影响范围；隐含操作依赖仍可能漏检。
-- Actor/updater 使用 Qwen3-4B-Instruct-2507 Q4_K_M，judge 使用 Qwen2.5-7B-Instruct Q4_K_M，由 llama.cpp b11900 本地运行，无付费 API。
-- 官方基准固定为 `888c779a0fe735f612ca62bdd1fdd7c9e6bf8701`；三个版本共32,388个提取文件与官方压缩包逐字节核对一致，见 `artifacts/server-source-audit.json`。
-
-## 运行
-
-从零安装请先按 `docs/REPRODUCTION.md` 准备依赖。在本目录打开 PowerShell 7，运行开发检查：
-
-```powershell
-.venv/Scripts/python.exe -m unittest discover -s tests -v
-pwsh -NoProfile -File scripts/start-local-model.ps1
-.venv/Scripts/python.exe -m tool_adapt run --split development --task-limit 1 --output runs/my-development-run
-pwsh -NoProfile -File scripts/stop-local-model.ps1 -Role actor
-pwsh -NoProfile -File scripts/start-judge.ps1
-.venv/Scripts/python.exe scripts/judge_with_capacity.py runs/my-development-run
-.venv/Scripts/python.exe -m tool_adapt analyze runs/my-development-run
-```
-
-模型启动后需等待服务就绪再调用。正式完整流程入口（新复现目录、配置已冻结，且停止开发评分模型后运行；本机已有流程运行时不要再次启动）：
-
-```powershell
-.venv/Scripts/python.exe scripts/run_full_pipeline.py
-```
-
-程序拒绝覆盖已有实验目录。每次运行保留配置、代码摘要、知识状态、更新记录、工具轨迹、模型原始响应与评分理由。
+| 目录 | 内容 |
+|---|---|
+| `tool_adapt/` | 共用AI执行循环、MCP工具连接、工具知识更新与指标聚合 |
+| `scripts/` | 下载、运行、评分、结果核查、复现和交付工具 |
+| `configs/` | 冻结实验配置及评分容量设置 |
+| `tests/` | 知识更新边界、协议、失败保存和打包等测试 |
+| `artifacts/` | 工具清单、结果数据、故障证据与核验收据 |
+| `docs/` | 方法、完整报告、失败案例与复现说明 |
+| `output/pdf/` | 最新报告与原单轮历史报告 |
+| `archive/` | 已分类保存的历史开发材料和中途快照 |
 
 ## 方法
 
-工具知识包含可执行工具结构和使用说明。局部修补比较前后契约，找出新增、移除、参数或描述变化；再沿说明中的工具引用扩展影响范围，只重写这些工具的说明。未受影响说明保持原样。全量重写使用相同模型和规则重写全部说明。不更新保留 Early 的旧知识。
-
-两种更新方法均从当前公开工具接口复制准确的结构，语言模型仅生成使用说明，不能擅自更改执行结构。无效说明更新会被拒绝并记入日志，保留此前知识。更新模型不接收任务题目、参考轨迹、变异标注或评分结果。
-
-```mermaid
-flowchart TB
-    A[新旧公开工具接口] --> B[找出改动并扩展关联工具]
-    B --> C[仅为受影响工具生成说明]
-    B --> D[保留其他工具的原说明]
-    C --> F[组合更新后的工具知识]
-    D --> F
-    E[从当前接口复制准确的参数结构] --> F
-    F --> G[固定的 AI 执行程序]
-    H[任务题目] --> G
-    G --> I[调用当前版本工具并保存轨迹]
-    I --> J[独立评分与结果核查]
-```
-
-图中题目只进入执行程序，评分只发生在执行之后；它们都不参与生成工具说明。关联范围依据工具名的明确引用扩展，不能保证识别所有隐含依赖。图示为有效更新路径；生成格式无效时保留此前知识并记录失败。
-
-## 研究边界
-
-- 固定18个任务、三个策略、三个环境版本；测试任务与开发任务分开，不代表整个基准。
-- seed=6203、temperature=0 的重复描述相同设置下的执行稳定性，不是新增独立任务或统计显著性证据。Early尚未更新就有分数差异，不能把所有差距归因于更新方法。
-- 第二轮输入可见性不同，因此保留该轮并单独报告；原轮与第二新增轮的比较也披露旧客户端检查及JSON序列化差异，详见最终核验页。
-- 独立本地7B模型的自动评分有已保存的误判。任务113、117存在调用失败却得高分的情况；评分和真实完成度必须分开看，原分数不修改。
-- 原单次依赖扩展组件对照只有6条，不混入主实验重复，也没有证明依赖扩展一定有效。
-- 成本只统计已返回并保存用量的调用；中断等未返回调用的成本未知。本地API零计费不含硬件、电费或开发成本，请求累计耗时也不等于完整运行时间。
-- 官方评分适配层保留原提示和ECS公式；Windows路径适配只处理加载兼容性，不改工具实现。
-
-## 代码与复现材料
-
-| 路径 | 内容 |
+| 策略 | 工具环境改变后如何处理 |
 |---|---|
-| `tool_adapt/knowledge.py` | 契约变化检测、关联扩展与更新边界 |
-| `tool_adapt/mcp_runtime.py`、`agent.py` | 工具连接、目录隔离与共用执行循环 |
-| `tool_adapt/official.py`、`experiment.py` | 官方评分接入、实验编排与证据保存 |
-| `configs/experiment.json`、`artifacts/inventory/` | 冻结配置及三个版本的工具清单 |
-| `docs/REPRODUCTION.md` | 依赖、运行、评分和复现方法 |
-| `docs/TASK_REVIEW_GUIDE_ZH.md` | 每个任务应检查的调用和实际产物 |
+| 不更新 | 保留Early工具契约和用法说明 |
+| 全部重写 | 复制当前工具契约，重新生成全部范围内的说明 |
+| 选择性修补 | 复制当前契约，只重写变化及明确关联的说明，保留其他说明 |
 
-源码仓库不包含模型权重和完整逐次运行目录；原始记录分别保存在[原轮](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/v1.0.0)、[第一新增轮](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/repeat-r2-20261029-evidence)、[第二新增轮](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/final-r3-evidence)证据发布包中。下载地址、哈希和核验索引见最终结果页。旧发布包保持原样，文档整理不重写历史证据。
+两种更新策略使用相同模型与校验规则。参数结构直接来自当前公开接口；更新模型不接收任务答案、参考轨迹、变异标签或评分。依赖扩展依据工具名称的明确引用，不能保证识别全部隐含操作顺序。
 
-历史材料已分类保存在[早期开发归档](archive/development/README.md)和[追加实验进度归档](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/blob/experiments/repeats-20261029/archive/progress/repeats-20261029/README.md)；归档清单保留原路径与哈希，不混作当前正式运行入口。
+## 实验结果
 
-## 来源与贡献声明
+每轮使用相同18个任务、3种策略、3个版本，共162条；三轮已评分486条，全部执行异常保留。
 
-官方基准：[MCPEvol-Bench](https://github.com/Octobrist/MCPEvol-Bench)。
+| 轮次 | 已评分 | 执行异常 | ECS：不更新 / 全部重写 / 选择性修补 |
+|---|---:|---:|---|
+| 原轮final-v1 | 162 | 4 | 6.280 / 5.239 / 6.332 |
+| 第一新增轮repeat-r2-20261029 | 162 | 5 | 5.983 / 5.611 / 4.597 |
+| 第二新增轮final-r3 | 162 | 5 | 4.929 / 5.340 / 6.152 |
 
-本项目由AI协助代码开发、文档整理和证据核查。AI辅助核查不等于成员独立复核；六人计划责任见`contributions/`，各包明确共同来源；个人贡献须依据本人实际完成的核查、分析或修改记录，当前不预填完成声明。
+第一新增轮存在123条跨轮资源清单差异和54组策略间输入差异，单独报告。只有原轮与第二新增轮按已披露条件作324条描述性对照：18个不同任务，每个任务/策略/版本组合两次。
+
+可比两轮中，选择性修补ECS均值为6.242，不更新5.605、全部重写5.289。选择性修补比全部重写少用65.1%的**更新token**，但更新、执行和评分三阶段已记录总token反而多5.6%。这些结果不证明总成本下降或任务效果普遍更好。Early尚未更新就有分数差异，且自动评分有已保存的误判；实际完成情况需结合工具返回和文件判断。
+
+## 团队分工
+
+| 板块 | 成员 | 负责内容 | 资料入口 |
+|---|---|---|---|
+| A | SU YANG | 执行系统与工具调用 | [查看](tool_adapt/agent.py) |
+| B | LIU ZHEYUAN | 工具知识与选择性修补 | [查看](tool_adapt/knowledge.py) |
+| C | HE YUJIE | 实验设计与复现 | [查看](configs/experiment.json) |
+| D | SHISHUYI | 指标、恢复保持与成本 | [查看](artifacts/final-report-data.json) |
+| E | LIN GENXIN | 失败案例与评分核查 | [查看](docs/CASE_113_REVIEW.md) |
+| F | PAN JUNKUN | 报告整合与交付一致性 | [查看](docs/REPORT.md) |
+
+上表说明六人的负责范围。代码与实验资料使用统一目录，不按姓名重复拆出六套系统。
+
+## 复现与原始证据
+
+Actor/updater使用Qwen3-4B-Instruct-2507 Q4_K_M，judge使用Qwen2.5-7B-Instruct Q4_K_M，通过llama.cpp b11900本地运行，无付费API。基准固定为`888c779a0fe735f612ca62bdd1fdd7c9e6bf8701`；模型、依赖和运行命令见复现说明。
+
+完整运行目录和模型权重不放入源码树。原始执行、调用、产物、评分及失败分别保存在[原轮Release](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/v1.0.0)、[第一新增轮Release](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/repeat-r2-20261029-evidence)、[第二新增轮Release](https://github.com/lingenxin3-sketch/pe6203-tool-harness-adaptation/releases/tag/final-r3-evidence)，哈希与核验入口见最终结果页。
+
+原单轮PDF、结果表和图作为历史版本保留。固定seed与temperature=0的重复不构成显著性证据；成本只统计已返回并保存用量的调用，API零计费不含硬件、电费与开发成本。
+
+## 来源
+
+官方基准：[MCPEvol-Bench](https://github.com/Octobrist/MCPEvol-Bench)。本项目的代码开发、文档和证据整理使用AI协助，原始实验数据、失败和评分均保留供核查。

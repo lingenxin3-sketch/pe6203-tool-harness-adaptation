@@ -10,7 +10,7 @@ from analyze_comparisons import compare
 
 ROOT = Path(__file__).resolve().parents[1]
 
-SOURCE_DIRECTORIES = ['tool_adapt', 'scripts', 'tests', 'configs', 'artifacts', 'docs', 'output/pdf', 'archive', 'contributions']
+SOURCE_DIRECTORIES = ['tool_adapt', 'scripts', 'tests', 'configs', 'artifacts', 'docs', 'output/pdf', 'archive']
 ROOT_FILES = ['README.md', 'pyproject.toml', 'requirements-lock.txt', 'requirements-report.txt', '.gitignore']
 INTERNAL_DOCUMENTS = {
     'docs/REPORT_DRAFT.md', 'docs/WORK_STATE.md', 'docs/TEAM_PLAN_ZH.md',
@@ -27,7 +27,7 @@ def source_files():
     files = set()
     for name in filter(None, paths):
         path = ROOT/name
-        if name in INTERNAL_DOCUMENTS or '__pycache__' in path.parts or path.suffix == '.pyc':
+        if name.startswith('contributions/') or name in INTERNAL_DOCUMENTS or '__pycache__' in path.parts or path.suffix == '.pyc':
             continue
         if not path.resolve().is_relative_to(ROOT.resolve()) or not path.is_file():
             raise ValueError(f'Tracked package source is missing or outside the project: {name}')
