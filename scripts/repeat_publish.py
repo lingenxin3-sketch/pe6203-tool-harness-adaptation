@@ -59,6 +59,16 @@ def status(phase,message,extra=''):
     PUBLIC.mkdir(parents=True,exist_ok=True)
     statuses=[inspect(ROOT/'runs'/n) for n in NAMES]
     finished=phase in ['final_publication','final_verified']
+    if finished:
+        lines=['# 实验完成状态','',f'快照时间：{now()}（UTC+8）。','',
+               '阶段：'+phase,'',message,'',
+               '结果、成本、可比范围、案例与核验索引见[最终结果与证据核验](交付与核验.md)。','',
+               '完成状态不等于任务全部成功。第一新增轮因输入差异独立报告；只有原轮与第二新增轮的324条作描述性对照，不作三次可比重复或显著性结论。',
+               '更新token节省不等于总token减少，详见最终结果页。']
+        if extra:lines+=['',extra]
+        (PUBLIC/'状态.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+        save(RECEIPTS/'latest-status.json',{'collected_at':now(),'phase':phase,'message':message,'rounds':statuses})
+        return
     monitor_note=('实验管理进程已正常退出，原每15分钟自动心跳已结束。本页为带采集时间的交付快照，后续更新由明确的发布操作完成。'
                   if finished else '运行期间进程请求 Windows 保持唤醒，不更改系统电源计划。断电、合盖、重启和网络故障仍可能中断；定时发布不作保证。计划每 15 分钟更新真实快照，并尽力覆盖 08:00 前的状态。')
     lines=['# 追加实验状态','',f'采集时间：{now()}（新加坡时间 UTC+8）。',f'','阶段：'+phase,'',message,'',
